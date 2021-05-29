@@ -349,3 +349,76 @@ template {
 }
 
 
+.button {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px 20px;
+  border-radius: 22px;
+  transition: 0.5s;
+  cursor: pointer;
+  font-size: 12px;
+  color: #fff;
+  width: fit-content;
+  text-decoration: none;
+}
+.button:hover {
+  opacity: 50%;
+}
+.button_submit {
+  border: none;
+  text-transform: uppercase;
+}
+.button_transparent {
+  background: linear-gradient(#BC9CFF, #8BA4F9);
+  position: relative;
+}
+.button_transparent:before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  border-radius: 22px;
+  background-color: #fff;
+  margin: 2px;
+  z-index: 0;
+}
+.button_big {
+  background: url(41d102dc1a2c0327f4ba780e5e8450b9.png), linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background-position: right center;
+  background-repeat: no-repeat;
+  max-width: 320px;
+  width: 100%;
+  box-sizing: border-box;
+  white-space: normal;
+  padding: 15px 35px;
+}
+.button_big:hover {
+  opacity: 1;
+}
+.button__text {
+  font-size: 12px;
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.button_transparent .button__text {
+  color: #BC9CFF;
+  z-index: 1;
+}
+
+.button_minimal .button__text {
+  color: #BC9CFF;
+}
+.button_minimal .button__text:hover {
+  color: #1F2041;
+  opacity: 0.5;
+}
+.button_minimal {
+  padding: 0;
+  background: none;
+}

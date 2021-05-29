@@ -39,6 +39,10 @@ module.exports = {
 
     optimization: optimization(),
 
+    devServer: {
+        port: 4200
+
+    },
     plugins: [
         new HTMLWebpackPlugin({
             template: 'src/index.pug',

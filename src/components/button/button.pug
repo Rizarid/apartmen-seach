@@ -1,0 +1,9 @@
+mixin button(text, isSubmit = false, link='', ...classes)
+  - if (isSubmit) classes.push("button_submit")
+  - var classValue = classes.join(' ')
+  if isSubmit 
+    input(type = "submit", value = text, class != classValue)
+  else
+    a(class != classValue, href != link) 
+      include __text/__text.pug 
+      +button__text(text) 
