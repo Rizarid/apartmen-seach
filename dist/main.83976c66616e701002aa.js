@@ -10,53 +10,53 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/components/button/__text/__text.sass":
-/*!**************************************************!*\
-  !*** ./src/components/button/__text/__text.sass ***!
-  \**************************************************/
+/***/ "./src/components/button/__text/button__text.sass":
+/*!********************************************************!*\
+  !*** ./src/components/button/__text/button__text.sass ***!
+  \********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://apartment_search/./src/components/button/__text/__text.sass?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://apartment_search/./src/components/button/__text/button__text.sass?");
 
 /***/ }),
 
-/***/ "./src/components/button/_big/_big.sass":
-/*!**********************************************!*\
-  !*** ./src/components/button/_big/_big.sass ***!
-  \**********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://apartment_search/./src/components/button/_big/_big.sass?");
-
-/***/ }),
-
-/***/ "./src/components/button/_minimal/_minimal.sass":
-/*!******************************************************!*\
-  !*** ./src/components/button/_minimal/_minimal.sass ***!
-  \******************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://apartment_search/./src/components/button/_minimal/_minimal.sass?");
-
-/***/ }),
-
-/***/ "./src/components/button/_submit/_submit.sass":
+/***/ "./src/components/button/_big/button_big.sass":
 /*!****************************************************!*\
-  !*** ./src/components/button/_submit/_submit.sass ***!
+  !*** ./src/components/button/_big/button_big.sass ***!
   \****************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://apartment_search/./src/components/button/_submit/_submit.sass?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://apartment_search/./src/components/button/_big/button_big.sass?");
 
 /***/ }),
 
-/***/ "./src/components/button/_transparent/_transparent.sass":
-/*!**************************************************************!*\
-  !*** ./src/components/button/_transparent/_transparent.sass ***!
-  \**************************************************************/
+/***/ "./src/components/button/_minimal/button_minimal.sass":
+/*!************************************************************!*\
+  !*** ./src/components/button/_minimal/button_minimal.sass ***!
+  \************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://apartment_search/./src/components/button/_transparent/_transparent.sass?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://apartment_search/./src/components/button/_minimal/button_minimal.sass?");
+
+/***/ }),
+
+/***/ "./src/components/button/_submit/button_submit.sass":
+/*!**********************************************************!*\
+  !*** ./src/components/button/_submit/button_submit.sass ***!
+  \**********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://apartment_search/./src/components/button/_submit/button_submit.sass?");
+
+/***/ }),
+
+/***/ "./src/components/button/_transparent/button_transparent.sass":
+/*!********************************************************************!*\
+  !*** ./src/components/button/_transparent/button_transparent.sass ***!
+  \********************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://apartment_search/./src/components/button/_transparent/button_transparent.sass?");
 
 /***/ }),
 
@@ -70,53 +70,53 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
-/***/ "./src/components/toggle/__checkbox/__checkbox.sass":
+/***/ "./src/components/toggle/__checkbox/toggle__checkbox.sass":
+/*!****************************************************************!*\
+  !*** ./src/components/toggle/__checkbox/toggle__checkbox.sass ***!
+  \****************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://apartment_search/./src/components/toggle/__checkbox/toggle__checkbox.sass?");
+
+/***/ }),
+
+/***/ "./src/components/toggle/__circle/toggle__circle.sass":
+/*!************************************************************!*\
+  !*** ./src/components/toggle/__circle/toggle__circle.sass ***!
+  \************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://apartment_search/./src/components/toggle/__circle/toggle__circle.sass?");
+
+/***/ }),
+
+/***/ "./src/components/toggle/__switch/toggle__switch.sass":
+/*!************************************************************!*\
+  !*** ./src/components/toggle/__switch/toggle__switch.sass ***!
+  \************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://apartment_search/./src/components/toggle/__switch/toggle__switch.sass?");
+
+/***/ }),
+
+/***/ "./src/components/toggle/__text/toggle__text.sass":
+/*!********************************************************!*\
+  !*** ./src/components/toggle/__text/toggle__text.sass ***!
+  \********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://apartment_search/./src/components/toggle/__text/toggle__text.sass?");
+
+/***/ }),
+
+/***/ "./src/components/toggle/_active/toggle_active.sass":
 /*!**********************************************************!*\
-  !*** ./src/components/toggle/__checkbox/__checkbox.sass ***!
+  !*** ./src/components/toggle/_active/toggle_active.sass ***!
   \**********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://apartment_search/./src/components/toggle/__checkbox/__checkbox.sass?");
-
-/***/ }),
-
-/***/ "./src/components/toggle/__circle/__circle.sass":
-/*!******************************************************!*\
-  !*** ./src/components/toggle/__circle/__circle.sass ***!
-  \******************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://apartment_search/./src/components/toggle/__circle/__circle.sass?");
-
-/***/ }),
-
-/***/ "./src/components/toggle/__switch/__switch.sass":
-/*!******************************************************!*\
-  !*** ./src/components/toggle/__switch/__switch.sass ***!
-  \******************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://apartment_search/./src/components/toggle/__switch/__switch.sass?");
-
-/***/ }),
-
-/***/ "./src/components/toggle/__text/__text.sass":
-/*!**************************************************!*\
-  !*** ./src/components/toggle/__text/__text.sass ***!
-  \**************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://apartment_search/./src/components/toggle/__text/__text.sass?");
-
-/***/ }),
-
-/***/ "./src/components/toggle/_active/_active.sass":
-/*!****************************************************!*\
-  !*** ./src/components/toggle/_active/_active.sass ***!
-  \****************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://apartment_search/./src/components/toggle/_active/_active.sass?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://apartment_search/./src/components/toggle/_active/toggle_active.sass?");
 
 /***/ }),
 
@@ -156,7 +156,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \*****************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _button_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./button.sass */ \"./src/components/button/button.sass\");\n/* harmony import */ var _submit_submit_sass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_submit/_submit.sass */ \"./src/components/button/_submit/_submit.sass\");\n/* harmony import */ var _transparent_transparent_sass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_transparent/_transparent.sass */ \"./src/components/button/_transparent/_transparent.sass\");\n/* harmony import */ var _big_big_sass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_big/_big.sass */ \"./src/components/button/_big/_big.sass\");\n/* harmony import */ var _text_text_sass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./__text/__text.sass */ \"./src/components/button/__text/__text.sass\");\n/* harmony import */ var _minimal_minimal_sass__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_minimal/_minimal.sass */ \"./src/components/button/_minimal/_minimal.sass\");\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://apartment_search/./src/components/button/button.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _button_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./button.sass */ \"./src/components/button/button.sass\");\n/* harmony import */ var _submit_button_submit_sass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_submit/button_submit.sass */ \"./src/components/button/_submit/button_submit.sass\");\n/* harmony import */ var _transparent_button_transparent_sass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_transparent/button_transparent.sass */ \"./src/components/button/_transparent/button_transparent.sass\");\n/* harmony import */ var _big_button_big_sass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_big/button_big.sass */ \"./src/components/button/_big/button_big.sass\");\n/* harmony import */ var _text_button_text_sass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./__text/button__text.sass */ \"./src/components/button/__text/button__text.sass\");\n/* harmony import */ var _minimal_button_minimal_sass__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_minimal/button_minimal.sass */ \"./src/components/button/_minimal/button_minimal.sass\");\n\r\n\r\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://apartment_search/./src/components/button/button.js?");
 
 /***/ }),
 
@@ -166,7 +166,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _but
   \*****************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _toggle_sass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./toggle.sass */ \"./src/components/toggle/toggle.sass\");\n/* harmony import */ var _checkbox_checkbox_sass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./__checkbox/__checkbox.sass */ \"./src/components/toggle/__checkbox/__checkbox.sass\");\n/* harmony import */ var _switch_switch_sass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./__switch/__switch.sass */ \"./src/components/toggle/__switch/__switch.sass\");\n/* harmony import */ var _circle_circle_sass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./__circle/__circle.sass */ \"./src/components/toggle/__circle/__circle.sass\");\n/* harmony import */ var _text_text_sass__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./__text/__text.sass */ \"./src/components/toggle/__text/__text.sass\");\n/* harmony import */ var _active_active_sass__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./_active/_active.sass */ \"./src/components/toggle/_active/_active.sass\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nlet toggles = jquery__WEBPACK_IMPORTED_MODULE_0__(\".toggle .toggle__switch\");\r\n\r\nif (toggles.length){\r\n  toggles.click(toggleSwitching);\r\n}\r\n\r\nfunction toggleSwitching(){\r\n  jquery__WEBPACK_IMPORTED_MODULE_0__(this).parent().find(\".toggle .toggle__checkbox\").trigger('click');\r\n  jquery__WEBPACK_IMPORTED_MODULE_0__(this).parent().toggleClass(\"toggle_active\");\r\n}\n\n//# sourceURL=webpack://apartment_search/./src/components/toggle/toggle.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _toggle_sass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./toggle.sass */ \"./src/components/toggle/toggle.sass\");\n/* harmony import */ var _checkbox_toggle_checkbox_sass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./__checkbox/toggle__checkbox.sass */ \"./src/components/toggle/__checkbox/toggle__checkbox.sass\");\n/* harmony import */ var _switch_toggle_switch_sass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./__switch/toggle__switch.sass */ \"./src/components/toggle/__switch/toggle__switch.sass\");\n/* harmony import */ var _circle_toggle_circle_sass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./__circle/toggle__circle.sass */ \"./src/components/toggle/__circle/toggle__circle.sass\");\n/* harmony import */ var _text_toggle_text_sass__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./__text/toggle__text.sass */ \"./src/components/toggle/__text/toggle__text.sass\");\n/* harmony import */ var _active_toggle_active_sass__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./_active/toggle_active.sass */ \"./src/components/toggle/_active/toggle_active.sass\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nlet toggles = jquery__WEBPACK_IMPORTED_MODULE_0__(\".toggle .toggle__switch\");\r\n\r\nif (toggles.length){\r\n  toggles.click(toggleSwitching);\r\n}\r\n\r\nfunction toggleSwitching(){\r\n  jquery__WEBPACK_IMPORTED_MODULE_0__(this).parent().find(\".toggle .toggle__checkbox\").trigger('click');\r\n  jquery__WEBPACK_IMPORTED_MODULE_0__(this).parent().toggleClass(\"toggle_active\");\r\n}\n\n//# sourceURL=webpack://apartment_search/./src/components/toggle/toggle.js?");
 
 /***/ }),
 

@@ -1,8 +1,8 @@
 mixin toggle(checkboxName, checkboxValue, toggleText)
   label.toggle
-    include __checkbox/__checkbox.pug
+    include __checkbox/toggle__checkbox.pug
     +toggle__checkbox(checkboxName, checkboxValue)
-    include __switch/__switch.pug
-    include __text/__text.pug
+    include __switch/toggle__switch.pug
+    include __text/toggle__text.pug
     +toggle__text(toggleText)
     
