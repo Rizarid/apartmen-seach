@@ -1,3 +1,24 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(0329bf8fcbfdd06caa2491b2d6a094fd.woff) format('woff'),
+        url(cfaa6b8889aa2a3864bdf1bcc494f41c.ttf) format('truetype'),
+        url(f17a0d1f3694aec87ffb9d3923f39046.svg#Montserrat-Bold) format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(498c8cdbbcd5264ad13c3d49457a0e11.woff) format('woff'),
+        url(d4f770a49dfa69890fd4b7a3ffff3644.ttf) format('truetype'),
+        url(7d8cc4b94a7e8b433722da860a5f5d1f.svg#Montserrat-Regular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -348,14 +369,44 @@ template {
   display: none;
 }
 
+h1 {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 24px;
+  style: normal;
+  line-height: 29.26px;
+}
 
+h2 {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 19px;
+  style: normal;
+  line-height: 23.16px;
+}
+
+h3 {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 12px;
+  style: normal;
+  line-height: 14.63px;
+}
+
+body {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  style: normal;
+  line-height: 24px;
+}
 .button {
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 15px 20px;
+  padding: 15px 19px;
   border-radius: 22px;
   transition: 0.5s;
   cursor: pointer;
@@ -363,6 +414,7 @@ template {
   color: #fff;
   width: fit-content;
   text-decoration: none;
+  box-sizing: border-box;
 }
 .button:hover {
   opacity: 50%;
@@ -404,6 +456,9 @@ template {
   margin: 0;
   text-transform: uppercase;
   transition: 0.5s;
+  line-height: 15px;
+  font-family: "Montserrat";
+  font-weight: 700;
 }
 
 .button_transparent .button__text {
