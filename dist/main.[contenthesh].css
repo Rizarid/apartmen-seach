@@ -400,6 +400,12 @@ body {
   style: normal;
   line-height: 24px;
 }
+
+.conteiner {
+  width: 380px;
+  padding: 30px;
+  box-sizing: border-box;
+}
 .button {
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   display: flex;
@@ -524,4 +530,112 @@ body {
 .toggle_active .toggle__circle {
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   margin-left: 20px;
+}
+.textField {
+  width: 100%;
+  height: 44px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: Montserrat;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.25);
+  font-size: 13.7px;
+  line-height: 18px;
+  padding: 13px 15px;
+}
+.textField:hover, .textField:focus, .textField:focus-visible {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  color: #1f2041;
+  line-height: 24px;
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  font-family: Montserrat;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.25);
+  font-size: 13.7px;
+  line-height: 18px;
+}
+
+::-moz-placeholder {
+  font-family: Montserrat;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.25);
+  font-size: 13.7px;
+  line-height: 18px;
+}
+
+:-moz-placeholder {
+  font-family: Montserrat;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.25);
+  font-size: 13.7px;
+  line-height: 18px;
+}
+
+:-ms-input-placeholder {
+  font-family: Montserrat;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.25);
+  font-size: 13.7px;
+  line-height: 18px;
+}
+
+:focus::-webkit-input-placeholder {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75);
+  line-height: 24px;
+  border: none;
+}
+
+:focus::-moz-placeholder {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75);
+  line-height: 24px;
+  border: none;
+}
+
+:focus:-moz-placeholder {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75);
+  line-height: 24px;
+  border: none;
+}
+
+:focus:-ms-input-placeholder {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75);
+  line-height: 24px;
+  border: none;
+}
+
+:hover::-webkit-input-placeholder {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75);
+  line-height: 24px;
+  border: none;
+}
+
+:hover::-moz-placeholder {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75);
+  line-height: 24px;
+  border: none;
+}
+
+:hover:-moz-placeholder {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75);
+  line-height: 24px;
+  border: none;
+}
+
+:hover:-ms-input-placeholder {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75);
+  line-height: 24px;
+  border: none;
 }

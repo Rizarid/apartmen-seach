@@ -8,5 +8,6 @@ html(lang="ru")
     
 
   body
-    include components/toggle/toggle.pug
-    +toggle("toggleCheckbox", "on", "Получать спецпредложения") 
+    .conteiner
+      include components/textField/textField.pug
+      +textField("email", "Email") 
