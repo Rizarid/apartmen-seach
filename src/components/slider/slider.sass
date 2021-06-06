@@ -1,0 +1,48 @@
+.slider
+  width: 100%
+  height: auto
+
+  &__header
+    width: 100%
+    height: auto
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 20px
+
+  &__title
+    margin: 0
+    width: auto
+    text-transform: uppercase
+
+  &__values
+    font-family: Montserrat
+    font-size: 12px
+    line-height: 14.63px
+    font-weight: 400
+    margin: 0
+    width: auto
+
+  &__body
+      width: 100%
+      height: 6px
+      border: 1px solid rgba(31, 32, 65, 0.25)
+      box-sizing: border-box
+      border-radius: 3px
+      background: #FFFFFF
+
+.ui-slider-horizontal .ui-slider-range
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
+  border-radius: 3px
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active
+    width: 12px
+    height: 12px
+    border: 3px #fff solid
+    border-radius: 50%
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
+    top: -7px
+
+    &:focus-visible
+        outline: none
+        
