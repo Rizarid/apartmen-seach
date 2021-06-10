@@ -1,0 +1,4 @@
+mixin subscriptionField(fieldName = "Email", fieldPlaceholder = "Email")
+  form.subscriptionField(action="#", method = "post")
+    input.subscriptionField__field(name !=fieldName, type = "email", placeholder != fieldPlaceholder )
+    input.subscriptionField__button(type = "submit", value = "")       
