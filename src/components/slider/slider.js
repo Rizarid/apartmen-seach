@@ -1,6 +1,6 @@
 import * as $ from 'jquery'
-import './jquery-ui/jquery-ui'
-import './jquery-ui/jquery-ui.css'
+import '../../scripts/jquery-ui/jquery-ui'
+import '../../scripts/jquery-ui/jquery-ui.css'
 import './slider.sass'
 
 $(function(){

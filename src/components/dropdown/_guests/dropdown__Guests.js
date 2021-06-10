@@ -1,4 +1,6 @@
 import '../../../scripts/createElement.js'
+import '../DropdownClass.js'
+
 class Guests extends Dropdown{
 
     constructor(selector, elementName, listItems = [0, 0, 0]){
