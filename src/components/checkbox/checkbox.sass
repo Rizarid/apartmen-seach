@@ -1,0 +1,46 @@
+.checkbox
+  width: 20px
+  height: 20px
+  border: 1px solid rgba(31, 32, 65, 0.25)
+  border-radius: 2px
+  position: relative
+  box-sizing: border-box
+  flex: 0 0 auto
+
+  &:before
+    content: ""
+    width: 4px
+    height: 2px
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+    transform: rotate(45deg)
+    position: absolute
+    top: 8px
+    left: 4px
+    display: none
+
+  &:after
+    content: ""
+    width: 8px
+    height: 2px
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+    transform: rotate(-45deg)
+    position: absolute
+    top: 8px
+    left: 6px
+    display: none
+  
+  &.checked
+    border: 1px solid rgba(31, 32, 65)
+
+  &.checked:before, &.checked:after
+    display: block
+
+  &__checkbox
+    width: 0
+    height: 0
+    opacity: 0
+
+  &__checkbox:checked
+    outline: none
+
+

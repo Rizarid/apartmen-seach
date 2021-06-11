@@ -9,6 +9,7 @@ html(lang="ru")
 
   body
     .conteiner
-      include components/subscriptionField/subscriptionField.pug
-      +subscriptionField()
+      - var itemOptions = [{checkboxName: "breakfast", checkboxChecked: false, itemText: "Завтрак"}, {checkboxName: "writingDesk", checkboxChecked: true, itemText: "Письменный стол"}, {checkboxName: "feedingChair", checkboxChecked: true, itemText: "Стул для кормления"}, {checkboxName: "crib",  checkboxChecked: true, itemText: "Кроватка"}, {checkboxName: "TV", checkboxChecked: false, itemText: "Телевизор"}, {checkboxName: "shampoo", checkboxChecked: false, itemText: "Шампунь"},]
+      include components/expandableCheckboxList/expandableCheckboxList.pug
+      +expandableCheckboxList("expandable Checkbox List", itemOptions)
        

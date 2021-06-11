@@ -1,0 +1,5 @@
+mixin expandableCheckboxList__item(checkboxName, checkboxChecked, itemText)
+  include ../../checkbox/checkbox.pug
+  label.expandableCheckboxList__item
+        +checkbox(checkboxName, checkboxChecked)
+        span.expandableCheckboxList__labelText #{itemText}
