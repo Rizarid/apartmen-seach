@@ -1,0 +1,7 @@
+mixin checkboxButtons(titleText, itemOptions)
+  .checkboxButtons
+    h3.checkboxButtons__title #{titleText}
+    .checkboxButtons__listItems 
+      include ../expandableCheckboxList/__item/expandableCheckboxList__item.pug
+      each item in itemOptions
+        +expandableCheckboxList__item(item.checkboxName, item.checkboxChecked, item.itemText)
