@@ -1,2 +1,3 @@
-mixin textField(name, placeholder)
-  input.textField(type="text", name != name, placeholder != placeholder)
+mixin textField(titleText, fieldName, placeholder)
+  h3.textField__title #{titleText}
+  input.textField__field(type="text", name != fieldName, placeholder != placeholder)
