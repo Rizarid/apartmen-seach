@@ -1,0 +1,14 @@
+mixin review(userPhoto, userName, publicationDate, reviewText, quantityLiks, liked)
+  include ../likeButton/likeButton.pug
+  .review
+    .review__userBlok 
+      img.review__userPhoto(src != userPhoto, alt = "user photo")
+      .review__userNameConteiner 
+        p.review__userName #{userName}
+        p.review__publicationDate #{publicationDate}
+    
+    .review__messageBlok
+      .review__likeButtonConteiner
+        +likeButton(quantityLiks, liked)
+      .review__textConteiner 
+        p.review__text #{reviewText}
