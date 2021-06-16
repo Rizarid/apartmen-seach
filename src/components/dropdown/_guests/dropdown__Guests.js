@@ -1,16 +1,15 @@
-import '../../../scripts/createElement.js'
-import '../DropdownClass.js'
+import '../../../scripts/createElem.js';
+import {DropdownClass} from '../DropdownClass.js';
 
-class Guests extends Dropdown{
+class Guests extends DropdownClass{
 
-    constructor(selector, elementName, listItems = [0, 0, 0]){
+    constructor(selector, titleText, elementName, listItems = [0, 0, 0]){
   
       if (Array.isArray(listItems)) listItems = {"взрослые": listItems[0], "дети": listItems[1], 
       "младенцы": listItems[2]};
       else listItems = listItems;
-      console.log(listItems)
   
-      super(selector, elementName, listItems);
+      super(selector, titleText, elementName, listItems);
   
       this.cleanText = createElement("p", "button__text");
       this.cleanText.innerHTML = "очистить";
@@ -77,6 +76,8 @@ class Guests extends Dropdown{
         values.push(this.listItems[item].getItemValue())
       }
       let value = values.reduce((sum, curent) => sum + curent, 0);
+      if (!value & !childrenQuantity) return "Сколько гостей";
+      if (!value) return "Не корректные параметры ввода";
       let result = (childrenQuantity === 0) ? 
       `${value} ${this.getDeclineGuest(value)}` : 
       `${value} ${this.getDeclineGuest(value)}, ${childrenQuantity} ${this.getDeclineBabies(childrenQuantity)}`;
@@ -84,3 +85,5 @@ class Guests extends Dropdown{
       return result;
     }
   }
+
+  export {Guests}

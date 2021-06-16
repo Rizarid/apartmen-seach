@@ -7,13 +7,12 @@ import './__itemValue/dropdown__itemValue.sass'
 import './__field/dropdown__field.sass'
 import './__list/dropdown__list.sass'
 import './__controlPanel/dropdown__controlPanel.sass'
-import '../../scripts/createElement.js'
-import './DropdownClass.js'
-import './_guests/dropdown__Guests.js'
+import '../../scripts/createElem.js'
+import {DropdownClass} from './DropdownClass.js'
+import {Guests} from './_guests/dropdown__Guests.js'
 
 function getAmenitiesDropdown(selector, elementName, initQuantity = [2, 2, 0]){
-  return new Dropdown(selector, elementName, {"спальни": initQuantity[0], "кровати": initQuantity[1],
+  return new DropdownClass(selector, elementName, {"спальни": initQuantity[0], "кровати": initQuantity[1],
    "ванные комнаты": initQuantity[2]})
 }
-
-let dropdown = new Guests(".dropdown", "dropdown");
+ export {getAmenitiesDropdown}

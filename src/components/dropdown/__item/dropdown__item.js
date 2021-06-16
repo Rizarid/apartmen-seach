@@ -1,4 +1,4 @@
-import '../../../scripts/createElement.js'
+import '../../../scripts/createElem.js'
 function DropdownItem(title, quantity){
     this.quantity = quantity;
     
@@ -60,3 +60,5 @@ function DropdownItem(title, quantity){
     }
 
 }
+
+export {DropdownItem}

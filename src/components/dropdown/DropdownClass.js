@@ -1,9 +1,15 @@
-import './__item/dropdown__item.js'
-import '../../scripts/createElement.js'
+import {DropdownItem} from './__item/dropdown__item.js'
+import '../../scripts/createElem.js'
 
-class Dropdown{
-    constructor(selector, elementName, listItems){
+class DropdownClass{
+    constructor(selector, titleText, elementName, listItems){
+
       this.dropdown = document.querySelector(selector);
+      this.dropdown.classList.add("dropdown")
+
+      this.title = createElement("h3", "dropdown__title");
+      this.title.innerHTML = titleText;
+
   
       this.field = createElement("input", "dropdown__field");
       this.field.type = "text";
@@ -24,7 +30,8 @@ class Dropdown{
       this.field.value = this.getDropdownValue();
       
       this.dropdown.addEventListener("mouseleave", this.enter);
-  
+      
+      this.dropdown.appendChild(this.title);
       this.dropdown.appendChild(this.field);
       this.dropdown.appendChild(this.listItemsHTML);
     }
@@ -42,6 +49,7 @@ class Dropdown{
     enter = () => {
       console.log(123);
       this.field.value = this.getDropdownValue();
-    }
-      
-  }
+    }   
+}
+
+export {DropdownClass}
