@@ -5,5 +5,5 @@ mixin button(text, isSubmit = false, link='', ...classes)
     input(type = "submit", value = text, class != classValue)
   else
     a(class != classValue, href != link) 
-      include __text/__text.pug 
+      include __text/button__text.pug 
       +button__text(text) 
