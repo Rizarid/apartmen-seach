@@ -4,8 +4,8 @@ import '../datepicker/datepicker.js';
 import '../../scripts/jquery-ui/jquery-ui.css';
 import '../datepicker/datepicker.sass';
 import '../../scripts/datepickeRrussification.js';
-import '../../scripts/createElem'
-import './dateDropdown.sass'
+import '../../scripts/createElem.js';
+import './dateDropdown.sass';
 
 
 class DateDropdown{
@@ -13,6 +13,7 @@ class DateDropdown{
     console.log(initDate);
 
     this.dateDropdown = document.querySelector(selector);
+    this.dateDropdown.classList.add("dateDropdown")
 
     this.dateTitleComing = createElement("h3", "dateDropdown__title dateDropdown__title_left");
     this.dateTitleComing.innerHTML = titles[0];
@@ -114,4 +115,5 @@ class DateDropdown{
   }
 }
 
-let dateDropdown = new DateDropdown(".dateDropdown", ["прибытие", "выезд"], ["dateComing, dateLeave"], '15.06.2021', '19.06.2021');
+export {DateDropdown}
+
