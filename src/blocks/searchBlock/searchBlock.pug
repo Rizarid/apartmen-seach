@@ -1,0 +1,16 @@
+include ../../components/dateDropdown/dateDropdown.pug 
+include ../../components/dropdown/dropdown.pug 
+include ../../components/button/button.pug 
+
+form.searchBlock
+  .searchBlock__titleConteiner 
+    h1.searchBlock__title Найдём номера под ваши пожелания
+
+  .searchBlock__dateConteiner 
+    +dateDropdown("dateSelection")
+
+  .searchBlock__guestsQuantityConteiner 
+    +dropdown("guestsQuantity")
+
+  .searchBlock__buttonConteiner
+    +button("подобрать номер", true, '', "button", "button_big")
