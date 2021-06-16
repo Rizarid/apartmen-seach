@@ -1,0 +1,19 @@
+include ../../components/textField/textField.pug 
+include ../../components/button/button.pug 
+
+form.signInBlock
+  .signInBlock__titleConteiner 
+    h1.signInBlock__title Войти
+
+  .signInBlock__emailConteiner
+    +textField('', "email", "email", "Email")
+
+  .signInBlock__passwordConteiner
+    +textField('', "password", "password", "Пароль")
+
+  .signInBlock__submitConteiner
+    +button("войти", true, '', "button", "button_big")
+
+  .signInBlock__signInConteiner
+    p.signInBlock__signInLabel Нет аккаунта на Toxin
+    +button("создать", false, 'registration.html', "button", "button_transparent")
