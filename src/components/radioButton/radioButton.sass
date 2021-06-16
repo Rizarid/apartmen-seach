@@ -1,16 +1,18 @@
 .radioButton
   width: 100%
   display: flex
-  justify-content: space-between
+  justify-content: flex-start
   align-items: center
   flex-wrap: wrap
   box-sizing: border-box
 
   &__item
-    width: 50%
     display: flex
     box-sizing: border-box
     align-items: center
+
+  &__item~&__item
+    margin-left: 20px
     
   &__inputButtonConteiner
     border: 1px solid rgba(31, 32, 65, 0.25)
