@@ -94,7 +94,7 @@ class DateDropdown{
     this.enterButton.appendChild(this.enterText);
     this.enterButton.addEventListener("click", this.enter)
   
-    this.controlPanel = createElement("div", "dateDropdownb__controlPanel");
+    this.controlPanel = createElement("div", "dateDropdown__controlPanel");
     this.controlPanel.appendChild(this.cleanButton);
     this.controlPanel.appendChild(this.enterButton);
   
