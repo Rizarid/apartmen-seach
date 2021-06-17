@@ -58,7 +58,7 @@ class Booking{
       }
   
       this.setBasicPriceCalculate = (price, days) => {
-        this.basicPriceCalculate.html(`${this.numberMargins(price)}&#8381 x ${days}`);
+        this.basicPriceCalculate.html(`${this.numberMargins(price)}&#8381 x ${days} суток`);
       }
   
       this.setBasicPriceResult = (price) => {
