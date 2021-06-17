@@ -9,11 +9,15 @@ import './dateDropdown.sass';
 
 
 class DateDropdown{
-  constructor(selector, titles = ["прибытие", "выезд"], names = ["dateComing, dateLeave"], ...initDate){
-    console.log(initDate);
+  constructor(selector, titles = ["прибытие", "выезд"], names = ["dateComing, dateLeave"], selectFunc, ...initDate){
+
+    this.dateStart;
+    this.dateEnd;
+
+    this.onSelected = selectFunc
 
     this.dateDropdown = document.querySelector(selector);
-    this.dateDropdown.classList.add("dateDropdown")
+    this.dateDropdown.classList.add("dateDropdown");
 
     this.dateTitleComing = createElement("h3", "dateDropdown__title dateDropdown__title_left");
     this.dateTitleComing.innerHTML = titles[0];
@@ -47,22 +51,31 @@ class DateDropdown{
 
     this.datepickerConteiner = createElement("div", "dateDropdown__datepickerConteiner");
     
+    let onSelected = this.onSelected;
+    let dateStart = this.dateStart;
+    let dateEnd = this.dateEnd;
     let dateFieldComing = this.dateFieldComing;
     let dateFieldLeave= this.dateFieldLeave;
+
     $(this.datepickerConteiner).datepicker({
-      range: 'period', // режим - выбор периода
+      range: 'period',
       showOtherMonths: 1,
       selectOtherMonths: true,
       onSelect: function(dateText, inst, extensionRange) {
-    	  // extensionRange - объект расширения
         dateFieldComing.value = extensionRange.startDateText;
         dateFieldLeave.value = extensionRange.endDateText;
+        dateStart = extensionRange.startDate;
+        dateEnd = extensionRange.endDate;
+        onSelected();
       }
     });
     
     this.datapicker = $(this.datepickerConteiner).datepicker('widget').data('datepickerExtensionRange');
 
-    if (initDate.length) this.setDate(initDate[0], initDate[1]);
+    if (initDate.length) {
+      this.setDate(initDate[0], initDate[1]);
+
+    }
     
 
     
@@ -108,11 +121,18 @@ class DateDropdown{
   }
 
   setDate = (dateComing, dateLeave) => {
-    console.log(dateComing)
     $(this.datepickerConteiner).datepicker("setDate", [dateComing, dateLeave]);
     this.dateFieldComing.value = this.datapicker.startDateText;
     this.dateFieldLeave.value = this.datapicker.endDateText;
+    this.dateStart = this.datapicker.startDate;
+    this.dateEnd = this.datapicker.endDate;
   }
+  
+  getNumberOfDays = () => {
+    console.log(this.dateEnd)
+    return (this.datapicker.endDate - this.datapicker.startDate) / 86400000
+  }
+
 }
 
 export {DateDropdown}
