@@ -1,0 +1,46 @@
+include ../../components/dateDropdown/dateDropdown.pug 
+include ../../components/dropdown/dropdown.pug 
+include ../../components/button/button.pug 
+
+form.bookingBlock
+  .bookingBlock__header 
+    p.bookingBlock__roomTitle 
+      span №
+      span.bookingBlock__roomNumber 888
+      span.bookingBlock__tag люкс
+
+    p.bookingBlock__roomPrice
+      span.bookingBlock__price
+      span.bookingBlock__period в сутки
+
+  .bookingBlock__dateSelectConteiner 
+    +dateDropdown("dateSelect")
+
+  .bookingBlock__guestsQuantityConteiner 
+    +dropdown("guestsQuantity")
+
+  .bookingBlock__calculation 
+    .bookingBlock__basicPriceConteiner 
+      p.bookingBlock__basicPriceCalculate
+      p.bookingBlock__basicPriceResult 
+
+    .bookingBlock__servicesConteiner
+      p.bookingBlock__services
+        span.bookingBlock__servicesText Сбор за услуги: скидка
+        span.bookingBlock__servicesPrices 
+      span.bookingBlock__information
+      p.bookingBlock__servicesTotal 
+
+    .bookingBlock__additionalServicesConteiner
+      p.bookingBlock__additionalServicesTitle Сбор за дополнительные услуги
+      span.bookingBlock__information
+      p.bookingBlock__additionalServicesTotal 
+
+  .bookingBlock__totalPriceConteiner 
+    p.bookingBlock__totalPriceText Итого
+    p.bookingBlock__dotsConteiner
+    p.bookingBlock__totalPriceValue 
+
+  .bookingBlock__submitConteiner 
+    +button("забронировать", true, '', "button", "button_big")
+  
