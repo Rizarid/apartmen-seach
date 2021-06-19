@@ -1,0 +1,26 @@
+include ../../components/imageSlider/imageSlider.pug 
+include ../../components/rateButton/rateButton.pug 
+
+mixin roomCardBlock(sliderItems, roomNumber, isLux, price, stars, reviewsQuantity)
+  .roomCardBlock
+    +imageSlider(sliderItems)
+    .roomCardBlock__roomInformation 
+      .roomCardBlock__header 
+        p.roomCardBlock__roomTitle 
+          span №
+          span.roomCardBlock__roomNumber #{roomNumber}
+          if isLux
+            span.roomCardBlock__tag люкс
+
+        p.roomCardBlock__roomPrice
+          span.roomCardBlock__price #{price}
+          span.roomCardBlock__period в сутки
+
+      .roomCardBlock__feedback
+        +rateButton(stars)
+    
+        p.roomCardBlock__reviews 
+          span.roomCardBlock__reviewsQuantity #{reviewsQuantity}
+          span.roomCardBlock__reviewsText Отзывов
+
+    
