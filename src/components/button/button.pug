@@ -1,9 +1,21 @@
-mixin button(text, isSubmit = false, link='', ...classes)
-  - if (isSubmit) classes.push("button_submit")
-  - var classValue = classes.join(' ')
+mixin button(options)
+
+  -
+    const classDefault = "button"
+    const modificator = options.modificator || undefined 
+    const href = options.href || "" 
+    const isSubmit = options.isSubmit || false
+    const text = options.text || "Click me"
+    
+    let classes = classDefault
+
+    if (modificator !== undefined){
+      classes = `${classDefault} ${classDefault}_${modificator}`
+    }
+    
   if isSubmit 
-    input(type = "submit", value = text, class != classValue)
+    button(type = "submit", class != classes) #{text}
   else
-    a(class != classValue, href != link) 
-      include __text/button__text.pug 
-      +button__text(text) 
+    a(class != classes, href != href)   
+      p.button__text #{text}
+      

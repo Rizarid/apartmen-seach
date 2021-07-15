@@ -1,10 +1,12 @@
+@import "../../styles/variables.sass"
+  
 .button
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+  +gradient
   display: flex
   justify-content: center
   align-items: center
   text-align: center
-  padding: 15px 19px
+  padding: 14.5px 19.3px
   border-radius: 22px
   transition: 0.5s
   cursor: pointer
@@ -13,7 +15,97 @@
   width: fit-content
   text-decoration: none
   box-sizing: border-box
+  max-height: 100%
+  font-weight: $bold
+  text-transform: uppercase
+  border: none
   
-
   &:hover
     opacity: 50%
+
+  & .button__text
+    font-size: 12px
+    color: #fff
+    margin: 0
+    text-transform: uppercase
+    transition: 0.5s
+    line-height: 15px
+    font-family: $main-font
+    font-weight: $bold
+
+  &.button_transparent
+    +gradient
+    position: relative
+    padding: 14.5px 19.25px
+    
+    &:before
+      content: ""
+      position: absolute
+      width: calc(100% - 4px)
+      height: calc(100% - 4px) 
+      border-radius: 22px
+      background-color: #fff
+      z-index: 0
+  
+    .button__text
+      color: $purple
+      z-index: 1
+
+  &.button_min-transparent
+    +gradient
+    position: relative
+    padding: 9.5px 20.3px
+    
+    &:before
+      content: ""
+      position: absolute
+      width: calc(100% - 4px)
+      height: calc(100% - 4px) 
+      border-radius: 22px
+      background-color: #fff
+      z-index: 0
+      
+  
+    .button__text
+      color: $purple
+      z-index: 1
+
+  &.button_minimal
+    padding: 0
+    background: none  
+
+    .button__text
+      color: $purple
+
+      &:hover
+        color: $dark-shade-50
+
+  &.button_big
+    +gradient
+    max-width: 320px
+    width: 100%
+    box-sizing: border-box
+    white-space: normal
+    padding: 15.5px 35px
+    position: relative
+    
+    &:hover
+      opacity: 1
+
+    &::before
+      content: "arrow_forward"
+      font-family: 'Material Icons'
+      text-transform: none
+      font-size: 24px
+      color: #fff
+      position: absolute
+      height: 100%
+      width: 100%
+      padding-right: 10px
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      font-weight: $normal
+      box-sizing: border-box
+
+  
