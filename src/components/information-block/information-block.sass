@@ -1,0 +1,50 @@
+@import "../../styles/variables.sass"
+  
+.information-block
+  width: 100%
+  box-sizing: border-box
+
+  &__title
+    margin: 0
+
+    @media screen and ( max-width: 650px )
+      text-align: center
+
+  &__list
+    width: max-content
+    padding-left: 3px
+
+    & .information-block__item
+      width: 100%
+      box-sizing: border-box
+      display: flex
+      border-bottom: 1px solid $dark-shade-10
+      padding: 24px 24px 24px 0
+      align-items: center
+
+      & .information-block__block-image
+        width: 40px
+        height: 40px
+        flex: 0 0 auto
+
+      & .information-block__text-conteiner
+        flex: 1 1 auto
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        padding-left: 14px
+        height: 40px
+
+        & .information-block__item-title
+          font-weight: $bold
+          font-size: 14px
+          line-height: 15px
+          color: $dark-shade-75
+          margin: 0
+    
+        & .information-block__text
+          font-weight: $normal
+          font-size: 13.8px
+          line-height: 15px
+          color: $dark-shade-75
+          margin: 0

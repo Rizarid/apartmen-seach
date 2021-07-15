@@ -1,0 +1,17 @@
+mixin informationBlock(options)
+  -
+    const title = options.title || ""
+    const itemOptions = options.itemOptions || []
+    
+  .information-block
+    h2.information-block__title #{title}
+    .information-block__list
+      if itemOptions.length
+        each item in itemOptions
+          .information-block__item
+            img.information-block__block-image(src != item.img, alt != item.alt)
+            .information-block__text-conteiner 
+              p.information-block__item-title #{item.title}
+              p.information-block__text #{item.text}
+            
+      
