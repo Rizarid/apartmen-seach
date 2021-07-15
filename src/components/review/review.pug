@@ -1,0 +1,23 @@
+include ../like-button/like-button.pug
+
+mixin review(options)
+  -
+    const photo = options.photo || ""
+    const name = options.name || ""
+    const publicationDate = options.publicationDate || ""
+    const text = options.text || ""
+    const quantityLikes = options.quantityLikes || 0
+    const liked = options.liked || false 
+ 
+  .review
+    .review__user 
+      img.review__photo(src != photo, alt = "user photo")
+      .review__name-conteiner 
+        p.review__name #{name}
+        p.review__publication-date #{publicationDate}
+    
+    .review__message
+      .review__like-button-conteiner
+        +likeButton({quantity: quantityLikes, liked: liked})
+      .review__text-conteiner 
+        p.review__text #{text}
