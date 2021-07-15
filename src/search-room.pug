@@ -1,0 +1,163 @@
+include blocks/header/header.pug 
+include blocks/room-card-block/room-card-block.pug 
+include blocks/footer/footer.pug
+include components/dropdown/dropdown.pug 
+include components/slider/slider.pug 
+include components/checkbox-buttons/checkbox-buttons.pug 
+include components/rich-checkbox-buttons/rich-checkbox-buttons.pug 
+include components/expandable-checkbox-list/expandable-checkbox-list.pug 
+include components/pagination/pagination.pug 
+include components/filter-date-dropdown/filter-date-dropdown.pug
+
+
+-
+  const roomsOptions = [
+    {
+      slides: [{src: "src/components/image-slider/img/01.jpg", alt: "123"}, {src: "src/components/image-slider/img/02.jpg", alt: "321"}, {src: "src/components/image-slider/img/03.jpg", alt: "321"}, {src: "src/components/image-slider/img/04.jpg", alt: "321"}],
+      roomNumber: 888, 
+      isLux: true,
+      price: 9990,
+      stars: 5,
+      reviewsQuantity: 145
+    },
+    {
+      slides: [{src: "src/components/image-slider/img/02.jpg", alt: "123"}, {src: "src/components/image-slider/img/04.jpg", alt: "321"}, {src: "src/components/image-slider/img/01.jpg", alt: "321"}, {src: "src/components/image-slider/img/08.jpg", alt: "321"}],
+      roomNumber: 840, 
+      isLux: false,
+      price: 9900,
+      stars: 4,
+      reviewsQuantity: 65
+    },
+    {
+      slides: [{src: "src/components/image-slider/img/04.jpg", alt: "123"}, {src: "src/components/image-slider/img/09.jpg", alt: "321"}, {src: "src/components/image-slider/img/07.jpg", alt: "321"}, {src: "src/components/image-slider/img/12.jpg", alt: "321"}],
+      roomNumber: 980, 
+      isLux: true,
+      price: 8500,
+      stars: 3,
+      reviewsQuantity: 35
+    },
+    {
+      slides: [{src: "src/components/image-slider/img/03.jpg", alt: "123"}, {src: "src/components/image-slider/img/01.jpg", alt: "321"}, {src: "src/components/image-slider/img/06.jpg", alt: "321"}, {src: "src/components/image-slider/img/11.jpg", alt: "321"}],
+      roomNumber: 856, 
+      isLux: false,
+      price: 7300,
+      stars: 5,
+      reviewsQuantity: 19
+    },
+    {
+      slides: [{src: "src/components/image-slider/img/05.jpg", alt: "123"}, {src: "src/components/image-slider/img/09.jpg", alt: "321"}, {src: "src/components/image-slider/img/03.jpg", alt: "321"}, {src: "src/components/image-slider/img/01.jpg", alt: "321"}],
+      roomNumber: 740, 
+      isLux: false,
+      price: 6000,
+      stars: 4,
+      reviewsQuantity: 44
+    },
+    {
+      slides: [{src: "src/components/image-slider/img/06.jpg", alt: "123"}, {src: "src/components/image-slider/img/05.jpg", alt: "321"}, {src: "src/components/image-slider/img/11.jpg", alt: "321"}, {src: "src/components/image-slider/img/02.jpg", alt: "321"}],
+      roomNumber: 982, 
+      isLux: false,
+      price: 5800,
+      stars: 3,
+      reviewsQuantity: 56
+    },
+    {
+      slides: [{src: "src/components/image-slider/img/07.jpg", alt: "123"}, {src: "src/components/image-slider/img/01.jpg", alt: "321"}, {src: "src/components/image-slider/img/04.jpg", alt: "321"}, {src: "src/components/image-slider/img/06.jpg", alt: "321"}],
+      roomNumber: 678, 
+      isLux: false,
+      price: 5500,
+      stars: 5,
+      reviewsQuantity: 45
+    },
+    {
+      slides: [{src: "src/components/image-slider/img/08.jpg", alt: "123"}, {src: "src/components/image-slider/img/09.jpg", alt: "321"}, {src: "src/components/image-slider/img/05.jpg", alt: "321"}, {src: "src/components/image-slider/img/12.jpg", alt: "321"}],
+      roomNumber: 450, 
+      isLux: false,
+      price: 5300,
+      stars: 4,
+      reviewsQuantity: 39
+    },
+    {
+      slides: [{src: "src/components/image-slider/img/09.jpg", alt: "123"}, {src: "src/components/image-slider/img/07.jpg", alt: "321"}, {src: "src/components/image-slider/img/04.jpg", alt: "321"}, {src: "src/components/image-slider/img/08.jpg", alt: "321"}],
+      roomNumber: 350, 
+      isLux: false,
+      price: 5000,
+      stars: 3,
+      reviewsQuantity: 77
+    },
+    {
+      slides: [{src: "src/components/image-slider/img/10.jpg", alt: "123"}, {src: "src/components/image-slider/img/03.jpg", alt: "321"}, {src: "src/components/image-slider/img/05.jpg", alt: "321"}, {src: "src/components/image-slider/img/07.jpg", alt: "321"}],
+      roomNumber: 666, 
+      isLux: false,
+      price: 5000,
+      stars: 5,
+      reviewsQuantity: 25
+    },
+    {
+      slides: [{src: "src/components/image-slider/img/11.jpg", alt: "123"}, {src: "src/components/image-slider/img/10.jpg", alt: "321"}, {src: "src/components/image-slider/img/04.jpg", alt: "321"}, {src: "src/components/image-slider/img/08.jpg", alt: "321"}],
+      roomNumber: 444, 
+      isLux: false,
+      price: 5000,
+      stars: 3,
+      reviewsQuantity: 15
+    },
+    {
+      slides: [{src: "src/components/image-slider/img/12.jpg", alt: "123"}, {src: "src/components/image-slider/img/02.jpg", alt: "321"}, {src: "src/components/image-slider/img/03.jpg", alt: "321"}, {src: "src/components/image-slider/img/04.jpg", alt: "321"}],
+      roomNumber: 352, 
+      isLux: false,
+      price: 5000,
+      stars: 3,
+      reviewsQuantity: 55
+    },
+  ] 
+
+
+
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description", content="Номера, которые мы для вас подобрали")
+    meta(name="keywords", content="номер, отель, номер в отеле, поис номеров, гостиница")
+
+    title Номера, которые мы для вас подобрали 
+
+  body
+
+    +header(false, '')
+    
+    main.main 
+
+      .main__conteiner 
+
+        aside.filters
+          .filters__show-button 
+          article.filters__date.js-filters__date
+            +filterDateDropdown({className: "date-filter", title: "даты пребывания в отеле", name: "dateFilter"})
+          article.filters__guests
+            +dropdown({className: "guests-quantity", title: "гости"})
+          article.filters__price 
+            +slider({title: "диапазон цены", selector: "price-filter"})
+            p.filters__price-text Стоимость за сутки пребывания в номере
+          article.filters__rules
+            +checkboxButtons({title: "правила дома", items: [{name: "smoke", text: "Можно курить"}, {name: "pets", checked: true, text: "Можно с питомцами"}, {name: "guests", checked: true, text: "Можно пригласить гостей (до 10 человек)"}]})
+          article.filters__availability
+            +richCheckboxButtons({title: "доступность", itemOptions: [{name: "corridorWidth", checked: false, title: "Широкий коридор", text: "Ширина коридоров в номере не мение 91 см."}, {name: "halperForinvalids", checked: false, title: "Помощник для инвалидов", text: "На 1 этаже вас встретит специалист и проводит до номера"}]})
+          article.filters__convenience
+            +dropdown({className: "convenience-filter", title: "удобства номера" , name:"convenience"})
+          article.filters__additional-amenities
+            +expandableCheckboxList({title: "дополнительные удобства", itemOptions: [{checkboxName: "breakfast", checkboxChecked: false, itemText: "Завтрак"}, {checkboxName: "desk", checkboxChecked: true, itemText: "Письменный стол"}, {checkboxName: "feedingChair", checkboxChecked: true, itemText: "Стул для кормления"}, {checkboxName: "ded", checkboxChecked: true, itemText: "Кроватка"}, {checkboxName: "tv", checkboxChecked: false, itemText: "Телевизор"}, {checkboxName: "Shampoo", checkboxChecked: false, itemText: "Шампунь"}]})
+        section.search-results 
+          h1.search-results__title Номера, которые мы для вас подобрали
+          
+          .search-results__list
+            
+            each item in roomsOptions
+              article.search-results__item
+                +roomCardBlock(item)
+
+            .search-results__pagination
+              +pagination(15, "1 – 12 из 100+ вариантов аренды")
+
+    +footer
