@@ -1,0 +1,86 @@
+@import "../../styles/variables.sass"
+  
+.filter-date-dropdown
+  width: 100%
+  height: fit-content
+  position: relative
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+
+  &__container
+    width: 100%
+    position: relative
+
+    &::after
+      content: "expand_more"
+      font-family: 'Material Icons'
+      text-transform: none
+      font-size: 24px
+      color: $dark-shade-50
+      position: absolute
+      right: 10px
+      bottom: 10px
+      cursor: pointer
+      z-index: 1
+
+    & .filter-date-dropdown__title
+      text-transform: uppercase
+      margin: 0 0 5.5px 0
+
+    & .filter-date-dropdown__field
+      width: 100%
+      height: 44px
+      border: 1px solid $dark-shade-25
+      background-color: transparent
+      box-sizing: border-box
+      border-radius: 5px
+      font-size: 14px
+      font-weight: $normal
+      line-height: 24px
+      color: $dark-shade-75
+      padding: 15px 13px
+      position: relative
+      z-index: 2
+      cursor: pointer
+
+
+      &::placeholder
+        color: $dark-shade-75
+        font-size: 14px
+        line-height: 18px
+
+      &:focus
+        outline: none
+        border: 1px solid $dark-shade-50
+
+      &:hover &__field
+        border: 1px solid $dark-shade-50
+
+  &__datepicker-container
+    max-width: 320px
+    box-sizing: border-box
+    position: absolute
+    height: 0
+    overflow: hidden
+    display: flex
+    flex: 1 1 auto
+    flex-wrap: wrap
+    padding: 0
+    z-index: 50
+    top: 70px
+    background-color: #fff
+    overflow: hidden
+
+    &_visible
+      height: auto
+      border: 1px solid $dark-shade-50
+      border-top: none
+      border-radius: 5px
+
+    & .filter-date-dropdown__control-panel
+      display: flex
+      justify-content: space-between
+      align-items: center
+      flex: 1 1 auto
+      padding: 0 20px 20px 20px
