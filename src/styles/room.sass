@@ -1,0 +1,49 @@
+@import "~normalize.css"
+@import "../styles/variables.sass"
+@import "../fonts/fonts.css"
+
++start-page-stiles
+
+.main
+  width: 100%
+  box-sizing: border-box
+  padding-bottom: 59px
+  border-bottom: 1px solid rgb(31 32 65 / 10%)
+  
+
+  &__conteiner
+    max-width: 1200px
+    width: 100%
+    padding: 0 20px
+    margin: 0 auto 
+    box-sizing: border-box
+    display: flex
+    justify-content: space-between
+    
+    @media screen and ( max-width: 1050px )
+      flex-direction: column
+      align-items: center
+        
+    
+
+    & .main__room-information-conteiner
+      max-width: 712px
+      flex: 1 1 auto
+      width: 100%
+      padding-top: 71px
+      margin-right: 10px
+      flex: 1 1 auto
+
+      @media screen and ( max-width: 1050px )
+        margin-right: 10px
+
+      @media screen and ( max-width: 650px )
+        padding-top: 50px
+
+    & .main__booking-conteiner
+      padding-top: 69px
+      flex: 0 0 auto
+
+      @media screen and ( max-width: 650px )
+        margin: 0 -20px
+    
