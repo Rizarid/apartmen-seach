@@ -7,6 +7,7 @@ const TerserWebpackPlugin = require('terser-webpack-plugin')
 const { Template } = require('webpack');
 const autoprefixer = require('autoprefixer')
 
+
 const isDev = process.env.NODE_ENV === "development";
 const isProd = !isDev;
 
@@ -30,7 +31,16 @@ const optimization = () => {
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.js',
+    entry: {
+        main: './src/index.js',
+        searchRoom: './src/search-room.js',
+        room: './src/room.js',
+        signIn: './src/sign-in.js',
+        registration: './src/registration.js',
+        elements: "./src/elements.js",
+        cards: "./src/cards.js",
+        headers: "./src/headers.js"
+    },
     
     output: {
         filename: '[name].[contenthash].js',
@@ -47,6 +57,70 @@ module.exports = {
         new HTMLWebpackPlugin({
             template: 'src/index.pug',
             inject: 'body',
+            chunks: ['main'],
+            minify: {
+                collapseWhitespace: isProd
+            }
+        }),
+        new HTMLWebpackPlugin({
+            template: 'src/search-room.pug',
+            inject: 'body',
+            filename: 'search-room.html',
+            chunks: ['searchRoom'],
+            minify: {
+                collapseWhitespace: isProd
+            }
+        }),
+        new HTMLWebpackPlugin({
+            template: 'src/room.pug',
+            inject: 'body',
+            filename: 'room.html',
+            chunks: ['room'],
+            minify: {
+                collapseWhitespace: isProd
+            }
+        }),
+        new HTMLWebpackPlugin({
+            template: 'src/sign-in.pug',
+            inject: 'body',
+            filename: 'sign-in.html',
+            chunks: ['signIn'],
+            minify: {
+                collapseWhitespace: isProd
+            }
+        }),
+        new HTMLWebpackPlugin({
+            template: 'src/registration.pug',
+            inject: 'body',
+            filename: 'registration.html',
+            chunks: ['registration'],
+            minify: {
+                collapseWhitespace: isProd
+            }
+        }),
+        new HTMLWebpackPlugin({
+            template: 'src/elements.pug',
+            inject: 'body',
+            filename: 'elements.html',
+            chunks: ['elements'],
+            minify: {
+                collapseWhitespace: isProd
+            }
+        }),
+        new HTMLWebpackPlugin({
+            template: 'src/cards.pug',
+            inject: 'body',
+            filename: 'cards.html',
+            chunks: ['cards'],
+            minify: {
+                collapseWhitespace: isProd
+            }
+        }),
+        new HTMLWebpackPlugin({
+            template: 'src/headers.pug',
+            inject: 'body',
+            filename: 'headers.html',
+            chunks: ['headers'],
             minify: {
                 collapseWhitespace: isProd
             }
@@ -85,7 +159,8 @@ module.exports = {
                 test:  /\.(ttf|woff|svg)/,
                 use: 'file-loader'
             }
-        ]
+        ],
+        
     }
 
     
