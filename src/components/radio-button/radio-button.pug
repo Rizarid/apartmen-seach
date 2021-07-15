@@ -1,0 +1,15 @@
+mixin radioButton(itemName, items)
+  .radio-button
+    each item in items
+      if item.checked 
+        label.radio-button__item.radio-button__item_checked.js-radio-button__item
+          span.radio-button__input-button-conteiner
+            input.radio-button__item-button(type = "radio", name != itemName, value != item.value, checked != item.checked)
+          span.radio-button__item-text #{item.text}
+      else 
+        label.radio-button__item.js-radio-button__item
+          span.radio-button__input-button-conteiner
+            input.radio-button__item-button(type = "radio", name != itemName, value != item.value, checked != item.checked)
+          span.radio-button__item-text #{item.text}
+
+        
