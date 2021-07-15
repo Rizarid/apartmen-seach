@@ -1,18 +1,17 @@
-import * as $ from 'jquery'
-import './toggle.sass';
-import './__checkbox/toggle__checkbox.sass';
-import './__switch/toggle__switch.sass';
-import './__circle/toggle__circle.sass';
-import './__text/toggle__text.sass';
-import './_active/toggle_active.sass';
+import * as $ from "jquery";
 
-let toggles = $(".toggle .toggle__switch");
+import "./toggle.sass";
 
-if (toggles.length){
-  toggles.click(toggleSwitching);
-}
+{
+  const $toggles = $(".js-toggle");
 
-function toggleSwitching(){
-  $(this).parent().find(".toggle .toggle__checkbox").trigger('click');
-  $(this).parent().toggleClass("toggle_active");
+  if ($toggles.length){
+    $toggles.click(handleToggleClick);
+  }
+
+  function handleToggleClick(){
+    const checkbox = $(this).find(".toggle__checkbox")[0];
+    checkbox.checked = !checkbox.checked;
+    $(this).toggleClass("toggle_active");
+  }
 }

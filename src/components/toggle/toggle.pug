@@ -1,8 +1,15 @@
-mixin toggle(checkboxName, checkboxValue, toggleText)
-  label.toggle
-    include __checkbox/toggle__checkbox.pug
-    +toggle__checkbox(checkboxName, checkboxValue)
-    include __switch/toggle__switch.pug
-    include __text/toggle__text.pug
-    +toggle__text(toggleText)
+mixin toggle(options)
+  -
+    const name = options.name || "toggle"
+    const value = options.value || "on"
+    const text = options.text || "toggle"
+    const checked = options.checked || false
+    const classes = checked ? "toggle js-toggle toggle_active" : "toggle js-toggle"
+
+  span(class != classes)
+    input.toggle__checkbox(type="checkbox", name != name, value != value)
+    span.toggle__switch
+      span.toggle__circle
+    span.toggle__text #{text}
+
     
