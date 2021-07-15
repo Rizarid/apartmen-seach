@@ -1,0 +1,19 @@
+include ../../components/text-field/text-field.pug 
+include ../../components/button/button.pug 
+mixin signInBlock
+  form.sign-in-block
+    .sign-in-block__title-conteiner 
+      h1.sign-in-block__title Войти
+
+    .sign-in-block__email-conteiner
+      +textField({name: "email", type: "email",  placeholder: "Email"})
+
+    .sign-in-block__password-conteiner
+      +textField({name: "password", type: "password",  placeholder: "Пароль"})
+
+    .sign-in-block__submit-conteiner
+      +button({text: "войти", isSubmit: true, modificator: "big"})
+
+    .sign-in-block__button-conteiner
+      p.sign-in-block__button-label Нет аккаунта на Toxin?
+      +button({text: "создать", href: 'registration.html', modificator: "transparent"})
