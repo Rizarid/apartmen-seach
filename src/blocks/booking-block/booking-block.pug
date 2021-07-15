@@ -1,0 +1,48 @@
+include ../../components/date-dropdown/date-dropdown.pug 
+include ../../components/dropdown/dropdown.pug 
+include ../../components/button/button.pug 
+
+mixin bookingBlock
+  form.booking.js-booking
+    .booking__header 
+      p.booking__title 
+        span №
+        span.booking__number 888
+        span.booking__tag люкс
+
+      p.booking__room-price
+        span.booking__price.js-booking__price
+        span.booking__period в сутки
+
+    .booking__date 
+      +dateDropdown({className: "date-select"})
+
+    .booking__guests
+      +dropdown({ className: "guests", title: "гости", name: "guestsQuantity"})
+
+    .booking__calculation 
+      .booking__basic-price-conteiner 
+        p.booking__basic-price-calculate.js-booking__basic-price-calculate
+        p.booking__basic-price-result.js-booking__basic-price-result 
+
+      .booking__services-conteiner
+        p.booking__services
+          span.booking__services-text Сбор за услуги: скидка
+          span.booking__services-prices.js-booking__services-prices 
+        span.booking__information i
+        p.booking__services-total.js-booking__services-total 
+
+      .booking__additional-services-conteiner
+        p.booking__additional-services-title Сбор за дополнительные услуги
+        span.booking__information i
+        p.booking__additional-services-total.js-booking__additional-services-total 
+
+    .booking__total-price-conteiner 
+      p.booking__total-price-text Итого
+      p.booking__dots-conteiner
+      p.booking__total-price-value.js-booking__total-price-value 
+
+    .booking__submit-conteiner 
+      +button({text: "забронировать", isSubmit: true, modificator: "big"})
+
+  

@@ -1,0 +1,144 @@
+@import "../../styles/variables.sass"
+  
+.booking
+  max-width: 380px
+  width: 100%
+  box-sizing: border-box
+  padding: 40px 30px 30px 30px
+  background: #FFFFFF
+  border: 1px solid rgba(0, 0, 0, 0.12)
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
+  border-radius: 4px
+
+  &__header
+    display: flex
+    flex: 1 1 auto
+    justify-content: space-between
+    align-items: center
+    padding-bottom: 22px
+    box-sizing: border-box
+
+    & .booking__title
+      font-weight: $bold
+      font-size: 14px
+      line-height: 17px
+      color: $dark-shade
+      margin: 0
+      box-sizing: border-box
+
+      & .booking__number
+        font-size: 24px
+        line-height: 29px
+        margin-left: 4px
+
+      & .booking__tag
+        font-size: 12px
+        line-height: 15px
+        text-transform: uppercase
+        color: $purple
+        margin-left: 8px
+
+    & .booking__room-price
+      font-weight: $bold
+      font-size: 14px
+      line-height: 18px
+      color: $dark-shade-50
+      margin: 0
+      margin-top: 7px
+      box-sizing: border-box
+
+      & .booking__period
+        font-size: 12px
+        font-weight: $normal
+
+  &__date
+    box-sizing: border-box
+    width: 100%
+    padding-bottom: 21px
+
+  &__guests
+    box-sizing: border-box
+    width: 100%
+    padding-bottom: 18px
+
+  &__calculation
+    width: 100%
+    box-sizing: border-box
+    font-weight: $normal
+    font-size: 13.9px
+    line-height: 24px
+    color: rgba(195, 195, 199, 0.75)
+
+    & .booking__basic-price-conteiner, & .booking__services-conteiner, & .booking__additional-services-conteiner
+      display: flex
+      flex: 1 1 auto
+      //justify-content: space-between
+      padding-bottom: 11px
+      box-sizing: border-box
+
+      & .booking__information
+        width: 20px
+        height: 20px
+        border-radius: 50%
+        box-sizing: border-box
+        border: 1px solid $dark-shade-25
+        display: flex
+        justify-content: center
+        align-items: center
+        font-weight: $bold
+        font-size: 12px
+        line-height: 14px
+        color: rgba(31, 32, 65, 0.25)
+        margin-left: 3px
+
+      & .booking__basic-price-calculate, & .booking__basic-price-result, & .booking__services, & .booking__services-total, & .booking__additional-services-title, & .booking__additional-services-total
+        margin: 0
+        max-width: 218px
+
+        @media screen and ( max-width:  350px)
+          max-width: 150px
+          
+
+      & .booking__additional-services-title
+        line-height: 18px
+        margin-top: 4px
+        
+        & ~ .booking__information
+          margin-top: 4px
+
+      & .booking__basic-price-result, & .booking__services-total, & .booking__additional-services-total
+        flex: 1 1 auto
+        text-align: right
+
+    & .booking__additional-services-conteiner
+        padding-bottom: 29px
+
+  &__total-price-conteiner
+    display: flex
+    flex: 1 1 auto
+    justify-content: space-between
+    box-sizing: border-box
+    font-weight: $bold
+    font-size: 19px
+    line-height: 23px
+    color: $dark-shade
+    padding-bottom: 20px
+
+    & .booking__total-price-text
+      flex: 0 0 auto
+      margin: 0
+      
+    & .booking__dots-conteiner
+      flex: 1 1 auto
+      border-bottom: 1px dashed $dark-shade-25
+      box-sizing: border-box
+      height: 1px
+      margin: 0
+      margin-top: 18px
+
+    & .booking__total-price-value
+      flex: 0 0 auto
+      margin: 0
+
+
+  
