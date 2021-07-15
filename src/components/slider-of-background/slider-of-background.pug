@@ -1,0 +1,10 @@
+mixin backgroundSlider(imgData)
+  .slider-of-background.js-slider-of-background
+    - i = 0
+    each item in imgData
+      if i
+        img.slider-of-background__image(src != item.src alt != item.alt)
+      else 
+        img.slider-of-background__image.slider-of-background__image_active(src != item.src alt != item.alt)
+        - i++
+  
