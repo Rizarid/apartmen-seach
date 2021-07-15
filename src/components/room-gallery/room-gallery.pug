@@ -1,0 +1,9 @@
+mixin roomGallery(imgData)
+  figure.room-gallery
+    figure.room-gallery__main-conteiner
+      img.room-gallery__image.room-gallery__image_big(src != imgData[0].src, alt != imgData[0].alt) 
+    figure.room-gallery__additional-conteiner 
+      figure.room-gallery__small-conteiner 
+        img.room-gallery__image.room-gallery__image_small(src != imgData[1].src, alt != imgData[1].alt)
+      figure.room-gallery__small-conteiner 
+        img.room-gallery__image.room-gallery__image_small(src != imgData[2].src, alt != imgData[2].alt)
