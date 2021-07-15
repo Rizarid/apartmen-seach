@@ -1,6 +1,10 @@
-mixin slider(title)
-  .slider
+mixin slider(options)
+  -
+    const title = options.title || ""
+    const selector = options.selector || "slider-selector"
+
+  div(class = `slider ${selector} js-${selector}`)
     .slider__header
       h3.slider__title #{title}
-      p.slider__values#qwe 
+      p.slider__values 
     .slider__body

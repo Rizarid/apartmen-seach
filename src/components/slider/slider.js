@@ -1,34 +1,61 @@
-import * as $ from 'jquery'
-import '../../scripts/jquery-ui/jquery-ui'
-import '../../scripts/jquery-ui/jquery-ui.css'
-import './slider.sass'
+import * as $ from 'jquery';
 
-$(function(){
-    let a = $('.slider__values')[0];
-    console.log(a);
-    $('.slider__body').slider({
-        range: true,
-        min: 0,
-        max: 15000,
-        values: ['5000', '10000'],
-        slide: function(event, ui) {
-            let value = `${numberMargins(ui.values[0])}&#8381 - ${numberMargins(ui.values[1])}&#8381`
-            $('#qwe').html(value);
-        }
-    })
-    let value = `${numberMargins($(".slider__body").slider("values", 0))}&#8381 - ${numberMargins($(".slider__body").slider("values", 1))}&#8381`
-    $('#qwe').html(value);
+import '../../scripts/jquery-ui/jquery-ui.js';
+import '../../scripts/jquery-ui/jquery-ui.css';
+import './slider.sass';
+
+
+class Slider {
+  constructor(options){
     
+    this._init(options);
     
+    this._parent = this._getParent();
+    this._$body = $(this._parent).children(".slider__body");
+    this._$value = $(this._parent).find(".slider__values");
 
+    this._initSlider(this); 
+  }
 
-})
-
-function numberMargins(number){
-    let arr = String(number).split("");
-    let len = Math.trunc(arr.length/3);
-    for (let i=1; i<=len; i++) {
-        arr.splice(arr.length - (i * 3 + i - 1), 0, " ");
+    _getParent = () => {
+      return document.querySelector(`.js-${this._parentSelector}`)   
     }
-    return arr.join("");
+
+    _init = (options) => {
+        this._parentSelector = options.parentSelector || "slider-selector";
+        this.min = options.min || 0;
+        this.max = options.max || 15000;
+        this.initValues = options.initValues || [min, max];
+      }
+
+    _initSlider = (_this) => {
+
+      this._$body.slider({
+        range: true,
+        min: _this.min,
+        max: _this.max,
+        values: _this.initValues,
+
+        slide: function(event, ui) {
+          let value = `${_this._numberMargins(ui.values[0])}&#8381 - ${_this._numberMargins(ui.values[1])}&#8381`;
+          _this._$value.html(value);
+        }
+      })
+
+      this._$value.html(`${this._numberMargins(this._$body.slider("values", 0))}&#8381 - ${this._numberMargins(this._$body.slider("values", 1))}&#8381`);
+    }
+
+    _numberMargins = function(number){
+
+      let arr = String(number).split("");
+      let len = Math.trunc(arr.length/3);
+
+      for (let i=1; i<=len; i++) {
+        arr.splice(arr.length - (i * 3 + i - 1), 0, " ");
+      }
+
+      return arr.join("");
+    }
 }
+
+export {Slider}
