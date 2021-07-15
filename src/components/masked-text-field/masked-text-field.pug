@@ -1,0 +1,5 @@
+include ../text-field/text-field.pug
+
+mixin maskedTextField(options)
+  .masked-text-field.js-masked-text-field
+    +textField({title: options.title, name: options.name, placeholder: "ДД.ММ.ГГГГ" })
