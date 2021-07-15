@@ -1,0 +1,28 @@
+include blocks/header/header.pug 
+include blocks/sign-in-block/sign-in-block.pug 
+include blocks/footer/footer.pug 
+include components/slider-of-background/slider-of-background.pug 
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description", content="Войти в аккаунта")
+    meta(name="keywords", content="номер, отель, номер в отеле, поис номеров, гостиница")
+
+    title Войти в аккаунта 
+
+  body
+
+    +header(false, '')
+
+    main.main 
+
+      - const imgData = [{src: "src/components/slider-of-background/img/04.png", alt: "room01"}, {src: "src/components/slider-of-background/img/01.jpg", alt: "room02"}, {src: "src/components/slider-of-background/img/02.jpg", alt: "room03"},]
+      +backgroundSlider(imgData)
+
+      .main__conteiner 
+          +signInBlock
+
+    +footer
