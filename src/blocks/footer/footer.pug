@@ -1,0 +1,57 @@
+include ../../components/logo/logo.pug
+include ../../components/subscription-field/subscription-field.pug
+mixin footer
+  footer.footer 
+    .footer__conteiner 
+      .footer__widgests 
+        .footer__description 
+          +logo  
+          p.footer__description-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+        
+        .footer__navigation 
+          h3.footer__title навигация
+          ul.footer__list
+            li.footer__item 
+              a.footer__link(href = "#") О нас
+            li.footer__item
+              a.footer__link(href = "#") Новости
+            li.footer__item
+              a.footer__link(href = "#") Служба поддержки
+            li.footer__item
+              a.footer__link(href = "#") Услуги
+
+        .footer__about-us 
+          h3.footer__title о нас
+          ul.footer__list
+            li.footer__item
+              a.footer__link(href = "#") О сервисе
+            li.footer__item
+              a.footer__link(href = "#") Наша команда
+            li.footer__item
+              a.footer__link(href = "#") Вакансии
+            li.footer__item
+              a.footer__link(href = "#") Инвесторы
+
+        .footer__support 
+          h3.footer__title cлужба поддержки
+          ul.footer__list
+            li.footer__item
+              a.footer__link(href = "#") Соглашения
+            li.footer__item
+              a.footer__link(href = "#") Сообщества
+            li.footer__item
+              a.footer__link(href = "#") Связь с нами
+
+        .footer__subscribe
+          h3.footer__title подписка
+          p.footer__subscribe-text Получайте специальные предложения и новости сервиса
+          +subscriptionField()
+
+      .footer__copyright-block
+        p.footer__copyright Copyright © 2018 Toxin отель. Все права защищены.
+        .footer__socials 
+          a.footer__social-link.footer__social-link_twitter(href = "#")
+
+          a.footer__social-link.footer__social-link_facebook(href = "#")
+            
+          a.footer__social-link.footer__social-link_instagramm(href = "#") 
