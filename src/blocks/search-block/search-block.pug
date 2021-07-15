@@ -1,0 +1,17 @@
+include ../../components/date-dropdown/date-dropdown.pug 
+include ../../components/dropdown/dropdown.pug 
+include ../../components/button/button.pug 
+
+mixin searchBlock
+  form.search-block(action="searchRoom.html")
+    .search-block__title-conteiner 
+      h1.search-block__title Найдём номера под ваши пожелания
+
+    .search-block__date-conteiner 
+      +dateDropdown({className: "date-selection"})
+
+    .search-block__guests-quantity-conteiner 
+      +dropdown({className: "guests-quantity", title: "гости"})
+
+    .search-block__button-conteiner
+      +button({text: "подобрать номер", isSubmit: true, modificator: "big"})
