@@ -1,0 +1,12 @@
+include __item/rich-checkbox-buttons__item.pug
+
+mixin richCheckboxButtons(options)
+  -
+    const title = options.title || ""
+    const itemOptions = options.itemOptions || undefined 
+
+  .rich-checkbox-buttons
+    h3.rich-checkbox-buttons__title #{title}
+    .rich-checkbox-buttons__list 
+      each item in itemOptions
+        +richCheckboxButtons__item(item)

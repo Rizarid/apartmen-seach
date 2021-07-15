@@ -1,0 +1,42 @@
+@import "../../../styles/variables.sass"
+  
+.rich-checkbox-buttons
+  &__item
+    display: flex
+    width: 100%
+    box-sizing: border-box
+    cursor: pointer
+
+    &~&
+      box-sizing: border-box
+      padding-top: 4px
+
+    & .rich-checkbox-buttons__text-content
+      margin-left: 10px
+      flex: 1 1 auto
+      box-sizing: border-box
+
+      & .rich-checkbox-buttons__item-title
+        font-weight: $bold
+        font-size: 14px
+        line-height: 1
+        color: $dark-shade-75
+        display: inline-block
+        width: 100%
+        box-sizing: border-box
+        margin: 0
+        height: 20px
+        //vertical-align: middle
+        display: flex
+        align-items: center
+
+      & .rich-checkbox-buttons__item-text
+        font-weight: $normal
+        font-size: 12px
+        line-height: 14px
+        color: $dark-shade-50
+        display: inline-block
+        width: 100%
+        margin: 5px 0 0 0
+        box-sizing: border-box
+    
