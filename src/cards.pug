@@ -1,0 +1,51 @@
+include blocks/search-block/search-block.pug 
+include blocks/registration-block/registration-block.pug 
+include blocks/booking-block/booking-block.pug
+include blocks/sign-in-block/sign-in-block.pug 
+include blocks/room-card-block/room-card-block.pug 
+-
+  const roomsOptions = [
+    {
+      slides: [{src: "src/components/image-slider/img/01.jpg", alt: "123"}, {src: "src/components/image-slider/img/02.jpg", alt: "321"}, {src: "src/components/image-slider/img/03.jpg", alt: "321"}, {src: "src/components/image-slider/img/04.jpg", alt: "321"}],
+      roomNumber: 888, 
+      isLux: true,
+      price: 9990,
+      stars: 5,
+    reviewsQuantity: 145
+    },
+    {
+      slides: [{src: "src/components/image-slider/img/02.jpg", alt: "123"}, {src: "src/components/image-slider/img/04.jpg", alt: "321"}, {src: "src/components/image-slider/img/01.jpg", alt: "321"}, {src: "src/components/image-slider/img/08.jpg", alt: "321"}],
+      roomNumber: 840, 
+      isLux: false,
+      price: 9900,
+      stars: 4,
+      reviewsQuantity: 65
+    },
+ ]
+
+.main 
+  .main__container 
+    .main__column.main__column_left
+      .main__search-form-container
+        +searchBlock
+
+      .main__registration-form-container 
+        +registrationBlock
+
+
+    .main__column.main__column_center
+      .main__booking-form-container 
+        +bookingBlock
+
+      .main__sign-in-form-container
+        +signInBlock
+
+    .main__column.main__column_right
+      .main__date-picker-container 
+
+
+      .main__room-card-container
+        +roomCardBlock(roomsOptions[0])
+
+      .main__room-card-container
+        +roomCardBlock(roomsOptions[1])
