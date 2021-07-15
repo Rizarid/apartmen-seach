@@ -1,0 +1,11 @@
+mixin likeButton(options)
+  -
+    const quantity = options.quantity || 0
+    const liked = options.liked || false 
+    const classes = liked ? "like-button like-button_liked js-like-button" : "like-button js-like-button"
+
+  div(class != classes)
+    span.like-button__icon 
+    span.like-button__quantity #{quantity}
+
+    

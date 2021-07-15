@@ -1,0 +1,62 @@
+@import "../../styles/variables.sass"
+  
+.like-button
+  width: 40px
+  height: 20px
+  box-sizing: border-box
+  border: 1px solid $dark-shade-25
+  border-radius: 10px
+  display: flex
+  flex: 0 0 auto
+  padding: 0 5px
+  align-items: center
+  cursor: pointer
+  transition: 0.5s
+
+  &__icon
+    height: 8px
+    display: flex
+    align-items: center
+    justify-content: center
+    box-sizing: border-box
+
+    &:before
+      content: "favorite_border"
+      font-family: "Material Icons"
+      text-transform: none
+      font-size: 10px
+      line-height: 9px
+      color: $dark-shade-25
+
+  &__quantity
+    font-weight: $normal
+    font-size: 10px
+    line-height: 12px
+    color: $dark-shade-25
+    transition: 0.5s
+    margin-left: 6px
+
+  &_liked
+    border: 1px solid $purple
+
+    & .like-button__icon:before
+      content: "favorite"
+      font-family: "Material Icons"
+      text-transform: none
+      font-size: 10px
+      line-height: 9px
+      color: transparent
+      +gradient
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+    
+    & .like-button__quantity
+      color: $purple
+    
+     
+    
+      
+
+  
+
+   
