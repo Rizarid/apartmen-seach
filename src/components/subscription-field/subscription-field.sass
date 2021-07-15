@@ -1,0 +1,48 @@
+@import "../../styles/variables.sass"
+  
+.subscription-field
+  width: 100%
+  display: flex
+  height: 44px
+  box-sizing: border-box
+  border: 1px solid $dark-shade-25
+  border-radius: 5px
+  overflow: hidden
+
+  &__field
+    flex: 1 1 auto
+    height: 44px
+    border: none
+    border-radius: 0
+    font-size: 14px
+    font-weight: $normal
+    line-height: 24px
+    color: $dark-shade-75
+    padding: 8px 15px
+    box-sizing: border-box
+
+    &::placeholder
+      color: $dark-shade-25
+      font-size: 14px
+      line-height: 24px
+
+  &__button
+    width: 44px
+    height: 44px
+    border: none
+    box-shadow: none
+    box-sizing: border-box
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    background-color: #fff
+
+    &::before
+      content: "arrow_forward"
+      font-family: 'Material Icons'
+      text-transform: none
+      font-size: 24px
+      +gradient
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
