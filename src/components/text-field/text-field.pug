@@ -1,0 +1,10 @@
+mixin textField(options)
+  -
+    const title = options.title || false 
+    const name = options.name || "text-field"
+    const type = options.type || "text"
+    const placeholder = options.placeholder || ""
+  .text-field
+    if title
+      h3.text-field__title #{title}
+    input.text-field__field(type != type, name != name, placeholder != placeholder)
