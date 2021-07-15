@@ -1,0 +1,80 @@
+@import "../../styles/variables.sass"
+
+.header
+  width: 100%
+  box-sizing: border-box
+  height: 70px
+  display: flex
+  justify-content: center
+  flex: 1 1 auto
+  background: #FFFFFF
+  box-shadow: 0px 10px 20px $dark-shade-5
+
+
+  &__container
+    max-width: 1200px
+    padding: 0 20px
+    box-sizing: border-box
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex: 1 1 auto
+
+    & .header__content
+      width: fit-content
+      display: flex
+      align-items: center
+      box-sizing: border-box
+
+      @media screen and ( max-width:  950px)
+        flex-direction: row-reverse
+
+      & .header__navigation
+        width: fit-content
+        height: fit-content
+        box-sizing: border-box
+    
+      & .header__authorization
+        width: fit-content
+        align-items: center
+        display: none
+        padding-left: 20px
+
+        @media screen and ( max-width:  950px)
+          padding-right: 20px
+
+        @media screen and ( max-width:  530px)
+          margin-left: auto
+          margin-right: auto
+          padding: 0
+
+        &_activated
+          display: flex
+
+        & .header__log-in
+          box-sizing: border-box
+          padding-right: 20.5px
+          width: fit-content
+          height: fit-content
+          height: 34px
+
+          @media screen and ( max-width:  950px)
+            padding-right: 10px
+
+        & .header__registration
+          box-sizing: border-box
+          width: fit-content
+          height: fit-content
+          height: 34px
+
+      & .header__user-name
+        box-sizing: border-box
+        padding: 5px 0 5px 19px
+        border-left: 1px solid $dark-shade-10
+        margin-left: 19px
+
+        & .header__name
+          font-size: 14px
+          line-height: 17px
+          color: $dark-shade-50
+          margin: 0
