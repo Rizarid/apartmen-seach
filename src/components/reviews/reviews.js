@@ -1,2 +1,2 @@
-import './reviews.sass'
-import '../likeButton/likeButton.js'
+import "../review/review.js";
+import "./reviews.sass";

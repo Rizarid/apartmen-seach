@@ -1,14 +1,14 @@
-mixin review(userPhoto, userName, publicationDate, reviewText, quantityLiks, liked)
-  include ../likeButton/likeButton.pug
-  .review
-    .review__userBlok 
-      img.review__userPhoto(src != userPhoto, alt = "user photo")
-      .review__userNameConteiner 
-        p.review__userName #{userName}
-        p.review__publicationDate #{publicationDate}
-    
-    .review__messageBlok
-      .review__likeButtonConteiner
-        +likeButton(quantityLiks, liked)
-      .review__textConteiner 
-        p.review__text #{reviewText}
+include ../review/review.pug
+
+mixin reviews(options)
+  -
+    const title = options.title || "отзывы"
+    const reviewsData = options.reviewsData || undefined
+
+  .reviews 
+    h2.reviews__title #{title}
+    p.reviews__number-of-reviews #{reviewsData.length} отзыва
+    .reviews__conteiner
+      each item in reviewsData
+        +review(item)
+      
