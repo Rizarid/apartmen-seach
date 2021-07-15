@@ -1,0 +1,10 @@
+mixin rateButton(stars)
+  .rate-button 
+    - let i = 0
+    while i < stars
+      span.rate-button__star.rate-button__star_active
+      - i++
+
+    while i < 5 
+      span.rate-button__star
+      - i++
