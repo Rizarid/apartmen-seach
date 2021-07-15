@@ -1,7 +1,9 @@
+@import "../../styles/variables.sass"
+  
 .checkbox
   width: 20px
   height: 20px
-  border: 1px solid rgba(31, 32, 65, 0.25)
+  border: 1px solid $dark-shade-25
   border-radius: 2px
   position: relative
   box-sizing: border-box
@@ -11,7 +13,7 @@
     content: ""
     width: 4px
     height: 2px
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+    +gradient
     transform: rotate(45deg)
     position: absolute
     top: 8px
@@ -22,25 +24,25 @@
     content: ""
     width: 8px
     height: 2px
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+    +gradient
     transform: rotate(-45deg)
     position: absolute
     top: 8px
     left: 6px
     display: none
   
-  &.checked
-    border: 1px solid #BC9CFF
+  &.checkbox_checked
+    border: 1px solid $purple
 
-  &.checked:before, &.checked:after
-    display: block
+    &:before, &:after
+      display: block
 
   &__checkbox
     width: 0
     height: 0
     opacity: 0
 
-  &__checkbox:checked
-    outline: none
+    &:checked
+      outline: none
 
 
