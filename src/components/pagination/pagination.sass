@@ -1,3 +1,5 @@
+@import "../../styles/variables.sass"
+  
 .pagination
   max-width: 280px
   width: fit-content
@@ -9,73 +11,56 @@
     box-sizing: border-box
     flex-wrap: wrap
 
-  &__page
-    width: 40px
-    height: 40px
-    display: flex
-    justify-content: center
-    align-items: center
-    flex: 0 0 auto
-    font-family: Montserrat
-    font-weight: 400
-    font-size: 12px
-    line-height: 15px
-    text-align: center
-    color: rgba(31, 32, 65, 0.5)
-    cursor: pointer
+    & .pagination__page
+      width: 40px
+      height: 40px
+      display: flex
+      justify-content: center
+      align-items: center
+      flex: 0 0 auto
+      font-weight: $normal
+      font-size: 12px
+      line-height: 15px
+      text-align: center
+      color: $dark-shade-50
+      cursor: pointer
 
-    &.active
+      &_active
+        border-radius: 50%
+        +gradient
+        color: #fff
+        font-weight: $bold
+  
+    & .pagination__prev-button, & .pagination__next-button
+      width: 40px
+      height: 40px
       border-radius: 50%
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
-      color: #fff
+      display: flex
+      justify-content: center
+      align-items: center
+      flex: 0 0 auto
+      position: relative
+      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
+      cursor: pointer
 
-  &__prevButton, &__nextButton
-    width: 40px
-    height: 40px
-    border-radius: 50%
-    display: flex
-    justify-content: center
-    align-items: center
-    flex: 0 0 auto
-    position: relative
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
-    cursor: pointer
+      &:after, &:before
+        font-family: 'Material Icons'
+        text-transform: none
+        font-size: 24px
+        color: #fff
+        font-weight: $normal
 
-    &:after, &:before
-      content: ""
-      width: 10.6px
-      height: 2px
-      position: absolute
-      background-color: #fff
+  
+    & .pagination__prev-button
+      display: none
 
-    & span
-      width: 15px
-      height: 2px
-      position: absolute
-      top: 19.5px
-      background-color: #fff
+    & .pagination__prev-button::before
+      content: "arrow_back"
 
-  &__prevButton::before
-    transform: rotate(-45deg)
-    left: 10px
-    top: 16.5px
+    & .pagination__next-button::before
+      content: "arrow_forward"
 
-  &__prevButton::after
-    transform: rotate(45deg)
-    left: 10px
-    top: 23px
-
-  &__nextButton::before
-    transform: rotate(45deg)
-    right: 10px
-    top: 16.5px
-
-  &__nextButton::after
-    transform: rotate(-45deg)
-    right: 10px
-    top: 23px
-    
-  &__textConteiner
+  &__text-conteiner
     width: 100%
     box-sizing: border-box
     display: flex
@@ -83,13 +68,12 @@
     justify-content: center
     
 
-  &__text
-    margin-top: 8px
-    font-family: Montserrat
-    font-weight: 400
-    font-size: 14px
-    line-height: 24px
-    color: rgba(31, 32, 65, 0.75)
-    width: fit-content
+    & .pagination__text
+      margin-top: 8px
+      font-weight: $normal
+      font-size: 14px
+      line-height: 24px
+      color: $dark-shade-75
+      width: fit-content
     
 

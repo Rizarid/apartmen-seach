@@ -1,1 +1,1 @@
-import './pagination.sass'
+import "./pagination.sass";

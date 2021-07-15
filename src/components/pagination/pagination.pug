@@ -1,16 +1,16 @@
 mixin pagination(maxValue, paginationText)
   .pagination
     .pagination__pages
-      .pagination__prevButton
+      .pagination__prev-button
         span
-      .pagination__page.active 1
+      .pagination__page.pagination__page_active 1
       .pagination__page 2
       .pagination__page 3
       .pagination__page ...
       .pagination__page #{maxValue} 
-      .pagination__nextButton 
+      .pagination__next-button 
         span
 
     
-    .pagination__textConteiner 
+    .pagination__text-conteiner 
       p.pagination__text #{paginationText}
