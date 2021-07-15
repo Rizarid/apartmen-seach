@@ -1,15 +1,40 @@
+include blocks/header/header.pug 
+include blocks/search-block/search-block.pug 
+include blocks/footer/footer.pug 
+include components/slider-of-background/slider-of-background.pug 
+
 doctype html
 html(lang="ru")
   head
     meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    
-    
+    meta(name="description", content="Лучшие номера для вашей работы, отдыха и просто вдохновения")
+    meta(name="keywords", content="номер, отель, номер в отеле, поис номеров, гостиница")
+
+    title Найдём номера под ваши пожелания 
 
   body
-    .conteiner
-      - var itemOptions = [{checkboxName: "breakfast", checkboxChecked: false, itemText: "Завтрак"}, {checkboxName: "writingDesk", checkboxChecked: true, itemText: "Письменный стол"}, {checkboxName: "feedingChair", checkboxChecked: true, itemText: "Стул для кормления"}, {checkboxName: "crib",  checkboxChecked: true, itemText: "Кроватка"}, {checkboxName: "TV", checkboxChecked: false, itemText: "Телевизор"}, {checkboxName: "shampoo", checkboxChecked: false, itemText: "Шампунь"},]
-      include components/expandableCheckboxList/expandableCheckboxList.pug
-      +expandableCheckboxList("expandable Checkbox List", itemOptions)
-       
+
+    +header(false, '')
+
+    main.main 
+
+      - const imgData = [{src: "src/components/slider-of-background/img/01.jpg", alt: "room01"}, {src: "src/components/slider-of-background/img/02.jpg", alt: "room02"}, {src: "src/components/slider-of-background/img/03.jpg", alt: "room03"},]
+      +backgroundSlider(imgData)
+
+      .main__conteiner 
+
+        .main__search-form
+          +searchBlock 
+
+        .main__text-conteiner 
+          p.main__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+
+    +footer
+
+
+
+
+    
+    
+      
