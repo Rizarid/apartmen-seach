@@ -1065,31 +1065,31 @@ a.ui-button:active,
 }
 .ui-icon,
 .ui-widget-content .ui-icon {
-	background-image: url(4e89a336f10f0e43c885eb4137a9e458.png);
+	background-image: url(/images/ui-icons_444444_256x240.4e89a336f10f0e43c885eb4137a9e458.png);
 }
 .ui-widget-header .ui-icon {
-	background-image: url(4e89a336f10f0e43c885eb4137a9e458.png);
+	background-image: url(/images/ui-icons_444444_256x240.4e89a336f10f0e43c885eb4137a9e458.png);
 }
 .ui-state-hover .ui-icon,
 .ui-state-focus .ui-icon,
 .ui-button:hover .ui-icon,
 .ui-button:focus .ui-icon {
-	background-image: url(1fbdfc17fc98736fb48129d62973b1b2.png);
+	background-image: url(/images/ui-icons_555555_256x240.1fbdfc17fc98736fb48129d62973b1b2.png);
 }
 .ui-state-active .ui-icon,
 .ui-button:active .ui-icon {
-	background-image: url(f5ce87806eaab007103c710d6e3c06a6.png);
+	background-image: url(/images/ui-icons_ffffff_256x240.f5ce87806eaab007103c710d6e3c06a6.png);
 }
 .ui-state-highlight .ui-icon,
 .ui-button .ui-state-highlight.ui-icon {
-	background-image: url(44146189d37b7684e65c0bb9ebfe6e7f.png);
+	background-image: url(/images/ui-icons_777620_256x240.44146189d37b7684e65c0bb9ebfe6e7f.png);
 }
 .ui-state-error .ui-icon,
 .ui-state-error-text .ui-icon {
-	background-image: url(f3da083d07293df612f7fb880e1c831e.png);
+	background-image: url(/images/ui-icons_cc0000_256x240.f3da083d07293df612f7fb880e1c831e.png);
 }
 .ui-button .ui-icon {
-	background-image: url(1ea2b5fbde745185e7b075b6f4e423c7.png);
+	background-image: url(/images/ui-icons_777777_256x240.1ea2b5fbde745185e7b075b6f4e423c7.png);
 }
 
 /* positioning */
