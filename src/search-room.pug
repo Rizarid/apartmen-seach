@@ -130,8 +130,7 @@ html(lang="ru")
     main.main 
       .main__conteiner 
 
-        aside.filters
-          .filters__show-button 
+        aside.filters.js-filters
           article.filters__date.js-filters__date
             +filterDateDropdown({className: "date-filter", title: "даты пребывания в отеле", name: "dateFilter"})
           
