@@ -22,6 +22,11 @@ class ImageSlider{
 
     this._addListeners();
 
+    this._createResizeObserver();
+    this._addResizeObserver();
+
+    this._updateHeight(this._slider);
+
     if (this._isTouch()) this._activateTouchOptions();
   }
 
@@ -136,6 +141,15 @@ class ImageSlider{
     this._prev.classList.add("image-slider__prev_touch");
     this._next.classList.add("image-slider__next_touch");
   }
+
+  _updateHeight = (target) => {
+    target.style.height = `${target.offsetWidth * 0.55925}px` ;
+  }
+
+  _createResizeObserver = () => this.resizeObserver = new ResizeObserver(entries => this._updateHeight(entries[0].target));
+
+  _addResizeObserver = () => this.resizeObserver.observe(this._slider);
+
 }
 
 export{ImageSlider}
