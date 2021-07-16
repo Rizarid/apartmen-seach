@@ -19,7 +19,7 @@ html(lang="ru")
 
     main.main 
 
-      - const imgData = [{src: "src/components/slider-of-background/img/01.jpg", alt: "room01"}, {src: "src/components/slider-of-background/img/02.jpg", alt: "room02"}, {src: "src/components/slider-of-background/img/03.jpg", alt: "room03"},]
+      - const imgData = [{src: require("./components/slider-of-background/img/01.jpg"), alt: "room01"}, {src: require("./components/slider-of-background/img/02.jpg"), alt: "room02"}, {src: require("./components/slider-of-background/img/03.jpg"), alt: "room03"},]
       +backgroundSlider(imgData)
 
       .main__conteiner 
