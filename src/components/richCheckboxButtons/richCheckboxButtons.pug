@@ -1,7 +1,0 @@
-mixin richCheckboxButtons(titleText, itemOptions)
-  .richCheckboxButtons
-    h3.richCheckboxButtons__title #{titleText}
-    .richCheckboxButtons__listItems 
-      include __item/richCheckboxButtons__item.pug
-      each item in itemOptions
-        +richCheckboxButtons__item(item.checkboxName, item.checkboxChecked, item.itemTitle, item.itemText)

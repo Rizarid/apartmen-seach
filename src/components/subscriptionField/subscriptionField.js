@@ -1,1 +1,0 @@
-import './subscriptionField.sass'

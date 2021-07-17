@@ -1,9 +1,0 @@
-mixin informationBlock(blockOptions)
-  .informationBlock
-    each item in blockOptions
-      .informationBlock__item
-        img.informationBlock__blockImage(src != item.img, alt != item.alt)
-        .informationBlock__textConteiner 
-          p.informationBlock__title #{item.title}
-          p.informationBlock__text #{item.text}
-      
