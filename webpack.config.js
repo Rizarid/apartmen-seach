@@ -6,6 +6,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin')
 const { Template } = require('webpack');
 const autoprefixer = require('autoprefixer');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 
 const isDev = process.env.NODE_ENV === "development";
@@ -61,6 +62,7 @@ module.exports = {
 
     },
     plugins: [
+        new FaviconsWebpackPlugin('./favicon.svg'),
         autoprefixer,
         new HTMLWebpackPlugin({
             template: 'src/index.pug',
