@@ -5,7 +5,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin')
 const { Template } = require('webpack');
-const autoprefixer = require('autoprefixer')
+const autoprefixer = require('autoprefixer');
 
 
 const isDev = process.env.NODE_ENV === "development";
@@ -61,6 +61,7 @@ module.exports = {
 
     },
     plugins: [
+        autoprefixer,
         new HTMLWebpackPlugin({
             template: 'src/index.pug',
             inject: 'body',
@@ -132,11 +133,11 @@ module.exports = {
                 collapseWhitespace: isProd
             }
         }),
+        new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
         }),
-        new CleanWebpackPlugin(),
-        autoprefixer
+        
     ],
     
 
@@ -156,7 +157,7 @@ module.exports = {
             },
             {
                 test: /\.s[ac]ss$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+                use: [MiniCssExtractPlugin.loader, 'css-loader', "postcss-loader", 'sass-loader']
             },
             {
                 test: /\.(png|jpeg|jpg|gif)$/,
