@@ -47,6 +47,13 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
 
+    resolve: {
+        alias: {
+            "@": path.relative(__dirname, "dist"),
+            
+        }
+    },
+
     optimization: optimization(),
 
     devServer: {
@@ -126,7 +133,7 @@ module.exports = {
             }
         }),
         new MiniCssExtractPlugin({
-            filename: '[name].[contenthesh].css'
+            filename: '[name].[contenthash].css'
         }),
         new CleanWebpackPlugin(),
         autoprefixer
@@ -152,12 +159,23 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             },
             {
-                test: /\.(png|jpeg|jpg|svg|gif)$/,
-                use: 'file-loader'
+                test: /\.(png|jpeg|jpg|gif)$/,
+                loader: 'file-loader',
+                options: {
+                    emitFile: true,
+                    esModule: false,
+                    name: 'images/[name].[contenthash].[ext]'
+                }
+            
             },
             {
                 test:  /\.(ttf|woff|svg)/,
-                use: 'file-loader'
+                loader: 'file-loader',
+                options: {
+                    emitFile: true,
+                    name: 'fonts/[name].[contenthash].[ext]'
+                }
+               
             }
         ],
         
