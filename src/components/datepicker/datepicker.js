@@ -4,8 +4,6 @@ import "../../scripts/create-element.js";
 import {ControlPanel} from "../control-panel/control-panel.js"
 import "./ui-datepicker";
 
-
-
 class Datepicker{
   constructor(parent){
     this._parent = parent;
@@ -18,20 +16,20 @@ class Datepicker{
     this._addListeners();
   }
 
-  getDatepicker = () => {return this._parent};
+  getDatepicker = () => his._parent;
 
   setDate = (dates) => {
     $(this._parent).datepicker("setDate", dates);
     this._parent.dispatchEvent(this._onSelected);
   }
 
-  getStartDate = () => {return this._datepicker.startDate};
+  getStartDate = () => this._datepicker.startDate;
 
-  getEndDate = () => {return this._datepicker.endDate};
+  getEndDate = () => this._datepicker.endDate;
 
-  getStartDateText = () => {return this._datepicker.startDateText};
+  getStartDateText = () => this._datepicker.startDateText;
   
-  getEndDateText = () => {return this._datepicker.endDateText};
+  getEndDateText = () => this._datepicker.endDateText;
 
   _createOnSelectEvent = () => this._onSelected = new Event("datepickerOnSelect", {bubbles: true});
 
@@ -47,9 +45,7 @@ class Datepicker{
     });
   }
 
-  _getDatepickerObject = () => {
-    return $(this._parent).datepicker("widget").data("datepickerExtensionRange");
-  }
+  _getDatepickerObject = () => $(this._parent).datepicker("widget").data("datepickerExtensionRange");
 
   _handleParentCleanButtonClick = () => this.setDate([null, null]);
 
