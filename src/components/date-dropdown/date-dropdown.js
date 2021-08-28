@@ -2,7 +2,7 @@ import * as $ from "jquery";
 
 import "../../scripts/jquery-ui/jquery-ui.js";
 import "../../scripts/jquery-ui/jquery-ui.css";
-import "../../scripts/datepicke-russification.js";
+import "../../scripts/datepicker-russification.js";
 import "../../scripts/create-element.js";
 import "../datepicker/datepicker.js";
 import "../datepicker/datepicker.sass";
@@ -12,25 +12,23 @@ import "./date-dropdown.sass";
 
 class DateDropdown{
   constructor(options){
-
     this._init(options);
     
     this._view = new ViewDateDropdown (this._parentSelector);
     this._model = new ModelDateDropdown ();
     this._controller = new ControllerDateDropdown (this._view, this._model, this._initDates);
-
-    
   }
   
-  getQuantityDays = () => {return this._model.getQuantityDays()};
+  getQuantityDays = () => this._model.getQuantityDays();
 
-  getStartDate = () => {return this._model.getStartDate()};
+  getStartDate = () => this._model.getStartDate();
 
-  getEndDate = () => {return this._model.getEndDate()};
+  getEndDate = () => this._model.getEndDate();
 
   _init = (options) => {
-    this._parentSelector = options.parentSelector || "date-dropdown";
-    this._initDates = options.initDates || [];
+    const { parentSelector = "date-dropdown", initDates = [] } = options;
+    this._parentSelector = parentSelector;
+    this._initDates = initDates;
   }
 
 }
@@ -46,7 +44,7 @@ class ViewDateDropdown {
     this._addListeners();
   }
 
-  getDateDropdown = () => {return this._parent};
+  getDateDropdown = () => this._parent;
 
   setComingFieldValue = (value) => this._comingField.value = value; 
 
@@ -54,13 +52,13 @@ class ViewDateDropdown {
 
   setDate = (dates) => this._datepicker.setDate(dates);
 
-  getStartDate = () => {return this._datepicker.getStartDate()};
+  getStartDate = () => this._datepicker.getStartDate();
 
-  getEndDate = () => {return this._datepicker.getEndDate()};
+  getEndDate = () => this._datepicker.getEndDate();
 
-  getStartDateText = () => {return this._datepicker.getStartDateText()};
+  getStartDateText = () => this._datepicker.getStartDateText();
   
-  getEndDateText = () => {return this._datepicker.getEndDateText()};
+  getEndDateText = () => this._datepicker.getEndDateText();
 
   showDatepicker = () => {
     this._datepicker.getDatepicker().classList.add("date-dropdown__datepicker-container_visible");
@@ -70,7 +68,7 @@ class ViewDateDropdown {
     this._datepicker.getDatepicker().classList.remove("date-dropdown__datepicker-container_visible");
   }
 
-  _getParentElement = (parentSelector) => {return document.querySelector(`.js-${parentSelector}`)};
+  _getParentElement = (parentSelector) => document.querySelector(`.js-${parentSelector}`);
 
   _getFields = () => {
     this._comingField = $(this._parent).find(".date-dropdown__container_left .date-dropdown__field")[0];
@@ -94,11 +92,11 @@ class ModelDateDropdown {
     this._millisecondsInDay = 86400000;
   }
 
-  getStartDate = () => {return this._startDate};
+  getStartDate = () => this._startDate;
 
-  getEndDate = () => {return this._endDate};
+  getEndDate = () => this._endDate;
   
-  getQuantityDays = () => {return this._quantityDays};
+  getQuantityDays = () => this._quantityDays;
 
   setStartDate = (value) => {
     this._startDate = value;
@@ -109,7 +107,7 @@ class ModelDateDropdown {
     this._calculateQuantityDays();  
   }
 
-  _isDates = () => {return this._startDate & this._endDate};
+  _isDates = () => this._startDate & this._endDate;
 
   _calculateQuantityDays = () => {
     this._quantityDays = this._isDates() ? (this._endDate - this._startDate) / this._millisecondsInDay : 0;

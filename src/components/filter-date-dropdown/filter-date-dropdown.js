@@ -2,7 +2,7 @@ import * as $ from "jquery";
 
 import "../../scripts/jquery-ui/jquery-ui.js";
 import "../../scripts/jquery-ui/jquery-ui.css";
-import "../../scripts/datepicke-russification.js";
+import "../../scripts/datepicker-russification.js";
 import "../../scripts/create-element.js";
 import "../datepicker/datepicker.js";
 import "../datepicker/datepicker.sass";

@@ -10,7 +10,7 @@ import "./blocks/sign-in-block/sign-in-block.js";
 import "./blocks/room-card-block/room-card-block.js";
 import "./scripts/jquery-ui/jquery-ui.js";
 import "./scripts/jquery-ui/jquery-ui.css";
-import "./scripts/datepicke-russification.js";
+import "./scripts/datepicker-russification.js";
 import "./styles/cards.sass";
 
 

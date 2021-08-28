@@ -1,8 +1,6 @@
 mixin dateDropdown(options)   
   -
-    const titles = options.titles || ["прибытие", "выезд"]
-    const names = options.names || ["dateComing, dateLeave"]
-    const className = options.className || ""
+    const { titles = ["прибытие", "выезд"], names = ["dateComing, dateLeave"], className = ""} = options
     const classes = className ? `date-dropdown ${className} js-${className}` : "date-dropdown js-date-dropdown"
   
   div(class != classes)
