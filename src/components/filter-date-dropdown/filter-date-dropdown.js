@@ -12,36 +12,31 @@ import "./filter-date-dropdown.sass";
 
 class FilterDateDropdown{
   constructor(options){
-
     this._init(options);
-    
     this._view = new ViewFilterDateDropdown (this._parentSelector);
     this._controller = new ControllerFilterDateDropdown (this._view, this._model, this._initDates);
   }
   
-  getStartDate = () => {return this._view.getStartDate()};
+  getStartDate = () => this._view.getStartDate();
 
-  getEndDate = () => {return this._view.getEndDate()};
+  getEndDate = () => this._view.getEndDate();
 
   _init = (options) => {
-    this._parentSelector = options.parentSelector || "filter-date-dropdown";
-    this._initDates = options.initDates || [];
+    const { parentSelector = "filter-date-dropdown", initDates = [] } = options;
+    this._parentSelector = parentSelector;
+    this._initDates = initDates;
   }
-
 }
 
 class ViewFilterDateDropdown {
   constructor (parentSelector) {
-
     this._parent = this._getParentElement(parentSelector);
     this._getField();
-
     this._datepicker = new Datepicker($(this._parent).find(".filter-date-dropdown__datepicker-container")[0]);
-
     this._addListeners();
   }
 
-  getDatedropdown = () => {return this._parent};
+  getDateDropdown = () => {return this._parent};
 
   setFieldValue = (value) => this._field.value = value; 
 
@@ -89,9 +84,9 @@ class ControllerFilterDateDropdown {
     if (this._initDates.length) this._view.setDate(this._initDates);
   }
 
-  getStartDate = () => {return this._view.getStartDate()}
+  getStartDate = () => this._view.getStartDate();
 
-  getEndDate = () => {return this._view.getEndDate()}
+  getEndDate = () => this._view.getEndDate();
 
   _handleDateDropdownDatepickerOnSelect = () => {
     this._view.setFieldValue(this._formatDate(this._view.getStartDate(), this._view.getEndDate()));
@@ -105,9 +100,9 @@ class ControllerFilterDateDropdown {
   _handleDateDropdownApplyButtonClick = () => this._view.hiddenDatepicker();
 
   _addListeners = () => {
-    this._view.getDatedropdown().addEventListener("datepickerOnSelect", this._handleDateDropdownDatepickerOnSelect);
-    this._view.getDatedropdown().addEventListener("cleanButtonClick", this._handleDateDropdownCleanButtonClick);
-    this._view.getDatedropdown().addEventListener("applyButtonClick", this._handleDateDropdownApplyButtonClick);
+    this._view.getDateDropdown().addEventListener("datepickerOnSelect", this._handleDateDropdownDatepickerOnSelect);
+    this._view.getDateDropdown().addEventListener("cleanButtonClick", this._handleDateDropdownCleanButtonClick);
+    this._view.getDateDropdown().addEventListener("applyButtonClick", this._handleDateDropdownApplyButtonClick);
   }
 
   _formatDate = (startDate, endDate) => {

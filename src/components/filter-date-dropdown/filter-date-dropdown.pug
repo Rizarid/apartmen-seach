@@ -1,8 +1,6 @@
 mixin filterDateDropdown(options)
   -
-    const title = options.title || "filter date dropdown"
-    const name = options.name || "dateFilter"
-    const className = options.className || ""
+    const { title = "filter date dropdown",  name = "dateFilter", className = "" } = options
     const classes = className ? `filter-date-dropdown ${className} js-${className}` : "filter-date-dropdown js-filter-date-dropdown"
 
   article(class != classes)
