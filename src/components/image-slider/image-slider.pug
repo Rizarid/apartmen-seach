@@ -1,4 +1,5 @@
 include __image/image-slider__image.pug
+
 mixin imageSlider(sliderItems)
   .image-slider.js-image-slider
     .image-slider__prev 
@@ -6,5 +7,6 @@ mixin imageSlider(sliderItems)
     .image-slider__slides
       - var activeImage = true
       each item in sliderItems
-        +image(item.src, item.alt, activeImage)
+        - const { src, alt } = item
+        +image(src, alt, activeImage)
         - activeImage = false

@@ -5,14 +5,14 @@ function Slide(img){
   this._slide = img;
   this._dot = createElement("div", "image-slider__slide-dote");
 
-  this.getSlide = () => {return this._slide};
-  this.getDot = () => {return this._dot};
+  this.getSlide = () => this._slide;
+  this.getDot = () => this._dot;
 
-  this._onDotSwitch = new Event("dotSwitch", {bubbles: true});
-  this._onSlideSwitch = new Event("slideSwitch", {bubbles: true});
+  this._onDotSwitch = new Event("dotSwitch", { bubbles: true });
+  this._onSlideSwitch = new Event("slideSwitch", { bubbles: true });
 
-  this._onDotReturn = new Event("dotReturn", {bubbles: true});
-  this._onSlideReturn = new Event("slideReturn", {bubbles: true});
+  this._onDotReturn = new Event("dotReturn", { bubbles: true });
+  this._onSlideReturn = new Event("slideReturn", { bubbles: true });
 
   this._handleDotMouseover = () => {
     this._dot.dispatchEvent(this._onDotSwitch);

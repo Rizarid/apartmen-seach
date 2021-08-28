@@ -8,9 +8,7 @@ import {Slide} from "./__image/image-slider__image.js"
 class ImageSlider{
   
   constructor(slider){
-
     this._slider = slider;
-
     this._createSlides();
     this._createDotsBlock();
 
@@ -21,12 +19,10 @@ class ImageSlider{
     this._initNextButton();
 
     this._addListeners();
-
     this._createResizeObserver();
     this._addResizeObserver();
 
     this._updateHeight(this._slider);
-
     if (this._isTouch()) this._activateTouchOptions();
   }
 
@@ -37,7 +33,7 @@ class ImageSlider{
 
   _createDotsBlock = () => {
     this._dots = createElement("div", "image-slider__dots");
-    this._slides.map( (item) => this._dots.appendChild(item.getDot()));
+    this._slides.map((item) => this._dots.appendChild(item.getDot()));
     this._slider.appendChild(this._dots);
   }
 
@@ -83,9 +79,9 @@ class ImageSlider{
     this._next.addEventListener("click", this._handleNextClick);
   }
 
-  _handleSlideSwitch = (e) => this._switchSlide(e.target)
+  _handleSlideSwitch = (event) => this._switchSlide(event.target)
 
-  _handleDotSwitch =  (e) => this._switchDot(e.target)
+  _handleDotSwitch =  (event) => this._switchDot(event.target)
 
   _handleSlideReturn = () => {
     this._activeSlide.classList.remove("image-slider__image_active"); 
@@ -104,15 +100,11 @@ class ImageSlider{
     const nextDot = $(this._activeDot).next()[0];
 
     if (nextSlide){
-
       this._switchSlide(nextSlide);
       this._switchDot(nextDot);
-
     } else{
-
       this._switchSlide($(this._activeSlide).parent().children().first()[0]);
       this._switchDot($(this._activeDot).parent().children().first()[0]);
-
     }
   }
 
@@ -121,15 +113,11 @@ class ImageSlider{
     const prevDot = $(this._activeDot).prev()[0];
 
     if (prevSlide){
-
       this._switchSlide(prevSlide);
       this._switchDot(prevDot);
-
     } else{
-
       this._switchSlide($(this._activeSlide).parent().children().last()[0]);
       this._switchDot($(this._activeDot).parent().children().last()[0]);
-
     }
   }
 
