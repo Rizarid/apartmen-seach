@@ -1,17 +1,9 @@
 mixin button(options)
-
   -
+    const { modifier = undefined, href = '', isSubmit = false,  text = "Click me" } = options
     const classDefault = "button"
-    const modificator = options.modificator || undefined 
-    const href = options.href || "" 
-    const isSubmit = options.isSubmit || false
-    const text = options.text || "Click me"
     
-    let classes = classDefault
-
-    if (modificator !== undefined){
-      classes = `${classDefault} ${classDefault}_${modificator}`
-    }
+    let classes = modifier ? `${classDefault} ${classDefault}_${modifier}` : classDefault
     
   if isSubmit 
     button(type = "submit", class != classes) #{text}
