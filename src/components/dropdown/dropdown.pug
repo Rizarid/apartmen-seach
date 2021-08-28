@@ -1,8 +1,6 @@
 mixin dropdown(options)
   -
-    const title = options.title || "dropdown"
-    const name = options.name || "dropdown"
-    const className = options.className || ""
+    const { title = "dropdown", name = "dropdown", className = "" } = options
     const classes = className ? `dropdown ${className} js-${className}` : "dropdown js-dropdown"
 
   div(class != classes)

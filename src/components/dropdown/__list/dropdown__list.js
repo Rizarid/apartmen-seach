@@ -5,19 +5,20 @@ import {DropdownItem} from "../__item/dropdown__item.js";
 
 class List {
   constructor (options) {
-    this._parent = options.list;
+    const { list, items } = options;
+    this._parent = list;
     this._list = [];
-    this._initItems(options);
+    this._initItems(items);
   }
 
   getList = () => {return this._parent}
 
   clean = () => this._list.map((item) => item.clean());
 
-  _initItems = (options) => {
-
-    Object.entries(options.items).map(([key, value]) => this._list.push(new DropdownItem({titleText: key, 
-    quantity:value})));
+  _initItems = (items) => {
+    Object.entries(items).map(([key, value]) => (
+      this._list.push(new DropdownItem({ titleText: key, quantity: value })))
+    );
 
     this._list.map( (item) => this._parent.appendChild(item.getItem()));
   }
@@ -25,9 +26,9 @@ class List {
 }
   
 class ListConvenience extends  List {
-  getListValue = () => {
-    return this._list.map( (item) => item.getItemToString()).join(", ").slice(0, 20) + "...";
-  }
+  getListValue = () => (
+    this._list.map( (item) => item.getItemToString()).join(", ").slice(0, 20) + "..."
+  );
 }
   
   
@@ -53,7 +54,7 @@ class ListGuests extends List {
 
     if (!guests & !babies) return "Сколько гостей";
 
-    if (!guests) return "Не корректные параметры ввода";
+    if (!guests) return "Нельзя бронировать только для младенцев";
     
     if (babies === 0) return `${guests} ${this._getDeclineGuest(guests)}`;
 
@@ -62,25 +63,24 @@ class ListGuests extends List {
   }
 
   _getDecline = function(numb){
-
     const quantity = String(numb);
     const length = quantity.length;
-
     const isNominative = quantity[length - 1] === "1" & quantity[length - 2] != "1";
 
-    const isGenitive = (((quantity[length-1] === "2") | (quantity[length-1] === "3") | 
-      (quantity[length-1] === "4")) & quantity[length - 2] != "1")
+    const isGenitive = (((quantity[length-1] === "2") | (quantity[length-1] === "3") | (
+      quantity[length-1] === "4")) & quantity[length - 2] != "1"
+    );
     
     return isNominative ? 0 : isGenitive ? 1 : 2; 
   }
 
   _getDeclineGuest = (numb) => {
-    let guest = ["гость", "гостя", "гостей"];
+    const guest = ["гость", "гостя", "гостей"];
     return guest[this._getDecline(numb)]
   }
 
   _getDeclineBabies = (numb) => {
-    let guest = ["младенец", "младенца", "младенцев"];
+    const guest = ["младенец", "младенца", "младенцев"];
     return guest[this._getDecline(numb)]
   }
 }

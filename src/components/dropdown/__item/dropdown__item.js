@@ -2,42 +2,40 @@ import "../../../scripts/create-element.js";
 
 class DropdownItem{
   constructor(options){
-
-    const _title = options.titleText || "Item title";
-    const _quantity = options.quantity || 0;
-
-    this._model = new ModelDropdownItem({title: _title, quantity: _quantity});
-    this._view = new ViewDropdownItem({title: _title, quantity: _quantity});
+    const { titleText: title = "Item title", quantity = 0 } = options;
+    this._model = new ModelDropdownItem({ title, quantity });
+    this._view = new ViewDropdownItem({ title, quantity });
     this._controller = new ControllerDropdownItem({model: this._model, view: this._view});
 
   }
 
-  getItemToString = () => {return this._model.getItemToString()};
+  getItemToString = () => this._model.getItemToString();
 
-  getQuantity = () => {return this._model.getQuantity()};
+  getQuantity = () => this._model.getQuantity();
 
   clean = () => this._controller.clean();
 
-  getTitle = () => {return this._model.getTitle()};
+  getTitle = () => this._model.getTitle();
 
-  getItem = () => {return this._view.getItem()};
+  getItem = () => this._view.getItem();
 }
 
 class ModelDropdownItem {
   constructor (options) {
-    this._title = options.title;
-    this._quantity = options.quantity;
+    const { title, quantity } = options;
+    this._title = title;
+    this._quantity = quantity;
   }
   
   increase = () => this._quantity++;
 
   reduce = () => this._quantity--;
 
-  getQuantity = () => {return this._quantity};
+  getQuantity = () => this._quantity;
 
-  getTitle = () => {return this._title};
+  getTitle = () => this._title;
 
-  getItemToString = () => {return `${this._quantity} ${this._title}`};
+  getItemToString = () => `${this._quantity} ${this._title}`;
 
   setTitle = (value) => this._title = value;
 
@@ -46,9 +44,10 @@ class ModelDropdownItem {
 
 class ViewDropdownItem {
   constructor (options) {
+    const { title, quantity } = options;
 
-    this._createTitle(options.title);
-    this._createQuantity(options.quantity);
+    this._createTitle(title);
+    this._createQuantity(quantity);
     this._createButtons();
     this._createQuantityBlock();
     this._createItem();
@@ -58,7 +57,7 @@ class ViewDropdownItem {
 
   }
 
-  getItem = () => {return this._item};
+  getItem = () => this._item;
 
   setQuantity = (value) => {
     this._quantity.innerHTML = value;
@@ -72,12 +71,12 @@ class ViewDropdownItem {
 
   _createTitle = (title) => {
     this._title = createElement("p", "dropdown__title");
-    this._title.innerHTML = title;
+    this.setTitle(title)
   }
 
   _createQuantity = (quantity) => {
     this._quantity = createElement("p", "dropdown__quantity");
-    this._quantity.innerHTML = quantity;
+    this.setQuantity(quantity);
   }
 
   _createButtons = () =>{
@@ -102,8 +101,8 @@ class ViewDropdownItem {
   }
 
   _createEvents = () => {
-    this._onMinusButtonClick = new Event("minusButtonClick", {bubbles: true});
-    this._onPlusButtonClick = new Event("plusButtonClick", {bubbles: true})
+    this._onMinusButtonClick = new Event("minusButtonClick", { bubbles: true });
+    this._onPlusButtonClick = new Event("plusButtonClick", { bubbles: true });
   }
 
   _addListeners = () => {
@@ -119,10 +118,9 @@ class ViewDropdownItem {
 
 class ControllerDropdownItem {
   constructor (options) {
-
-    this._model = options.model;
-    this._view = options.view;
-
+    const { model, view } = options;
+    this._model = model;
+    this._view = view;
     this._addListeners();
   }
 

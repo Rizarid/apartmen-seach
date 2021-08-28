@@ -16,7 +16,7 @@ class Datepicker{
     this._addListeners();
   }
 
-  getDatepicker = () => his._parent;
+  getDatepicker = () => this._parent;
 
   setDate = (dates) => {
     $(this._parent).datepicker("setDate", dates);

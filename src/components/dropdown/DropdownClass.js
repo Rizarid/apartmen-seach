@@ -2,7 +2,6 @@ import * as $ from "jquery"
 
 import {ListConvenience, ListGuests} from "./__list/dropdown__list.js"
 
-
 class DropdownClass{
   constructor (options) {
 
@@ -14,14 +13,19 @@ class DropdownClass{
     this._list = this._getListClass({list: list, items: this._items});
 
     this._addListeners();
-
     this._apply();
   }
 
   _init = (options) => {
-    this._parentSelector = options.parentSelector || "dropdown";
-    this._items = options.items || {"взрослые": 0, "дети": 0, "младенцы": 0};
-    this._getListClass = (options.getListClass) ? options.getListClass : (items) => {return new ListGuests(items)}
+    const { 
+      parentSelector = "dropdown", 
+      items = {"взрослые": 0, "дети": 0, "младенцы": 0}, 
+      getListClass = (items) => new ListGuests(items) 
+    } = options;
+
+    this._parentSelector = parentSelector;
+    this._items = items;
+    this._getListClass = getListClass;
   }
 
   _getParent = () => {
@@ -38,12 +42,9 @@ class DropdownClass{
   }
 
   _handleFieldClick = () => {
-
     const list = this._list.getList();
     const isListVisible = list.classList.contains("dropdown__list_visible");
-
-    if (!isListVisible) list.classList.add("dropdown__list_visible"); 
-    else this._apply();
+    (!isListVisible) ? list.classList.add("dropdown__list_visible") : this._apply();
   }
 
   _handleDropdownMouseleave = () => this._apply();
