@@ -6,5 +6,5 @@ mixin checkboxButtons(options)
     h3.checkbox-buttons__title #{title}
     .checkbox-buttons__list 
       each item in options.items
-        - const { name = "", checked = false, text = "checkbox item" } = item
-        +expandableCheckboxList__item(name, checked, text)
+        - const { name: checkboxName = "", checked: checkboxChecked = false, text: itemText = "checkbox item" } = item
+        +expandableCheckboxList__item({ checkboxName, checkboxChecked, itemText })
