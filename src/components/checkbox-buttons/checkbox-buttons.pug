@@ -1,14 +1,10 @@
 include ../expandable-checkbox-list/__item/expandable-checkbox-list__item.pug
 
 mixin checkboxButtons(options)
-  - const title = options.title || "checkbox buttons"
+  - const { title = "checkbox buttons", item } = options
   article.checkbox-buttons
     h3.checkbox-buttons__title #{title}
     .checkbox-buttons__list 
       each item in options.items
-        -
-          const name = item.name || "" 
-          const checked = item.checked || false 
-          const text = item.text || "checkbox item"
-
+        - const { name = "", checked = false, text = "checkbox item" } = item
         +expandableCheckboxList__item(name, checked, text)
