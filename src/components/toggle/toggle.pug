@@ -1,9 +1,6 @@
-mixin toggle(options)
+mixin toggle(options = {})
   -
-    const name = options.name || "toggle"
-    const value = options.value || "on"
-    const text = options.text || "toggle"
-    const checked = options.checked || false
+    const { name = "toggle", value = "on", text = "toggle", checked = false } = options
     const classes = checked ? "toggle js-toggle toggle_active" : "toggle js-toggle"
 
   span(class != classes)

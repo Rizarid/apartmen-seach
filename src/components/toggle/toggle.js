@@ -4,10 +4,7 @@ import "./toggle.sass";
 
 {
   const $toggles = $(".js-toggle");
-
-  if ($toggles.length){
-    $toggles.click(handleToggleClick);
-  }
+  if ($toggles.length)$toggles.click(handleToggleClick);
 
   function handleToggleClick(){
     const checkbox = $(this).find(".toggle__checkbox")[0];
