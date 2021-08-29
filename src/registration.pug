@@ -3,26 +3,25 @@ include blocks/registration-block/registration-block.pug
 include blocks/footer/footer.pug 
 include components/slider-of-background/slider-of-background.pug 
 
+- const { backgroundSliderRegistrationOptions } = require('./scripts/state.js')
+
 doctype html
-html(lang="ru")
+html(lang='ru')
   head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(name="description", content="Регистрация аккаунта")
-    meta(name="keywords", content="номер, отель, номер в отеле, поис номеров, гостиница")
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='Регистрация аккаунта')
+    meta(name='keywords', content='номер, отель, номер в отеле, поис номеров, гостиница')
 
     title Регистрация аккаунта 
 
   body
-
     +header(false, '')
 
     main.main 
+      +backgroundSlider(backgroundSliderRegistrationOptions)
 
-      - const imgData = [{src: require("./components/slider-of-background/img/04.png"), alt: "room01"}, {src: require("./components/slider-of-background/img/01.jpg"), alt: "room02"}, {src: require("./components/slider-of-background/img/02.jpg"), alt: "room03"},]
-      +backgroundSlider(imgData)
-
-      .main__conteiner 
-          +registrationBlock
+      .main__container 
+        +registrationBlock
 
     +footer
