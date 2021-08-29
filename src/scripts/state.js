@@ -267,7 +267,22 @@ const roomGalleryData = [
   },
 ]
 
+const backgroundSliderOptions = [
+  {
+    src: require('../components/slider-of-background/img/01.jpg'), 
+    alt: 'room01'
+  }, 
+  {
+    src: require('../components/slider-of-background/img/02.jpg'), 
+    alt: 'room02'
+  }, 
+  {
+    src: require('../components/slider-of-background/img/03.jpg'), 
+    alt: 'room03'
+  },
+]
+
 export { 
   roomsOptions, checkboxButtonsOptions, richCheckboxButtonsOptions, expandableCheckboxListOptions,
-  informationItems, reviewsData, rulesItems, roomGalleryData
+  informationItems, reviewsData, rulesItems, roomGalleryData, backgroundSliderOptions
 }
