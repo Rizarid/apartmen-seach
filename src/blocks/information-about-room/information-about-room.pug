@@ -6,14 +6,14 @@ include ../../components/bullet-list/bullet-list.pug
 mixin roomInformationBlock(informationItems,reviewsData, rulesItems )
   .information-about-room
     .information-about-room__information 
-      +informationBlock({title: "Сведения о номере", itemOptions: informationItems})
+      +informationBlock({ title: "Сведения о номере", itemOptions: informationItems })
     .information-about-room__review-statistics
       +roundChart("Впечатления от номера")
     .information-about-room__reviews
-      +reviews({title: "Отзывы посетителей номера", reviewsData: reviewsData})
+      +reviews({ title: "Отзывы посетителей номера", reviewsData: reviewsData })
     .information-about-room__rules
       +bulletList("Правила", rulesItems)
-    .information-about-room__cancellation-conditions
+    section.information-about-room__cancellation-conditions
       h2.cancellation-conditions__title Отмена
       p.cancellation-conditions__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
 
