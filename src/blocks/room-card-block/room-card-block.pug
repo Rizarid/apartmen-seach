@@ -3,13 +3,9 @@ include ../../components/rate-button/rate-button.pug
 
 mixin roomCardBlock(options)
   -
-    const slides = options.slides || []
-    const roomNumber = options.roomNumber || 000
-    const isLux = options.isLux || false 
-    const price = options.price || 0
-    const stars = options.stars || 0
-    const reviewsQuantity = options.reviewsQuantity || 0
-    const href = options.link || "#"
+    const { 
+      slides = [], roomNumber = 0, isLux = false, price = 0, stars = 0, reviewsQuantity = 0, link = "#" 
+    } = options
 
   .room-card-block.js-room-card-block
     +imageSlider(slides)
@@ -17,19 +13,19 @@ mixin roomCardBlock(options)
       .room-card-block__header 
         p.room-card-block__title 
           span.room-card-block__number-symbol №
-          span.room-card-block__number #{roomNumber}
+          span.room-card-block__number #{ roomNumber }
           if isLux
             span.room-card-block__tag люкс
 
         p.room-card-block__room-price
-          span.room-card-block__price.js-room-card-block__price #{price}
+          span.room-card-block__price.js-room-card-block__price #{ price }
           span.room-card-block__period в сутки
 
       .room-card-block__feedback
         +rateButton(stars)
     
         p.room-card-block__reviews 
-          span.room-card-block__reviews-quantity #{reviewsQuantity}
+          span.room-card-block__reviews-quantity #{ reviewsQuantity }
           span.room-card-block__reviews-text Отзывов
 
     
