@@ -27,14 +27,10 @@ const menu = {
       menu.visibleItem = undefined
     }
   }
-
 }
-  if(menu.burger){
-    menu.burger.addEventListener("click", menu.activateBurger);
-  }
+ 
+if(menu.burger) menu.burger.addEventListener("click", menu.activateBurger); 
+if(menu.$arrows) menu.$arrows.on("click", menu.showSubMenu);
 
-  if(menu.$arrows) {
-    menu.$arrows.on("click", menu.showSubMenu);
-  }
 
   

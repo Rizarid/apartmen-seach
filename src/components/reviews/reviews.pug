@@ -2,13 +2,17 @@ include ../review/review.pug
 
 mixin reviews(options)
   -
-    const title = options.title || "отзывы"
-    const reviewsData = options.reviewsData || undefined
+    const { title = "отзывы", reviewsData = undefined } = options
+    const haveReviewsData = reviewsData !== undefined
+    const numberReviews = haveReviewsData ? reviewsData.length : 0
+    const { getDecline } = require('./scripts/getDecline.js')
+    const reviewWord = getDecline(numberReviews, ['отзыв', 'отзыва', 'отзывов'])
 
-  .reviews 
-    h2.reviews__title #{title}
-    p.reviews__number-of-reviews #{reviewsData.length} отзыва
-    .reviews__conteiner
-      each item in reviewsData
-        +review(item)
+  section.reviews 
+    h2.reviews__title #{ title }
+    p.reviews__number-of-reviews #{ numberReviews } #{ reviewWord }
+    .reviews__container
+      if haveReviewsData
+        each item in reviewsData
+          +review(item)
       
