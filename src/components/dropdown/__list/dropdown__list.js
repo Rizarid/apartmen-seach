@@ -1,7 +1,8 @@
 import * as $ from "jquery"
 
+import { getDecline } from '../../../scripts/getDecline'
 import { ControlPanel } from "../../control-panel/control-panel.js";
-import {DropdownItem} from "../__item/dropdown__item.js";
+import { DropdownItem } from '../__item/dropdown__item';
 
 class List {
   constructor (options) {
@@ -11,7 +12,7 @@ class List {
     this._initItems(items);
   }
 
-  getList = () => {return this._parent}
+  getList = () => this._parent
 
   clean = () => this._list.map((item) => item.clean());
 
@@ -20,18 +21,17 @@ class List {
       this._list.push(new DropdownItem({ titleText: key, quantity: value })))
     );
 
-    this._list.map( (item) => this._parent.appendChild(item.getItem()));
+    this._list.map((item) => this._parent.appendChild(item.getItem()));
   }
-    
 }
-  
+
 class ListConvenience extends  List {
-  getListValue = () => (
-    this._list.map( (item) => item.getItemToString()).join(", ").slice(0, 20) + "..."
-  );
+  getListValue = () => {
+    const values = this._list.map((item) => item.getItemToString());
+    return values.join(", ").slice(0, 20) + "...";
+  };
 }
-  
-  
+ 
 class ListGuests extends List {
   constructor (options) {
     super(options);
@@ -42,7 +42,6 @@ class ListGuests extends List {
   getListValue = () => {
     let babies;
     const guests = this._list.reduce( (sum, current) => {
-    
       const isBabes = current.getTitle() === "младенцы";
 
       if (isBabes)  {
@@ -52,37 +51,14 @@ class ListGuests extends List {
       
     } , 0);
 
+    const guestLabel = getDecline(guests, ["гость", "гостя", "гостей"]);
+    const babiesLabel = getDecline(babies, ["младенец", "младенца", "младенцев"]);
+
     if (!guests & !babies) return "Сколько гостей";
-
     if (!guests) return "Нельзя бронировать только для младенцев";
-    
-    if (babies === 0) return `${guests} ${this._getDeclineGuest(guests)}`;
-
-    return `${guests} ${this._getDeclineGuest(guests)}, ${babies} ${this._getDeclineBabies(babies)}`;
+    return (babies === 0) ? `${guests} ${guestLabel}` : `${guests} ${guestLabel}, ${babies} ${babiesLabel}`;
         
-  }
-
-  _getDecline = function(numb){
-    const quantity = String(numb);
-    const length = quantity.length;
-    const isNominative = quantity[length - 1] === "1" & quantity[length - 2] != "1";
-
-    const isGenitive = (((quantity[length-1] === "2") | (quantity[length-1] === "3") | (
-      quantity[length-1] === "4")) & quantity[length - 2] != "1"
-    );
-    
-    return isNominative ? 0 : isGenitive ? 1 : 2; 
-  }
-
-  _getDeclineGuest = (numb) => {
-    const guest = ["гость", "гостя", "гостей"];
-    return guest[this._getDecline(numb)]
-  }
-
-  _getDeclineBabies = (numb) => {
-    const guest = ["младенец", "младенца", "младенцев"];
-    return guest[this._getDecline(numb)]
   }
 }
 
-export { ListConvenience, ListGuests}
+export { ListConvenience, ListGuests }
