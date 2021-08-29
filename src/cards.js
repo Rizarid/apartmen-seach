@@ -5,7 +5,7 @@ import "./fonts/scss/_path.scss";
 import {Datepicker} from "./components/datepicker/datepicker.js";
 import "./blocks/search-block/search-block.js";
 import "./blocks/registration-block/registration-block.js"
-import {Booking} from "./blocks/booking-block/booking-block.js";
+import { Booking } from "./blocks/booking-block/booking-block.js";
 import "./blocks/sign-in-block/sign-in-block.js";
 import "./blocks/room-card-block/room-card-block.js";
 import "./scripts/jquery-ui/jquery-ui.js";
