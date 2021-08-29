@@ -8,4 +8,6 @@ import "./blocks/footer/footer.js";
 import "./blocks/information-about-room/information-about-room.js";
 import "./components/room-gallery/room-gallery.js";
 
-const booking = new Booking(9990, 2179, 0, 300);
+const booking = new Booking({ 
+    roomPrice: 9990, discount: 2179, servicesTotal: 0, additionalServicesPrice: 300
+});

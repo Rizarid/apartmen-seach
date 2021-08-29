@@ -10,48 +10,32 @@ class LogicModel {
     this._servicesTotal = servicesTotal;
     this._additionalServicesPrice = additionalServicesPrice;
 
-    this._dateDropdown = new DateDropdown({parentSelector: "date-select", initDates:["+1d", "+5d"]});
-
-    this._guests = new DropdownClass({parentSelector: "guests"}); 
+    this._dateDropdown = new DateDropdown({ parentSelector: "date-select", initDates:["+1d", "+5d"] });
+    this._guests = new DropdownClass({ parentSelector: "guests" }); 
 
     this.calculate();
   }
 
   calculate = () => {
-
     this._days = this._dateDropdown.getQuantityDays();
     this._basicPriceResult = this._price * this._days;
     this._totalPriceValue = (this._days > 0) ? this._basicPriceResult - this._discount + 
       this._servicesTotal + this._additionalServicesPrice : 0;
   }
 
-  getPrice = () => {
-    return this._price;
-  }
+  getPrice = () => this._price;
 
-  getDiscount = () => {
-    return this._discount;
-  }
+  getDiscount = () => this._discount;
 
-  getServicesTotal = () => {
-    return this._servicesTotal;
-  }
+  getServicesTotal = () => this._servicesTotal;
 
-  getAdditionalServicesPrice = () => {
-    return this._additionalServicesPrice;
-  }
+  getAdditionalServicesPrice = () => this._additionalServicesPrice;
 
-  getDays = () => {
-    return this._days;
-  }
+  getDays = () => this._days;
 
-  getBasicPriceResult = () => {
-    return this._basicPriceResult;
-  }
+  getBasicPriceResult = () => this._basicPriceResult;
 
-  getTotalPriceValue = () => {
-    return this._totalPriceValue;
-  }
+  getTotalPriceValue = () => this._totalPriceValue;
 }
 
-export {LogicModel}
+export { LogicModel }

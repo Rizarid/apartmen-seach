@@ -13,11 +13,10 @@ import "./scripts/jquery-ui/jquery-ui.css";
 import "./scripts/datepicker-russification.js";
 import "./styles/cards.sass";
 
-
-
 {
-  const booking = new Booking(9990, 2179, 0, 300);
-  
+  const booking = new Booking({ 
+    roomPrice: 9990, discount: 2179, servicesTotal: 0, additionalServicesPrice: 300
+  });
   const datepickerContainer = document.querySelector(".main__date-picker-container");
   const datepicker = new Datepicker(datepickerContainer);
 }
