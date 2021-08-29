@@ -5,7 +5,7 @@ import "./round-chart.sass";
   roundChart.innerHTML = getRoundChart([0, 65, 65, 130]);
 }
 
-function getRoundChart(data) {
+function getRoundChart(data = []) {
   
   const chartData = {};
   chartData.data = data;
