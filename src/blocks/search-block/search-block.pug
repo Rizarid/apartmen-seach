@@ -4,14 +4,14 @@ include ../../components/button/button.pug
 
 mixin searchBlock
   form.search-block(action="search-room.html")
-    .search-block__title-conteiner 
+    .search-block__title-container 
       h1.search-block__title Найдём номера под ваши пожелания
 
-    .search-block__date-conteiner 
-      +dateDropdown({className: "date-selection"})
+    .search-block__date-container 
+      +dateDropdown({ className: "date-selection" })
 
-    .search-block__guests-quantity-conteiner 
-      +dropdown({className: "guests-quantity", title: "гости"})
+    .search-block__guests-quantity-container 
+      +dropdown({ className: "guests-quantity", title: "гости" })
 
-    .search-block__button-conteiner
-      +button({text: "подобрать номер", isSubmit: true, modifier: "big"})
+    .search-block__button-container
+      +button({ text: "подобрать номер", isSubmit: true, modifier: "big" })
