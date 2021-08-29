@@ -212,7 +212,8 @@ const informationItems = [
     img: require('../components/information-block/img/smile.png'), 
     alt: 'comfort', 
     title: 'Комфорт', 
-    text: 'Шумопоглощающие стены'},
+    text: 'Шумопоглощающие стены'
+  },
   {
     img: require('../components/information-block/img/windows.png'), 
     alt: 'windows', 
