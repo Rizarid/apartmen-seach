@@ -1,13 +1,12 @@
 import * as $ from 'jquery';
 
+import { numberMargins } from '../../scripts/numberMargins'
 import '../../scripts/jquery-ui/jquery-ui.js';
 import '../../scripts/jquery-ui/jquery-ui.css';
 import './slider.sass';
 
-
 class Slider {
   constructor(options){
-    
     this._init(options);
     
     this._parent = this._getParent();
@@ -17,44 +16,34 @@ class Slider {
     this._initSlider(this); 
   }
 
-    _getParent = () => {
-      return document.querySelector(`.js-${this._parentSelector}`)   
-    }
+    _getParent = () => document.querySelector(`.js-${this._parentSelector}`)   
 
     _init = (options) => {
-        this._parentSelector = options.parentSelector || "slider-selector";
-        this.min = options.min || 0;
-        this.max = options.max || 15000;
-        this.initValues = options.initValues || [min, max];
+       const { parentSelector = "slider-selector", min = 0, max = 15000, initValues = [min, max] } = options;
+        this._parentSelector = parentSelector;
+        this.min = min;
+        this.max = max;
+        this.initValues = initValues;
       }
 
     _initSlider = (_this) => {
-
       this._$body.slider({
         range: true,
         min: _this.min,
         max: _this.max,
         values: _this.initValues,
-
-        slide: function(event, ui) {
-          let value = `${_this._numberMargins(ui.values[0])}&#8381 - ${_this._numberMargins(ui.values[1])}&#8381`;
-          _this._$value.html(value);
-        }
+        slide: this.handleSliderChange
       })
 
-      this._$value.html(`${this._numberMargins(this._$body.slider("values", 0))}&#8381 - ${this._numberMargins(this._$body.slider("values", 1))}&#8381`);
+      const min = this._$body.slider("values", 0);
+      const max = this._$body.slider("values", 1);
+      this._$value.html(`${ numberMargins(min) }&#8381 - ${ numberMargins(max) }&#8381`);
     }
 
-    _numberMargins = function(number){
-
-      let arr = String(number).split("");
-      let len = Math.trunc(arr.length/3);
-
-      for (let i=1; i<=len; i++) {
-        arr.splice(arr.length - (i * 3 + i - 1), 0, " ");
-      }
-
-      return arr.join("");
+    handleSliderChange = (event, ui) => {
+      const [min, max] = ui.values;
+      let value = `${ numberMargins(min) }&#8381 - ${ numberMargins(max) }&#8381`;
+      this._$value.html(value);
     }
 }
 
