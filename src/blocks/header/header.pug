@@ -13,11 +13,11 @@ mixin header(isLogIn, userName)
         if !isLogIn
           .header__authorization.js-header__authorization
             .header__log-in
-              +button({text: "Войти", href: 'sign-in.html', modifier: "min-transparent"})
+              +button({ text: "Войти", href: 'sign-in.html', modifier: "min-transparent" })
 
             .header__registration
-              +button({text:"Зарегистрироваться", href: "registration.html"})
+              +button({ text:"Зарегистрироваться", href: "registration.html" })
 
         else 
           .header__user-name 
-            p.header__name #{userName}
+            p.header__name #{ userName }
