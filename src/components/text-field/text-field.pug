@@ -1,9 +1,6 @@
 mixin textField(options)
-  -
-    const title = options.title || false 
-    const name = options.name || "text-field"
-    const type = options.type || "text"
-    const placeholder = options.placeholder || ""
+  - const { title = false, name = "text-field", type = "text", placeholder = "" } = options
+
   .text-field
     if title
       h3.text-field__title #{title}
