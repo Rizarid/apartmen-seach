@@ -207,4 +207,66 @@ const expandableCheckboxListOptions = {
   ]
 }
 
-export { roomsOptions, checkboxButtonsOptions, richCheckboxButtonsOptions, expandableCheckboxListOptions }
+const informationItems = [
+  {
+    img: require('../components/information-block/img/smile.png'), 
+    alt: 'comfort', 
+    title: 'Комфорт', 
+    text: 'Шумопоглощающие стены'},
+  {
+    img: require('../components/information-block/img/windows.png'), 
+    alt: 'windows', 
+    title: 'Удобство', 
+    text: 'Окно в каждой из спален'}, 
+  {
+    img: require('../components/information-block/img/fire.png'), 
+    alt: 'cosiness', 
+    title: 'Уют', 
+    text: 'Номер оснащён камином'
+  }
+]
+
+const reviewsData = [
+  {
+    photo: require('../components/reviews/img/user1.jpg'), 
+    name: 'Мурад Сарафанов', 
+    publicationDate: '5 дней назад', 
+    text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', 
+    quantityLikes: 12, 
+    liked: true
+  },
+  {
+    photo: require('../components/reviews/img/user2.jpg'), 
+    name: 'Патрисия Стёклышкова', 
+    publicationDate: 'Неделю назад', 
+    text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент', 
+    quantityLikes: 2, 
+    liked: false
+  }
+]
+
+const rulesItems = [
+  'Нельзя с питомцами', 
+  'Без вечеринок и мероприятий', 
+  'Время прибытия — после 13:00, а выезд до 12:00'
+]
+
+const roomGalleryData = [
+  {
+    src: require('../components/room-gallery/img/room-01.jpg'), 
+    alt: 'room01'
+  }, 
+  {
+    src: require('../components/room-gallery/img/room-02.jpg'), 
+    alt: 'room02'
+  }, 
+  {
+    src: require('../components/room-gallery/img/room-03.jpg'), 
+    alt: 'room03'
+  },
+]
+
+export { 
+  roomsOptions, checkboxButtonsOptions, richCheckboxButtonsOptions, expandableCheckboxListOptions,
+  informationItems, reviewsData, rulesItems, roomGalleryData
+}
