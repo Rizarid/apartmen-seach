@@ -1,4 +1,4 @@
-mixin pagination(maxValue, paginationText)
+mixin pagination(maxValue = 15, paginationText = 'pagination text')
   .pagination
     .pagination__pages
       .pagination__prev-button
@@ -7,9 +7,9 @@ mixin pagination(maxValue, paginationText)
       .pagination__page 2
       .pagination__page 3
       .pagination__page ...
-      .pagination__page #{maxValue} 
+      .pagination__page #{ maxValue } 
       .pagination__next-button 
         span
 
     .pagination__text-container 
-      p.pagination__text #{paginationText}
+      p.pagination__text #{ paginationText }

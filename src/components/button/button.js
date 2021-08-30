@@ -1,2 +1,2 @@
-import "./button.sass";
+import './button.sass';
 

@@ -1,14 +1,14 @@
 include ../like-button/like-button.pug
 
-mixin review(options)
+mixin review(options = {})
   -
     const { 
-      photo = "", name = "", publicationDate = "", text = "", quantityLikes: quantity = 0, liked = false 
+      photo = '', name = '', publicationDate = '', text = '', quantityLikes: quantity = 0, liked = false 
     } = options
  
   article.review
     header.review__user 
-      img.review__photo(src != photo, alt = "user photo")
+      img.review__photo(src != photo, alt = 'user photo')
       .review__name-container 
         h2.review__name #{ name }
         p.review__publication-date #{ publicationDate }

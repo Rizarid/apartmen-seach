@@ -1,4 +1,4 @@
-mixin image(src, alt, active)
+mixin image(src = './', alt = 'alt', active = false)
   if active
     img.image-slider__image.active(src != src, alt != alt)
   else 

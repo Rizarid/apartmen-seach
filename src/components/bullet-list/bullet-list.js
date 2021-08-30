@@ -1,1 +1,1 @@
-import "./bullet-list.sass";
+import './bullet-list.sass';

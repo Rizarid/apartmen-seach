@@ -1,13 +1,12 @@
-mixin button(options)
+mixin button(options = {})
   -
-    const { modifier = undefined, href = '', isSubmit = false,  text = "Click me" } = options
-    const classDefault = "button"
-    
+    const { modifier = undefined, href = '', isSubmit = false,  text = 'Click me' } = options
+    const classDefault = 'button'
     let classes = modifier ? `${classDefault} ${classDefault}_${modifier}` : classDefault
     
   if isSubmit 
-    button(type = "submit", class != classes) #{text}
+    button(type = 'submit', class != classes) #{ text }
   else
     a(class != classes, href != href)   
-      p.button__text #{text}
+      p.button__text #{ text }
       

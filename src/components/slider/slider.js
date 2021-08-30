@@ -6,12 +6,12 @@ import '../../scripts/jquery-ui/jquery-ui.css';
 import './slider.sass';
 
 class Slider {
-  constructor(options){
+  constructor(options = {}){
     this._init(options);
     
     this._parent = this._getParent();
-    this._$body = $(this._parent).children(".slider__body");
-    this._$value = $(this._parent).find(".slider__values");
+    this._$body = $(this._parent).children('.slider__body');
+    this._$value = $(this._parent).find('.slider__values');
 
     this._initSlider(this); 
   }
@@ -19,7 +19,7 @@ class Slider {
     _getParent = () => document.querySelector(`.js-${this._parentSelector}`)   
 
     _init = (options) => {
-       const { parentSelector = "slider-selector", min = 0, max = 15000, initValues = [min, max] } = options;
+       const { parentSelector = 'slider-selector', min = 0, max = 15000, initValues = [min, max] } = options;
         this._parentSelector = parentSelector;
         this.min = min;
         this.max = max;
@@ -35,8 +35,8 @@ class Slider {
         slide: this.handleSliderChange
       })
 
-      const min = this._$body.slider("values", 0);
-      const max = this._$body.slider("values", 1);
+      const min = this._$body.slider('values', 0);
+      const max = this._$body.slider('values', 1);
       this._$value.html(`${ numberMargins(min) }&#8381 - ${ numberMargins(max) }&#8381`);
     }
 

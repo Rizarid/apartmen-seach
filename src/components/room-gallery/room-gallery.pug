@@ -1,10 +1,15 @@
 mixin roomGallery(imgData = [])
-  - const [bigImage, smallImageFirst, smallImageSecond] = imgData
+  - const [bigImage = {}, smallImageFirst = {}, smallImageSecond = {}] = imgData
   figure.room-gallery
     figure.room-gallery__main-container
-      img.room-gallery__image.room-gallery__image_big(src != bigImage.src, alt != bigImage.alt) 
+      if bigImage
+        img.room-gallery__image.room-gallery__image_big(src != bigImage.src, alt != bigImage.alt) 
+
     figure.room-gallery__additional-container 
       figure.room-gallery__small-container 
-        img.room-gallery__image.room-gallery__image_small(src != smallImageFirst.src, alt != smallImageFirst.alt)
+        if smallImageFirst
+          img.room-gallery__image.room-gallery__image_small(src != smallImageFirst.src, alt != smallImageFirst.alt)
+
       figure.room-gallery__small-container 
-        img.room-gallery__image.room-gallery__image_small(src != smallImageSecond.src, alt != smallImageSecond.alt)
+        if smallImageSecond
+          img.room-gallery__image.room-gallery__image_small(src != smallImageSecond.src, alt != smallImageSecond.alt)
