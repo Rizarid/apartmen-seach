@@ -1,17 +1,17 @@
 import './fonts/fonts.css';
 import './fonts/scss/_path.scss';
 import './styles/search-room.sass';
-import './scripts/create-element.js';
-import './blocks/header/header.js';
-import './blocks/room-card-block/room-card-block.js';
-import './blocks/footer/footer.js';
-import { FilterDateDropdown } from './components/filter-date-dropdown/filter-date-dropdown.js';
-import { Slider } from './components/slider/slider.js';
-import './components/checkbox-buttons/checkbox-buttons.js';
-import './components/rich-checkbox-buttons/rich-checkbox-buttons.js';
-import './components/expandable-checkbox-list/expandable-checkbox-list.js';
-import './components/pagination/pagination.js';
-import './components/dropdown/dropdown.js';
+import './scripts/create-element';
+import './blocks/header/header';
+import './blocks/room-card-block/room-card-block';
+import './blocks/footer/footer';
+import { FilterDateDropdown } from './components/filter-date-dropdown/filter-date-dropdown';
+import { Slider } from './components/slider/slider';
+import './components/checkbox-buttons/checkbox-buttons';
+import './components/rich-checkbox-buttons/rich-checkbox-buttons';
+import './components/expandable-checkbox-list/expandable-checkbox-list';
+import './components/pagination/pagination';
+import './components/dropdown/dropdown';
 import { DropdownClass } from './components/dropdown/DropdownClass';
 import { ListConvenience } from './components/dropdown/__list/ListConvenience';
 

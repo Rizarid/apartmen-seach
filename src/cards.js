@@ -1,16 +1,13 @@
-import * as $ from 'jquery';
+/* eslint-disable no-unused-vars */
 
 import './fonts/fonts.css';
 import './fonts/scss/_path.scss';
-import { Datepicker } from './components/datepicker/datepicker.js';
-import './blocks/search-block/search-block.js';
-import './blocks/registration-block/registration-block.js';
-import { Booking } from './blocks/booking-block/booking-block.js';
-import './blocks/sign-in-block/sign-in-block.js';
-import './blocks/room-card-block/room-card-block.js';
-import './scripts/jquery-ui/jquery-ui.js';
-import './scripts/jquery-ui/jquery-ui.css';
-import './scripts/datepicker-russification.js';
+import { Datepicker } from './components/datepicker/datepicker';
+import './blocks/search-block/search-block';
+import './blocks/registration-block/registration-block';
+import { Booking } from './blocks/booking-block/booking-block';
+import './blocks/sign-in-block/sign-in-block';
+import './blocks/room-card-block/room-card-block';
 import './styles/cards.sass';
 
 {
