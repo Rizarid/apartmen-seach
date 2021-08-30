@@ -4,19 +4,18 @@ import '../../scripts/jquery-ui/jquery-ui.js';
 import '../../scripts/jquery-ui/jquery-ui.css';
 import '../../scripts/datepicker-russification.js';
 import '../../scripts/create-element.js';
-import '../datepicker/datepicker.js';
-import '../datepicker/datepicker.sass';
 import { Datepicker } from '../datepicker/datepicker.js';
+import '../datepicker/datepicker.sass';
+
 import './filter-date-dropdown.sass';
 
-
-class FilterDateDropdown{
-  constructor(options = {}){
+class FilterDateDropdown {
+  constructor(options = {}) {
     this._init(options);
-    this._view = new ViewFilterDateDropdown (this._parentSelector);
-    this._controller = new ControllerFilterDateDropdown (this._view, this._model, this._initDates);
+    this._view = new ViewFilterDateDropdown(this._parentSelector);
+    this._controller = new ControllerFilterDateDropdown(this._view, this._model, this._initDates);
   }
-  
+
   getStartDate = () => this._view.getStartDate();
 
   getEndDate = () => this._view.getEndDate();
@@ -29,7 +28,7 @@ class FilterDateDropdown{
 }
 
 class ViewFilterDateDropdown {
-  constructor (parentSelector) {
+  constructor(parentSelector) {
     this._parent = this._getParentElement(parentSelector);
     this._getField();
     this._datepicker = new Datepicker($(this._parent).find('.filter-date-dropdown__datepicker-container')[0]);
@@ -38,7 +37,7 @@ class ViewFilterDateDropdown {
 
   getDateDropdown = () => this._parent;
 
-  setFieldValue = (value) => this._field.value = value; 
+  setFieldValue = (value) => this._field.value = value;
 
   setDate = (dates) => this._datepicker.setDate(dates);
 
@@ -47,7 +46,7 @@ class ViewFilterDateDropdown {
   getEndDate = () => this._datepicker.getEndDate();
 
   getStartDateText = () => this._datepicker.getStartDateText();
-  
+
   getEndDateText = () => this._datepicker.getEndDateText();
 
   showDatepicker = () => {
@@ -72,7 +71,7 @@ class ViewFilterDateDropdown {
 }
 
 class ControllerFilterDateDropdown {
-  constructor (view, model, initDates) {
+  constructor(view, model, initDates) {
     this._view = view;
     this._model = model;
     this._initDates = initDates;
@@ -102,17 +101,16 @@ class ControllerFilterDateDropdown {
   }
 
   _formatDate = (startDate, endDate) => {
-    if(!startDate || !endDate) return '';
-    else{ 
-      const months = ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'];
-      const startDay =  (startDate.getDate() > 9) ? startDate.getDate().toString() : `0${startDate.getDate()}`
-      const endDay =  (endDate.getDate() > 9) ? endDate.getDate().toString() : `0${endDate.getDate()}`
-      const startMonth = months[startDate.getMonth()];
-      const endMonth = months[endDate.getMonth()];
+    if (!startDate || !endDate) return '';
 
-      return `${startDay} ${startMonth} - ${endDay} ${endMonth}`
-    }
+    const months = ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'];
+    const startDay = (startDate.getDate() > 9) ? startDate.getDate().toString() : `0${startDate.getDate()}`;
+    const endDay = (endDate.getDate() > 9) ? endDate.getDate().toString() : `0${endDate.getDate()}`;
+    const startMonth = months[startDate.getMonth()];
+    const endMonth = months[endDate.getMonth()];
+
+    return `${startDay} ${startMonth} - ${endDay} ${endMonth}`;
   }
 }
 
-export {FilterDateDropdown}
+export { FilterDateDropdown };

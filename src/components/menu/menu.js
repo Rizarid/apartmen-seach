@@ -17,20 +17,17 @@ const menu = {
     menu.navigation.classList.toggle('nav__container_active');
     menu.darkening.classList.toggle('nav__darkening_active');
   },
-  
+
   showSubMenu() {
     menu.$subLists.removeClass('nav__sub-list_visible');
-    if(menu.visibleItem != this){
+    if (menu.visibleItem != this) {
       $(this).parent().next().toggleClass('nav__sub-list_visible');
-      menu.visibleItem = this
+      menu.visibleItem = this;
     } else {
-      menu.visibleItem = undefined
+      menu.visibleItem = undefined;
     }
-  }
-}
- 
-if(menu.burger) menu.burger.addEventListener('click', menu.activateBurger); 
-if(menu.$arrows) menu.$arrows.on('click', menu.showSubMenu);
+  },
+};
 
-
-  
+if (menu.burger) menu.burger.addEventListener('click', menu.activateBurger);
+if (menu.$arrows) menu.$arrows.on('click', menu.showSubMenu);

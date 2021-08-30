@@ -1,12 +1,11 @@
 import * as $ from 'jquery';
 
-import '../../scripts/create-element.js'
-import './image-slider.sass'
-import { Slide } from './__image/image-slider__image.js'
+import '../../scripts/create-element.js';
+import './image-slider.sass';
+import { Slide } from './__image/image-slider__image.js';
 
-
-class ImageSlider{
-  constructor(slider){
+class ImageSlider {
+  constructor(slider) {
     this._slider = slider;
     this._createSlides();
     this._createDotsBlock();
@@ -26,7 +25,7 @@ class ImageSlider{
   }
 
   _createSlides = () => {
-    let $images = $(this._slider).children('.image-slider__slides').children('.image-slider__image');
+    const $images = $(this._slider).children('.image-slider__slides').children('.image-slider__image');
     this._slides = $.map($images, (item) => new Slide(item));
   }
 
@@ -62,12 +61,11 @@ class ImageSlider{
     this._activeDot.classList.add('image-slider__slide-dote_active');
   }
 
-  _initPrevButton = () => this._prev = $(this._slider).children('.image-slider__prev')[0]; 
+  _initPrevButton = () => this._prev = $(this._slider).children('.image-slider__prev')[0];
 
   _initNextButton = () => this._next = $(this._slider).children('.image-slider__next')[0];
- 
-  _addListeners = () => {
 
+  _addListeners = () => {
     this._slider.addEventListener('dotSwitch', this._handleDotSwitch);
     this._slider.addEventListener('slideSwitch', this._handleSlideSwitch);
 
@@ -80,10 +78,10 @@ class ImageSlider{
 
   _handleSlideSwitch = (event) => this._switchSlide(event.target)
 
-  _handleDotSwitch =  (event) => this._switchDot(event.target)
+  _handleDotSwitch = (event) => this._switchDot(event.target)
 
   _handleSlideReturn = () => {
-    this._activeSlide.classList.remove('image-slider__image_active'); 
+    this._activeSlide.classList.remove('image-slider__image_active');
     this._activeSlide = this._previousSlide;
     this._activeSlide.classList.add('image-slider__image_active');
   }
@@ -98,10 +96,10 @@ class ImageSlider{
     const nextSlide = $(this._activeSlide).next()[0];
     const nextDot = $(this._activeDot).next()[0];
 
-    if (nextSlide){
+    if (nextSlide) {
       this._switchSlide(nextSlide);
       this._switchDot(nextDot);
-    } else{
+    } else {
       this._switchSlide($(this._activeSlide).parent().children().first()[0]);
       this._switchDot($(this._activeDot).parent().children().first()[0]);
     }
@@ -111,18 +109,16 @@ class ImageSlider{
     const prevSlide = $(this._activeSlide).prev()[0];
     const prevDot = $(this._activeDot).prev()[0];
 
-    if (prevSlide){
+    if (prevSlide) {
       this._switchSlide(prevSlide);
       this._switchDot(prevDot);
-    } else{
+    } else {
       this._switchSlide($(this._activeSlide).parent().children().last()[0]);
       this._switchDot($(this._activeDot).parent().children().last()[0]);
     }
   }
 
-  _isTouch = () => {
-    return ('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch;
-  }
+  _isTouch = () => ('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch
 
   _activateTouchOptions = () => {
     this._prev.classList.add('image-slider__prev_touch');
@@ -130,13 +126,12 @@ class ImageSlider{
   }
 
   _updateHeight = (target) => {
-    target.style.height = `${target.offsetWidth * 0.55925}px` ;
+    target.style.height = `${target.offsetWidth * 0.55925}px`;
   }
 
-  _createResizeObserver = () => this.resizeObserver = new ResizeObserver(entries => this._updateHeight(entries[0].target));
+  _createResizeObserver = () => this.resizeObserver = new ResizeObserver((entries) => this._updateHeight(entries[0].target));
 
   _addResizeObserver = () => this.resizeObserver.observe(this._slider);
-
 }
 
-export{ImageSlider}
+export { ImageSlider };

@@ -6,9 +6,9 @@ import './slider-of-background.sass';
   let i = 0;
   setInterval(nextSlide, 10000);
 
-  function nextSlide(){
+  function nextSlide() {
     slides[i].classList.remove('slider-of-background__image_active');
-    i = (i + 1 < slides.length) ?  i + 1 :  0;
+    i = (i + 1 < slides.length) ? i + 1 : 0;
     slides[i].classList.add('slider-of-background__image_active');
   }
 }

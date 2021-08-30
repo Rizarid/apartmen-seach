@@ -1,2 +1,2 @@
-import './dropdown.sass'
-import './__item/dropdown__item.sass'
+import './dropdown.sass';
+import './__item/dropdown__item.sass';

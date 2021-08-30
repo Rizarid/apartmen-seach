@@ -1,25 +1,25 @@
-import * as $ from 'jquery'
+import * as $ from 'jquery';
 
-import {ListConvenience, ListGuests} from './__list/dropdown__list.js'
+import { ListConvenience, ListGuests } from './__list/dropdown__list.js';
 
-class DropdownClass{
-  constructor (options = {}) {
-    this._init(options)
+class DropdownClass {
+  constructor(options = {}) {
+    this._init(options);
     this._getParent(this._parentSelector);
     this._getField();
 
     const list = $(this._parent).find('.dropdown__list')[0];
-    this._list = this._getListClass({list: list, items: this._items});
+    this._list = this._getListClass({ list, items: this._items });
 
     this._addListeners();
     this._apply();
   }
 
   _init = (options = {}) => {
-    const { 
-      parentSelector = 'dropdown', 
-      items = {'взрослые': 0, 'дети': 0, 'младенцы': 0}, 
-      getListClass = (items) => new ListGuests(items) 
+    const {
+      parentSelector = 'dropdown',
+      items = { взрослые: 0, дети: 0, младенцы: 0 },
+      getListClass = (items) => new ListGuests(items),
     } = options;
 
     this._parentSelector = parentSelector;
@@ -28,16 +28,16 @@ class DropdownClass{
   }
 
   _getParent = () => {
-    this._parent = document.querySelector(`.js-${this._parentSelector}`)
+    this._parent = document.querySelector(`.js-${this._parentSelector}`);
   }
 
   _getField = () => this._field = $(this._parent).find('.dropdown__field')[0];
 
   _addListeners = () => {
-    this._field.addEventListener('click', this._handleFieldClick)
+    this._field.addEventListener('click', this._handleFieldClick);
     this._parent.addEventListener('mouseleave', this._handleDropdownMouseleave);
-    this._list.getList().addEventListener('cleanButtonClick', this._handleCleanButtonClick)
-    this._list.getList().addEventListener('applyButtonClick', this._handleApplyButtonClick)
+    this._list.getList().addEventListener('cleanButtonClick', this._handleCleanButtonClick);
+    this._list.getList().addEventListener('applyButtonClick', this._handleApplyButtonClick);
   }
 
   _handleFieldClick = () => {
@@ -61,4 +61,4 @@ class DropdownClass{
   }
 }
 
-export {DropdownClass}
+export { DropdownClass };

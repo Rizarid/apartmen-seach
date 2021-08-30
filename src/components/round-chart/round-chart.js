@@ -6,22 +6,21 @@ import './round-chart.sass';
 }
 
 function getRoundChart(data = []) {
-  
   const chartData = {};
   chartData.data = data;
 
   chartData.sum = chartData.data.reduce((sum, current) => sum + current, 0);
-  chartData.dash = chartData.data.map(item => (item > 0) ? Math.abs((item / chartData.sum) * 100 - 0.5) : 0);
+  chartData.dash = chartData.data.map((item) => ((item > 0) ? Math.abs((item / chartData.sum) * 100 - 0.5) : 0));
 
-  chartData.dashoffset = []
+  chartData.dashoffset = [];
 
   for (let i = 0; i < chartData.dash.length; i++) {
     if (i == 0) {
       chartData.dashoffset.push(25);
-      continue
+      continue;
     }
 
-    chartData.dashoffset.push(100 - chartData.dash[i-1] + chartData.dashoffset[i-1] - 0.5);
+    chartData.dashoffset.push(100 - chartData.dash[i - 1] + chartData.dashoffset[i - 1] - 0.5);
   }
 
   const chart = `
@@ -61,7 +60,7 @@ function getRoundChart(data = []) {
       </ul>
     </figcaption>
   </figure>
-  `
+  `;
 
   return chart;
 }

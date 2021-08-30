@@ -5,9 +5,9 @@ import './__item/expandable-checkbox-list__item.js';
 
 {
   const $expandableCheckboxList = $('.js-expandable-checkbox-list__container-of-title');
-  if($expandableCheckboxList.length) $expandableCheckboxList.click(showExpandableCheckboxList);
+  if ($expandableCheckboxList.length) $expandableCheckboxList.click(showExpandableCheckboxList);
 
-  function showExpandableCheckboxList(){
+  function showExpandableCheckboxList() {
     $(this).toggleClass('expandable-checkbox-list__container-of-title_visible');
   }
 }

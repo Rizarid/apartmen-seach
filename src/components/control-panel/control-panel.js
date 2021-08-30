@@ -2,22 +2,22 @@ import '../../scripts/create-element.js';
 import './control-panel.sass';
 
 class ControlPanel {
-  constructor () {
+  constructor() {
     this._createEvents();
     this._createCleanButton();
     this._createApplyButton();
     this._addListeners();
-    
+
     this._controlPanel = createElement('div', 'control-panel');
     this._controlPanel.appendChild(this._cleanButton);
     this._controlPanel.appendChild(this._applyButton);
   }
-  
+
   getPanel = () => this._controlPanel;
 
   _createEvents = () => {
-    this._cleanEvent = new Event('cleanButtonClick', {bubbles: true});
-    this._applyEvent = new Event('applyButtonClick', {bubbles: true});
+    this._cleanEvent = new Event('cleanButtonClick', { bubbles: true });
+    this._applyEvent = new Event('applyButtonClick', { bubbles: true });
   }
 
   _handleCleanButtonClick = () => this._cleanButton.dispatchEvent(this._cleanEvent);
@@ -46,4 +46,4 @@ class ControlPanel {
   }
 }
 
-export {ControlPanel}
+export { ControlPanel };

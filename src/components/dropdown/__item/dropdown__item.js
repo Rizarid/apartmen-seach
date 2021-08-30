@@ -1,12 +1,11 @@
 import '../../../scripts/create-element.js';
 
-class DropdownItem{
-  constructor(options = {}){
+class DropdownItem {
+  constructor(options = {}) {
     const { titleText: title = 'Item title', quantity = 0 } = options;
     this._model = new ModelDropdownItem({ title, quantity });
     this._view = new ViewDropdownItem({ title, quantity });
     this._controller = new ControllerDropdownItem({ model: this._model, view: this._view });
-
   }
 
   getItemToString = () => this._model.getItemToString();
@@ -21,12 +20,12 @@ class DropdownItem{
 }
 
 class ModelDropdownItem {
-  constructor (options = {}) {
+  constructor(options = {}) {
     const { title, quantity } = options;
     this._title = title;
     this._quantity = quantity;
   }
-  
+
   increase = () => this._quantity++;
 
   reduce = () => this._quantity--;
@@ -43,7 +42,7 @@ class ModelDropdownItem {
 }
 
 class ViewDropdownItem {
-  constructor (options) {
+  constructor(options) {
     const { title, quantity } = options;
 
     this._createTitle(title);
@@ -70,7 +69,7 @@ class ViewDropdownItem {
 
   _createTitle = (title) => {
     this._title = createElement('p', 'dropdown__title');
-    this.setTitle(title)
+    this.setTitle(title);
   }
 
   _createQuantity = (quantity) => {
@@ -78,7 +77,7 @@ class ViewDropdownItem {
     this.setQuantity(quantity);
   }
 
-  _createButtons = () =>{
+  _createButtons = () => {
     this._minusButton = createElement('div', 'dropdown__button dropdown__minus-button');
     this._minusButton.innerHTML = '-';
 
@@ -114,9 +113,8 @@ class ViewDropdownItem {
   _handlePlusButtonClick = () => this._plusButton.dispatchEvent(this._onPlusButtonClick);
 }
 
-
 class ControllerDropdownItem {
-  constructor (options = {}) {
+  constructor(options = {}) {
     const { model, view } = options;
     this._model = model;
     this._view = view;
@@ -130,9 +128,8 @@ class ControllerDropdownItem {
   }
 
   _addListeners = () => {
-
-    this._view.getItem().addEventListener('minusButtonClick', this._handleMinusButtonClick)
-    this._view.getItem().addEventListener('plusButtonClick', this._handlePlusButtonClick)
+    this._view.getItem().addEventListener('minusButtonClick', this._handleMinusButtonClick);
+    this._view.getItem().addEventListener('plusButtonClick', this._handlePlusButtonClick);
   }
 
   _handleMinusButtonClick = () => {
@@ -146,7 +143,7 @@ class ControllerDropdownItem {
     if (this._model.getQuantity() === 0) this._view.activateMinusButton();
     this._model.increase();
     this._view.setQuantity(this._model.getQuantity());
-  }   
+  }
 }
 
-export {DropdownItem}
+export { DropdownItem };

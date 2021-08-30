@@ -1,7 +1,6 @@
-import '../../../scripts/create-element.js'
+import '../../../scripts/create-element.js';
 
-function Slide(img){
-
+function Slide(img) {
   this._slide = img;
   this._dot = createElement('div', 'image-slider__slide-dote');
 
@@ -17,15 +16,15 @@ function Slide(img){
   this._handleDotMouseover = () => {
     this._dot.dispatchEvent(this._onDotSwitch);
     this._slide.dispatchEvent(this._onSlideSwitch);
-  }
+  };
 
   this._handleDotMouseout = () => {
     this._dot.dispatchEvent(this._onDotReturn);
     this._slide.dispatchEvent(this._onSlideReturn);
-  }
+  };
 
   this._dot.addEventListener('mouseover', this._handleDotMouseover);
   this._dot.addEventListener('mouseout', this._handleDotMouseout);
 }
 
-export {Slide}
+export { Slide };
