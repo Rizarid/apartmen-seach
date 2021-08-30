@@ -3,7 +3,7 @@ mixin dropdown(options)
     const { title = "dropdown", name = "dropdown", className = "" } = options
     const classes = className ? `dropdown ${className} js-${className}` : "dropdown js-dropdown"
 
-  div(class != classes)
+  section(class != classes)
     h3.dropdown__title #{title}
 
     .dropdown__container-of-field

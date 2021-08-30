@@ -31,35 +31,35 @@ html(lang='ru')
       .main__container 
 
         aside.filters.js-filters
-          article.filters__date.js-filters__date
+          .filters__date.js-filters__date
             +filterDateDropdown({ className: 'date-filter', title: 'даты пребывания в отеле', name: 'dateFilter' })
           
-          article.filters__guests
+          .filters__guests
             +dropdown({ className: 'guests-quantity', title: 'гости' })
           
-          article.filters__price 
+          section.filters__price 
             +slider({ title: 'диапазон цены', selector: 'price-filter' })
             p.filters__price-text Стоимость за сутки пребывания в номере
           
-          article.filters__rules
+          .filters__rules
             +checkboxButtons(checkboxButtonsOptions)
           
-          article.filters__availability
+          .filters__availability
             +richCheckboxButtons(richCheckboxButtonsOptions)
           
-          article.filters__convenience
+          .filters__convenience
             +dropdown({ className: 'convenience-filter', title: 'удобства номера' , name:'convenience' })
           
-          article.filters__additional-amenities
+          .filters__additional-amenities
             +expandableCheckboxList(expandableCheckboxListOptions)
         
-        section.search-results 
+        article.search-results 
           h1.search-results__title Номера, которые мы для вас подобрали
           
           .search-results__list
             
             each item in roomsOptions
-              article.search-results__item
+              .search-results__item
                 +roomCardBlock(item)
 
             .search-results__pagination

@@ -3,7 +3,7 @@ mixin filterDateDropdown(options)
     const { title = "filter date dropdown",  name = "dateFilter", className = "" } = options
     const classes = className ? `filter-date-dropdown ${className} js-${className}` : "filter-date-dropdown js-filter-date-dropdown"
 
-  article(class != classes)
+  section(class != classes)
     .filter-date-dropdown__container
       h3.filter-date-dropdown__title #{title}
       input.filter-date-dropdown__field(type = "text", name != name, placeholder="ДД.ММ.ГГГГ" readonly)

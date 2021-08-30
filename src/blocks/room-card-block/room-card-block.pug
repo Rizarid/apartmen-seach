@@ -7,11 +7,11 @@ mixin roomCardBlock(options)
       slides = [], roomNumber = 0, isLux = false, price = 0, stars = 0, reviewsQuantity = 0, link = "#" 
     } = options
 
-  .room-card-block.js-room-card-block
+  article.room-card-block.js-room-card-block
     +imageSlider(slides)
     a.room-card-block__information(href != link) 
       .room-card-block__header 
-        p.room-card-block__title 
+        h2.room-card-block__title 
           span.room-card-block__number-symbol №
           span.room-card-block__number #{ roomNumber }
           if isLux
