@@ -1,14 +1,14 @@
 import * as $ from 'jquery';
 
-import '../../scripts/create-element.js';
-import { ControlPanel } from '../control-panel/control-panel.js';
+import '../../scripts/create-element';
+import { ControlPanel } from '../control-panel/control-panel';
 import './ui-datepicker';
 
 class Datepicker {
   constructor(parent) {
     this._parent = parent;
     this._createOnSelectEvent();
-    this._init(this);
+    this._init();
     this._controlPanel = new ControlPanel();
 
     this._parent.appendChild(this._controlPanel.getPanel());
@@ -31,17 +31,14 @@ class Datepicker {
 
   getEndDateText = () => this._datepicker.endDateText;
 
-  _createOnSelectEvent = () => this._onSelected = new Event('datepickerOnSelect', { bubbles: true });
+  _createOnSelectEvent = () => { this._onSelected = new Event('datepickerOnSelect', { bubbles: true }); };
 
-  _init = (obj) => {
+  _init = () => {
     $(this._parent).datepicker({
       range: 'period',
       showOtherMonths: 1,
       selectOtherMonths: true,
-
-      onSelect(dateText, inst, extensionRange) {
-        obj._parent.dispatchEvent(obj._onSelected);
-      },
+      onSelect: this._onSelect,
     });
   }
 
@@ -52,6 +49,10 @@ class Datepicker {
   _addListeners = () => {
     this._parent.addEventListener('cleanButtonClick', this._handleParentCleanButtonClick);
   }
+
+  _onSelect = () => {
+    this._parent.dispatchEvent(this._onSelected);
+  };
 }
 
 export { Datepicker };

@@ -1,6 +1,8 @@
 import * as $ from 'jquery';
 
-import { ListConvenience, ListGuests } from './__list/dropdown__list.js';
+// eslint-disable-next-line no-unused-vars
+import { ListConvenience } from './__list/ListConvenience';
+import { ListGuests } from './__list/ListGuests';
 
 class DropdownClass {
   constructor(options = {}) {
@@ -19,7 +21,7 @@ class DropdownClass {
     const {
       parentSelector = 'dropdown',
       items = { взрослые: 0, дети: 0, младенцы: 0 },
-      getListClass = (items) => new ListGuests(items),
+      getListClass = (params) => new ListGuests(params),
     } = options;
 
     this._parentSelector = parentSelector;
@@ -31,7 +33,7 @@ class DropdownClass {
     this._parent = document.querySelector(`.js-${this._parentSelector}`);
   }
 
-  _getField = () => this._field = $(this._parent).find('.dropdown__field')[0];
+  _getField = () => { [this._field] = $(this._parent).find('.dropdown__field'); };
 
   _addListeners = () => {
     this._field.addEventListener('click', this._handleFieldClick);
@@ -43,7 +45,8 @@ class DropdownClass {
   _handleFieldClick = () => {
     const list = this._list.getList();
     const isListVisible = list.classList.contains('dropdown__list_visible');
-    (!isListVisible) ? list.classList.add('dropdown__list_visible') : this._apply();
+    if (!isListVisible) list.classList.add('dropdown__list_visible');
+    else this._apply();
   }
 
   _handleDropdownMouseleave = () => this._apply();

@@ -13,7 +13,7 @@ import './components/expandable-checkbox-list/expandable-checkbox-list.js';
 import './components/pagination/pagination.js';
 import './components/dropdown/dropdown.js';
 import { DropdownClass } from './components/dropdown/DropdownClass';
-import { ListConvenience } from './components/dropdown/__list/dropdown__list';
+import { ListConvenience } from './components/dropdown/__list/ListConvenience';
 
 {
   const searchRoom = {};

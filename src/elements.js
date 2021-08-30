@@ -20,7 +20,7 @@ import './components/toggle/toggle.js';
 import './components/rate-button/rate-button.js';
 import './components/dropdown/dropdown.js';
 import { DropdownClass } from './components/dropdown/DropdownClass.js';
-import { ListConvenience, ListGuests } from './components/dropdown/__list/dropdown__list.js';
+import { ListConvenience, ListGuests } from './components/dropdown/__list/ListConvenience';
 import './styles/elements.sass';
 
 {

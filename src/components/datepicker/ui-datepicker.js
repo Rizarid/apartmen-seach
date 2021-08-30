@@ -1,5 +1,5 @@
 import * as $ from 'jquery';
-import '../../scripts/jquery-ui/jquery-ui.js';
+import '../../scripts/jquery-ui/jquery-ui';
 import '../../scripts/jquery-ui/jquery-ui.css';
 
 /* jQuery ui-datepicker extension */
