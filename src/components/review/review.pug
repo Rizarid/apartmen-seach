@@ -10,9 +10,8 @@ mixin review(options)
     header.review__user 
       img.review__photo(src != photo, alt = "user photo")
       .review__name-container 
-        p.review__name #{ name }
-        p.review__publication-date 
-          time #{ publicationDate }
+        h2.review__name #{ name }
+        p.review__publication-date #{ publicationDate }
     
     .review__message
       .review__like-button-container
