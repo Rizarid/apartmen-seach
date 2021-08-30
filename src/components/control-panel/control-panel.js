@@ -1,4 +1,4 @@
-import '../../scripts/create-element.js';
+import '../../scripts/create-element';
 import './control-panel.sass';
 
 class ControlPanel {
