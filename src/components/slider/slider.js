@@ -1,7 +1,7 @@
 import * as $ from 'jquery';
 
 import { numberMargins } from '../../scripts/numberMargins';
-import '../../scripts/jquery-ui/jquery-ui.js';
+import '../../scripts/jquery-ui/jquery-ui';
 import '../../scripts/jquery-ui/jquery-ui.css';
 import './slider.sass';
 

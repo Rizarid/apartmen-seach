@@ -3,17 +3,19 @@ import * as $ from 'jquery';
 import './like-button.sass';
 
 {
-  const $likeButtons = $('.js-like-button');
-  if ($likeButtons.length) $likeButtons.click(handleLikeButtonClick);
-
-  function handleLikeButtonClick() {
+  const handleLikeButtonClick = function () {
     $(this).toggleClass('like-button_liked');
     let text;
 
-    $(this).hasClass('like-button_liked')
-      ? text = Number($(this).children('.like-button__quantity').text()) + 1
-      : text = Number($(this).children('.like-button__quantity').text()) - 1;
+    if ($(this).hasClass('like-button_liked')) {
+      text = Number($(this).children('.like-button__quantity').text()) + 1;
+    } else {
+      text = Number($(this).children('.like-button__quantity').text()) - 1;
+    }
 
     $(this).children('.like-button__quantity').html(text.toString());
-  }
+  };
+
+  const $likeButtons = $('.js-like-button');
+  if ($likeButtons.length) $likeButtons.click(handleLikeButtonClick);
 }

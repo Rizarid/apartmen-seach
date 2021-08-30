@@ -20,7 +20,7 @@ const menu = {
 
   showSubMenu() {
     menu.$subLists.removeClass('nav__sub-list_visible');
-    if (menu.visibleItem != this) {
+    if (menu.visibleItem !== this) {
       $(this).parent().next().toggleClass('nav__sub-list_visible');
       menu.visibleItem = this;
     } else {

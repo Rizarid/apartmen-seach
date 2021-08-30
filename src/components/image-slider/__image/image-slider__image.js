@@ -1,4 +1,4 @@
-import '../../../scripts/create-element.js';
+import '../../../scripts/create-element';
 
 function Slide(img) {
   this._slide = img;

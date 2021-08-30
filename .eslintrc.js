@@ -22,5 +22,6 @@ module.exports = {
     "object-curly-newline": "off",
     "import/prefer-default-export": "off",
     "no-undef": "off",
+    "no-continue": "off",
   },
 };

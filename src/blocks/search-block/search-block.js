@@ -2,7 +2,7 @@ import '../../components/button/button.js';
 import { DateDropdown } from '../../components/date-dropdown/date-dropdown.js';
 import '../../components/dropdown/dropdown.js';
 import { DropdownClass } from '../../components/dropdown/DropdownClass';
-import { ListGuests } from '../../components/dropdown/__list/dropdown__list.js';
+import { ListGuests } from '../../components/dropdown/__list/ListGuests';
 import './search-block.sass';
 
 {
