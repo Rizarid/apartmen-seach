@@ -1,3 +1,3 @@
-import '../../components/text-field/text-field.js';
-import '../../components/button/button.js';
+import '../../components/text-field/text-field';
+import '../../components/button/button';
 import './sign-in-block.sass';

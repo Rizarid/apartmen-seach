@@ -1,5 +1,5 @@
-import '../../components/information-block/information-block.js';
-import '../../components/round-chart/round-chart.js';
-import '../../components/reviews/reviews.js';
-import '../../components/bullet-list/bullet-list.js';
+import '../../components/information-block/information-block';
+import '../../components/round-chart/round-chart';
+import '../../components/reviews/reviews';
+import '../../components/bullet-list/bullet-list';
 import './information-about-room.sass';

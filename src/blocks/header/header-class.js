@@ -9,19 +9,19 @@ class Header {
   }
 
   _getElements = () => {
-    this._buttons = $(this._header).find('.js-header__authorization')[0];
-    this._content = $(this._header).find('.js-header__content')[0];
-    this._navContainer = $(this._header).find('.js-nav__container')[0];
-    this._navList = $(this._header).find('.js-nav__list')[0];
+    [this._buttons] = $(this._header).find('.js-header__authorization');
+    [this._content] = $(this._header).find('.js-header__content');
+    [this._navContainer] = $(this._header).find('.js-nav__container');
+    [this._navList] = $(this._header).find('.js-nav__list');
   }
 
   _hiddenButtons = () => {
-    if (window.innerWidth < 530 & !this._isHidden) {
+    if (window.innerWidth < 530 && !this._isHidden) {
       this._navContainer.insertBefore(this._buttons, this._navList);
       this._isHidden = true;
     }
 
-    if (window.innerWidth >= 530 & this._isHidden) {
+    if (window.innerWidth >= 530 && this._isHidden) {
       this._content.appendChild(this._buttons);
       this._isHidden = false;
     }

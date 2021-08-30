@@ -1,9 +1,10 @@
-import '../../components/logo/logo.js';
-import '../../components/button/button.js';
-import '../../components/menu/menu.js';
-import { Header } from './header-class.js';
+import '../../components/logo/logo';
+import '../../components/button/button';
+import '../../components/menu/menu';
+import { Header } from './header-class';
 import './header.sass';
 
 {
+  // eslint-disable-next-line no-unused-vars
   const header = new Header(document.querySelector('.js-header'));
 }

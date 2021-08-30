@@ -1,3 +1,3 @@
-import '../../components/logo/logo.js';
-import '../../components/subscription-field/subscription-field.js';
+import '../../components/logo/logo';
+import '../../components/subscription-field/subscription-field';
 import './footer.sass';

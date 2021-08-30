@@ -1,6 +1,6 @@
-import '../../components/text-field/text-field.js';
-import '../../components/radio-button/radio-button.js';
-import '../../components/masked-text-field/masked-text-field.js';
-import '../../components/toggle/toggle.js';
-import '../../components/button/button.js';
+import '../../components/text-field/text-field';
+import '../../components/radio-button/radio-button';
+import '../../components/masked-text-field/masked-text-field';
+import '../../components/toggle/toggle';
+import '../../components/button/button';
 import './registration-block.sass';

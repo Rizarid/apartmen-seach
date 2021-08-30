@@ -1,6 +1,7 @@
-import '../../components/button/button.js';
-import { DateDropdown } from '../../components/date-dropdown/date-dropdown.js';
-import '../../components/dropdown/dropdown.js';
+/* eslint-disable no-unused-vars */
+import '../../components/button/button';
+import { DateDropdown } from '../../components/date-dropdown/date-dropdown';
+import '../../components/dropdown/dropdown';
 import { DropdownClass } from '../../components/dropdown/DropdownClass';
 import { ListGuests } from '../../components/dropdown/__list/ListGuests';
 import './search-block.sass';
