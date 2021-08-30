@@ -6,8 +6,6 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin')
 const { Template } = require('webpack');
 const autoprefixer = require('autoprefixer');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-
 
 const isDev = process.env.NODE_ENV === "development";
 const isProd = !isDev;
@@ -62,9 +60,9 @@ module.exports = {
 
     },
     plugins: [
-        new FaviconsWebpackPlugin('./favicon.svg'),
         autoprefixer,
         new HTMLWebpackPlugin({
+            favicon: './favicon.svg',
             template: 'src/index.pug',
             inject: 'body',
             chunks: ['main'],
@@ -73,6 +71,7 @@ module.exports = {
             }
         }),
         new HTMLWebpackPlugin({
+            favicon: './favicon.svg',
             template: 'src/search-room.pug',
             inject: 'body',
             filename: 'search-room.html',
@@ -82,6 +81,7 @@ module.exports = {
             }
         }),
         new HTMLWebpackPlugin({
+            favicon: './favicon.svg',
             template: 'src/room.pug',
             inject: 'body',
             filename: 'room.html',
@@ -91,6 +91,7 @@ module.exports = {
             }
         }),
         new HTMLWebpackPlugin({
+            favicon: './favicon.svg',
             template: 'src/sign-in.pug',
             inject: 'body',
             filename: 'sign-in.html',
@@ -100,6 +101,7 @@ module.exports = {
             }
         }),
         new HTMLWebpackPlugin({
+            favicon: './favicon.svg',
             template: 'src/registration.pug',
             inject: 'body',
             filename: 'registration.html',
@@ -109,6 +111,7 @@ module.exports = {
             }
         }),
         new HTMLWebpackPlugin({
+            favicon: './favicon.svg',
             template: 'src/elements.pug',
             inject: 'body',
             filename: 'elements.html',
@@ -118,6 +121,7 @@ module.exports = {
             }
         }),
         new HTMLWebpackPlugin({
+            favicon: './favicon.svg',
             template: 'src/cards.pug',
             inject: 'body',
             filename: 'cards.html',
@@ -127,6 +131,7 @@ module.exports = {
             }
         }),
         new HTMLWebpackPlugin({
+            favicon: './favicon.svg',
             template: 'src/headers.pug',
             inject: 'body',
             filename: 'headers.html',
