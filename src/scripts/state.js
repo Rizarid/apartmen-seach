@@ -2,10 +2,10 @@
 const roomsOptions = [
   {
     slides: [
-      { src: require('../components/image-slider/img/01.jpg'), alt: '123' },
-      { src: require('../components/image-slider/img/02.jpg'), alt: '321' },
-      { src: require('../components/image-slider/img/03.jpg'), alt: '321' },
-      { src: require('../components/image-slider/img/04.jpg'), alt: '321' },
+      { src: require('../components/image-slider/img/01.webp'), alt: '123' },
+      { src: require('../components/image-slider/img/02.webp'), alt: '321' },
+      { src: require('../components/image-slider/img/03.webp'), alt: '321' },
+      { src: require('../components/image-slider/img/04.webp'), alt: '321' },
     ],
     roomNumber: 888,
     isLux: true,
@@ -16,10 +16,10 @@ const roomsOptions = [
   },
   {
     slides: [
-      { src: require('../components/image-slider/img/02.jpg'), alt: '123' },
-      { src: require('../components/image-slider/img/04.jpg'), alt: '321' },
-      { src: require('../components/image-slider/img/01.jpg'), alt: '321' },
-      { src: require('../components/image-slider/img/08.jpg'), alt: '321' },
+      { src: require('../components/image-slider/img/02.webp'), alt: '123' },
+      { src: require('../components/image-slider/img/04.webp'), alt: '321' },
+      { src: require('../components/image-slider/img/01.webp'), alt: '321' },
+      { src: require('../components/image-slider/img/08.webp'), alt: '321' },
     ],
     roomNumber: 840,
     isLux: false,
@@ -30,10 +30,10 @@ const roomsOptions = [
   },
   {
     slides: [
-      { src: require('../components/image-slider/img/04.jpg'), alt: '123' },
-      { src: require('../components/image-slider/img/09.jpg'), alt: '321' },
-      { src: require('../components/image-slider/img/07.jpg'), alt: '321' },
-      { src: require('../components/image-slider/img/12.jpg'), alt: '321' },
+      { src: require('../components/image-slider/img/04.webp'), alt: '123' },
+      { src: require('../components/image-slider/img/09.webp'), alt: '321' },
+      { src: require('../components/image-slider/img/07.webp'), alt: '321' },
+      { src: require('../components/image-slider/img/12.webp'), alt: '321' },
     ],
     roomNumber: 980,
     isLux: true,
@@ -44,10 +44,10 @@ const roomsOptions = [
   },
   {
     slides: [
-      { src: require('../components/image-slider/img/03.jpg'), alt: '123' },
-      { src: require('../components/image-slider/img/01.jpg'), alt: '321' },
-      { src: require('../components/image-slider/img/06.jpg'), alt: '321' },
-      { src: require('../components/image-slider/img/11.jpg'), alt: '321' },
+      { src: require('../components/image-slider/img/03.webp'), alt: '123' },
+      { src: require('../components/image-slider/img/01.webp'), alt: '321' },
+      { src: require('../components/image-slider/img/06.webp'), alt: '321' },
+      { src: require('../components/image-slider/img/11.webp'), alt: '321' },
     ],
     roomNumber: 856,
     isLux: false,
@@ -58,10 +58,10 @@ const roomsOptions = [
   },
   {
     slides: [
-      { src: require('../components/image-slider/img/05.jpg'), alt: '123' },
-      { src: require('../components/image-slider/img/09.jpg'), alt: '321' },
-      { src: require('../components/image-slider/img/03.jpg'), alt: '321' },
-      { src: require('../components/image-slider/img/01.jpg'), alt: '321' },
+      { src: require('../components/image-slider/img/05.webp'), alt: '123' },
+      { src: require('../components/image-slider/img/09.webp'), alt: '321' },
+      { src: require('../components/image-slider/img/03.webp'), alt: '321' },
+      { src: require('../components/image-slider/img/01.webp'), alt: '321' },
     ],
     roomNumber: 740,
     isLux: false,
@@ -72,10 +72,10 @@ const roomsOptions = [
   },
   {
     slides: [
-      { src: require('../components/image-slider/img/06.jpg'), alt: '123' },
-      { src: require('../components/image-slider/img/05.jpg'), alt: '321' },
-      { src: require('../components/image-slider/img/11.jpg'), alt: '321' },
-      { src: require('../components/image-slider/img/02.jpg'), alt: '321' },
+      { src: require('../components/image-slider/img/06.webp'), alt: '123' },
+      { src: require('../components/image-slider/img/05.webp'), alt: '321' },
+      { src: require('../components/image-slider/img/11.webp'), alt: '321' },
+      { src: require('../components/image-slider/img/02.webp'), alt: '321' },
     ],
     roomNumber: 982,
     isLux: false,
@@ -86,10 +86,10 @@ const roomsOptions = [
   },
   {
     slides: [
-      { src: require('../components/image-slider/img/07.jpg'), alt: '123' },
-      { src: require('../components/image-slider/img/01.jpg'), alt: '321' },
-      { src: require('../components/image-slider/img/04.jpg'), alt: '321' },
-      { src: require('../components/image-slider/img/06.jpg'), alt: '321' },
+      { src: require('../components/image-slider/img/07.webp'), alt: '123' },
+      { src: require('../components/image-slider/img/01.webp'), alt: '321' },
+      { src: require('../components/image-slider/img/04.webp'), alt: '321' },
+      { src: require('../components/image-slider/img/06.webp'), alt: '321' },
     ],
     roomNumber: 678,
     isLux: false,
@@ -100,10 +100,10 @@ const roomsOptions = [
   },
   {
     slides: [
-      { src: require('../components/image-slider/img/08.jpg'), alt: '123' },
-      { src: require('../components/image-slider/img/09.jpg'), alt: '321' },
-      { src: require('../components/image-slider/img/05.jpg'), alt: '321' },
-      { src: require('../components/image-slider/img/12.jpg'), alt: '321' },
+      { src: require('../components/image-slider/img/08.webp'), alt: '123' },
+      { src: require('../components/image-slider/img/09.webp'), alt: '321' },
+      { src: require('../components/image-slider/img/05.webp'), alt: '321' },
+      { src: require('../components/image-slider/img/12.webp'), alt: '321' },
     ],
     roomNumber: 450,
     isLux: false,
@@ -114,10 +114,10 @@ const roomsOptions = [
   },
   {
     slides: [
-      { src: require('../components/image-slider/img/09.jpg'), alt: '123' },
-      { src: require('../components/image-slider/img/07.jpg'), alt: '321' },
-      { src: require('../components/image-slider/img/04.jpg'), alt: '321' },
-      { src: require('../components/image-slider/img/08.jpg'), alt: '321' },
+      { src: require('../components/image-slider/img/09.webp'), alt: '123' },
+      { src: require('../components/image-slider/img/07.webp'), alt: '321' },
+      { src: require('../components/image-slider/img/04.webp'), alt: '321' },
+      { src: require('../components/image-slider/img/08.webp'), alt: '321' },
     ],
     roomNumber: 350,
     isLux: false,
@@ -128,10 +128,10 @@ const roomsOptions = [
   },
   {
     slides: [
-      { src: require('../components/image-slider/img/10.jpg'), alt: '123' },
-      { src: require('../components/image-slider/img/03.jpg'), alt: '321' },
-      { src: require('../components/image-slider/img/05.jpg'), alt: '321' },
-      { src: require('../components/image-slider/img/07.jpg'), alt: '321' },
+      { src: require('../components/image-slider/img/10.webp'), alt: '123' },
+      { src: require('../components/image-slider/img/03.webp'), alt: '321' },
+      { src: require('../components/image-slider/img/05.webp'), alt: '321' },
+      { src: require('../components/image-slider/img/07.webp'), alt: '321' },
     ],
     roomNumber: 666,
     isLux: false,
@@ -142,10 +142,10 @@ const roomsOptions = [
   },
   {
     slides: [
-      { src: require('../components/image-slider/img/11.jpg'), alt: '123' },
-      { src: require('../components/image-slider/img/10.jpg'), alt: '321' },
-      { src: require('../components/image-slider/img/04.jpg'), alt: '321' },
-      { src: require('../components/image-slider/img/08.jpg'), alt: '321' },
+      { src: require('../components/image-slider/img/11.webp'), alt: '123' },
+      { src: require('../components/image-slider/img/10.webp'), alt: '321' },
+      { src: require('../components/image-slider/img/04.webp'), alt: '321' },
+      { src: require('../components/image-slider/img/08.webp'), alt: '321' },
     ],
     roomNumber: 444,
     isLux: false,
@@ -156,10 +156,10 @@ const roomsOptions = [
   },
   {
     slides: [
-      { src: require('../components/image-slider/img/12.jpg'), alt: '123' },
-      { src: require('../components/image-slider/img/02.jpg'), alt: '321' },
-      { src: require('../components/image-slider/img/03.jpg'), alt: '321' },
-      { src: require('../components/image-slider/img/04.jpg'), alt: '321' },
+      { src: require('../components/image-slider/img/12.webp'), alt: '123' },
+      { src: require('../components/image-slider/img/02.webp'), alt: '321' },
+      { src: require('../components/image-slider/img/03.webp'), alt: '321' },
+      { src: require('../components/image-slider/img/04.webp'), alt: '321' },
     ],
     roomNumber: 352,
     isLux: false,
@@ -211,18 +211,18 @@ const expandableCheckboxListOptions = {
 
 const informationItems = [
   {
-    img: require('../components/information-block/img/smile.png'),
+    img: require('../components/information-block/img/smile.webp'),
     alt: 'comfort',
     title: 'Комфорт',
     text: 'Шумопоглощающие стены',
   },
   {
-    img: require('../components/information-block/img/windows.png'),
+    img: require('../components/information-block/img/windows.webp'),
     alt: 'windows',
     title: 'Удобство',
     text: 'Окно в каждой из спален' },
   {
-    img: require('../components/information-block/img/fire.png'),
+    img: require('../components/information-block/img/fire.webp'),
     alt: 'cosiness',
     title: 'Уют',
     text: 'Номер оснащён камином',
@@ -231,7 +231,7 @@ const informationItems = [
 
 const reviewsData = [
   {
-    photo: require('../components/reviews/img/user1.jpg'),
+    photo: require('../components/reviews/img/user1.webp'),
     name: 'Мурад Сарафанов',
     publicationDate: '5 дней назад',
     text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
@@ -239,7 +239,7 @@ const reviewsData = [
     liked: true,
   },
   {
-    photo: require('../components/reviews/img/user2.jpg'),
+    photo: require('../components/reviews/img/user2.webp'),
     name: 'Патрисия Стёклышкова',
     publicationDate: 'Неделю назад',
     text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
@@ -256,45 +256,45 @@ const rulesItems = [
 
 const roomGalleryData = [
   {
-    src: require('../components/room-gallery/img/room-01.jpg'),
+    src: require('../components/room-gallery/img/room-01.webp'),
     alt: 'room01',
   },
   {
-    src: require('../components/room-gallery/img/room-02.jpg'),
+    src: require('../components/room-gallery/img/room-02.webp'),
     alt: 'room02',
   },
   {
-    src: require('../components/room-gallery/img/room-03.jpg'),
+    src: require('../components/room-gallery/img/room-03.webp'),
     alt: 'room03',
   },
 ];
 
 const backgroundSliderOptions = [
   {
-    src: require('../components/slider-of-background/img/01.jpg'),
+    src: require('../components/slider-of-background/img/01.webp'),
     alt: 'room01',
   },
   {
-    src: require('../components/slider-of-background/img/02.jpg'),
+    src: require('../components/slider-of-background/img/02.webp'),
     alt: 'room02',
   },
   {
-    src: require('../components/slider-of-background/img/03.jpg'),
+    src: require('../components/slider-of-background/img/03.webp'),
     alt: 'room03',
   },
 ];
 
 const backgroundSliderRegistrationOptions = [
   {
-    src: require('../components/slider-of-background/img/04.png'),
+    src: require('../components/slider-of-background/img/04.webp'),
     alt: 'room01',
   },
   {
-    src: require('../components/slider-of-background/img/01.jpg'),
+    src: require('../components/slider-of-background/img/01.webp'),
     alt: 'room02',
   },
   {
-    src: require('../components/slider-of-background/img/02.jpg'),
+    src: require('../components/slider-of-background/img/02.webp'),
     alt: 'room03',
   },
 ];

@@ -37,7 +37,8 @@
       & .header__authorization
         width: fit-content
         align-items: center
-        display: none
+        opacity: 1
+        display: flex
         padding-left: 20px
 
         @media screen and ( max-width:  1000px)
@@ -47,10 +48,13 @@
           margin-left: auto
           margin-right: auto
           padding: 0
+          position: absolute
+          opacity: 0
 
         &_activated
-          display: flex
-
+          opacity: 1
+          position: relative
+          
         & .header__log-in
           box-sizing: border-box
           padding-right: 20.5px

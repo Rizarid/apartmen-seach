@@ -6,6 +6,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin')
 const { Template } = require('webpack');
 const autoprefixer = require('autoprefixer');
+const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
 
 const isDev = process.env.NODE_ENV === "development";
 const isProd = !isDev;
@@ -60,6 +61,7 @@ module.exports = {
 
     },
     plugins: [
+        new ImageminWebpWebpackPlugin(),
         autoprefixer,
         new HTMLWebpackPlugin({
             favicon: './favicon.svg',
@@ -167,7 +169,7 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader, 'css-loader', "postcss-loader", 'sass-loader']
             },
             {
-                test: /\.(png|jpeg|jpg|gif)$/,
+                test: /\.(png|jpeg|jpg|gif|webp)$/,
                 loader: 'file-loader',
                 options: {
                     emitFile: true,

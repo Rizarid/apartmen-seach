@@ -11,5 +11,5 @@ import './slider-of-background.sass';
     slides[i].classList.add('slider-of-background__image_active');
   };
 
-  setInterval(nextSlide, 10000);
+  setInterval(nextSlide, 4000);
 }

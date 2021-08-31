@@ -7,6 +7,6 @@ mixin backgroundSlider(imgData = [])
         if i
           img.slider-of-background__image(src != src alt != alt)
         else 
-          img.slider-of-background__image.slider-of-background__image_active(src != src alt != alt)
+          img.slider-of-background__image.slider-of-background__image_active(src != src alt != alt, loading = "eager")
           - i++
   
