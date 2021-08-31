@@ -1,1 +1,0 @@
-!function(){"use strict";{const e=document.querySelector(".js-slider-of-background").children;let t=0;setInterval((function(){e[t].classList.remove("slider-of-background__image_active"),t=t+1<e.length?t+1:0,e[t].classList.add("slider-of-background__image_active")}),4e3)}}();
