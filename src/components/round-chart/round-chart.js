@@ -62,7 +62,4 @@ const getRoundChart = function (data = []) {
   return chart;
 };
 
-{
-  const roundChart = document.querySelector('.js-round-chart__content');
-  roundChart.innerHTML = getRoundChart([0, 65, 65, 130]);
-}
+export { getRoundChart };
