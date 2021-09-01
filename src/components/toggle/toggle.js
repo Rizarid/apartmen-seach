@@ -11,5 +11,5 @@ import './toggle.sass';
     $(this).toggleClass('toggle_active');
   };
 
-  if ($toggles.length)$toggles.click(handleToggleClick);
+  if ($toggles.length) $toggles.click(handleToggleClick);
 }

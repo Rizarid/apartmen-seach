@@ -1,21 +1,23 @@
-import * as $ from 'jquery';
-
 import './like-button.sass';
 
 {
   const handleLikeButtonClick = function () {
-    $(this).toggleClass('like-button_liked');
+    this.classList.toggle('like-button_liked');
     let text;
 
-    if ($(this).hasClass('like-button_liked')) {
-      text = Number($(this).children('.like-button__quantity').text()) + 1;
+    if (this.classList.contains('like-button_liked')) {
+      text = Number(this.querySelector('.like-button__quantity').innerText) + 1;
     } else {
-      text = Number($(this).children('.like-button__quantity').text()) - 1;
+      text = Number(this.querySelector('.like-button__quantity').innerText) - 1;
     }
 
-    $(this).children('.like-button__quantity').html(text.toString());
+    this.querySelector('.like-button__quantity').innerHTML = text.toString();
   };
 
-  const $likeButtons = $('.js-like-button');
-  if ($likeButtons.length) $likeButtons.click(handleLikeButtonClick);
+  const likeButtons = document.querySelectorAll('div .js-like-button');
+  if (likeButtons.length) {
+    for (let i = 0; i < likeButtons.length; i += 1) {
+      likeButtons[i].addEventListener('click', handleLikeButtonClick);
+    }
+  }
 }

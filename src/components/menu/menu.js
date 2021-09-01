@@ -1,33 +1,40 @@
-import * as $ from 'jquery';
-
 import './menu.sass';
 
-const menu = {
-  burger: document.querySelector('.js-nav__burger'),
-  navigation: document.querySelector('.js-nav__container'),
-  darkening: document.querySelector('.js-nav__darkening'),
+const menu = new Menu();
 
-  $arrows: $('.js-nav__arrow'),
-  $subLists: $('.js-nav__sub-list'),
+function Menu() {
+  this.body = document.querySelector('nav.js-nav');
+  this.burger = this.body.querySelector('.js-nav__burger');
+  this.navigation = this.body.querySelector('.js-nav__container');
+  this.darkening = this.body.querySelector('.js-nav__darkening');
 
-  visibleItem: undefined,
+  this.arrows = this.body.querySelectorAll('.js-nav__arrow');
+  this.subLists = this.body.querySelectorAll('.js-nav__sub-list');
 
-  activateBurger() {
-    menu.burger.classList.toggle('nav__burger_active');
-    menu.navigation.classList.toggle('nav__container_active');
-    menu.darkening.classList.toggle('nav__darkening_active');
-  },
+  this.visibleItem = undefined;
 
-  showSubMenu() {
-    menu.$subLists.removeClass('nav__sub-list_visible');
-    if (menu.visibleItem !== this) {
-      $(this).parent().next().toggleClass('nav__sub-list_visible');
-      menu.visibleItem = this;
-    } else {
-      menu.visibleItem = undefined;
+  this.activateBurger = () => {
+    this.burger.classList.toggle('nav__burger_active');
+    this.navigation.classList.toggle('nav__container_active');
+    this.darkening.classList.toggle('nav__darkening_active');
+  };
+
+  this.showSubMenu = (event) => {
+    for (let i = 0; i < this.subLists.length; i += 1) {
+      this.subLists[i].classList.remove('nav__sub-list_visible');
     }
-  },
-};
 
-if (menu.burger) menu.burger.addEventListener('click', menu.activateBurger);
-if (menu.$arrows) menu.$arrows.on('click', menu.showSubMenu);
+    if (this.visibleItem !== this) {
+      event.target.parentNode.nextElementSibling.classList.toggle('nav__sub-list_visible');
+      this.visibleItem = this;
+    } else {
+      this.visibleItem = undefined;
+    }
+  }
+
+  this.burger.addEventListener('click', this.activateBurger);
+
+  for (let i = 0; i < this.arrows.length; i += 1) {
+    this.arrows[i].addEventListener('click', this.showSubMenu);
+  }
+}

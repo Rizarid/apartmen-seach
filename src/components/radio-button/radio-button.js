@@ -8,6 +8,6 @@ import './radio-button.sass';
     $(this).addClass('radio-button__item_checked');
   };
 
-  const $radioButtons = $('.js-radio-button__item');
+  const $radioButtons = $('div.js-radio-button .js-radio-button__item');
   if ($radioButtons.length) $radioButtons.click(switchButton);
 }
