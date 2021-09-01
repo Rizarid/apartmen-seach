@@ -1,5 +1,9 @@
 import * as $ from 'jquery';
 
+import './room-card-block.sass';
+import '../../components/button/button';
+import '../../components/rate-button/rate-button';
+
 import { ImageSlider } from '../../components/image-slider/image-slider';
 import { numberMargins } from '../../scripts/numberMargins';
 

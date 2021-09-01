@@ -1,0 +1,32 @@
+include ../../components/dropdown/dropdown.pug 
+include ../../components/slider/slider.pug 
+include ../../components/checkbox-buttons/checkbox-buttons.pug 
+include ../../components/rich-checkbox-buttons/rich-checkbox-buttons.pug 
+include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug 
+include ../../components/pagination/pagination.pug 
+include ../../components/filter-date-dropdown/filter-date-dropdown.pug
+
+
+mixin filters()
+  form.filters.js-filters
+    .filters__date.js-filters__date
+      +filterDateDropdown({ className: 'date-filter', title: 'даты пребывания в отеле', name: 'dateFilter' })
+    
+    .filters__guests
+      +dropdown({ className: 'guests-quantity', title: 'гости' })
+    
+    section.filters__price 
+      +slider({ title: 'диапазон цены', selector: 'price-filter' })
+      p.filters__price-text Стоимость за сутки пребывания в номере
+    
+    .filters__rules
+      +checkboxButtons(checkboxButtonsOptions)
+    
+    .filters__availability
+      +richCheckboxButtons(richCheckboxButtonsOptions)
+    
+    .filters__convenience
+      +dropdown({ className: 'convenience-filter', title: 'удобства номера' , name:'convenience' })
+    
+    .filters__additional-amenities
+      +expandableCheckboxList(expandableCheckboxListOptions)
