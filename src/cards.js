@@ -3,7 +3,7 @@
 import './fonts/fonts.css';
 import './fonts/scss/_path.scss';
 import { Datepicker } from './components/datepicker/datepicker';
-import './blocks/search-block/search-block';
+import { SearchForm } from './blocks/search-block/search-block';
 import './blocks/registration-block/registration-block';
 import { Booking } from './blocks/booking-block/booking-block';
 import './blocks/sign-in-block/sign-in-block';
@@ -16,4 +16,5 @@ import './styles/cards.sass';
   });
   const datepickerContainer = document.querySelector('.main__date-picker-container');
   const datepicker = new Datepicker(datepickerContainer);
+  const searchForm = new SearchForm({ dateDropdownSelector: 'date-selection', dropdownSelector: 'guests-quantity' });
 }
