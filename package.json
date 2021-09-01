@@ -59,7 +59,7 @@
   "scripts": {
     "dev": "webpack --mode development",
     "prod": "webpack --mode production",
-    "start": "webpack server --mode production --open",
+    "start": "webpack server --mode development --open",
     "deploy": "npm run prod && gh-pages -d dist",
     "lint": "eslint src/",
     "lint-fix": "eslint --fix src/"
