@@ -39,6 +39,7 @@ class Datepicker {
       showOtherMonths: 1,
       selectOtherMonths: true,
       onSelect: this._onSelect,
+      minDate: 0
     });
   }
 
