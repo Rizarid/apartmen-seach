@@ -8,9 +8,9 @@ import './search-block.sass';
 class SearchForm {
   constructor(options = {}) {
     const { dateDropdownSelector = 'date-selection', dropdownSelector = 'guests-quantity' } = options;
-    this.dateDropdown = new DateDropdown({ parentSelector: dateDropdownSelector });
+    this._dateDropdown = new DateDropdown({ parentSelector: dateDropdownSelector });
 
-    this.dropdown = new DropdownClass({
+    this._dropdown = new DropdownClass({
       parentSelector: dropdownSelector,
       items: { взрослые: 0, дети: 0, младенцы: 0 },
       getListClass: (items) => new ListGuests(items),

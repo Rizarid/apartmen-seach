@@ -10,7 +10,7 @@ class SearchRoom {
  _createRoomCards = () => {
    const roomCardsSelection = Array.prototype.slice.call(document.querySelectorAll('.js-room-card-block'));
    if (roomCardsSelection) {
-     this._roomCards = roomCardsSelection.map((item) => new RoomCard(item))
+     this._roomCards = roomCardsSelection.map((item) => new RoomCard(item));
    }
  }
 

@@ -9,10 +9,10 @@ import { numberMargins } from '../../scripts/numberMargins';
 
 class RoomCard {
   constructor(card) {
-    this.card = card;
-    this.slider = new ImageSlider($(this.card).find('.js-image-slider')[0]);
-    [this.price] = $(this.card).find('.js-room-card-block__price');
-    this.price.innerHTML = `${numberMargins(this.price.innerHTML)}&#8381 `;
+    this._card = card;
+    this._slider = new ImageSlider($(this._card).find('.js-image-slider')[0]);
+    [this._price] = $(this._card).find('.js-room-card-block__price');
+    this._price.innerHTML = `${numberMargins(this._price.innerHTML)}&#8381 `;
   }
 }
 
