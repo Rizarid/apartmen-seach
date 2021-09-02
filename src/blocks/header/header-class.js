@@ -16,12 +16,12 @@ class Header {
   }
 
   _hiddenButtons = () => {
-    if (window.innerWidth < 530 && !this._isHidden) {
+    if (window.innerWidth < 580 && !this._isHidden) {
       this._navContainer.insertBefore(this._buttons, this._navList);
       this._isHidden = true;
     }
 
-    if (window.innerWidth >= 530 && this._isHidden) {
+    if (window.innerWidth >= 580 && this._isHidden) {
       this._content.appendChild(this._buttons);
       this._isHidden = false;
     }
