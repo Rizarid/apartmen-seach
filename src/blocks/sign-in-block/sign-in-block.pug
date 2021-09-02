@@ -6,14 +6,14 @@ mixin signInBlock
       h1.sign-in-block__title Войти
 
     .sign-in-block__email-container
-      +textField({ name: "email", type: "email",  placeholder: "Email" })
+      +textField({ name: 'email', type: 'email',  placeholder: 'Email' })
 
     .sign-in-block__password-container
-      +textField({ name: "password", type: "password",  placeholder: "Пароль" })
+      +textField({ name: 'password', type: 'password',  placeholder: 'Пароль' })
 
     .sign-in-block__submit-container
-      +button({ text: "войти", isSubmit: true, modifier: "big" })
+      +button({ text: 'войти', isSubmit: true, modifier: 'big' })
 
     .sign-in-block__button-container
       p.sign-in-block__button-label Нет аккаунта на Toxin?
-      +button({ text: "создать", href: 'registration.html', modifier: "transparent" })
+      +button({ text: 'создать', href: 'registration.html', modifier: 'transparent' })

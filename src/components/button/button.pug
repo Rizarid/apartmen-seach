@@ -5,7 +5,7 @@ mixin button(options = {})
     let classes = modifier ? `${classDefault} ${classDefault}_${modifier}` : classDefault
     
   if isSubmit 
-    button(type = 'submit', class != classes) #{ text }
+    button(type = "submit", class != classes) #{ text }
   else
     a(class != classes, href != href)   
       p.button__text #{ text }

@@ -6,11 +6,11 @@ mixin dateDropdown(options = {})
   div(class != classes)
     .date-dropdown__container.date-dropdown__container_left
       h3.date-dropdown__title #{titles[0]}
-      input.date-dropdown__field(type = 'text', name != names[0], placeholder = 'ДД.ММ.ГГГГ', readonly)
+      input.date-dropdown__field(type = "text", name != names[0], placeholder = "ДД.ММ.ГГГГ", readonly)
     
     .date-dropdown__container.date-dropdown__container_right
       h3.date-dropdown__title #{titles[1]}
-      input.date-dropdown__field(type = 'text', name != names[1], placeholder = 'ДД.ММ.ГГГГ', readonly)
+      input.date-dropdown__field(type = "text", name != names[1], placeholder = "ДД.ММ.ГГГГ", readonly)
 
     .date-dropdown__datepicker-container
 

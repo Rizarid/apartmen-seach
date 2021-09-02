@@ -15,10 +15,10 @@ mixin bookingBlock
         span.booking__period в сутки
 
     .booking__date 
-      +dateDropdown({ className: "date-select" })
+      +dateDropdown({ className: 'date-select' })
 
     .booking__guests
-      +dropdown({ className: "guests", title: "гости", name: "guestsQuantity" })
+      +dropdown({ className: 'guests', title: 'гости', name: 'guestsQuantity' })
 
     .booking__calculation 
       .booking__basic-price-container 
@@ -43,6 +43,6 @@ mixin bookingBlock
       p.booking__total-price-value.js-booking__total-price-value 
 
     .booking__submit-container 
-      +button({text: "забронировать", isSubmit: true, modifier: "big"})
+      +button({text: 'забронировать', isSubmit: true, modifier: 'big'})
 
   

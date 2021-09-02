@@ -10,29 +10,29 @@ mixin registrationBlock
       h1.registration-block__title Регистрация аккаунта
 
     .registration-block__name-container 
-      +textField({ name: "name", placeholder: "Имя" })
+      +textField({ name: 'name', placeholder: 'Имя' })
 
     .registration-block__surname-container 
-      +textField({ name: "surname", placeholder: "Фамилия" })
+      +textField({ name: 'surname', placeholder: 'Фамилия' })
 
     .registration-block__sex-container 
-      +radioButton("sex", [{ value: "man", text: "Мужчина", checked: true }, { value: "woman", text: "Женщина", checked: false }])
+      +radioButton('sex', [{ value: 'man', text: 'Мужчина', checked: true }, { value: 'woman', text: 'Женщина', checked: false }])
 
     .registration-block__date-of-birth-container
-      +maskedTextField({ title: "дата рождения", name: "dateOfBirth" })
+      +maskedTextField({ title: 'дата рождения', name: 'dateOfBirth' })
 
     .registration-block__email-container
-      +textField({ title: "данные для входа в сервис", name:"email", type:"email", placeholder: "Email" })
+      +textField({ title: 'данные для входа в сервис', name:'email', type:'email', placeholder: 'Email' })
 
     .registration-block__password-container
-      +textField({ name: "password", type: "password",  placeholder: "Пароль" })
+      +textField({ name: 'password', type: 'password',  placeholder: 'Пароль' })
 
     .registration-block__offers-container
-      +toggle({ name: "offers", text: "Получать спецпредложения" })
+      +toggle({ name: 'offers', text: 'Получать спецпредложения' })
 
     .registration-block__submit-container
-      +button({ text: "зарегистрироваться", isSubmit: true, modifier: "big" })
+      +button({ text: 'зарегистрироваться', isSubmit: true, modifier: 'big' })
 
     .registration-block__sign-in-container
       p.registration-block__sign-in-label Уже есть аккаунт на Toxin
-      +button({ text: "войти", href: 'sign-in.html', modifier: "transparent" })
+      +button({ text: 'войти', href: 'sign-in.html', modifier: 'transparent' })
