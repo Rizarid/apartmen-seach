@@ -37,9 +37,9 @@ module.exports = {
         room: './src/room.js',
         signIn: './src/sign-in.js',
         registration: './src/registration.js',
-        elements: "./src/pages/elements/elements.js",
-        cards: "./src/pages/cards/cards.js",
-        headers: "./src/headers.js"
+        elements: './src/pages/elements/elements.js',
+        cards: './src/pages/cards/cards.js',
+        headers: './src/pages/headers/headers.js'
     },
     
     output: {
@@ -49,8 +49,7 @@ module.exports = {
 
     resolve: {
         alias: {
-            "@": path.relative(__dirname, "dist"),
-            
+            "@": path.resolve(__dirname, "src"),
         }
     },
 
@@ -134,7 +133,7 @@ module.exports = {
         }),
         new HTMLWebpackPlugin({
             favicon: './favicon.svg',
-            template: 'src/headers.pug',
+            template: 'src/pages/headers/headers.pug',
             inject: 'body',
             filename: 'headers.html',
             chunks: ['headers'],
