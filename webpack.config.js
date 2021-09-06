@@ -36,7 +36,7 @@ module.exports = {
         searchRoom: './src/search-room.js',
         room: './src/room.js',
         signIn: './src/sign-in.js',
-        registration: './src/registration.js',
+        registration: './src/pages/registration/registration.js',
         elements: './src/pages/elements/elements.js',
         cards: './src/pages/cards/cards.js',
         headers: './src/pages/headers/headers.js'
@@ -104,7 +104,7 @@ module.exports = {
         }),
         new HTMLWebpackPlugin({
             favicon: './favicon.svg',
-            template: 'src/registration.pug',
+            template: 'src/pages/registration/registration.pug',
             inject: 'body',
             filename: 'registration.html',
             chunks: ['registration'],
