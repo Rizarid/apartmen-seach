@@ -33,7 +33,7 @@ module.exports = {
     mode: 'development',
     entry: {
         main: './src/pages/landing/landing.js',
-        searchRoom: './src/search-room.js',
+        searchRoom: './src/pages/search-room/search-room.js',
         room: './src/pages/room/room.js',
         signIn: './src/sign-in.js',
         registration: './src/pages/registration/registration.js',
@@ -74,7 +74,7 @@ module.exports = {
         }),
         new HTMLWebpackPlugin({
             favicon: './favicon.svg',
-            template: 'src/search-room.pug',
+            template: 'src/pages/search-room/search-room.pug',
             inject: 'body',
             filename: 'search-room.html',
             chunks: ['searchRoom'],

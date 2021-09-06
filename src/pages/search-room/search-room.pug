@@ -1,13 +1,13 @@
-include blocks/header/header.pug 
-include blocks/room-card-block/room-card-block.pug 
-include blocks/footer/footer.pug
-include blocks/filters-block/filters-block.pug
+include ../../blocks/header/header.pug 
+include ../../blocks/room-card-block/room-card-block.pug 
+include ../../blocks/footer/footer.pug
+include ../../blocks/filters-block/filters-block.pug
 
 -
   const { 
     roomsOptions  =  [], checkboxButtonsOptions  =  {}, richCheckboxButtonsOptions  =  {}, 
     expandableCheckboxListOptions  =  {}
-  }  =  require("./scripts/state.js")
+  }  =  require("@/scripts/state.js")
 
 doctype html
 html(lang = "ru")
@@ -22,8 +22,8 @@ html(lang = "ru")
   body
     +header(false, "")
     
-    main.main 
-      .main__container 
+    main.search-room 
+      .search-room__container 
         +filters
         
         article.search-results.js-search-results
