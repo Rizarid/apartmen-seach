@@ -32,7 +32,7 @@ const optimization = () => {
 module.exports = {
     mode: 'development',
     entry: {
-        main: './src/index.js',
+        main: './src/pages/landing/landing.js',
         searchRoom: './src/search-room.js',
         room: './src/room.js',
         signIn: './src/sign-in.js',
@@ -64,9 +64,10 @@ module.exports = {
         autoprefixer,
         new HTMLWebpackPlugin({
             favicon: './favicon.svg',
-            template: 'src/index.pug',
+            template: 'src/pages/landing/landing.pug',
             inject: 'body',
             chunks: ['main'],
+            filename: 'index.html',
             minify: {
                 collapseWhitespace: isProd
             }

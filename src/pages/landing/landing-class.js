@@ -1,5 +1,5 @@
-import { SearchForm } from '../blocks/search-block/search-block';
-import { BGSlider } from '../components/slider-of-background/bg-slider';
+import { SearchForm } from '@/blocks/search-block/search-block';
+import { BGSlider } from '@/components/slider-of-background/bg-slider';
 
 
 class Landing {
