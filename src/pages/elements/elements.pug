@@ -1,0 +1,114 @@
+include ../../components/text-field/text-field.pug 
+include ../../components/dropdown/dropdown.pug
+include ../../components/masked-text-field/masked-text-field.pug  
+include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug
+include ../../components/date-dropdown/date-dropdown.pug
+include ../../components/checkbox-buttons/checkbox-buttons.pug 
+include ../../components/subscription-field/subscription-field.pug
+include ../../components/radio-button/radio-button.pug 
+include ../../components/like-button/like-button.pug
+include ../../components/rate-button/rate-button.pug 
+include ../../components/rich-checkbox-buttons/rich-checkbox-buttons.pug 
+include ../../components/slider/slider.pug
+include ../../components/button/button.pug 
+include ../../components/bullet-list/bullet-list.pug
+include ../../components/information-block/information-block.pug
+include ../../components/review/review.pug
+include ../../components/toggle/toggle.pug
+include ../../components/pagination/pagination.pug 
+include ../../components/filter-date-dropdown/filter-date-dropdown.pug
+
+-
+  const { 
+    checkboxButtonsOptions, richCheckboxButtonsOptions, expandableCheckboxListOptions,
+    informationItems, reviewsData, rulesItems
+  } = require('../../scripts/state.js')
+
+.elements 
+  .elements__container
+    .elements__column.elements__column_left
+      .elements__text-field-container 
+        +textField({ title: 'text field', name: 'textField', placeholder: 'Email' }) 
+
+      .elements__guests-container
+        +dropdown({ className: 'guests-quantity', title: 'dropdown', name: 'guestsQuantity' })
+
+      .elements__masked-field-container
+        +maskedTextField({ title: 'masked text field', name: 'dateOfBirth' })
+
+      .elements__date-dropdown-container
+        +dateDropdown({ className: 'date-selection', titles: ['date dropdown', 'date dropdown'] })
+
+      .elements__date-filter-container.js-date-filter-container
+        +filterDateDropdown({ 
+          className: 'date-filter', title: 'filter date dropdown', name: 'dateFilter' 
+        })
+
+      h3.elements__title.subscription-title subscription text field
+      .elements__subscription-field-container
+        +subscriptionField
+
+      .elements__convenience-container 
+        +dropdown({ className: 'convenience', title: 'dropdown', name: 'convenience' })
+      
+      .elements__expandable-checkbox-container
+        - expandableCheckboxListOptions.title = 'expandable checkbox list'
+        +expandableCheckboxList(expandableCheckboxListOptions)
+     
+    .elements__column.elements__column_center 
+      .elements__checkbox-buttons-container
+        - checkboxButtonsOptions.title = 'checkbox buttons'  
+        +checkboxButtons(checkboxButtonsOptions)
+
+      h3.elements__title.radio-button-title Radio Buttons
+      .elements__radio-buttons-container 
+        +radioButton('sex', [
+          { value: 'man', text: 'Мужчина', checked: true }, 
+          { value: 'woman', text: 'Женщина', checked: false }
+        ])
+
+      h3.elements__title.toggle-title toggle
+      .elements__toggle-container
+        +toggle({ text: 'Получать спецпредложения', checked: true})
+        +toggle({ text: 'Получать спецпредложения'})
+
+      h3.elements__title.like-button-title like button
+      .elements__like-button-container 
+        +likeButton({quantity: 2})
+        +likeButton({quantity: 12, liked: true})
+
+      h3.elements__title.rate-button-title rate button
+      .elements__rate-button-container 
+        +rateButton(4)
+        +rateButton(5)
+         
+      .elements__rich-checkbox-container
+        - richCheckboxButtonsOptions.title = 'rich checkbox buttons'
+        +richCheckboxButtons(richCheckboxButtonsOptions)
+
+
+    .elements__column.elements__column_right
+      .elements__slider-container 
+        +slider({title: 'range slider', selector: 'price-filter'})
+
+      h3.elements__title.buttons-title buttons
+      .elements__buttons-container
+        +button({})
+        +button({modifier: 'transparent'})
+        +button({modifier: 'minimal'})
+        +button({text: 'перейти к оплате', modifier: 'big', isSubmit: true})
+
+      h3.elements__title.pagination-title pagination
+      .elements__pagination-container
+        +pagination(15, '1 – 12 из 100+ вариантов аренды')
+        
+      .elements__bullet-list-container 
+        +bulletList('bullet list', rulesItems)
+
+    .elements__row 
+      .elements__information-container 
+        +informationBlock({ itemOptions: [informationItems[0], informationItems[1]] })
+
+      .elements__review-container 
+        +review(reviewsData[0])
+        

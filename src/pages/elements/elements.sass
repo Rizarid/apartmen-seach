@@ -1,11 +1,11 @@
 @import "~normalize.css"
-@import "variables.sass"
-@import "../fonts/fonts.css"
+@import "../../styles/variables.sass"
+@import "../../fonts/fonts.css"
 
 
 +start-page-stiles
   
-.main
+.elements
   box-sizing: border-box
   padding-top: 40px
 
@@ -19,7 +19,7 @@
     flex-wrap: wrap
     box-sizing: border-box
 
-    & .main__title
+    & .elements__title
       text-transform: uppercase
       margin: 0
       padding-bottom: 3px
@@ -44,7 +44,7 @@
         padding-bottom: 16px
 
 
-    & .main__column
+    & .elements__column
       max-width: 320px
       width: 100%
       flex: 1 1 auto
@@ -56,51 +56,51 @@
       &_right
         max-width: 322px
 
-      & .main__text-field-container
+      & .elements__text-field-container
         box-sizing: border-box
         padding-bottom: 106px
 
-      & .main__guests-container
+      & .elements__guests-container
         box-sizing: border-box
         padding-bottom: 24px
 
-      & .main__masked-field-container
+      & .elements__masked-field-container
         box-sizing: border-box
         padding-bottom: 41px
 
-      & .main__date-dropdown-container
+      & .elements__date-dropdown-container
         box-sizing: border-box
         padding-bottom: 41px
 
-      & .main__date-filter-container
+      & .elements__date-filter-container
         box-sizing: border-box
         padding-bottom: 43px
         max-width: 266px
 
-      & .main__subscription-field-container
+      & .elements__subscription-field-container
         box-sizing: border-box
         padding-bottom: 88px
         max-width: 266px
 
-      & .main__convenience-container 
+      & .elements__convenience-container 
         box-sizing: border-box
         padding-bottom: 258px
         max-width: 266px
 
-      & .main__expandable-checkbox-container
+      & .elements__expandable-checkbox-container
         box-sizing: border-box
         padding-bottom: 43px
         max-width: 266px
         
-      & .main__checkbox-buttons-container
+      & .elements__checkbox-buttons-container
         box-sizing: border-box
         padding-bottom: 38px
 
-      & .main__radio-buttons-container
+      & .elements__radio-buttons-container
         box-sizing: border-box
         padding-bottom: 40px
 
-      & .main__toggle-container
+      & .elements__toggle-container
         box-sizing: border-box
         padding-bottom: 44px
 
@@ -108,7 +108,7 @@
           padding-top: 10px
           box-sizing: border-box
 
-      & .main__like-button-container
+      & .elements__like-button-container
         display: flex
         max-width: 89px
         justify-content: space-between
@@ -117,31 +117,31 @@
         box-sizing: border-box
         padding-bottom: 41px
 
-      & .main__rate-button-container
+      & .elements__rate-button-container
         display: flex
         max-width: 260px
         flex: 1 1 auto
         justify-content: space-between
         padding-bottom: 518px
 
-      & .main__rich-checkbox-container
+      & .elements__rich-checkbox-container
         & .rich-checkbox-buttons__item ~ .rich-checkbox-buttons__item
           padding-top: 9px
 
-      & .main__slider-container 
+      & .elements__slider-container 
         max-width: 266px
         padding-bottom: 45px
 
-      & .main__buttons-container
+      & .elements__buttons-container
         padding-bottom: 42px
 
         & .button ~ .button
           margin-top: 30px
 
-      & .main__pagination-container
+      & .elements__pagination-container
         padding-bottom: 535px
 
-      & .main__bullet-list-container
+      & .elements__bullet-list-container
         & .bullet-list__title
           text-transform: uppercase
           font-size: 12px
@@ -151,7 +151,7 @@
         & .bullet-list__list
           padding-top: 9px
 
-    & .main__row
+    & .elements__row
       width: 100%
       display: flex
       flex: 1 1 auto
@@ -159,7 +159,7 @@
       padding-top: 191px
       justify-content: space-between
 
-      & .main__review-container
+      & .elements__review-container
         max-width: 714px
         padding-top: 30px
 
