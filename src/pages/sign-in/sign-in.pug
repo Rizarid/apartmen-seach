@@ -1,9 +1,9 @@
-include blocks/header/header.pug 
-include blocks/sign-in-block/sign-in-block.pug 
-include blocks/footer/footer.pug 
-include components/slider-of-background/slider-of-background.pug 
+include ../../blocks/header/header.pug 
+include ../../blocks/sign-in-block/sign-in-block.pug 
+include ../../blocks/footer/footer.pug 
+include ../../components/slider-of-background/slider-of-background.pug 
 
-- const { backgroundSliderRegistrationOptions }  =  require("./scripts/state.js")
+- const { backgroundSliderRegistrationOptions }  =  require("@/scripts/state.js")
 
 doctype html
 html(lang = "ru")
@@ -18,10 +18,10 @@ html(lang = "ru")
   body
     +header(false, "")
 
-    main.main 
+    main.sign-in 
       +backgroundSlider(backgroundSliderRegistrationOptions)
 
-      .main__container 
+      .sign-in__container 
           +signInBlock
 
     +footer
