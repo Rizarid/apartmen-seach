@@ -1,6 +1,5 @@
 import * as $ from 'jquery';
 
-import '../../scripts/datepicker-russification';
 import '../../scripts/create-element';
 import { Datepicker } from '../datepicker/datepicker';
 import '../datepicker/datepicker.sass';

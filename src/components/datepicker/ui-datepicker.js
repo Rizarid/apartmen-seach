@@ -1,6 +1,7 @@
 import * as $ from 'jquery';
-import '../../scripts/jquery-ui/jquery-ui';
-import '../../scripts/jquery-ui/jquery-ui.css';
+import 'jquery-ui';
+
+import './datepicker-russification';
 
 /* jQuery ui-datepicker extension */
 

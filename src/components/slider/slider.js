@@ -1,8 +1,9 @@
 import * as $ from 'jquery';
+import 'jquery-ui-slider/jquery-ui';
+import 'jquery-ui-slider/jquery-ui.css';
 
 import { numberMargins } from '../../scripts/numberMargins';
-import '../../scripts/jquery-ui/jquery-ui';
-import '../../scripts/jquery-ui/jquery-ui.css';
+import './touch-punch';
 import './slider.sass';
 
 class Slider {

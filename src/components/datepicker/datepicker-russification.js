@@ -1,7 +1,7 @@
 import * as $ from 'jquery';
+import datepickerFactory from 'jquery-datepicker';
 
-import './jquery-ui/jquery-ui';
-import './jquery-ui/jquery-ui.css';
+datepickerFactory($);
 
 $.datepicker.regional.ru = {
   closeText: 'Закрыть',

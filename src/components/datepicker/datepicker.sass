@@ -9,10 +9,11 @@
     background-color: #fff
     border: none
     padding: 0
-    margin: 0 17px
+    margin: 0 20px
 
     .ui-datepicker-prev
       cursor: pointer
+      float: left
       
       &:before
         content: 'arrow_back'
@@ -25,8 +26,8 @@
       &:hover
         background: #fff
         border: none
-        margin-top: 1px
-        margin-left: 1px
+        //margin-top: 1px
+        //margin-left: 1px
           
       & .ui-icon
         display: none
@@ -34,6 +35,7 @@
     .ui-datepicker-next
       cursor: pointer
       border: none
+      float: right
 
       &:before
         content: 'arrow_forward'
@@ -46,8 +48,8 @@
       &:hover
         background: #fff
         border: none
-        margin-top: 1px
-        margin-right: 1px
+        //margin-top: 1px
+        //margin-right: 1px
        
              
       & .ui-icon
@@ -60,11 +62,13 @@
       line-height: 23.16px
       color: $dark-shade
       line-height: 1.6
+      text-align: center
 
   .ui-datepicker-calendar
-    margin: 29px auto 0 auto
+    margin: 25px auto 0 auto
     max-width: 280px
     width: 100%
+    border-collapse: collapse
 
     thead
       tr
@@ -107,6 +111,7 @@
             linre-height: 14.63px
             border: none
             border-radius: 0
+            text-decoration: none
 
           span
             width: 100%
