@@ -1,0 +1,32 @@
+include ../../blocks/search-block/search-block.pug 
+include ../../blocks/registration-block/registration-block.pug 
+include ../../blocks/booking-block/booking-block.pug
+include ../../blocks/sign-in-block/sign-in-block.pug 
+include ../../blocks/room-card-block/room-card-block.pug 
+
+- const { roomsOptions } = require('../../scripts/state.js')
+
+main.cards 
+  .cards__container 
+    .cards__column.cards__column_left
+      .cards__search-form-container
+        +searchBlock
+
+      .cards__registration-form-container 
+        +registrationBlock
+
+    .cards__column.cards__column_center
+      .cards__booking-form-container 
+        +bookingBlock
+
+      .cards__sign-in-form-container
+        +signInBlock
+
+    .cards__column.cards__column_right
+      .cards__date-picker-container 
+
+      .cards__room-card-container
+        +roomCardBlock(roomsOptions[0])
+
+      .cards__room-card-container
+        +roomCardBlock(roomsOptions[1])

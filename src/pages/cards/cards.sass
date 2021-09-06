@@ -1,10 +1,10 @@
 @import "~normalize.css"
-@import "variables.sass"
-@import "../fonts/fonts.css"
+@import "../../styles/variables.sass"
+@import "../../fonts/fonts.css"
 
 +start-page-stiles
 
-.main
+.cards
   width: 100%
   box-sizing: border-box 
   background: #E5E5E5
@@ -19,23 +19,23 @@
     padding: 0 20px
     box-sizing: border-box
 
-    & .main__column
+    & .cards__column
       max-width: 380px
       flex: 1 1 auto
 
       &_right
         max-width: 320px
 
-      & .main__search-form-container
+      & .cards__search-form-container
         padding-bottom: 25px
       
-      & .main__booking-form-container 
+      & .cards__booking-form-container 
         padding-bottom: 25px
         padding-top: 2px
 
-      & .main__date-picker-container
+      & .cards__date-picker-container
         padding-bottom: 42px
 
-      & .main__room-card-container
+      & .cards__room-card-container
         padding-bottom: 39px
         max-width: 270px

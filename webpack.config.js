@@ -38,7 +38,7 @@ module.exports = {
         signIn: './src/sign-in.js',
         registration: './src/registration.js',
         elements: "./src/elements.js",
-        cards: "./src/cards.js",
+        cards: "./src/pages/cards/cards.js",
         headers: "./src/headers.js"
     },
     
@@ -124,7 +124,7 @@ module.exports = {
         }),
         new HTMLWebpackPlugin({
             favicon: './favicon.svg',
-            template: 'src/cards.pug',
+            template: 'src/pages/cards/cards.pug',
             inject: 'body',
             filename: 'cards.html',
             chunks: ['cards'],
