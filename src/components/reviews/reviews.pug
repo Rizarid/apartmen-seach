@@ -5,7 +5,7 @@ mixin reviews(options = {})
     const { title = 'отзывы', reviewsData = undefined } = options
     const haveReviewsData = reviewsData !== undefined
     const numberReviews = haveReviewsData ? reviewsData.length : 0
-    const { getDecline } = require('./scripts/getDecline.js')
+    const { getDecline } = require('@/scripts/getDecline.js')
     const reviewWord = getDecline(numberReviews, ['отзыв', 'отзыва', 'отзывов'])
 
   section.reviews 

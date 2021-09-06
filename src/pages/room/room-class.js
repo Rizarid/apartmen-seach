@@ -1,6 +1,5 @@
-import { getRoundChart } from '../components/round-chart/round-chart';
-import { Booking } from '../blocks/booking-block/booking-block';
-
+import { getRoundChart } from '@/components/round-chart/round-chart';
+import { Booking } from '@/blocks/booking-block/booking-block';
 
 class Room {
   constructor() {

@@ -1,10 +1,10 @@
 @import '~normalize.css'
-@import '../styles/variables.sass'
-@import '../fonts/fonts.css'
+@import '@/styles/variables.sass'
+@import '@/fonts/fonts.css'
 
 +start-page-stiles
 
-.main
+.room
   width: 100%
   box-sizing: border-box
   padding-bottom: 59px
@@ -23,7 +23,7 @@
       flex-direction: column
       align-items: center
         
-    & .main__room-information-container
+    & .room__room-information-container
       max-width: 712px
       flex: 1 1 auto
       width: 100%
@@ -37,7 +37,7 @@
       @media screen and ( max-width: 650px )
         padding-top: 50px
 
-    & .main__booking-container
+    & .room__booking-container
       padding-top: 69px
       flex: 0 0 auto
 

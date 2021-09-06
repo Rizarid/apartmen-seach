@@ -1,11 +1,11 @@
-include blocks/header/header.pug 
-include blocks/information-about-room/information-about-room.pug 
-include blocks/booking-block/booking-block.pug
-include blocks/footer/footer.pug 
-include components/room-gallery/room-gallery.pug 
+include ../../blocks/header/header.pug 
+include ../../blocks/information-about-room/information-about-room.pug 
+include ../../blocks/booking-block/booking-block.pug
+include ../../blocks/footer/footer.pug 
+include ../../components/room-gallery/room-gallery.pug 
 
 -
-  const { informationItems, reviewsData, rulesItems, roomGalleryData }  =  require("./scripts/state.js")
+  const { informationItems, reviewsData, rulesItems, roomGalleryData }  =  require("@/scripts/state.js")
 
 doctype html
 html(lang = "ru")
@@ -19,14 +19,14 @@ html(lang = "ru")
 
   body
     +header(false, "")
-    main.main 
+    main.room 
       +roomGallery(roomGalleryData)
 
-      .main__container 
-        .main__room-information-container
+      .room__container 
+        .room__room-information-container
           +roomInformationBlock(informationItems, reviewsData, rulesItems)
 
-        .main__booking-container
+        .room__booking-container
           +bookingBlock
 
     +footer
