@@ -6,7 +6,7 @@ mixin review(options = {})
       photo = '', name = '', publicationDate = '', text = '', quantityLikes: quantity = 0, liked = false 
     } = options
  
-  article.review
+  article.review.js-review
     header.review__user 
       img.review__photo(src != photo, alt = "user photo")
       .review__name-container 

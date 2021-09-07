@@ -8,7 +8,7 @@ mixin reviews(options = {})
     const { getDecline } = require('@/scripts/getDecline.js')
     const reviewWord = getDecline(numberReviews, ['отзыв', 'отзыва', 'отзывов'])
 
-  section.reviews 
+  section.reviews.js-reviews
     h2.reviews__title #{ title }
     p.reviews__number-of-reviews #{ numberReviews } #{ reviewWord }
     .reviews__container
