@@ -7,9 +7,12 @@ import './booking-block.sass';
 
 class Booking {
   constructor(options = {}) {
-    const { roomPrice, discount, servicesTotal, additionalServicesPrice } = options;
+    const { 
+      target, roomPrice = 9990, discount = 2179, servicesTotal = 0, additionalServicesPrice = 300,
+    } = options;
+
     this._model = new LogicModel(roomPrice, discount, servicesTotal, additionalServicesPrice);
-    this._view = new ViewModel();
+    this._view = new ViewModel(target);
     this.updateView();
     this._addListeners();
   }
