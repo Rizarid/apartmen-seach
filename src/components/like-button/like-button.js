@@ -1,23 +1,24 @@
 import './like-button.sass';
 
-{
-  const handleLikeButtonClick = function () {
-    this.classList.toggle('like-button_liked');
-    let text;
+class LikeButton {
+  constructor(target) {
+    this._body = target;
+    this._quantityElement = this._getQuantity();
+    this._isLiked = this._body.classList.contains('like-button_liked');
+    this._quantity = Number(this._quantityElement.innerText);
+    this._addListener();
+  }
 
-    if (this.classList.contains('like-button_liked')) {
-      text = Number(this.querySelector('.like-button__quantity').innerText) + 1;
-    } else {
-      text = Number(this.querySelector('.like-button__quantity').innerText) - 1;
-    }
+  _getQuantity = () => this._body.querySelector('.like-button__quantity');
 
-    this.querySelector('.like-button__quantity').innerHTML = text.toString();
-  };
+  _addListener = () => { this._body.addEventListener('click', this._handleLikeButtonClick); };
 
-  const likeButtons = document.querySelectorAll('div .js-like-button');
-  if (likeButtons.length) {
-    for (let i = 0; i < likeButtons.length; i += 1) {
-      likeButtons[i].addEventListener('click', handleLikeButtonClick);
-    }
+  _handleLikeButtonClick = () => {
+    this._quantity = (this._isLiked) ? this._quantity - 1 : this._quantity + 1;
+    this._isLiked = !this._isLiked;
+    this._quantityElement.innerText = this._quantity.toString();
+    this._body.classList.toggle('like-button_liked');
   }
 }
+
+export { LikeButton };
