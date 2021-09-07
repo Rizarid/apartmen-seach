@@ -1,9 +1,7 @@
 import '../../scripts/create-element';
 import { FilterDateDropdown } from '../../components/filter-date-dropdown/filter-date-dropdown';
 import { Slider } from '../../components/slider/slider';
-import '../../components/checkbox-buttons/checkbox-buttons';
-import '../../components/rich-checkbox-buttons/rich-checkbox-buttons';
-import '../../components/expandable-checkbox-list/expandable-checkbox-list';
+import { CheckboxButtons } from '../../components/checkbox-buttons/checkbox-buttons';
 import '../../components/pagination/pagination';
 import '../../components/dropdown/dropdown';
 import { DropdownClass } from '../../components/dropdown/DropdownClass';
@@ -36,6 +34,9 @@ class Filters {
     this._createGuestsFilter();
     this._createConvenienceFilter();
     this._createPriceFilter();
+    this._createRulesFilter();
+    this._createAdditionalAmenitiesFilter();
+    this._createAvailability();
   };
 
   _createDateFilter = () => {
@@ -61,6 +62,21 @@ class Filters {
       parentSelector: 'price-filter', min: 0, max: 16000, initValues: ['5000', '10000'],
     });
   };
+
+  _createRulesFilter = () => {
+    const rulesTarget = this._body.querySelector('.filters__rules .js-checkbox-buttons');
+    this._rules = new CheckboxButtons(rulesTarget);
+  }
+
+  _createAdditionalAmenitiesFilter = () => {
+    const additionalAmenitiesTarget = this._body.querySelector('.filters__additional-amenities .js-checkbox-buttons');
+    this._additionalAmenities = new CheckboxButtons(additionalAmenitiesTarget);
+  }
+
+  _createAvailability = () => {
+    const availabilityTarget = this._body.querySelector('.filters__availability .js-checkbox-buttons');
+    this._availability = new CheckboxButtons(availabilityTarget);
+  }
 
   _showFilters = () => {
     this._body.classList.toggle('show');

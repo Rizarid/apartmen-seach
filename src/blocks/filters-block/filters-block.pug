@@ -1,8 +1,6 @@
 include ../../components/dropdown/dropdown.pug 
 include ../../components/slider/slider.pug 
 include ../../components/checkbox-buttons/checkbox-buttons.pug 
-include ../../components/rich-checkbox-buttons/rich-checkbox-buttons.pug 
-include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug 
 include ../../components/pagination/pagination.pug 
 include ../../components/filter-date-dropdown/filter-date-dropdown.pug
 
@@ -23,10 +21,10 @@ mixin filters()
       +checkboxButtons(checkboxButtonsOptions)
     
     .filters__availability
-      +richCheckboxButtons(richCheckboxButtonsOptions)
+      +checkboxButtons(richCheckboxButtonsOptions)
     
     .filters__convenience
       +dropdown({ className: 'convenience-filter', title: 'удобства номера' , name:'convenience' })
     
     .filters__additional-amenities
-      +expandableCheckboxList(expandableCheckboxListOptions)
+      +checkboxButtons(expandableCheckboxListOptions)

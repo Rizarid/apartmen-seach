@@ -1,14 +1,12 @@
 include ../../components/text-field/text-field.pug 
 include ../../components/dropdown/dropdown.pug
 include ../../components/masked-text-field/masked-text-field.pug  
-include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug
 include ../../components/date-dropdown/date-dropdown.pug
 include ../../components/checkbox-buttons/checkbox-buttons.pug 
 include ../../components/subscription-field/subscription-field.pug
 include ../../components/radio-button/radio-button.pug 
 include ../../components/like-button/like-button.pug
 include ../../components/rate-button/rate-button.pug 
-include ../../components/rich-checkbox-buttons/rich-checkbox-buttons.pug 
 include ../../components/slider/slider.pug
 include ../../components/button/button.pug 
 include ../../components/bullet-list/bullet-list.pug
@@ -53,7 +51,7 @@ include ../../components/filter-date-dropdown/filter-date-dropdown.pug
       
       .elements__expandable-checkbox-container
         - expandableCheckboxListOptions.title = 'expandable checkbox list'
-        +expandableCheckboxList(expandableCheckboxListOptions)
+        +checkboxButtons(expandableCheckboxListOptions)
      
     .elements__column.elements__column_center 
       .elements__checkbox-buttons-container
@@ -84,7 +82,7 @@ include ../../components/filter-date-dropdown/filter-date-dropdown.pug
          
       .elements__rich-checkbox-container
         - richCheckboxButtonsOptions.title = 'rich checkbox buttons'
-        +richCheckboxButtons(richCheckboxButtonsOptions)
+        +checkboxButtons(richCheckboxButtonsOptions)
 
 
     .elements__column.elements__column_right

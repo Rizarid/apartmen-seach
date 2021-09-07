@@ -1,18 +1,18 @@
-import * as $ from 'jquery';
-
 import './checkbox.sass';
 
-{
-  const checkboxChecked = function () {
-    $(this).parent().toggleClass('checkbox_checked');
-  };
-  const checkboxes = Array.prototype.slice.call(document.querySelectorAll('span.js-checkbox .js-checkbox__checkbox'));
-
-  if (checkboxes.length) {
-    checkboxes.map((item) => {
-      item.addEventListener('click', checkboxChecked);
-      if (item.checked) $(item).parent().toggleClass('checkbox_checked');
-      return null;
-    });
+class Checkbox {
+  constructor(target) {
+    this._body = target;
+    this._isClickBlocked = false;
+    this._checkbox = this._getCheckbox();
+    this._addListener();
   }
+
+  _addListener = () => { this._checkbox.addEventListener('click', this._handleCheckboxClick); }
+
+  _getCheckbox = () => this._body.querySelector('.checkbox__checkbox');
+
+  _handleCheckboxClick = () => { this._body.classList.toggle('checkbox_checked'); };
 }
+
+export { Checkbox };

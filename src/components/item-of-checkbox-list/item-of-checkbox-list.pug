@@ -1,0 +1,17 @@
+include ../checkbox/checkbox.pug
+
+mixin itemOfCheckboxList(options = {})
+  -
+    const { 
+      title = "items title", text = 'items text', modifier = 'standard', name = 'checkbox', checked = false 
+    } = options
+    const classes = `item-of-checkbox-list js-item-of-checkbox-list item-of-checkbox-list_${modifier}`
+
+  label(class != classes)
+    +checkbox(name, checked)
+    if modifier === 'rich'
+      span.item-of-checkbox-list__text-content 
+        span.item-of-checkbox-list__item-title #{ title }
+        span.item-of-checkbox-list__item-text #{ text }
+    else 
+      span.item-of-checkbox-list__item-text #{ text }

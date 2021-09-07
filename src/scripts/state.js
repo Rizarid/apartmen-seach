@@ -181,31 +181,35 @@ const checkboxButtonsOptions = {
 
 const richCheckboxButtonsOptions = {
   title: 'доступность',
-  itemOptions: [
+  modifier: 'rich',
+  items: [
     {
       name: 'corridorWidth',
       checked: false,
       title: 'Широкий коридор',
       text: 'Ширина коридоров в номере не мение 91 см.',
+      modifier: 'rich',
     },
     {
       name: 'halperForinvalids',
       checked: false,
       title: 'Помощник для инвалидов',
       text: 'На 1 этаже вас встретит специалист и проводит до номера',
+      modifier: 'rich',
     },
   ],
 };
 
 const expandableCheckboxListOptions = {
   title: 'дополнительные удобства',
-  itemOptions: [
-    { checkboxName: 'breakfast', checkboxChecked: false, itemText: 'Завтрак' },
-    { checkboxName: 'desk', checkboxChecked: true, itemText: 'Письменный стол' },
-    { checkboxName: 'feedingChair', checkboxChecked: true, itemText: 'Стул для кормления' },
-    { checkboxName: 'ded', checkboxChecked: true, itemText: 'Кроватка' },
-    { checkboxName: 'tv', checkboxChecked: false, itemText: 'Телевизор' },
-    { checkboxName: 'Shampoo', checkboxChecked: false, itemText: 'Шампунь' },
+  modifier: 'expandable',
+  items: [
+    { name: 'breakfast', checked: false, text: 'Завтрак' },
+    { name: 'desk', checked: true, text: 'Письменный стол' },
+    { name: 'feedingChair', checked: true, text: 'Стул для кормления' },
+    { name: 'ded', checked: true, text: 'Кроватка' },
+    { name: 'tv', checked: false, text: 'Телевизор' },
+    { name: 'Shampoo', checked: false, text: 'Шампунь' },
   ],
 };
 

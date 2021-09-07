@@ -1,10 +1,20 @@
-include ../expandable-checkbox-list/__item/expandable-checkbox-list__item.pug
+include ../item-of-checkbox-list/item-of-checkbox-list.pug
 
 mixin checkboxButtons(options = {})
-  - const { title = 'checkbox buttons', item } = options
-  section.checkbox-buttons
-    h3.checkbox-buttons__title #{ title }
-    .checkbox-buttons__list 
-      each item in options.items
-        - const { name: checkboxName = '', checked: checkboxChecked = false, text: itemText = 'checkbox item' } = item
-        +expandableCheckboxList__item({ checkboxName, checkboxChecked, itemText })
+  -
+    const { title = 'checkbox buttons', modifier = 'standard', items = [] } = options
+    const classes = `checkbox-buttons js-checkbox-buttons checkbox-buttons_${modifier}`
+
+  section(class != classes)
+    - const isExpandable = (modifier === 'expandable')
+
+    if isExpandable
+      .checkbox-buttons__titles-container.js-checkbox-buttons__titles-container
+        h3.checkbox-buttons__title #{ title } 
+    else
+      h3.checkbox-buttons__title #{ title }
+
+    .checkbox-buttons__list
+      each item in items
+        - if (!item) item = {}
+        +itemOfCheckboxList(item)

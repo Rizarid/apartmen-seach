@@ -1,22 +1,37 @@
-@import '../../../styles/variables.sass'
+@import '@/styles/variables.sass'
+    
+.item-of-checkbox-list
+  display: flex
+  width: 100%
+  cursor: pointer
+
+  & .item-of-checkbox-list__item-text
+    font-weight: $normal
+    color: $dark-shade-50
   
-.rich-checkbox-buttons
-  &__item
-    display: flex
-    width: 100%
+
+  &_standard
+    padding: 5px 0
+    width: fit-content
+    
+    & .item-of-checkbox-list__item-text
+      font-size: 13.8px
+      line-height: 18px
+      margin-left: 10px
+
+  &_rich
     box-sizing: border-box
-    cursor: pointer
 
     &~&
       box-sizing: border-box
       padding-top: 4px
 
-    & .rich-checkbox-buttons__text-content
+    & .item-of-checkbox-list__text-content
       margin-left: 10px
       flex: 1 1 auto
       box-sizing: border-box
 
-      & .rich-checkbox-buttons__item-title
+      & .item-of-checkbox-list__item-title
         font-weight: $bold
         font-size: 14px
         line-height: 1
@@ -26,17 +41,13 @@
         box-sizing: border-box
         margin: 0
         height: 20px
-        //vertical-align: middle
         display: flex
         align-items: center
 
-      & .rich-checkbox-buttons__item-text
-        font-weight: $normal
+      & .item-of-checkbox-list__item-text
         font-size: 12px
         line-height: 14px
-        color: $dark-shade-50
         display: inline-block
         width: 100%
         margin: 5px 0 0 0
         box-sizing: border-box
-    
