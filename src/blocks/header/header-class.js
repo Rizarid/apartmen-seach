@@ -1,18 +1,24 @@
-import * as $ from 'jquery';
+import { Menu } from '../../components/menu/menu';
 
 class Header {
   constructor(header) {
-    this._header = header;
+    this._body = header;
     this._isHidden = false;
     this._getElements();
+    this._menu = this._getMenu();
     this._init();
   }
 
   _getElements = () => {
-    [this._buttons] = $(this._header).find('.js-header__authorization');
-    [this._content] = $(this._header).find('.js-header__content');
-    [this._navContainer] = $(this._header).find('.js-nav__container');
-    [this._navList] = $(this._header).find('.js-nav__list');
+    this._buttons = this._body.querySelector('.js-header__authorization');
+    this._content = this._body.querySelector('.js-header__content');
+    this._navContainer = this._body.querySelector('.js-nav__container');
+    this._navList = this._body.querySelector('.js-nav__list');
+  }
+
+  _getMenu = () => {
+    const menu = this._body.querySelector('nav.js-nav');
+    return new Menu(menu);
   }
 
   _hiddenButtons = () => {
