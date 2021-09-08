@@ -1,0 +1,14 @@
+mixin radioButtons(name = 'button', items = []) 
+  .radio-buttons.js-radio-buttons
+    if items
+      each item in items
+        -
+          const { value, text, checked } = item
+          const labelClass = `radio-buttons__item js-radio-buttons__item ${ checked ? ' radio-buttons__item_checked' : ''}`
+
+        label(class != labelClass)
+          span.radio-buttons__input-container
+            input.radio-buttons__input(type = "radio", name != name, value != value, checked != checked)
+          span.radio-buttons__text #{ text }
+
+        

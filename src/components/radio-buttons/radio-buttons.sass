@@ -1,0 +1,58 @@
+@import '../../styles/variables.sass'
+  
+.radio-buttons
+  width: 100%
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  flex-wrap: wrap
+  box-sizing: border-box
+  
+  &__item
+    display: flex
+    box-sizing: border-box
+    align-items: center
+    cursor: pointer
+    
+    &~&
+      margin-left: 20px
+    
+    & .radio-buttons__input-container
+      border: 1px solid $dark-shade-25
+      border-radius: 50%
+      width: 20px
+      height: 20px
+      box-sizing: border-box
+      position: relative
+      padding: 3px
+
+      &::before 
+        content: ' '
+        width: 12px
+        height: 12px
+        border-radius: 50%
+        position: absolute
+        +gradient
+        display: none
+
+      & .radio-buttons__input
+        width: 0
+        height: 0
+        opacity: 0
+
+    & .radio-buttons__text
+      color: $dark-shade-50
+      font-weight: $normal
+      font-size: 13.8px
+      line-height: 24px
+      margin-left: 10px
+
+    &.radio-buttons__item_checked
+      & .radio-buttons__input-container
+        border: 1px solid $purple
+        
+      & .radio-buttons__input-container::before
+        display: block
+      
+      & .radio-buttons__text
+        color: $dark-shade-75
