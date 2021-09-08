@@ -1,11 +1,11 @@
 include ../../components/text-field/text-field.pug 
-include ../../components/radio-button/radio-button.pug 
+include ../../components/radio-buttons/radio-buttons.pug 
 include ../../components/masked-text-field/masked-text-field.pug 
 include ../../components/toggle/toggle.pug 
 include ../../components/button/button.pug 
 
 mixin registrationBlock
-  form.registration-block 
+  form.registration-block.js-registration-block
     .registration-block__title-container 
       h1.registration-block__title Регистрация аккаунта
 
@@ -16,7 +16,7 @@ mixin registrationBlock
       +textField({ name: 'surname', placeholder: 'Фамилия' })
 
     .registration-block__sex-container 
-      +radioButton('sex', [{ value: 'man', text: 'Мужчина', checked: true }, { value: 'woman', text: 'Женщина', checked: false }])
+      +radioButtons('sex', [{ value: 'man', text: 'Мужчина', checked: true }, { value: 'woman', text: 'Женщина', checked: false }])
 
     .registration-block__date-of-birth-container
       +maskedTextField({ title: 'дата рождения', name: 'dateOfBirth' })
