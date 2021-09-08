@@ -4,7 +4,7 @@ include ../../components/masked-text-field/masked-text-field.pug
 include ../../components/date-dropdown/date-dropdown.pug
 include ../../components/checkbox-buttons/checkbox-buttons.pug 
 include ../../components/subscription-field/subscription-field.pug
-include ../../components/radio-button/radio-button.pug 
+include ../../components/radio-buttons/radio-buttons.pug 
 include ../../components/like-button/like-button.pug
 include ../../components/rate-button/rate-button.pug 
 include ../../components/slider/slider.pug
@@ -60,7 +60,7 @@ include ../../components/filter-date-dropdown/filter-date-dropdown.pug
 
       h3.elements__title.radio-button-title Radio Buttons
       .elements__radio-buttons-container 
-        +radioButton('sex', [
+        +radioButtons('sex', [
           { value: 'man', text: 'Мужчина', checked: true }, 
           { value: 'woman', text: 'Женщина', checked: false }
         ])

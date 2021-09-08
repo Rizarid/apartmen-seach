@@ -7,7 +7,7 @@ import { DateDropdown } from '../../components/date-dropdown/date-dropdown';
 import { FilterDateDropdown } from '../../components/filter-date-dropdown/filter-date-dropdown';
 import '../../components/checkbox-buttons/checkbox-buttons';
 import '../../components/subscription-field/subscription-field';
-import '../../components/radio-button/radio-button';
+import '../../components/radio-buttons/radio-buttons';
 import '../../components/like-button/like-button';
 import { Slider } from '../../components/slider/slider';
 import '../../components/button/button';

@@ -1,4 +1,5 @@
 import './slider-of-background.sass';
+
 class BGSlider {
   constructor(slider, interval) {
     this._slider = slider;
