@@ -4,21 +4,13 @@ import { BGSlider } from '../../components/slider-of-background/bg-slider';
 class Registration {
   constructor() {
     this._body = this._getBody();
-    this._registrationForm = this._getRegistrationForm();
-    this._bgSlider = this._getBGSlider();
+    this._registrationForm = new RegistrationForm(this._getTarget('.js-registration-block'));
+    this._bgSlider = new BGSlider(this._getTarget('.js-slider-of-background'), 6000);
   }
 
   _getBody = () => document.querySelector('.registration');
 
-  _getRegistrationForm = () => {
-    const registrationForm = this._body.querySelector('.js-registration-block');
-    return new RegistrationForm(registrationForm);
-  };
-
-  _getBGSlider = () => {
-    const slider = this._body.querySelector('.js-slider-of-background');
-    return new BGSlider(slider, 6000);
-  };
+  _getTarget = (selector) => this._body.querySelector(selector);
 }
 
 export { Registration };
