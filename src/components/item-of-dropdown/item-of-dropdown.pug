@@ -1,0 +1,9 @@
+mixin itemOfDropdown(options = {})
+  - const { title = 'item of dropdown', quantity = 0 } = options 
+  .item-of-dropdown.js-item-of-dropdown
+    p.item-of-dropdown__title.js-item-of-dropdown__title #{ title }
+
+    .item-of-dropdown__quantity-block 
+      .item-of-dropdown__button.item-of-dropdown__button_minus.js-item-of-dropdown__button_minus -
+      p.item-of-dropdown__quantity.js-item-of-dropdown__quantity #{ quantity }
+      .item-of-dropdown__button.item-of-dropdown__button_plus.js-item-of-dropdown__button_plus +
