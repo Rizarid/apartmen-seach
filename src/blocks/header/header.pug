@@ -1,5 +1,6 @@
 include ../../components/logo/logo.pug
 include ../../components/button/button.pug
+include ../../components/menu/menu.pug 
 
 mixin header(isLogIn, userName)
   header.header.js-header
@@ -8,7 +9,7 @@ mixin header(isLogIn, userName)
       
       .header__content.js-header__content
         .header__navigation.js-header__navigation
-          include ../../components/menu/menu.pug 
+          +menu
 
         if !isLogIn
           .header__authorization.js-header__authorization
