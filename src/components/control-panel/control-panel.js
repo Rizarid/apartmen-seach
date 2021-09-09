@@ -2,15 +2,12 @@ import '../../scripts/create-element';
 import './control-panel.sass';
 
 class ControlPanel {
-  constructor() {
+  constructor(target) {
+    this._body = target;
+    console.log(this._body)
     this._createEvents();
-    this._createCleanButton();
-    this._createApplyButton();
+    this._getButtons();
     this._addListeners();
-
-    this._controlPanel = createElement('div', 'control-panel');
-    this._controlPanel.appendChild(this._cleanButton);
-    this._controlPanel.appendChild(this._applyButton);
   }
 
   getPanel = () => this._controlPanel;
@@ -24,20 +21,10 @@ class ControlPanel {
 
   _handleApplyButtonClick = () => this._applyButton.dispatchEvent(this._applyEvent);
 
-  _createCleanButton = () => {
-    this._cleanText = createElement('p', 'button__text');
-    this._cleanText.innerHTML = 'очистить';
-
-    this._cleanButton = createElement('div', 'button button_minimal control-panel__clean-button');
-    this._cleanButton.appendChild(this._cleanText);
-  }
-
-  _createApplyButton = () => {
-    this._applyText = createElement('p', 'button__text');
-    this._applyText.innerHTML = 'применить';
-
-    this._applyButton = createElement('div', 'button button_minimal control-panel__apply-button');
-    this._applyButton.appendChild(this._applyText);
+  _getButtons = () => {
+    console.log(this._body)
+    this._applyButton = this._body.querySelector('.control-panel__apply-button');
+    this._cleanButton = this._body.querySelector('.control-panel__clean-button');
   }
 
   _addListeners = () => {
