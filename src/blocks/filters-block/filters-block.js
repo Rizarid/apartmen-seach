@@ -5,23 +5,19 @@ import { CheckboxButtons } from '../../components/checkbox-buttons/checkbox-butt
 import '../../components/pagination/pagination';
 import '../../components/dropdown/dropdown';
 import { DropdownClass } from '../../components/dropdown/DropdownClass';
-import { ListConvenience } from '../../components/dropdown/__list/ListConvenience';
+import { ListConvenience } from '../../components/dropdown-list/ListConvenience';
 import './filters-block.sass';
 
 class Filters {
-  constructor() {
-    this._body = this._getFiltersElement();
+  constructor(target) {
+    this._body = target;
     this._navigation = this._getNavigationElement();
 
     this._createFiltersButton();
     this._appendFiltersButton();
-
     this._createFilters();
     this._appendListeners();
-
   }
-
-  _getFiltersElement = () => document.querySelector('.js-filters');
 
   _getNavigationElement = () => document.querySelector('.js-header__navigation');
 
@@ -39,20 +35,21 @@ class Filters {
     this._createAvailability();
   };
 
+  _getTarget = (selector) => this._body.querySelector(selector);
+
   _createDateFilter = () => {
     this._dateFilter = new FilterDateDropdown({
-      parentSelector: 'date-filter', initDate: ['19.08.2021', '23.08.2021'],
+      target: this._getTarget('.js-date-filter'), initDate: ['+3d', '+8d'],
     });
   };
 
   _createGuestsFilter = () => {
-    this._guests = new DropdownClass({ parentSelector: 'guests-quantity' });
+    this._guests = new DropdownClass({ target: this._getTarget('.js-guests-quantity') });
   };
 
   _createConvenienceFilter = () => {
     this._convenience = new DropdownClass({
-      parentSelector: 'convenience-filter',
-      items: { спальни: 2, кровати: 2, 'ванные комнаты': 0 },
+      target: this._getTarget('.js-convenience-filter'),
       getListClass: (items) => new ListConvenience(items),
     });
   };

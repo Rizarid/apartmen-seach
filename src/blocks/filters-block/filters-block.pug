@@ -24,7 +24,11 @@ mixin filters()
       +checkboxButtons(richCheckboxButtonsOptions)
     
     .filters__convenience
-      +dropdown({ className: 'convenience-filter', title: 'удобства номера' , name:'convenience' })
+      +dropdown({ 
+        className: 'convenience-filter', title: 'удобства номера' , name:'convenience', 
+        type: 'convenience', 
+        items: [{ title: 'спальни', quantity: 2 }, { title: 'кровати', quantity: 2 }, { title: 'ванные комнаты', quantity: 0 }]  
+      })
     
     .filters__additional-amenities
       +checkboxButtons(expandableCheckboxListOptions)
