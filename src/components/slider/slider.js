@@ -9,24 +9,25 @@ import './slider.sass';
 class Slider {
   constructor(options = {}) {
     this._init(options);
-    this._parent = this._getParent();
-    this._$body = $(this._parent).children('.slider__body');
-    this._$value = $(this._parent).find('.slider__values');
+    this._$slider = this._getSlider();
+    this._value = this._getValue();
     this._initSlider();
   }
 
-  _getParent = () => document.querySelector(`.js-${this._parentSelector}`);
-
   _init = (options) => {
-    const { parentSelector = 'slider-selector', min = 0, max = 15000, initValues = [min, max] } = options;
-    this._parentSelector = parentSelector;
+    const { target, min = 0, max = 15000, initValues = [min, max] } = options;
+    this._body = target;
     this._min = min;
     this._max = max;
     this._initValues = initValues;
   }
 
+  _getSlider = () => $(this._body).children('.slider__body');
+
+  _getValue = () => this._body.querySelector('.slider__values');
+
   _initSlider = () => {
-    this._$body.slider({
+    this._$slider.slider({
       range: true,
       min: this._min,
       max: this._max,
@@ -34,15 +35,15 @@ class Slider {
       slide: this._handleSliderChange,
     });
 
-    const min = this._$body.slider('values', 0);
-    const max = this._$body.slider('values', 1);
-    this._$value.html(`${numberMargins(min)}&#8381 - ${numberMargins(max)}&#8381`);
+    const min = this._$slider.slider('values', 0);
+    const max = this._$slider.slider('values', 1);
+    this._value.innerHTML = `${numberMargins(min)}&#8381 - ${numberMargins(max)}&#8381`;
   }
 
   _handleSliderChange = (event, ui) => {
     const [min, max] = ui.values;
     const value = `${numberMargins(min)}&#8381 - ${numberMargins(max)}&#8381`;
-    this._$value.html(value);
+    this._value.innerHTML = value;
   }
 }
 

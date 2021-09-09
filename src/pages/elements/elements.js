@@ -39,7 +39,7 @@ import './elements.sass';
   });
 
   const priceFilter = new Slider({
-    parentSelector: 'price-filter',
+    target: getTarget('.js-price-filter'),
     min: 0,
     max: 16000,
     initValues: ['5000', '10000'],

@@ -55,7 +55,7 @@ class Filters {
 
   _createPriceFilter = () => {
     this._priceFilter = new Slider({
-      parentSelector: 'price-filter', min: 0, max: 16000, initValues: ['5000', '10000'],
+      target: this._getTarget('.js-price-filter'), min: 0, max: 16000, initValues: ['5000', '10000'],
     });
   };
 
