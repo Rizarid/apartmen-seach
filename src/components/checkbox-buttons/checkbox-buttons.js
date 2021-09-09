@@ -5,7 +5,7 @@ class CheckboxButtons {
   constructor(target) {
     this._body = target;
     this._createItems();
-    if (this._body.classList.contains('checkbox-buttons_expandable')) this._addListener()
+    if (this._isExpandable()) this._addListener();
   }
 
   _createItems = () => {
@@ -18,6 +18,8 @@ class CheckboxButtons {
   _handleCheckboxButtonsClick = () => {
     this._body.classList.toggle('checkbox-buttons_visible');
   };
+
+  _isExpandable = () => this._body.classList.contains('checkbox-buttons_expandable');
 }
 
 export { CheckboxButtons };
