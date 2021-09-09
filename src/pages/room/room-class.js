@@ -10,15 +10,17 @@ class Room {
 
   _getBody = () => document.querySelector('.room');
 
+  _getTarget = (selector) => this._body.querySelector(selector);
+
   _getBooking = () => {
-    const target = this._body.querySelector('.js-booking');
+    const target = this._getTarget('.js-booking');
     return new Booking({
       target, roomPrice: 9990, discount: 2179, servicesTotal: 0, additionalServicesPrice: 300,
     });
   }
 
   _getInformation = () => {
-    const target = this._body.querySelector('.information-about-room');
+    const target = this._getTarget('.information-about-room');
     return new InformationAboutRoom({ target, votes: [0, 65, 65, 130] });
   }
 }
