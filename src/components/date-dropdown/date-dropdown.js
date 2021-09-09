@@ -5,9 +5,9 @@ import { ControllerDateDropdown } from './ControllerDateDropdown';
 
 class DateDropdown {
   constructor(options = {}) {
-    this._init(options);
-
-    this._view = new ViewDateDropdown(this._parentSelector);
+    const { target, initDates = [] } = options;
+    this._initDates = initDates;
+    this._view = new ViewDateDropdown(target);
     this._model = new ModelDateDropdown();
     this._controller = new ControllerDateDropdown(this._view, this._model, this._initDates);
   }
@@ -17,12 +17,6 @@ class DateDropdown {
   getStartDate = () => this._model.getStartDate();
 
   getEndDate = () => this._model.getEndDate();
-
-  _init = (options = {}) => {
-    const { parentSelector = 'date-dropdown', initDates = [] } = options;
-    this._parentSelector = parentSelector;
-    this._initDates = initDates;
-  }
 }
 
 export { DateDropdown };

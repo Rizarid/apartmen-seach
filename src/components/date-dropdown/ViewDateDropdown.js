@@ -1,17 +1,15 @@
-import * as $ from 'jquery';
-
 import { Datepicker } from '../datepicker/datepicker';
 import '../datepicker/datepicker.sass';
 
 class ViewDateDropdown {
-  constructor(parentSelector) {
-    this._parent = this._getParentElement(parentSelector);
+  constructor(target) {
+    this._body = target;
     this._getFields();
-    this._datepicker = new Datepicker($(this._parent).find('.date-dropdown__datepicker-container')[0]);
+    this._datepicker = this._getDatepicker(); 
     this._addListeners();
   }
 
-  getDateDropdown = () => this._parent;
+  getDateDropdown = () => this._body;
 
   setComingFieldValue = (value) => { this._comingField.value = value; };
 
@@ -28,18 +26,21 @@ class ViewDateDropdown {
   getEndDateText = () => this._datepicker.getEndDateText();
 
   showDatepicker = () => {
-    this._datepicker.getDatepicker().classList.add('date-dropdown__datepicker-container_visible');
+    this._datepicker.getDatepicker().classList.add('datepicker_visible');
   }
 
   hiddenDatepicker = () => {
-    this._datepicker.getDatepicker().classList.remove('date-dropdown__datepicker-container_visible');
+    this._datepicker.getDatepicker().classList.remove('datepicker_visible');
   }
 
-  _getParentElement = (parentSelector) => document.querySelector(`.js-${parentSelector}`);
-
   _getFields = () => {
-    [this._comingField] = $(this._parent).find('.date-dropdown__container_left .date-dropdown__field');
-    [this._leaveField] = $(this._parent).find('.date-dropdown__container_right .date-dropdown__field');
+    this._comingField = this._body.querySelector('.js-date-dropdown__container_left .js-date-dropdown__field');
+    this._leaveField = this._body.querySelector('.js-date-dropdown__container_right .js-date-dropdown__field');
+  }
+
+  _getDatepicker = () => {
+    const datepicker = this._body.querySelector('.js-datepicker');
+    return new Datepicker(datepicker);
   }
 
   _handleFieldFocus = () => this.showDatepicker();

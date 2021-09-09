@@ -59,35 +59,14 @@
       &:hover
         border: 1px solid $dark-shade-50
 
-  & .date-dropdown__datepicker-container
-    max-width: 320px
-    box-sizing: border-box
-    position: absolute
+  & .datepicker
     height: 0
-    overflow: hidden
-    top: 68px
-    display: flex
-    flex: 1 1 auto
-    flex-wrap: wrap
-    padding: 0
-    z-index: 100
-    background-color: #fff
-
-    & .date-dropdown__control-panel
-      display: flex
-      justify-content: space-between
-      align-items: center
-      flex: 1 1 auto
-      padding: 0 20px 20px 20px
+    opacity: 0
     
-  & .date-dropdown__datepicker-container.date-dropdown__datepicker-container_visible
-    height: auto
-    border: 1px solid $dark-shade-50
-    border-top: none
-    border-radius: 5px
-  
-  & .date-dropdown__datepicker-container.date-dropdown__datepicker-container_unvisible
-    display: none
+    &.datepicker_visible
+      height: auto
+      opacity: 1
+    
 
     
 
