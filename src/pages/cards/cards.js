@@ -22,7 +22,7 @@ import './cards.sass';
     additionalServicesPrice: 300,
   });
 
-  const datepicker = new Datepicker(getTarget('.js-datepicker'));
+  const datepicker = new Datepicker(getTarget('.cards__date-picker-container .js-datepicker'));
   const searchForm = new SearchForm({ target: getTarget('.js-search-block') });
   const registration = new RegistrationForm(getTarget('.js-registration-block'));
 

@@ -3,6 +3,7 @@ include ../../blocks/registration-block/registration-block.pug
 include ../../blocks/booking-block/booking-block.pug
 include ../../blocks/sign-in-block/sign-in-block.pug 
 include ../../blocks/room-card-block/room-card-block.pug 
+include ../../components/datepicker/datepicker.pug
 
 - const { roomsOptions } = require('@/scripts/state.js')
 
@@ -24,9 +25,10 @@ main.cards.js-cards
 
     .cards__column.cards__column_right
       .cards__date-picker-container 
+        +datepicker
 
-      .cards__room-card-container
+      .cards__room-card-container.cards__room-card-container_first
         +roomCardBlock(roomsOptions[0])
 
-      .cards__room-card-container
+      .cards__room-card-container.cards__room-card-container_second
         +roomCardBlock(roomsOptions[1])
