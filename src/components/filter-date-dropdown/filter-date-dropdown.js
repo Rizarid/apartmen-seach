@@ -4,8 +4,10 @@ import { ControllerFilterDateDropdown } from './ControllerFilterDateDropdown';
 
 class FilterDateDropdown {
   constructor(options = {}) {
-    this._init(options);
-    this._view = new ViewFilterDateDropdown(this._parentSelector);
+    const { target, initDates = [] } = options;
+    this._body = target;
+    this._initDates = initDates;
+    this._view = new ViewFilterDateDropdown(target);
     this._controller = new ControllerFilterDateDropdown(this._view, this._model, this._initDates);
   }
 
@@ -14,8 +16,7 @@ class FilterDateDropdown {
   getEndDate = () => this._view.getEndDate();
 
   _init = (options) => {
-    const { parentSelector = 'filter-date-dropdown', initDates = [] } = options;
-    this._parentSelector = parentSelector;
+    const { target, initDates = [] } = options;
     this._initDates = initDates;
   }
 }

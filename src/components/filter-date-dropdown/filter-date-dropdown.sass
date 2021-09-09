@@ -57,33 +57,14 @@
       &:hover
         border: 1px solid $dark-shade-50
 
-  &__datepicker-container
+  & .datepicker
     width: 320px
-    box-sizing: border-box
-    position: absolute
     height: 0
-    overflow: hidden
-    display: flex
-    flex: 1 1 auto
-    flex-wrap: wrap
-    padding: 0
-    z-index: 50
-    top: 70px
-    background-color: #fff
-    overflow: hidden
+    opacity: 0
 
     &_visible
       height: auto
-      border: 1px solid $dark-shade-50
-      border-top: none
-      border-radius: 5px
-
-    & .filter-date-dropdown__control-panel
-      display: flex
-      justify-content: space-between
-      align-items: center
-      flex: 1 1 auto
-      padding: 0 20px 20px 20px
+      opacity: 1
     
     @media screen and ( max-width: 350px)
       width: 100%
