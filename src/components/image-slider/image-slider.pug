@@ -1,13 +1,15 @@
-include __image/image-slider__image.pug
-
 mixin imageSlider(sliderItems = [])
   .image-slider.js-image-slider
-    .image-slider__prev 
-    .image-slider__next
+    .image-slider__prev.js-image-slider__prev
+    .image-slider__next.js-image-slider__next
     .image-slider__slides
       - var activeImage = true
       if sliderItems
         each item in sliderItems
           - const { src, alt } = item
-          +image(src, alt, activeImage)
+          if activeImage
+            img.image-slider__image.js-image-slider__image.image-slider__image_active(src != src, alt != alt)
+          else 
+            img.image-slider__image.js-image-slider__image(src != src, alt != alt)
+
           - activeImage = false

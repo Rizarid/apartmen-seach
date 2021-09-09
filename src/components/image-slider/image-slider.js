@@ -1,12 +1,10 @@
-import * as $ from 'jquery';
-
 import '../../scripts/create-element';
+import { Slide } from './Slide';
 import './image-slider.sass';
-import { Slide } from './__image/image-slider__image';
 
 class ImageSlider {
-  constructor(slider) {
-    this._slider = slider;
+  constructor(target) {
+    this._body = target;
     this._createSlides();
     this._createDotsBlock();
 
@@ -20,19 +18,19 @@ class ImageSlider {
     this._createResizeObserver();
     this._addResizeObserver();
 
-    this._updateHeight(this._slider);
+    this._updateHeight(this._body);
     if (this._isTouch()) this._activateTouchOptions();
   }
 
   _createSlides = () => {
-    const $images = $(this._slider).children('.image-slider__slides').children('.image-slider__image');
-    this._slides = $.map($images, (item) => new Slide(item));
+    const images = Array.prototype.slice.call(this._body.querySelectorAll('.js-image-slider__image'));
+    this._slides = images.map((item) => new Slide(item));
   }
 
   _createDotsBlock = () => {
     this._dots = createElement('div', 'image-slider__dots');
     this._slides.map((item) => this._dots.appendChild(item.getDot()));
-    this._slider.appendChild(this._dots);
+    this._body.appendChild(this._dots);
   }
 
   _initSlides = () => {
@@ -61,16 +59,16 @@ class ImageSlider {
     this._activeDot.classList.add('image-slider__slide-dote_active');
   }
 
-  _initPrevButton = () => { [this._prev] = $(this._slider).children('.image-slider__prev'); };
+  _initPrevButton = () => { this._prev = this._body.querySelector('.js-image-slider__prev'); };
 
-  _initNextButton = () => { [this._next] = $(this._slider).children('.image-slider__next'); };
+  _initNextButton = () => { this._next = this._body.querySelector('.js-image-slider__next'); };
 
   _addListeners = () => {
-    this._slider.addEventListener('dotSwitch', this._handleDotSwitch);
-    this._slider.addEventListener('slideSwitch', this._handleSlideSwitch);
+    this._body.addEventListener('dotSwitch', this._handleDotSwitch);
+    this._body.addEventListener('slideSwitch', this._handleSlideSwitch);
 
-    this._slider.addEventListener('dotReturn', this._handleDotReturn);
-    this._slider.addEventListener('slideReturn', this._handleSlideReturn);
+    this._body.addEventListener('dotReturn', this._handleDotReturn);
+    this._body.addEventListener('slideReturn', this._handleSlideReturn);
 
     this._prev.addEventListener('click', this._handlePrevClick);
     this._next.addEventListener('click', this._handleNextClick);
@@ -93,29 +91,30 @@ class ImageSlider {
   }
 
   _handleNextClick = () => {
-    const nextSlide = $(this._activeSlide).next()[0];
-    const nextDot = $(this._activeDot).next()[0];
+    let nextSlide = this._activeSlide.nextSibling;
+    let nextDot = this._activeDot.nextSibling;
 
-    if (nextSlide) {
-      this._switchSlide(nextSlide);
-      this._switchDot(nextDot);
-    } else {
-      this._switchSlide($(this._activeSlide).parent().children().first()[0]);
-      this._switchDot($(this._activeDot).parent().children().first()[0]);
+    if (!nextSlide) {
+      nextSlide = this._slides[0].getSlide();
+      nextDot = this._slides[0].getDot();
     }
+
+    this._switchSlide(nextSlide);
+    this._switchDot(nextDot);
   }
 
   _handlePrevClick = () => {
-    const prevSlide = $(this._activeSlide).prev()[0];
-    const prevDot = $(this._activeDot).prev()[0];
+    let prevSlide = this._activeSlide.previousSibling;
+    let prevDot = this._activeDot.previousSibling;
 
-    if (prevSlide) {
-      this._switchSlide(prevSlide);
-      this._switchDot(prevDot);
-    } else {
-      this._switchSlide($(this._activeSlide).parent().children().last()[0]);
-      this._switchDot($(this._activeDot).parent().children().last()[0]);
+    if (!prevSlide) {
+      const len = this._slides.length;
+      prevSlide = this._slides[len - 1].getSlide();
+      prevDot = this._slides[len - 1].getDot();
     }
+
+    this._switchSlide(prevSlide);
+    this._switchDot(prevDot);
   }
 
   _isTouch = () => ('ontouchstart' in window) || (window.DocumentTouch && document instanceof DocumentTouch);
@@ -134,7 +133,7 @@ class ImageSlider {
     this.resizeObserver = new ResizeObserver((entries) => this._updateHeight(entries[0].target));
   }
 
-  _addResizeObserver = () => this.resizeObserver.observe(this._slider);
+  _addResizeObserver = () => this.resizeObserver.observe(this._body);
 }
 
 export { ImageSlider };
