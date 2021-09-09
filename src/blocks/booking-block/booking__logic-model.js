@@ -1,21 +1,21 @@
-import { DateDropdown } from '../../components/date-dropdown/date-dropdown';
-import { DropdownClass } from '../../components/dropdown/DropdownClass';
 
 class LogicModel {
-  constructor(roomPrice, discount, servicesTotal, additionalServicesPrice) {
+  constructor(options) {
+    const { 
+      roomPrice, discount, servicesTotal, additionalServicesPrice, getQuantityDays 
+    } = options;
+    
     this._price = roomPrice;
     this._discount = discount;
     this._servicesTotal = servicesTotal;
     this._additionalServicesPrice = additionalServicesPrice;
-
-    this._dateDropdown = new DateDropdown({ parentSelector: 'date-select', initDates: ['+1d', '+5d'] });
-    this._guests = new DropdownClass({ parentSelector: 'guests' });
+    this._getQuantityDays = getQuantityDays;
 
     this.calculate();
   }
 
   calculate = () => {
-    this._days = this._dateDropdown.getQuantityDays();
+    this._days = this._getQuantityDays();
     this._basicPriceResult = this._price * this._days;
     this._totalPriceValue = (this._days > 0) ? this._basicPriceResult - this._discount
       + this._servicesTotal + this._additionalServicesPrice : 0;

@@ -11,8 +11,11 @@ class Booking {
       target, roomPrice = 9990, discount = 2179, servicesTotal = 0, additionalServicesPrice = 300,
     } = options;
 
-    this._model = new LogicModel(roomPrice, discount, servicesTotal, additionalServicesPrice);
     this._view = new ViewModel(target);
+    this._model = new LogicModel({ 
+      roomPrice, discount, servicesTotal, additionalServicesPrice, getQuantityDays: this.getQuantityDays,
+    });
+    
     this.updateView();
     this._addListeners();
   }
@@ -26,6 +29,8 @@ class Booking {
     this._view.setAdditionalServicesTotal(this._model.getAdditionalServicesPrice());
     this._view.setTotalPriceValue(this._model.getTotalPriceValue());
   }
+
+  getQuantityDays = () => this._view.getQuantityDays();
 
   _addListeners = () => {
     this._view.getBooking().addEventListener('datepickerOnSelect', this._handleBookingBlockDatepickerOnSelect);

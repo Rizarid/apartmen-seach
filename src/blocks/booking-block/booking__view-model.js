@@ -1,44 +1,59 @@
-import * as $ from 'jquery';
-
 import { numberMargins } from '../../scripts/numberMargins';
 import { getDecline } from '../../scripts/getDecline';
+import { DateDropdown } from '../../components/date-dropdown/date-dropdown';
+import { DropdownClass } from '../../components/dropdown/DropdownClass';
 
 class ViewModel {
   constructor(target) {
-    this._$parent = $(target);
+    this._body = target;
     this._getElements();
+
   }
 
-  getBooking = () => this._$parent[0];
+  getBooking = () => this._body;
 
-  setPrice = (price) => this._$price.html(`${numberMargins(price)}&#8381 `) ;
+  getQuantityDays = () => this._dateDropdown.getQuantityDays();
+
+  setPrice = (price) => { this._price.innerHTML = `${numberMargins(price)}&#8381 `; };
 
   setBasicPriceCalculate = (price, days) => {
-    this._$basicPriceCalculate.html(
-      `${numberMargins(price)}&#8381 x ${days} ${getDecline(days, ['сутки', 'суток', 'суток'])}`,
+    this._basicPriceCalculate.innerHTML = (
+      `${numberMargins(price)}&#8381 x ${days} ${getDecline(days, ['сутки', 'суток', 'суток'])}`
     );
-  }
+  };
 
-  setBasicPriceResult = (price) => this._$basicPriceResult.html(`${numberMargins(price)}&#8381`);
+  setBasicPriceResult = (price) => {
+    this._basicPriceResult.innerHTML = `${numberMargins(price)}&#8381`;
+  };
 
-  setDiscount = (price) => this._$discount.html(`${numberMargins(price)}&#8381`);
+  setDiscount = (price) => { this._discount.innerHTML = `${numberMargins(price)}&#8381`; };
 
-  setServicesTotal = (price) => this._$servicesTotal.html(`${numberMargins(price)}&#8381`);
+  setServicesTotal = (price) => { this._servicesTotal.innerHTML = `${numberMargins(price)}&#8381`; };
 
   setAdditionalServicesTotal = (price) => {
-    this._$additionalServicesTotal.html(`${numberMargins(price)}&#8381`);
+    this._additionalServicesTotal.innerHTML = `${numberMargins(price)}&#8381`;
   }
 
-  setTotalPriceValue = (price) => this._$totalPriceValue.html(`${numberMargins(price)}&#8381`);
+  setTotalPriceValue = (price) => { 
+    this._totalPriceValue.innerHTML = `${numberMargins(price)}&#8381`; 
+  }
+
+  _getTarget = (selector) => this._body.querySelector(selector);
 
   _getElements = () => {
-    this._$price = this._$parent.find('.js-booking__price');
-    this._$basicPriceCalculate = this._$parent.find('.js-booking__basic-price-calculate');
-    this._$basicPriceResult = this._$parent.find('.js-booking__basic-price-result');
-    this._$discount = this._$parent.find('.js-booking__services-prices');
-    this._$servicesTotal = this._$parent.find('.js-booking__services-total');
-    this._$additionalServicesTotal = this._$parent.find('.js-booking__additional-services-total');
-    this._$totalPriceValue = this._$parent.find('.js-booking__total-price-value');
+    this._price = this._getTarget('.js-booking__price');
+    this._basicPriceCalculate = this._getTarget('.js-booking__basic-price-calculate');
+    this._basicPriceResult = this._getTarget('.js-booking__basic-price-result');
+    this._discount = this._getTarget('.js-booking__services-prices');
+    this._servicesTotal = this._getTarget('.js-booking__services-total');
+    this._additionalServicesTotal = this._getTarget('.js-booking__additional-services-total');
+    this._totalPriceValue = this._getTarget('.js-booking__total-price-value');
+
+    this._dateDropdown = new DateDropdown({ 
+      target: this._getTarget('.js-date-select'), 
+      initDates: ['+1d', '+5d'] 
+    });
+    this._guests = new DropdownClass({ target: this._getTarget('.js-guests') });
   }
 }
 
