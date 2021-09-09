@@ -4,7 +4,6 @@ import './control-panel.sass';
 class ControlPanel {
   constructor(target) {
     this._body = target;
-    console.log(this._body)
     this._createEvents();
     this._getButtons();
     this._addListeners();
@@ -22,7 +21,6 @@ class ControlPanel {
   _handleApplyButtonClick = () => this._applyButton.dispatchEvent(this._applyEvent);
 
   _getButtons = () => {
-    console.log(this._body)
     this._applyButton = this._body.querySelector('.control-panel__apply-button');
     this._cleanButton = this._body.querySelector('.control-panel__clean-button');
   }
