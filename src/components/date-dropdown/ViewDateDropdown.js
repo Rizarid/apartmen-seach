@@ -5,7 +5,7 @@ class ViewDateDropdown {
   constructor(target) {
     this._body = target;
     this._getFields();
-    this._datepicker = this._getDatepicker(); 
+    this._datepicker = new Datepicker(this._getTarget('.js-datepicker'));
     this._addListeners();
   }
 
@@ -15,7 +15,7 @@ class ViewDateDropdown {
 
   setLeaveFieldValue = (value) => { this._leaveField.value = value; };
 
-  setDate = (dates) => this._datepicker.setDate(dates);
+  setDate = (dates) => { this._datepicker.setDate(dates) };
 
   getStartDate = () => this._datepicker.getStartDate();
 
@@ -33,14 +33,11 @@ class ViewDateDropdown {
     this._datepicker.getDatepicker().classList.remove('datepicker_visible');
   }
 
-  _getFields = () => {
-    this._comingField = this._body.querySelector('.js-date-dropdown__container_left .js-date-dropdown__field');
-    this._leaveField = this._body.querySelector('.js-date-dropdown__container_right .js-date-dropdown__field');
-  }
+  _getTarget = (selector) => this._body.querySelector(selector);
 
-  _getDatepicker = () => {
-    const datepicker = this._body.querySelector('.js-datepicker');
-    return new Datepicker(datepicker);
+  _getFields = () => {
+    this._comingField = this._getTarget('.js-date-dropdown__container_left .js-date-dropdown__field');
+    this._leaveField = this._getTarget('.js-date-dropdown__container_right .js-date-dropdown__field');
   }
 
   _handleFieldFocus = () => this.showDatepicker();

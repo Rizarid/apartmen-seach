@@ -5,8 +5,8 @@ import '../datepicker/datepicker.sass';
 class ViewFilterDateDropdown {
   constructor(target) {
     this._body = target;
-    this._getField();
-    this._datepicker = this._getDatepicker();
+    this._field = this._getTarget('.filter-date-dropdown__field');
+    this._datepicker = new Datepicker(this._getTarget('.datepicker'));
     this._addListeners();
   }
 
@@ -14,7 +14,7 @@ class ViewFilterDateDropdown {
 
   setFieldValue = (value) => { this._field.value = value; };
 
-  setDate = (dates) => this._datepicker.setDate(dates);
+  setDate = (dates) => { this._datepicker.setDate(dates); };
 
   getStartDate = () => this._datepicker.getStartDate();
 
@@ -32,14 +32,7 @@ class ViewFilterDateDropdown {
     this._datepicker.getDatepicker().classList.remove('datepicker_visible');
   }
 
-  _getField = () => {
-    this._field = this._body.querySelector('.filter-date-dropdown__field');
-  }
-
-  _getDatepicker = () => {
-    const datepicker = this._body.querySelector('.datepicker');
-    return new Datepicker(datepicker);
-  }
+  _getTarget = (selector) => this._body.querySelector(selector);
 
   _handleFieldFocus = () => this.showDatepicker();
 

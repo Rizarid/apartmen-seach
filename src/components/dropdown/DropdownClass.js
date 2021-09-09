@@ -9,16 +9,14 @@ class DropdownClass {
     const { target, getListClass = (params) => new ListGuests(params) } = options;
 
     this._body = target;
-    this._getField();
-    this._list = getListClass(this._getListsTarget());
+    this._field = this._getTarget('.js-dropdown__field');
+    this._list = getListClass(this._getTarget('.js-dropdown-list'));
 
     this._addListeners();
     this._apply();
   }
 
-  _getField = () => { this._field = this._body.querySelector('.js-dropdown__field'); };
-
-  _getListsTarget = () => this._body.querySelector('.js-dropdown-list');
+  _getTarget = (selector) => this._body.querySelector(selector);
 
   _addListeners = () => {
     this._field.addEventListener('click', this._handleFieldClick);

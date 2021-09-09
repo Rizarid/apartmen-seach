@@ -14,11 +14,6 @@ class FilterDateDropdown {
   getStartDate = () => this._view.getStartDate();
 
   getEndDate = () => this._view.getEndDate();
-
-  _init = (options) => {
-    const { target, initDates = [] } = options;
-    this._initDates = initDates;
-  }
 }
 
 export { FilterDateDropdown };

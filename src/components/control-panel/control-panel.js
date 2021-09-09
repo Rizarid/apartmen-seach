@@ -9,8 +9,6 @@ class ControlPanel {
     this._addListeners();
   }
 
-  getPanel = () => this._controlPanel;
-
   _createEvents = () => {
     this._cleanEvent = new Event('cleanButtonClick', { bubbles: true });
     this._applyEvent = new Event('applyButtonClick', { bubbles: true });
