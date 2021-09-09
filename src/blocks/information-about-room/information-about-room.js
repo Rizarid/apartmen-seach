@@ -8,20 +8,17 @@ class InformationAboutRoom {
   constructor(options) {
     const { target, votes } = options;
     this._body = target;
-    this._reviews = this._getReviews(); 
+    this._reviews = new Reviews(this._getTarget('.js-reviews'));
     this._roundChart = new RoundChart(votes);
     this._appendChart();
   }
 
-  _getReviews = () => {
-    const reviews = this._body.querySelector('.js-reviews');
-    return new Reviews(reviews);
-  };
+  _getTarget = (selector) => this._body.querySelector(selector);
 
   _appendChart = () => {
-    const chart = this._body.querySelector('.js-round-chart__content');
-    chart.innerHTML = this._roundChart.getChart()
-  }
+    const chart = this._getTarget('.js-round-chart__content');
+    chart.innerHTML = this._roundChart.getChart();
+  };
 }
 
 export { InformationAboutRoom };

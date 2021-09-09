@@ -7,7 +7,6 @@ class ViewModel {
   constructor(target) {
     this._body = target;
     this._getElements();
-
   }
 
   getBooking = () => this._body;
@@ -32,11 +31,11 @@ class ViewModel {
 
   setAdditionalServicesTotal = (price) => {
     this._additionalServicesTotal.innerHTML = `${numberMargins(price)}&#8381`;
-  }
+  };
 
   setTotalPriceValue = (price) => { 
     this._totalPriceValue.innerHTML = `${numberMargins(price)}&#8381`; 
-  }
+  };
 
   _getTarget = (selector) => this._body.querySelector(selector);
 
@@ -54,7 +53,7 @@ class ViewModel {
       initDates: ['+1d', '+5d'] 
     });
     this._guests = new DropdownClass({ target: this._getTarget('.js-guests') });
-  }
+  };
 }
 
 export { ViewModel };

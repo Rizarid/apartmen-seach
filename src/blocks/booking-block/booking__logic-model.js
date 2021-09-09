@@ -4,7 +4,7 @@ class LogicModel {
     const { 
       roomPrice, discount, servicesTotal, additionalServicesPrice, getQuantityDays 
     } = options;
-    
+
     this._price = roomPrice;
     this._discount = discount;
     this._servicesTotal = servicesTotal;

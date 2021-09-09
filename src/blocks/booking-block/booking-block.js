@@ -9,12 +9,13 @@ class Booking {
     const { 
       target, roomPrice = 9990, discount = 2179, servicesTotal = 0, additionalServicesPrice = 300,
     } = options;
+    const { getQuantityDays } = this;
 
     this._view = new ViewModel(target);
-    this._model = new LogicModel({ 
-      roomPrice, discount, servicesTotal, additionalServicesPrice, getQuantityDays: this.getQuantityDays,
+    this._model = new LogicModel({
+      roomPrice, discount, servicesTotal, additionalServicesPrice, getQuantityDays,
     });
-    
+
     this.updateView();
     this._addListeners();
   }

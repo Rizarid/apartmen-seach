@@ -8,26 +8,12 @@ import './registration-block.sass';
 class RegistrationForm {
   constructor(target) {
     this._body = target;
-    this._radioButtons = this._getRadioButtons();
-    this._maskedField = this._getMaskedField();
-    this._toggle = this._getToggle();
-
+    this._radioButtons = new RadioButtons(this._getTarget('.js-radio-buttons'));
+    this._maskedField = new MaskedTextField(this._getTarget('.js-masked-text-field'));
+    this._toggle = new Toggle(this._getTarget('.js-toggle'));
   }
 
-  _getRadioButtons = () => {
-    const radioButtons = this._body.querySelector('.js-radio-buttons');
-    return new RadioButtons(radioButtons);
-  }
-
-  _getMaskedField = () => {
-    const maskedField = this._body.querySelector('.js-masked-text-field');
-    return new MaskedTextField(maskedField);
-  }
-
-  _getToggle = () => {
-    const toggle = this._body.querySelector('.js-toggle')
-    return new Toggle(toggle);
-  }
+  _getTarget = (selector) => this._body.querySelector(selector);
 }
 
 export { RegistrationForm };
