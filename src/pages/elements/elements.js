@@ -17,7 +17,6 @@ import '../../components/review/review';
 import '../../components/pagination/pagination';
 import { Toggle } from '../../components/toggle/toggle';
 import '../../components/rate-button/rate-button';
-import '../../components/dropdown/dropdown';
 import { DropdownClass } from '../../components/dropdown/DropdownClass';
 import { ListConvenience } from '../../components/dropdown-list/ListConvenience';
 import './elements.sass';

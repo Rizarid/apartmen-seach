@@ -1,5 +1,4 @@
 import '../../components/date-dropdown/date-dropdown';
-import '../../components/dropdown/dropdown';
 import '../../components/button/button';
 import { LogicModel } from './booking__logic-model';
 import { ViewModel } from './booking__view-model';
@@ -28,18 +27,18 @@ class Booking {
     this._view.setServicesTotal(this._model.getServicesTotal());
     this._view.setAdditionalServicesTotal(this._model.getAdditionalServicesPrice());
     this._view.setTotalPriceValue(this._model.getTotalPriceValue());
-  }
+  };
 
   getQuantityDays = () => this._view.getQuantityDays();
 
   _addListeners = () => {
     this._view.getBooking().addEventListener('datepickerOnSelect', this._handleBookingBlockDatepickerOnSelect);
-  }
+  };
 
   _handleBookingBlockDatepickerOnSelect = () => {
     this._model.calculate();
     this.updateView();
-  }
+  };
 }
 
 export { Booking };

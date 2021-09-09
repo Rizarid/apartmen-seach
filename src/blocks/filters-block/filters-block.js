@@ -3,7 +3,6 @@ import { FilterDateDropdown } from '../../components/filter-date-dropdown/filter
 import { Slider } from '../../components/slider/slider';
 import { CheckboxButtons } from '../../components/checkbox-buttons/checkbox-buttons';
 import '../../components/pagination/pagination';
-import '../../components/dropdown/dropdown';
 import { DropdownClass } from '../../components/dropdown/DropdownClass';
 import { ListConvenience } from '../../components/dropdown-list/ListConvenience';
 import './filters-block.sass';

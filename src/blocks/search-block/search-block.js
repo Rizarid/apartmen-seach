@@ -1,6 +1,5 @@
 import '../../components/button/button';
 import { DateDropdown } from '../../components/date-dropdown/date-dropdown';
-import '../../components/dropdown/dropdown';
 import { DropdownClass } from '../../components/dropdown/DropdownClass';
 import { ListGuests } from '../../components/dropdown-list/ListGuests';
 import './search-block.sass';
