@@ -1,13 +1,18 @@
+include ../dropdown-list/dropdown-list.pug
+
 mixin dropdown(options = {})
   -
-    const { title = 'dropdown', name = 'dropdown', className = '' } = options
+    const { 
+      title = 'dropdown', name = 'dropdown', className = '', type = 'guests', 
+      items = [{ title: 'взрослые', quantity: 0 }, { title: 'дети', quantity: 0 }, { title: 'младенцы', quantity: 0 }]
+    } = options
     const classes = className ? `dropdown ${ className } js-${ className }` : 'dropdown js-dropdown'
 
   section(class != classes)
     h3.dropdown__title #{ title }
 
     .dropdown__container-of-field
-      input.dropdown__field(type = "text", name != name, readonly)
+      input.dropdown__field.js-dropdown__field(type = "text", name != name, readonly)
 
-    .dropdown__list
+    +dropdownList({ type, items })
 
