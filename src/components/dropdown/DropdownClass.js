@@ -2,6 +2,7 @@
 
 import { ListConvenience } from '../dropdown-list/ListConvenience';
 import { ListGuests } from '../dropdown-list/ListGuests';
+import './dropdown.sass';
 
 class DropdownClass {
   constructor(options = {}) {
