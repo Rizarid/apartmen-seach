@@ -2,20 +2,24 @@ import '../../components/button/button';
 import { DateDropdown } from '../../components/date-dropdown/date-dropdown';
 import '../../components/dropdown/dropdown';
 import { DropdownClass } from '../../components/dropdown/DropdownClass';
-import { ListGuests } from '../../components/dropdown/__list/ListGuests';
+import { ListGuests } from '../../components/dropdown-list/ListGuests';
 import './search-block.sass';
 
 class SearchForm {
   constructor(options = {}) {
-    const { dateDropdownSelector = 'date-selection', dropdownSelector = 'guests-quantity' } = options;
-    this._dateDropdown = new DateDropdown({ parentSelector: dateDropdownSelector });
+    const { target, dateDropdownSelector = 'date-selection', dropdownSelector = 'guests-quantity' } = options;
+
+    this._body = target;
+    this._dateDropdown = new DateDropdown({ target: this._getTarget(dateDropdownSelector) });
 
     this._dropdown = new DropdownClass({
-      parentSelector: dropdownSelector,
-      items: { взрослые: 0, дети: 0, младенцы: 0 },
+      target: this._getTarget(dropdownSelector),
       getListClass: (items) => new ListGuests(items),
     });
   }
+
+  _getTarget = (selector) => this._body.querySelector(`.js-${selector}`);
+
 }
 
 export { SearchForm };
