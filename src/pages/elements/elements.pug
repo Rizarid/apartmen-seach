@@ -22,7 +22,7 @@ include ../../components/filter-date-dropdown/filter-date-dropdown.pug
     informationItems, reviewsData, rulesItems
   } = require('@/scripts/state.js')
 
-.elements 
+.elements.js-elements
   .elements__container
     .elements__column.elements__column_left
       .elements__text-field-container 
@@ -47,7 +47,10 @@ include ../../components/filter-date-dropdown/filter-date-dropdown.pug
         +subscriptionField
 
       .elements__convenience-container 
-        +dropdown({ className: 'convenience', title: 'dropdown', name: 'convenience' })
+        +dropdown({ className: 'convenience', title: 'dropdown', name: 'convenience',
+          type: 'convenience', 
+          items: [{ title: 'спальни', quantity: 2 }, { title: 'кровати', quantity: 2 }, { title: 'ванные комнаты', quantity: 0 }]
+        })
       
       .elements__expandable-checkbox-container
         - expandableCheckboxListOptions.title = 'expandable checkbox list'
@@ -109,4 +112,6 @@ include ../../components/filter-date-dropdown/filter-date-dropdown.pug
 
       .elements__review-container 
         +review(reviewsData[0])
+
+
         
