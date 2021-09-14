@@ -3,7 +3,7 @@ import './round-chart.sass';
 class RoundChart {
   constructor(votes) {
     this._votes = votes;
-    this._sum = this._getSum(); 
+    this._sum = this._getSum();
     this._dash = this._getDash();
     this._createDashoffset();
   }
@@ -27,11 +27,10 @@ class RoundChart {
       this._dashoffset.push(100 - this._dash[i - 1] + this._dashoffset[i - 1] - 0.5);
     }
 
-    return this._dashoffset
+    return this._dashoffset;
   }
 
-  _createChart = () => {
-    return `
+  _createChart = () => `
     <figure class = 'chart'>
       <figure class='chart__content'>
         <svg width='100%' height='100%' viewBox='0 0 34 34' class='chart__donut'>
@@ -69,7 +68,6 @@ class RoundChart {
       </figcaption>
     </figure>
     `
-  }
 }
 
 export { RoundChart };

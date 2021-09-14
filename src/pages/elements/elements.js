@@ -57,5 +57,5 @@ import './elements.sass';
   const likeButtonsTargets = Array.prototype.slice.call(_body.querySelectorAll('.elements__like-button-container .js-like-button'));
   const likeButtons = likeButtonsTargets.map((item) => new LikeButton(item));
 
-  const radioButtons = new RadioButtons(getTarget('.elements__radio-buttons-container .js-radio-buttons'))
+  const radioButtons = new RadioButtons(getTarget('.elements__radio-buttons-container .js-radio-buttons'));
 }

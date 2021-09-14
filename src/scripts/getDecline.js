@@ -1,4 +1,4 @@
-const getDecline = function (number, dictionary) {
+const getDecline = (number, dictionary) => {
   const numberInStr = number.toString();
   const { length } = numberInStr;
   const isNominative = numberInStr[length - 1] === '1' && numberInStr[length - 2] !== '1';

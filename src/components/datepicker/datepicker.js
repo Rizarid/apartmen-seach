@@ -9,7 +9,7 @@ class Datepicker {
     this._body = target;
     this._createOnSelectEvent();
     this._init();
-    this._controlPanel = this._getControlPanel(); 
+    this._controlPanel = this._getControlPanel();
 
     this._datepicker = this._getDatepickerObject();
     this._addListeners();
@@ -30,7 +30,7 @@ class Datepicker {
 
   getEndDateText = () => this._datepicker.endDateText;
 
-  _getControlPanel = () => { 
+  _getControlPanel = () => {
     const controlPanel = this._body.querySelector('.js-control-panel');
     return new ControlPanel(controlPanel);
   };
@@ -43,7 +43,7 @@ class Datepicker {
       showOtherMonths: 1,
       selectOtherMonths: true,
       onSelect: this._onSelect,
-      minDate: 0
+      minDate: 0,
     });
   };
 

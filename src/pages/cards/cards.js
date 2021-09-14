@@ -16,9 +16,9 @@ import './cards.sass';
 
   const booking = new Booking({
     target: getTarget('.js-booking'),
-    roomPrice: 9990, 
-    discount: 2179, 
-    servicesTotal: 0, 
+    roomPrice: 9990,
+    discount: 2179,
+    servicesTotal: 0,
     additionalServicesPrice: 300,
   });
 
@@ -29,6 +29,6 @@ import './cards.sass';
   const roomCardsSelection = Array.prototype.slice.call(document.querySelectorAll('.js-room-card-block'));
   let roomCards;
   if (roomCardsSelection) {
-    roomCards = roomCardsSelection.map((item) => new RoomCard(item))
+    roomCards = roomCardsSelection.map((item) => new RoomCard(item));
   }
 }

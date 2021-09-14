@@ -1,5 +1,5 @@
-import { InformationAboutRoom } from '@/blocks/information-about-room/information-about-room';
-import { Booking } from '@/blocks/booking-block/booking-block';
+import { InformationAboutRoom } from '../../blocks/information-about-room/information-about-room';
+import { Booking } from '../../blocks/booking-block/booking-block';
 
 class Room {
   constructor() {

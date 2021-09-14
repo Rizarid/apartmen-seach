@@ -1,8 +1,7 @@
-
 class LogicModel {
   constructor(options) {
-    const { 
-      roomPrice, discount, servicesTotal, additionalServicesPrice, getQuantityDays 
+    const {
+      roomPrice, discount, servicesTotal, additionalServicesPrice, getQuantityDays,
     } = options;
 
     this._price = roomPrice;

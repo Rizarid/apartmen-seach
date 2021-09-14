@@ -6,7 +6,7 @@ import './booking-block.sass';
 
 class Booking {
   constructor(options = {}) {
-    const { 
+    const {
       target, roomPrice = 9990, discount = 2179, servicesTotal = 0, additionalServicesPrice = 300,
     } = options;
     const { getQuantityDays } = this;

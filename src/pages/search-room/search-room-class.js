@@ -1,5 +1,5 @@
-import { Filters } from '@/blocks/filters-block/filters-block';
-import { RoomCard } from '@/blocks/room-card-block/room-card';
+import { Filters } from '../../blocks/filters-block/filters-block';
+import { RoomCard } from '../../blocks/room-card-block/room-card';
 
 class SearchRoom {
   constructor() {
@@ -18,7 +18,6 @@ class SearchRoom {
      this._roomCards = roomCardsSelection.map((item) => new RoomCard(item));
    }
  }
-
 }
 
 export { SearchRoom };

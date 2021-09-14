@@ -1,6 +1,5 @@
 // eslint-disable-next-line no-unused-vars
 
-import { ListConvenience } from '../dropdown-list/ListConvenience';
 import { ListGuests } from '../dropdown-list/ListGuests';
 import './dropdown.sass';
 

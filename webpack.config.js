@@ -179,7 +179,7 @@ module.exports = {
             
             },
             {
-                test:  /\.(ttf|woff|svg)/,
+                test: /\.(ttf|woff|svg)/,
                 loader: 'file-loader',
                 options: {
                     emitFile: true,

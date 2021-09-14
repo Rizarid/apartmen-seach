@@ -33,8 +33,8 @@ class ViewModel {
     this._additionalServicesTotal.innerHTML = `${numberMargins(price)}&#8381`;
   };
 
-  setTotalPriceValue = (price) => { 
-    this._totalPriceValue.innerHTML = `${numberMargins(price)}&#8381`; 
+  setTotalPriceValue = (price) => {
+    this._totalPriceValue.innerHTML = `${numberMargins(price)}&#8381`;
   };
 
   _getTarget = (selector) => this._body.querySelector(selector);
@@ -48,9 +48,9 @@ class ViewModel {
     this._additionalServicesTotal = this._getTarget('.js-booking__additional-services-total');
     this._totalPriceValue = this._getTarget('.js-booking__total-price-value');
 
-    this._dateDropdown = new DateDropdown({ 
-      target: this._getTarget('.js-date-select'), 
-      initDates: ['+1d', '+5d'] 
+    this._dateDropdown = new DateDropdown({
+      target: this._getTarget('.js-date-select'),
+      initDates: ['+1d', '+5d'],
     });
     this._guests = new DropdownClass({ target: this._getTarget('.js-guests') });
   };

@@ -15,7 +15,7 @@ class ViewDateDropdown {
 
   setLeaveFieldValue = (value) => { this._leaveField.value = value; };
 
-  setDate = (dates) => { this._datepicker.setDate(dates) };
+  setDate = (dates) => { this._datepicker.setDate(dates); };
 
   getStartDate = () => this._datepicker.getStartDate();
 

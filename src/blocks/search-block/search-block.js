@@ -18,7 +18,6 @@ class SearchForm {
   }
 
   _getTarget = (selector) => this._body.querySelector(`.js-${selector}`);
-
 }
 
 export { SearchForm };

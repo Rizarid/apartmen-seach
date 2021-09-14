@@ -24,7 +24,7 @@ class DropdownItem {
   _getModel = () => {
     const title = this._view.getTitle();
     const quantity = this._view.getQuantity();
-    return new ModelDropdownItem({ title, quantity }); 
+    return new ModelDropdownItem({ title, quantity });
   };
 }
 

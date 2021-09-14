@@ -2,9 +2,9 @@ import './menu.sass';
 
 class Menu {
   constructor(target) {
-  this._body = target;
-  this._getElements();
-  this._addListeners();
+    this._body = target;
+    this._getElements();
+    this._addListeners();
   }
 
   _getElements = () => {
@@ -30,7 +30,7 @@ class Menu {
   };
 
   _showSubMenu = (event) => {
-    this._subLists.map((item) => item.classList.remove('nav__sub-list_visible'))
+    this._subLists.map((item) => item.classList.remove('nav__sub-list_visible'));
 
     if (this._visibleItem !== event.target) {
       event.target.parentNode.nextElementSibling.classList.toggle('nav__sub-list_visible');

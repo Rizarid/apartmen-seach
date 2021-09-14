@@ -1,4 +1,4 @@
-const numberMargins = function (number) {
+const numberMargins = (number) => {
   const arr = String(number).split('');
   const len = Math.trunc(arr.length / 3);
 
