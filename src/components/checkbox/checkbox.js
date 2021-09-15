@@ -10,7 +10,7 @@ class Checkbox {
 
   _addListener = () => { this._checkbox.addEventListener('click', this._handleCheckboxClick); }
 
-  _getCheckbox = () => this._body.querySelector('.checkbox__checkbox');
+  _getCheckbox = () => this._body.querySelector('.js-checkbox__checkbox');
 
   _handleCheckboxClick = () => { this._body.classList.toggle('checkbox_checked'); };
 }
