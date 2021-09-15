@@ -1,11 +1,12 @@
-include ../item-of-checkbox-list/item-of-checkbox-list.pug
+include ../checkbox/checkbox.pug
 
 mixin checkboxButtons(options = {})
   -
     const { title = 'checkbox buttons', modifier = 'standard', items = [] } = options
-    const classes = `checkbox-buttons js-checkbox-buttons checkbox-buttons_${modifier}`
+    const blockClass = `checkbox-buttons js-checkbox-buttons checkbox-buttons_${modifier}`
+    const itemClass = `checkbox-buttons__item`
 
-  section(class != classes)
+  section(class != blockClass)
     - const isExpandable = (modifier === 'expandable')
 
     if isExpandable
@@ -16,5 +17,19 @@ mixin checkboxButtons(options = {})
 
     .checkbox-buttons__list
       each item in items
-        - if (!item) item = {}
-        +itemOfCheckboxList(item)
+        -
+          if (!item) item = {}
+          const { 
+            title = "items title", text = 'items text', name = 'checkbox', 
+            checked = false 
+          } = item
+        
+        label(class != itemClass)
+          +checkbox(name, checked)
+
+          if modifier === 'rich'
+            span.checkbox-buttons__item-content 
+              span.checkbox-buttons__item-title #{ title }
+              span.checkbox-buttons__item-text #{ text }
+          else 
+            span.checkbox-buttons__item-text #{ text }
