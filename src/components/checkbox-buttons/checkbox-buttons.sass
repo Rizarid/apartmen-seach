@@ -17,8 +17,8 @@
     cursor: pointer 
 
     & .checkbox-buttons__item-text
-    font-weight: $normal
-    color: $dark-shade-50
+      font-weight: $normal
+      color: $dark-shade-50
 
 
   &_standard
@@ -37,38 +37,38 @@
     & .checkbox-buttons__list
       margin-top: 15px
 
-    & .checkbox-buttons__item
-      box-sizing: border-box
+      & .checkbox-buttons__item
+        box-sizing: border-box
 
-      &~&
+        & .checkbox-buttons__item-content
+          margin-left: 10px
+          flex: 1 1 auto
+          box-sizing: border-box
+
+          & .checkbox-buttons__item-title
+            font-weight: $bold
+            font-size: 14px
+            line-height: 1
+            color: $dark-shade-75
+            display: inline-block
+            width: 100%
+            box-sizing: border-box
+            margin: 0
+            height: 20px
+            display: flex
+            align-items: center
+
+          & .checkbox-buttons__item-text
+            font-size: 12px
+            line-height: 14px
+            display: inline-block
+            width: 100%
+            margin: 5px 0 0 0
+            box-sizing: border-box
+
+      & .checkbox-buttons__item~.checkbox-buttons__item
         box-sizing: border-box
         padding-top: 4px
-
-      & .checkbox-buttons__item-content
-        margin-left: 10px
-        flex: 1 1 auto
-        box-sizing: border-box
-
-        & .checkbox-buttons__item-title
-          font-weight: $bold
-          font-size: 14px
-          line-height: 1
-          color: $dark-shade-75
-          display: inline-block
-          width: 100%
-          box-sizing: border-box
-          margin: 0
-          height: 20px
-          display: flex
-          align-items: center
-
-        & .checkbox-buttons__item-text
-          font-size: 12px
-          line-height: 14px
-          display: inline-block
-          width: 100%
-          margin: 5px 0 0 0
-          box-sizing: border-box
 
   &_expandable
     & .checkbox-buttons__titles-container
@@ -93,6 +93,15 @@
       margin-top: 13px
       display: none
 
+      & .checkbox-buttons__item
+        padding: 5px 0
+        width: fit-content
+      
+        & .checkbox-buttons__item-text
+          font-size: 13.8px
+          line-height: 18px
+          margin-left: 10px
+
     &.checkbox-buttons_visible
       & .checkbox-buttons__titles-container::after
         transform: rotate(180deg)
@@ -100,12 +109,5 @@
       & .checkbox-buttons__list
         display: block
 
-    & .checkbox-buttons__item
-      padding: 5px 0
-      width: fit-content
-    
-      & .checkbox-buttons__item-text
-        font-size: 13.8px
-        line-height: 18px
-        margin-left: 10px  
+      
  

@@ -2,6 +2,8 @@ import '../../scripts/create-element';
 import { FilterDateDropdown } from '../../components/filter-date-dropdown/filter-date-dropdown';
 import { Slider } from '../../components/slider/slider';
 import { CheckboxButtons } from '../../components/checkbox-buttons/checkbox-buttons';
+import '../../components/checkbox-buttons/checkbox-buttons-init';
+import '../../components/checkbox/checkbox-init';
 import '../../components/pagination/pagination';
 import { DropdownClass } from '../../components/dropdown/DropdownClass';
 import { ListConvenience } from '../../components/dropdown-list/ListConvenience';
@@ -29,9 +31,9 @@ class Filters {
     this._createGuestsFilter();
     this._createConvenienceFilter();
     this._createPriceFilter();
-    this._createRulesFilter();
-    this._createAdditionalAmenitiesFilter();
-    this._createAvailability();
+    //this._createRulesFilter();
+    //this._createAdditionalAmenitiesFilter();
+    //this._createAvailability();
   };
 
   _getTarget = (selector) => this._body.querySelector(selector);
