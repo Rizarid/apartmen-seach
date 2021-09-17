@@ -1,0 +1,10 @@
+include ../control-panel/control-panel.pug
+
+mixin datePicker(options = {})
+  -
+    const { startDate = '', endDate = '' } = options
+    const classes = 'date-picker js-date-picker'
+
+  div(class != classes, data-startDate != startDate, data-endDate != endDate)
+    .date-picker__control-panel
+      +controlPanel
