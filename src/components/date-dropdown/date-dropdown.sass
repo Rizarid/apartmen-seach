@@ -17,7 +17,7 @@
       font-family: 'Material Icons'
       text-transform: none
       font-size: 24px
-      color: rgba(31, 32, 65, 0.5)
+      color: $dark-shade-75
       position: absolute
       right: 10px
       bottom: 10px
@@ -59,14 +59,24 @@
       &:hover
         border: 1px solid $dark-shade-50
 
-  & .datepicker
+  &__date-picker
+    max-width: 320px
+    width: 320px
     height: 0
     opacity: 0
     top: 68px
+    position: absolute
+
+    @media screen and ( max-width: 350px)
+      width: 100% 
     
-    &.datepicker_visible
+    &_visible
       height: auto
       opacity: 1
+
+  &_single-field
+    .date-dropdown__container
+      width: 100%
     
 
     
