@@ -1,4 +1,4 @@
-import '../../scripts/create-element';
+import '../button/button';
 import './control-panel.sass';
 
 class ControlPanel {
@@ -19,8 +19,8 @@ class ControlPanel {
   _handleApplyButtonClick = () => this._applyButton.dispatchEvent(this._applyEvent);
 
   _getButtons = () => {
-    this._applyButton = this._body.querySelector('.control-panel__apply-button');
-    this._cleanButton = this._body.querySelector('.control-panel__clean-button');
+    this._applyButton = this._body.querySelector('.js-control-panel__apply-button');
+    this._cleanButton = this._body.querySelector('.js-control-panel__clean-button');
   }
 
   _addListeners = () => {
