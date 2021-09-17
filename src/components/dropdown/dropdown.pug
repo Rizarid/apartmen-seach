@@ -1,18 +1,32 @@
-include ../dropdown-list/dropdown-list.pug
+include ../control-panel/control-panel.pug
 
 mixin dropdown(options = {})
   -
     const { 
-      title = 'dropdown', name = 'dropdown', className = '', type = 'guests', 
-      items = [{ title: 'взрослые', quantity: 0 }, { title: 'дети', quantity: 0 }, { title: 'младенцы', quantity: 0 }]
+      title = 'dropdown', name = 'dropdown', modifier = 'guests', 
+      items = [{ title: 'взрослые', quantity: 0 }, { title: 'дети', quantity: 0 }, { title: 'младенцы', quantity: 0 }]  
     } = options
-    const classes = className ? `dropdown ${ className } js-${ className }` : 'dropdown js-dropdown'
+    const classes = `dropdown js-dropdown dropdown_${modifier}`
 
   section(class != classes)
     h3.dropdown__title #{ title }
 
-    .dropdown__container-of-field
+    .dropdown__field-container
       input.dropdown__field.js-dropdown__field(type = "text", name != name, readonly)
 
-    +dropdownList({ type, items })
+    .dropdown__list.js-dropdown__list
+      each item in items
+        - const { title = 'item of dropdown', quantity = 0 } = item
+        
+        .dropdown__item.js-dropdown__item
+          p.dropdown__item-title.js-dropdown__item-title #{ title }
+
+          .dropdown__item-quantity-block 
+            .dropdown__item-button.dropdown__item-button_minus.js-dropdown__item-button_minus -
+            p.dropdown__item-quantity.js-dropdown__item-quantity #{ quantity }
+            .dropdown__item-button.dropdown__item-button_plus.js-dropdown__item-button_plus +
+
+      if modifier === 'guests'
+        .dropdown__control-panel
+          +controlPanel
 
