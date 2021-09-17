@@ -2,7 +2,14 @@ include ../../components/date-dropdown/date-dropdown.pug
 include ../../components/dropdown/dropdown.pug 
 include ../../components/button/button.pug 
 
-mixin bookingBlock
+- const { numberMargins } = require('../../scripts/numberMargins.js')
+
+mixin bookingBlock(options = {})
+  -
+    const {
+      target, roomPrice = 9990, discount = 2179, servicesTotal = 0, additionalServicesPrice = 300,
+    } = options;
+
   form.booking.js-booking
     .booking__header 
       p.booking__title 
@@ -11,14 +18,14 @@ mixin bookingBlock
         span.booking__tag люкс
 
       p.booking__room-price
-        span.booking__price.js-booking__price
-        span.booking__period в сутки
+        span.booking__price.js-booking__price #{numberMargins(roomPrice)}&#8381
+        span.booking__period #{' в сутки'}
 
     .booking__date 
-      +dateDropdown({ className: 'date-select' })
+      +dateDropdown({ initDate: { startDate: '+1d', endDate: '+5d' } })
 
     .booking__guests
-      +dropdown({ className: 'guests', title: 'гости', name: 'guestsQuantity' })
+      +dropdown({ title: 'гости', name: 'guestsQuantity' })
 
     .booking__calculation 
       .booking__basic-price-container 
@@ -28,14 +35,14 @@ mixin bookingBlock
       .booking__services-container
         p.booking__services
           span.booking__services-text Сбор за услуги: скидка
-          span.booking__services-prices.js-booking__services-prices 
+          span.booking__services-prices.js-booking__services-prices #{numberMargins(discount)}&#8381
         span.booking__information i
-        p.booking__services-total.js-booking__services-total 
+        p.booking__services-total.js-booking__services-total #{numberMargins(servicesTotal)}&#8381
 
       .booking__additional-services-container
         p.booking__additional-services-title Сбор за дополнительные услуги
         span.booking__information i
-        p.booking__additional-services-total.js-booking__additional-services-total 
+        p.booking__additional-services-total.js-booking__additional-services-total #{numberMargins(additionalServicesPrice)}&#8381
 
     .booking__total-price-container 
       p.booking__total-price-text Итого
