@@ -3,6 +3,7 @@
 import { Checkbox } from './checkbox';
 
 {
-  const checkboxTargets = Array.prototype.slice.call(document.querySelectorAll('.js-checkbox'));
-  const checkboxes = checkboxTargets.map((item) => new Checkbox(item));
+  const checkboxTargets = [...document.querySelectorAll('.js-checkbox')];
+  let checkboxes = [];
+  if (checkboxTargets) checkboxes = checkboxTargets.map((item) => new Checkbox(item));
 }
