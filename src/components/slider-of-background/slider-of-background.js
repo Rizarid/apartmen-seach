@@ -1,6 +1,6 @@
 import './slider-of-background.sass';
 
-class BGSlider {
+class SliderOfBackground {
   constructor(slider, interval) {
     this._slider = slider;
     this._interval = interval;
@@ -18,4 +18,4 @@ class BGSlider {
   };
 }
 
-export { BGSlider };
+export { SliderOfBackground };
