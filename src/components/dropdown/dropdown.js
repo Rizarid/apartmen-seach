@@ -17,7 +17,7 @@ class Dropdown {
   }
 
   _getItems = () => {
-    const itemsTargets = Array.prototype.slice.call(this._body.querySelectorAll('.js-dropdown__item'));
+    const itemsTargets = [...this._body.querySelectorAll('.js-dropdown__item')];
     return itemsTargets.map((item) => new this._Item(item));
   }
 
@@ -87,8 +87,8 @@ class Dropdown {
 
     this.getItemToString = () => `${this._quantity.innerText} ${this._title.innerText}`;
 
-    this.clean = () => { 
-      this._quantity.innerText = '0'; 
+    this.clean = () => {
+      this._quantity.innerText = '0';
       this._minusButton.classList.add('dropdown__item-button_disabled');
     };
 
