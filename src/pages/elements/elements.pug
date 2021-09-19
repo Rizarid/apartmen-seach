@@ -14,7 +14,6 @@ include ../../components/information-block/information-block.pug
 include ../../components/review/review.pug
 include ../../components/toggle/toggle.pug
 include ../../components/pagination/pagination.pug 
-include ../../components/filter-date-dropdown/filter-date-dropdown.pug
 
 -
   const { 
@@ -29,7 +28,7 @@ include ../../components/filter-date-dropdown/filter-date-dropdown.pug
         +textField({ title: 'text field', name: 'textField', placeholder: 'Email' }) 
 
       .elements__guests-container
-        +dropdown({ className: 'guests-quantity', title: 'dropdown', name: 'guestsQuantity' })
+        +dropdown({ title: 'dropdown', name: 'guestsQuantity' })
 
       .elements__masked-field-container
         +maskedTextField({ title: 'masked text field', name: 'dateOfBirth' })
@@ -38,8 +37,8 @@ include ../../components/filter-date-dropdown/filter-date-dropdown.pug
         +dateDropdown({ className: 'date-selection', titles: ['date dropdown', 'date dropdown'] })
 
       .elements__date-filter-container.js-date-filter-container
-        +filterDateDropdown({ 
-          className: 'date-filter', title: 'filter date dropdown', name: 'dateFilter' 
+        +dateDropdown({ 
+          title: 'filter date dropdown', name: 'dateFilter', modifier: "single-field"
         })
 
       h3.elements__title.subscription-title subscription text field
@@ -47,8 +46,7 @@ include ../../components/filter-date-dropdown/filter-date-dropdown.pug
         +subscriptionField
 
       .elements__convenience-container 
-        +dropdown({ className: 'convenience', title: 'dropdown', name: 'convenience',
-          type: 'convenience', 
+        +dropdown({ title: 'dropdown', name: 'convenience', modifier: 'convenience', 
           items: [{ title: 'спальни', quantity: 2 }, { title: 'кровати', quantity: 2 }, { title: 'ванные комнаты', quantity: 0 }]
         })
       
@@ -90,7 +88,7 @@ include ../../components/filter-date-dropdown/filter-date-dropdown.pug
 
     .elements__column.elements__column_right
       .elements__slider-container 
-        +slider({title: 'range slider', selector: 'price-filter'})
+        +slider({ title: 'range slider', min: 0, max: 16000, initValues: [5000, 10000] })
 
       h3.elements__title.buttons-title buttons
       .elements__buttons-container
