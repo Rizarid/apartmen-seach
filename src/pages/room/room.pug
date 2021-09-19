@@ -1,32 +1,26 @@
-include ../../blocks/header/header.pug 
+extends ../page-template/page-template.pug
+
 include ../../blocks/information-about-room/information-about-room.pug 
 include ../../blocks/booking-block/booking-block.pug
-include ../../blocks/footer/footer.pug 
 include ../../components/room-gallery/room-gallery.pug 
 
--
-  const { informationItems, reviewsData, rulesItems, roomGalleryData }  =  require("@/scripts/state.js")
+block variables
+  -const { informationItems, reviewsData, rulesItems, roomGalleryData }  =  require("@/scripts/state.js")
 
-doctype html
-html(lang = "ru")
-  head
-    meta(charset = "UTF-8")
-    meta(name = "viewport", content = "width = device-width, initial-scale = 1.0")
-    meta(name = "description", content = "Описание номера")
-    meta(name = "keywords", content = "номер, отель, номер в отеле, поис номеров, гостиница")
 
-    title Описание номера 
+block head
+  +head({
+    description: 'Описание номера', 
+    title: 'Описание номера' 
+  })
 
-  body
-    +header(false, "")
-    main.room 
-      +roomGallery(roomGalleryData)
+block content
+  main.room 
+    +roomGallery(roomGalleryData)
 
-      .room__container 
-        .room__room-information-container
-          +roomInformationBlock(informationItems, reviewsData, rulesItems)
+    .room__container 
+      .room__room-information-container
+        +roomInformationBlock(informationItems, reviewsData, rulesItems)
 
-        .room__booking-container
-          +bookingBlock
-
-    +footer
+      .room__booking-container
+        +bookingBlock
