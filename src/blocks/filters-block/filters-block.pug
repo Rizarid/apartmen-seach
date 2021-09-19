@@ -2,19 +2,19 @@ include ../../components/dropdown/dropdown.pug
 include ../../components/slider/slider.pug 
 include ../../components/checkbox-buttons/checkbox-buttons.pug 
 include ../../components/pagination/pagination.pug 
-include ../../components/filter-date-dropdown/filter-date-dropdown.pug
+include ../../components/date-dropdown/date-dropdown.pug 
 
 
 mixin filters()
   form.filters.js-filters
     .filters__date.js-filters__date
-      +filterDateDropdown({ className: 'date-filter', title: 'даты пребывания в отеле', name: 'dateFilter' })
+      +dateDropdown({ titles: ['даты пребывания в отеле'], names: ['dateFilter'], modifier: 'single-field' })
     
     .filters__guests
-      +dropdown({ className: 'guests-quantity', title: 'гости' })
+      +dropdown({ title: 'гости' })
     
     section.filters__price 
-      +slider({ title: 'диапазон цены', selector: 'price-filter' })
+      +slider({ title: 'диапазон цены', min: 0, max: 16000, initValues: [5000, 10000] })
       p.filters__price-text Стоимость за сутки пребывания в номере
     
     .filters__rules
@@ -25,8 +25,7 @@ mixin filters()
     
     .filters__convenience
       +dropdown({ 
-        className: 'convenience-filter', title: 'удобства номера' , name:'convenience', 
-        type: 'convenience', 
+        title: 'удобства номера' , name:'convenience', modifier: 'convenience', 
         items: [{ title: 'спальни', quantity: 2 }, { title: 'кровати', quantity: 2 }, { title: 'ванные комнаты', quantity: 0 }]  
       })
     
