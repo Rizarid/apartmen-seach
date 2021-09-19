@@ -7,7 +7,7 @@ class RadioButtons {
     this._addListeners();
   }
 
-  _getItems = () => Array.prototype.slice.call(this._body.querySelectorAll('.js-radio-buttons__item'));
+  _getItems = () => [...this._body.querySelectorAll('.js-radio-buttons__item')];
 
   _addListeners = () => {
     this._items.map((item) => item.addEventListener('click', this._handleItemClick));
