@@ -1,9 +1,7 @@
-/* eslint-disable no-unused-vars */
 import '../../fonts/fonts.css';
 import '../../fonts/scss/_path.scss';
-import '../../blocks/header/header';
+import '../../blocks/header/header-init';
 import '../../blocks/footer/footer';
-import { Landing } from './landing-class';
+import '../../blocks/search-block/search-block';
+import '../../components/slider-of-background/slider-of-background-init';
 import './landing.sass';
-
-const landing = new Landing();
