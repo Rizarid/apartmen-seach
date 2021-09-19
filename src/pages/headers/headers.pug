@@ -1,19 +1,12 @@
 include ../../blocks/header/header.pug 
 include ../../blocks/footer/footer.pug 
 
-doctype html
-html(lang='ru')
-  head
-    meta(charset='UTF-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+main.headers 
+  .headers__header-container
+    +header(false, '')
 
-  body
-    main.headers 
-      .headers__header-container
-        +header(false, '')
+  .headers__header-container
+    +header(true, 'Юлий Цезарь')
 
-      .headers__header-container
-        +header(true, 'Юлий Цезарь')
-
-      .headers__footer-container 
-        +footer
+  .headers__footer-container 
+    +footer

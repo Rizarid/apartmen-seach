@@ -1,4 +1,4 @@
-import '../../blocks/header/header';
+import '../../blocks/header/header-init';
 import '../../blocks/footer/footer';
 import '../../fonts/fonts.css';
 import '../../fonts/scss/_path.scss';
