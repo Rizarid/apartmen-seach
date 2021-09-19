@@ -4,6 +4,7 @@ import { Booking } from './booking-block';
 
 {
   const bookingTarget = document.querySelector('.js-booking');
-  let booking;
-  if (bookingTarget) booking = new Booking(bookingTarget);
+  if (bookingTarget) {
+    const booking = new Booking(bookingTarget);
+  }
 }

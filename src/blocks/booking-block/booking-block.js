@@ -55,6 +55,7 @@ class Booking {
   };
 
   _handleDateDropdownOnSelect = (event) => {
+    event.stopPropagation();
     this._days = event.detail.daysCount;
     this._calculate();
     this._update();
