@@ -1,5 +1,5 @@
 import * as $ from 'jquery';
-import './date-picker.sass'
+import './date-picker.sass';
 
 class DatePicker {
   constructor(target) {
@@ -7,22 +7,29 @@ class DatePicker {
     this._getInitDate();
     this._createOnSelectEvent();
     this._init();
-
     this._datepicker = this._getDatepickerObject();
     this._addListeners();
-    if (this._initDate) this._setDate(this._initDate);
+
+    if (this._initDate) {
+      const initDatePromise = new Promise((resolve) => {
+        setTimeout(() => resolve(this._initDate), 1);
+      }).then(this._setDate);
+    }
   }
 
   _getInitDate = () => {
-    const { startDate, endDate } = this._body.dataset;
-    if (startDate && endDate) this._initDate = [startDate, endDate];
+    const { start, end } = this._body.dataset;
+    if (start && end) this._initDate = [start, end];
   }
 
-  _setDate = (dates) => { $(this._body).datepicker('setDate', dates); };
+  _setDate = (dates) => {
+    $(this._body).datepicker('setDate', dates);
+    this._onSelect();
+  };
 
-  _createOnSelectEvent = () => { 
-    const detail = { startDate: 0, endDate: 0, startDateText: '', endDateText: '' }
-    this._onSelected = new CustomEvent('datepickerOnSelect', { bubbles: true, detail }); 
+  _createOnSelectEvent = () => {
+    const detail = { startDate: 0, endDate: 0, startDateText: '', endDateText: '' };
+    this._onSelected = new CustomEvent('datepickerOnSelect', { bubbles: true, detail });
   };
 
   _init = () => {

@@ -26,8 +26,7 @@ import { DatePicker } from './date-picker';
   $.datepicker.setDefaults($.datepicker.regional.ru);
 
   const datePickerTargets = [...document.querySelectorAll('.js-date-picker')];
-  let datePickerCollection = [];
   if (datePickerTargets) {
-    datePickerCollection = datePickerTargets.map((item) => new DatePicker(item));
+    const datePickerCollection = datePickerTargets.map((item) => new DatePicker(item));
   }
 }
