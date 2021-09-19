@@ -4,6 +4,7 @@ import { ControlPanel } from './control-panel';
 
 {
   const controlPanelTargets = [...document.querySelectorAll('.js-control-panel')];
-  let controlPanel = [];
-  if (controlPanelTargets) controlPanel = controlPanelTargets.map((item) => new ControlPanel(item));
+  if (controlPanelTargets) {
+    const controlPanel = controlPanelTargets.map((item) => new ControlPanel(item));
+  }
 }
