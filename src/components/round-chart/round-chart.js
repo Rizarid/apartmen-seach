@@ -1,14 +1,22 @@
 import './round-chart.sass';
 
 class RoundChart {
-  constructor(votes) {
-    this._votes = votes;
+  constructor(target) {
+    this._body = target;
+    this._content = this._getContent();
+    this._votes = this._getVotes();
     this._sum = this._getSum();
     this._dash = this._getDash();
     this._createDashoffset();
+    this._content.innerHTML = this._createChart();
   }
 
-  getChart = () => this._createChart();
+  _getContent = () => this._body.querySelector('.js-round-chart__content');
+
+  _getVotes = () => {
+    const { first, second, third, fourth } = this._body.dataset;
+    return [Number(first), Number(second), Number(third), Number(fourth)];
+  }
 
   _getSum = () => this._votes.reduce((summa, current) => summa + current, 0);
 
