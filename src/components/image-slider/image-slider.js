@@ -1,5 +1,4 @@
 import '../../scripts/create-element';
-import { Slide } from './Slide';
 import './image-slider.sass';
 
 class ImageSlider {
@@ -23,8 +22,8 @@ class ImageSlider {
   }
 
   _createSlides = () => {
-    const images = Array.prototype.slice.call(this._body.querySelectorAll('.js-image-slider__image'));
-    this._slides = images.map((item) => new Slide(item));
+    const images = [...this._body.querySelectorAll('.js-image-slider__image')];
+    this._slides = images.map((item) => new this._Slide(item));
   }
 
   _createDotsBlock = () => {
@@ -134,6 +133,32 @@ class ImageSlider {
   }
 
   _addResizeObserver = () => this.resizeObserver.observe(this._body);
+
+  _Slide = function (target) {
+    this._body = target;
+    this._dot = createElement('div', 'image-slider__slide-dote');
+
+    this._onDotSwitch = new Event('dotSwitch', { bubbles: true });
+    this._onSlideSwitch = new Event('slideSwitch', { bubbles: true });
+    this._onDotReturn = new Event('dotReturn', { bubbles: true });
+    this._onSlideReturn = new Event('slideReturn', { bubbles: true });
+
+    this.getSlide = () => this._body;
+    this.getDot = () => this._dot;
+
+    this._handleDotMouseover = () => {
+      this._dot.dispatchEvent(this._onDotSwitch);
+      this._body.dispatchEvent(this._onSlideSwitch);
+    };
+
+    this._handleDotMouseout = () => {
+      this._dot.dispatchEvent(this._onDotReturn);
+      this._body.dispatchEvent(this._onSlideReturn);
+    };
+
+    this._dot.addEventListener('mouseover', this._handleDotMouseover);
+    this._dot.addEventListener('mouseout', this._handleDotMouseout);
+  }
 }
 
 export { ImageSlider };
