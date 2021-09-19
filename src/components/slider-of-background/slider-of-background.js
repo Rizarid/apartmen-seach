@@ -1,11 +1,11 @@
 import './slider-of-background.sass';
 
 class SliderOfBackground {
-  constructor(slider, interval) {
-    this._slider = slider;
-    this._interval = interval;
+  constructor(target) {
+    this._body = target;
+    this._interval = Number(this._body.dataset.interval);
     this._slidesNumber = 0;
-    this._slides = this._slider.children;
+    this._slides = this._body.children;
     setInterval(this._nextSlide, this._interval);
   }
 
