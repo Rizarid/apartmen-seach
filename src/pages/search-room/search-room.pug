@@ -1,41 +1,34 @@
-include ../../blocks/header/header.pug 
+extends ../page-template/page-template.pug
+
 include ../../blocks/room-card-block/room-card-block.pug 
-include ../../blocks/footer/footer.pug
 include ../../blocks/filters-block/filters-block.pug
 
--
-  const { 
-    roomsOptions  =  [], checkboxButtonsOptions  =  {}, richCheckboxButtonsOptions  =  {}, 
-    expandableCheckboxListOptions  =  {}
-  }  =  require("@/scripts/state.js")
+block variables
+  -
+    const { 
+      roomsOptions  =  [], checkboxButtonsOptions  =  {}, richCheckboxButtonsOptions  =  {}, 
+      expandableCheckboxListOptions  =  {}
+    }  =  require("@/scripts/state.js")
 
-doctype html
-html(lang = "ru")
-  head
-    meta(charset = "UTF-8")
-    meta(name = "viewport", content = "width = device-width, initial-scale = 1.0")
-    meta(name = "description", content = "Номера, которые мы для вас подобрали")
-    meta(name = "keywords", content = "номер, отель, номер в отеле, поис номеров, гостиница")
+block head
+  +head({
+    description: 'Номера, которые мы для вас подобрали',  
+    title: 'Номера, которые мы для вас подобрали' 
+  })
 
-    title Номера, которые мы для вас подобрали 
-
-  body
-    +header(false, "")
-    
-    main.search-room.js-search-room
-      .search-room__container 
-        +filters
+block content
+  main.search-room.js-search-room
+    .search-room__container 
+      +filters
+      
+      article.search-results.js-search-results
+        h1.search-results__title Номера, которые мы для вас подобрали
         
-        article.search-results.js-search-results
-          h1.search-results__title Номера, которые мы для вас подобрали
-          
-          if roomsOptions
-          .search-results__list   
-            each item in roomsOptions
-              .search-results__item
-                +roomCardBlock(item)
+        if roomsOptions
+        .search-results__list   
+          each item in roomsOptions
+            .search-results__item
+              +roomCardBlock(item)
 
-            .search-results__pagination
-              +pagination(15, "1 – 12 из 100+ вариантов аренды")
-
-    +footer
+          .search-results__pagination
+            +pagination(15, "1 – 12 из 100+ вариантов аренды")

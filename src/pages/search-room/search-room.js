@@ -1,12 +1,7 @@
-/* eslint-disable no-unused-vars */
-
 import '../../fonts/fonts.css';
 import '../../fonts/scss/_path.scss';
-import '../../blocks/header/header';
+import '../../blocks/header/header-init';
 import '../../blocks/footer/footer';
-import { SearchRoom } from './search-room-class';
+import '../../blocks/filters-block/filters-block';
+import '../../blocks/room-card-block/room-card';
 import './search-room.sass';
-
-{
-  const searchRoom = new SearchRoom();
-}
