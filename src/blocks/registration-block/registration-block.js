@@ -1,7 +1,7 @@
 import '../../components/text-field/text-field';
-import { RadioButtons } from '../../components/radio-buttons/radio-buttons';
-import { MaskedTextField } from '../../components/masked-text-field/masked-text-field';
-import { Toggle } from '../../components/toggle/toggle';
+import '../../components/radio-buttons/radio-buttons-init';
+import '../../components/masked-text-field/masked-text-field-init';
+import '../../components/toggle/toggle-init';
 import '../../components/button/button';
 import './registration-block.sass';
 
