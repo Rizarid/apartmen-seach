@@ -4,7 +4,7 @@ import { CheckboxButtons } from './checkbox-buttons';
 
 {
   const checkboxButtonsTargets = [...document.querySelectorAll('.js-checkbox-buttons')];
-  if (checkboxButtonsTargets) { 
+  if (checkboxButtonsTargets) {
     const checkboxButtonsList = checkboxButtonsTargets.map((item) => new CheckboxButtons(item));
   }
 }
