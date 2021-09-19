@@ -39,7 +39,7 @@ module.exports = {
         registration: './src/pages/registration/registration.js',
         elements: './src/pages/elements/elements.js',
         cards: './src/pages/cards/cards.js',
-        headers: './src/pages/headers/headers.js'
+        headers: './src/pages/headers/headers.js' 
     },
     
     output: {
