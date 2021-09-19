@@ -1,27 +1,22 @@
-include ../../blocks/header/header.pug 
+extends ../page-template/page-template.pug
+
 include ../../blocks/registration-block/registration-block.pug 
-include ../../blocks/footer/footer.pug 
 include ../../components/slider-of-background/slider-of-background.pug 
 
-- const { backgroundSliderRegistrationOptions }  =  require("@/scripts/state.js")
+block variables
+  - const { backgroundSliderRegistrationOptions }  =  require("@/scripts/state.js")
 
-doctype html
-html(lang = "ru")
-  head
-    meta(charset = "UTF-8")
-    meta(name = "viewport", content = "width = device-width, initial-scale = 1.0")
-    meta(name = "description", content = "Регистрация аккаунта")
-    meta(name = "keywords", content = "номер, отель, номер в отеле, поис номеров, гостиница")
+block head
+  +head({
+    description: 'Регистрация аккаунта', 
+    title: 'Регистрация аккаунта' 
+  })
 
-    title Регистрация аккаунта 
+block content
 
-  body
-    +header(false, "")
+  main.registration 
+    +backgroundSlider(backgroundSliderRegistrationOptions, 6000)
 
-    main.registration 
-      +backgroundSlider(backgroundSliderRegistrationOptions)
+    .registration__container 
+      +registrationBlock
 
-      .registration__container 
-        +registrationBlock
-
-    +footer
