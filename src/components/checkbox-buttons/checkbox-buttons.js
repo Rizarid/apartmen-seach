@@ -1,3 +1,4 @@
+import '../checkbox/checkbox-init';
 import './checkbox-buttons.sass';
 
 class CheckboxButtons {
