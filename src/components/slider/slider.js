@@ -7,19 +7,19 @@ import './touch-punch';
 import './slider.sass';
 
 class Slider {
-  constructor(options = {}) {
-    this._init(options);
+  constructor(target) {
+    this._body = target;
+    this._init();
     this._$slider = this._getSlider();
     this._value = this._getValue();
     this._initSlider();
   }
 
-  _init = (options) => {
-    const { target, min = 0, max = 15000, initValues = [min, max] } = options;
-    this._body = target;
-    this._min = min;
-    this._max = max;
-    this._initValues = initValues;
+  _init = () => {
+    const { min, max, minInitValue, maxInitValue } = this._body.dataset;
+    this._min = Number(min);
+    this._max = Number(max);
+    this._initValues = [Number(minInitValue), Number(maxInitValue)];
   }
 
   _getSlider = () => $(this._body).children('.slider__body');
