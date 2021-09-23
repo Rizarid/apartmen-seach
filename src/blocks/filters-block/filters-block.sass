@@ -7,9 +7,6 @@
   background-color: #fff
   transition: 0.75s
   box-sizing: border-box
-    
-  &.show
-    left: 0
 
   @media screen and ( max-width:  1150px)
     position: absolute
@@ -21,6 +18,9 @@
     padding-top: 30px
     box-shadow: 15px 0px 10px rgb(31 32 65 / 25%)
     border-radius: 10px
+
+  &_visible
+    left: 0
         
   &__date
     max-width: 266px
@@ -70,3 +70,28 @@
     width: 100%
     padding-top: 32px
     box-sizing: border-box
+
+.filters-button
+  width: 40px
+  height: 40px
+  box-sizing: border-box
+  justify-content: center
+  align-items: center
+  display: none
+  border-radius: 50%
+  font-size: 25px
+  font-family: FontAwesome
+  color: #fff
+  +gradient
+  z-index: 50
+  margin-left: 20px
+  
+  &::before
+    content: '\f0b0'
+
+  @media screen and ( max-width:  1150px)
+    display: flex
+
+  @media screen and ( max-width:  1000px)
+    margin-right: 20px
+    margin-left: 0
