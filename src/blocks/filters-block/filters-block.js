@@ -1,4 +1,4 @@
-import '../../scripts/create-element';
+import { createElement } from '../../utilities/utilities';
 import '../../components/slider/slider-init';
 import '../../components/checkbox-buttons/checkbox-buttons-init';
 import '../../components/checkbox/checkbox-init';

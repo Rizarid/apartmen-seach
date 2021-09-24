@@ -1,4 +1,4 @@
-import '../../scripts/create-element';
+import { createElement } from '../../utilities/utilities';
 import './image-slider.sass';
 
 class ImageSlider {

@@ -1,5 +1,4 @@
-import { numberMargins } from '../../scripts/numberMargins';
-import { getDecline } from '../../scripts/getDecline';
+import { numberMargins, getDecline } from '../../utilities/utilities';
 import '../../components/button/button';
 import '../../components/dropdown/dropdown-init';
 import '../../components/date-dropdown/date-dropdown-init';

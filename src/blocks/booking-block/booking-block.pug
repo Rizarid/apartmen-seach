@@ -6,7 +6,7 @@ mixin bookingBlock({ roomPrice = 9990, discount = 2179, servicesTotal = 0, addit
   -
     let redactedRoomPrice, redactedDiscount, redactedServicesTotal, redactedAdditionalServicesPrice
     {
-      const { numberMargins } = require('../../scripts/numberMargins.js')
+      const { numberMargins } = require('../../utilities/utilities.js')
       redactedRoomPrice = numberMargins(roomPrice)
       redactedDiscount = numberMargins(discount)
       redactedServicesTotal = numberMargins(servicesTotal)

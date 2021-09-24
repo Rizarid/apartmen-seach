@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 
-import { getDecline } from '../../scripts/getDecline';
+import { getDecline } from '../../utilities/utilities';
 import '../control-panel/control-panel-init';
 import './dropdown.sass';
 

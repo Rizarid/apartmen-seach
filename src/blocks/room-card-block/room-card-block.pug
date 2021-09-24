@@ -5,7 +5,7 @@ mixin roomCardBlock({ slides = [], roomNumber = 0, isLux = false, price = 0, sta
   -
     let redactedPrice
     {
-      const { numberMargins } = require('../../scripts/numberMargins.js')
+      const { numberMargins } = require('../../utilities/utilities.js')
       redactedPrice = numberMargins(price)
     }
 

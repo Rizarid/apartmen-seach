@@ -2,7 +2,7 @@ import * as $ from 'jquery';
 import 'jquery-ui-slider/jquery-ui';
 import 'jquery-ui-slider/jquery-ui.css';
 
-import { numberMargins } from '../../scripts/numberMargins';
+import { numberMargins } from '../../utilities/utilities';
 import './touch-punch';
 import './slider.sass';
 
