@@ -6,7 +6,7 @@ mixin checkboxButtons(options = {})
     const blockClass = `checkbox-buttons js-checkbox-buttons checkbox-buttons_${modifier}`
     const itemClass = `checkbox-buttons__item`
 
-  section(class != blockClass)
+  section(class = blockClass)
     - const isExpandable = (modifier === 'expandable')
 
     if isExpandable
@@ -24,7 +24,7 @@ mixin checkboxButtons(options = {})
             checked = false 
           } = item
         
-        label(class != itemClass)
+        label(class = itemClass)
           +checkbox(name, checked)
 
           if modifier === 'rich'

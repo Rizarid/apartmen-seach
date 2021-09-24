@@ -5,12 +5,12 @@ mixin button(options = {})
     let classes = modifier ? `${classDefault} ${classDefault}_${modifier}` : classDefault
     
   if isSubmit 
-    button(type = "submit", class != classes) #{ text }
+    button(type = "submit", class = classes) #{ text }
   else
     if (modifier === 'minimal')
-      p(class != classes, href != href)
+      p(class = classes, href = href)
         span.button__text #{ text }
     else
-      a(class != classes, href != href)   
+      a(class = classes, href = href)   
         p.button__text #{ text }
       

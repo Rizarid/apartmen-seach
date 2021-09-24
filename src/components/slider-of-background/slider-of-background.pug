@@ -1,12 +1,12 @@
 mixin backgroundSlider(imgData = [], interval = 5000)
-  div(class = "slider-of-background js-slider-of-background", data-interval != interval)
+  div(class = "slider-of-background js-slider-of-background", data-interval = interval)
     if imgData
       - i = 0
       each item in imgData
         - const { src, alt } = item
         if i
-          img.slider-of-background__image(src != src alt != alt)
+          img.slider-of-background__image(src = src alt = alt)
         else 
-          img.slider-of-background__image.slider-of-background__image_active(src != src alt != alt, loading = "eager")
+          img.slider-of-background__image.slider-of-background__image_active(src = src alt = alt, loading = "eager")
           - i++
   

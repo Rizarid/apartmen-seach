@@ -5,6 +5,6 @@ mixin datePicker(options = {})
     const { startDate = '', endDate = '' } = options
     const classes = 'date-picker js-date-picker'
 
-  div(class != classes, data-start != startDate, data-end != endDate)
+  div(class = classes, data-start = startDate, data-end = endDate)
     .date-picker__control-panel
       +controlPanel

@@ -8,11 +8,11 @@ mixin dropdown(options = {})
     } = options
     const classes = `dropdown js-dropdown dropdown_${modifier}`
 
-  section(class != classes)
+  section(class = classes)
     h3.dropdown__title #{ title }
 
     .dropdown__field-container
-      input.dropdown__field.js-dropdown__field(type = "text", name != name, readonly)
+      input.dropdown__field.js-dropdown__field(type = "text", name = name, readonly)
 
     .dropdown__list.js-dropdown__list
       each item in items

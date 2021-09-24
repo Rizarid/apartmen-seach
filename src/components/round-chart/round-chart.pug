@@ -1,8 +1,8 @@
 mixin roundChart(options = {})
   - const { title = 'round chart', votes = [0, 65, 65, 130] } = options
   section(
-    class = "round-chart js-round-chart", data-first != votes[0], data-second != votes[1], 
-    data-third != votes[2], data-fourth != votes[3]
+    class = "round-chart js-round-chart", data-first = votes[0], data-second = votes[1], 
+    data-third = votes[2], data-fourth = votes[3]
   )
     h3.round-chart__title #{ title }
     .round-chart__content.js-round-chart__content

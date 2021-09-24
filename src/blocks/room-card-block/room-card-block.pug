@@ -14,7 +14,7 @@ mixin roomCardBlock(options = {})
 
   article.room-card-block.js-room-card-block
     +imageSlider(slides)
-    a.room-card-block__information(href != link) 
+    a.room-card-block__information(href = link) 
       .room-card-block__header 
         h2.room-card-block__title 
           span.room-card-block__number-symbol №

@@ -9,7 +9,7 @@ mixin informationBlock(options = {})
         each item in itemOptions
           - const { img, alt, title, text } = item
           li.information-block__item
-            img.information-block__block-image(src != img, alt != alt)
+            img.information-block__block-image(src = img, alt = alt)
 
             .information-block__text-container 
               p.information-block__item-title #{ title }

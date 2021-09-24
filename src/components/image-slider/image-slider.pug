@@ -8,8 +8,8 @@ mixin imageSlider(sliderItems = [])
         each item in sliderItems
           - const { src, alt } = item
           if activeImage
-            img.image-slider__image.js-image-slider__image.image-slider__image_active(src != src, alt != alt)
+            img.image-slider__image.js-image-slider__image.image-slider__image_active(src = src, alt = alt)
           else 
-            img.image-slider__image.js-image-slider__image(src != src, alt != alt)
+            img.image-slider__image.js-image-slider__image(src = src, alt = alt)
 
           - activeImage = false

@@ -1,4 +1,4 @@
 mixin checkbox(name = 'checkbox', checked = false)
   - let classes = `checkbox js-checkbox ${checked ? 'checkbox_checked' : ''}`
-  span(class != classes)
-    input.checkbox__checkbox.js-checkbox__checkbox( type = "checkbox", name != name, checked != checked)
+  span(class = classes)
+    input.checkbox__checkbox.js-checkbox__checkbox( type = "checkbox", name = name, checked = checked)

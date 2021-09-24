@@ -3,7 +3,7 @@ mixin likeButton(options = {})
     const { quantity = 0, liked = false } = options
     const classes = liked ? 'like-button like-button_liked js-like-button' : 'like-button js-like-button'
 
-  div(class != classes)
+  div(class = classes)
     span.like-button__icon 
     span.like-button__quantity #{ quantity }
 

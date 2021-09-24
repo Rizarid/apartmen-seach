@@ -8,7 +8,7 @@ mixin review(options = {})
  
   article.review.js-review
     header.review__user 
-      img.review__photo(src != photo, alt = "user photo")
+      img.review__photo(src = photo, alt = "user photo")
       .review__name-container 
         h2.review__name #{ name }
         p.review__publication-date #{ publicationDate }

@@ -1,6 +1,6 @@
 mixin slider(options = {})
   - const { title = 'slider', min = 0, max = 15000, initValues = [min, max] } = options;
-  div(class = "slider js-slider", data-min != min, data-max != max, data-min-init-value != initValues[0], data-max-init-value != initValues[1])
+  div(class = "slider js-slider", data-min = min, data-max = max, data-min-init-value = initValues[0], data-max-init-value = initValues[1])
     .slider__header
       h3.slider__title #{ title }
       p.slider__values 
