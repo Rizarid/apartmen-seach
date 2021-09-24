@@ -1,6 +1,6 @@
 include ../text-field/text-field.pug
 
-mixin maskedTextField(options = {})
-  -  const { title = 'masked text field', name = 'maskedTextField' } = options
+mixin maskedTextField({ title = 'masked text field', name = 'maskedTextField' })
+
   .masked-text-field.js-masked-text-field
     +textField({ title, name, placeholder: "ДД.ММ.ГГГГ" })

@@ -18,14 +18,14 @@ main.cards.js-cards
 
     .cards__column.cards__column_center
       .cards__booking-form-container 
-        +bookingBlock
+        +bookingBlock({})
 
       .cards__sign-in-form-container
         +signInBlock
 
     .cards__column.cards__column_right
       .cards__date-picker-container 
-        +datePicker()
+        +datePicker({})
 
       .cards__room-card-container.cards__room-card-container_first
         +roomCardBlock(roomsOptions[0])

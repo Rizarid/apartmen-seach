@@ -8,7 +8,7 @@ mixin searchBlock
       h1.search-block__title Найдём номера под ваши пожелания
 
     .search-block__date-container 
-      +dateDropdown()
+      +dateDropdown({})
 
     .search-block__guests-quantity-container 
       +dropdown({ className: 'guests-quantity', title: 'гости' })

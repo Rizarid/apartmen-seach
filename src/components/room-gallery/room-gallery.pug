@@ -1,5 +1,5 @@
-mixin roomGallery(imgData = [])
-  - const [bigImage = {}, smallImageFirst = {}, smallImageSecond = {}] = imgData
+mixin roomGallery([bigImage = {}, smallImageFirst = {}, smallImageSecond = {}])
+
   figure.room-gallery
     figure.room-gallery__main-container
       if bigImage

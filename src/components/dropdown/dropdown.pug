@@ -1,12 +1,8 @@
 include ../control-panel/control-panel.pug
 
-mixin dropdown(options = {})
-  -
-    const { 
-      title = 'dropdown', name = 'dropdown', modifier = 'guests', 
-      items = [{ title: 'взрослые', quantity: 0 }, { title: 'дети', quantity: 0 }, { title: 'младенцы', quantity: 0 }]  
-    } = options
-    const classes = `dropdown js-dropdown dropdown_${modifier}`
+mixin dropdown({ title = 'dropdown', name = 'dropdown', modifier = 'guests',  items = [{ title: 'взрослые', quantity: 0 }, { title: 'дети', quantity: 0 }, { title: 'младенцы', quantity: 0 }] })
+  
+  - const classes = `dropdown js-dropdown dropdown_${modifier}`
 
   section(class = classes)
     h3.dropdown__title #{ title }

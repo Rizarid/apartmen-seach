@@ -2,17 +2,15 @@ include ../../components/date-dropdown/date-dropdown.pug
 include ../../components/dropdown/dropdown.pug 
 include ../../components/button/button.pug 
 
-mixin bookingBlock(options = {})
+mixin bookingBlock({ roomPrice = 9990, discount = 2179, servicesTotal = 0, additionalServicesPrice = 300 })
   -
-    let {
-      roomPrice = 9990, discount = 2179, servicesTotal = 0, additionalServicesPrice = 300,
-    } = options;
+    let redactedRoomPrice, redactedDiscount, redactedServicesTotal, redactedAdditionalServicesPrice
     {
       const { numberMargins } = require('../../scripts/numberMargins.js')
-      roomPrice = numberMargins(roomPrice)
-      discount = numberMargins(discount)
-      servicesTotal = numberMargins(servicesTotal)
-      additionalServicesPrice = numberMargins(additionalServicesPrice)
+      redactedRoomPrice = numberMargins(roomPrice)
+      redactedDiscount = numberMargins(discount)
+      redactedServicesTotal = numberMargins(servicesTotal)
+      redactedAdditionalServicesPrice = numberMargins(additionalServicesPrice)
     }
 
   form.booking.js-booking
@@ -23,7 +21,7 @@ mixin bookingBlock(options = {})
         span.booking__tag люкс
 
       p.booking__room-price
-        span.booking__price.js-booking__price #{roomPrice}&#8381
+        span.booking__price.js-booking__price #{redactedRoomPrice}&#8381
         span.booking__period #{' в сутки'}
 
     .booking__date 
@@ -40,14 +38,14 @@ mixin bookingBlock(options = {})
       .booking__services-container
         p.booking__services
           span.booking__services-text Сбор за услуги: скидка
-          span.booking__services-prices.js-booking__services-prices #{discount}&#8381
+          span.booking__services-prices.js-booking__services-prices #{redactedDiscount}&#8381
         span.booking__information i
-        p.booking__services-total.js-booking__services-total #{servicesTotal}&#8381
+        p.booking__services-total.js-booking__services-total #{redactedServicesTotal}&#8381
 
       .booking__additional-services-container
         p.booking__additional-services-title Сбор за дополнительные услуги
         span.booking__information i
-        p.booking__additional-services-total.js-booking__additional-services-total #{additionalServicesPrice}&#8381
+        p.booking__additional-services-total.js-booking__additional-services-total #{redactedAdditionalServicesPrice}&#8381
 
     .booking__total-price-container 
       p.booking__total-price-text Итого

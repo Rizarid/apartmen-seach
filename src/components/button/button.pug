@@ -1,6 +1,5 @@
-mixin button(options = {})
+mixin button({ modifier = undefined, href = '', isSubmit = false,  text = 'Click me' })
   -
-    const { modifier = undefined, href = '', isSubmit = false,  text = 'Click me' } = options
     const classDefault = 'button'
     let classes = modifier ? `${classDefault} ${classDefault}_${modifier}` : classDefault
     

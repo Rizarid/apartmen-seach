@@ -1,11 +1,8 @@
 include ../date-picker/date-picker.pug
 
-mixin dateDropdown(options = {})   
-  -
-    const { 
-      titles = ['прибытие', 'выезд'], names = ['dateComing', 'dateLeave'], initDate, modifier = 'double-field'
-    } = options
-    const classes = `date-dropdown js-date-dropdown date-dropdown_${modifier}`
+mixin dateDropdown({ titles = ['прибытие', 'выезд'], names = ['dateComing', 'dateLeave'], initDate, modifier = 'double-field' })   
+  
+  - const classes = `date-dropdown js-date-dropdown date-dropdown_${modifier}`
   
   div(class = classes)
     .date-dropdown__container

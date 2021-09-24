@@ -1,10 +1,5 @@
-mixin head(options = {})
-  -
-    const { 
-     description = 'Лучшие номера для вашей работы, отдыха и просто вдохновения', 
-      keywords = 'номер, отель, номер в отеле, поис номеров, гостиница', 
-      title = 'Найдём номера под ваши пожелания'  
-    } = options
+mixin head({ description = 'Лучшие номера для вашей работы, отдыха и просто вдохновения', keywords = 'номер, отель, номер в отеле, поис номеров, гостиница', title = 'Найдём номера под ваши пожелания' })
+
   head
     meta(charset = "UTF-8")
     meta(name = "viewport", content = "width = device-width, initial-scale = 1.0")

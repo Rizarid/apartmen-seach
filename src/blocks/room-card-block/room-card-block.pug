@@ -1,15 +1,12 @@
 include ../../components/image-slider/image-slider.pug 
 include ../../components/rate-button/rate-button.pug 
 
-mixin roomCardBlock(options = {})
+mixin roomCardBlock({ slides = [], roomNumber = 0, isLux = false, price = 0, stars = 0, reviewsQuantity = 0, link = '/mock-address/change-me' })
   -
-    let { 
-      slides = [], roomNumber = 0, isLux = false, price = 0, stars = 0, reviewsQuantity = 0, 
-      link = '/mock-address/change-me' 
-    } = options
+    let redactedPrice
     {
       const { numberMargins } = require('../../scripts/numberMargins.js')
-      price = numberMargins(price)
+      redactedPrice = numberMargins(price)
     }
 
   article.room-card-block.js-room-card-block
@@ -23,7 +20,7 @@ mixin roomCardBlock(options = {})
             span.room-card-block__tag люкс
 
         p.room-card-block__room-price
-          span.room-card-block__price.js-room-card-block__price #{price}&#8381
+          span.room-card-block__price.js-room-card-block__price #{redactedPrice}&#8381
           span.room-card-block__period в сутки
 
       .room-card-block__feedback
