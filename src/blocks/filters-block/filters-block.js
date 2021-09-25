@@ -19,7 +19,7 @@ class Filters {
 
   _getNavigationElement = () => document.querySelector('.js-header__navigation');
 
-  _createFiltersButton = () => { this._filtersButton = createElement('div', 'filters-button'); };
+  _createFiltersButton = () => { this._filtersButton = createElement('div', 'filters__filters-button'); };
 
   _appendFiltersButton = () => { this._navigation.insertAdjacentElement('afterEnd', this._filtersButton); }
 

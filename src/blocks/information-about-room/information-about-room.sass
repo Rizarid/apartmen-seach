@@ -37,15 +37,12 @@
 
   &__rules
     padding-top: 9px
-    max-width: 360px
+    max-width: 255px
 
     @media screen and ( max-width: 650px )
       align-self: center
       padding-top: 40px
-
-    & .bulletList
-      max-width: 255px
-
+      
   &__cancellation-conditions
     max-width: 351px
     padding-top: 10px
@@ -55,20 +52,20 @@
       align-self: center
       padding-top: 50px
 
-    & .cancellation-conditions__title
-      margin: 0
+  &__cancellation-conditions-title
+    margin: 0
 
-      @media screen and ( max-width: 650px )
-        text-align: center
+    @media screen and ( max-width: 650px )
+      text-align: center
 
-    & .cancellation-conditions__text
-      font-weight: $normal
-      font-size: 13.9px
-      line-height: 24px
-      color: $dark-shade-75
-      padding-top: 19px
-      margin: 0
-      max-width: 345px
+  &__cancellation-conditions-text
+    font-weight: $normal
+    font-size: 13.9px
+    line-height: 24px
+    color: $dark-shade-75
+    padding-top: 19px
+    margin: 0
+    max-width: 345px
 
-      @media screen and ( max-width: 650px )
-        text-align: center
+    @media screen and ( max-width: 650px )
+      text-align: center

@@ -12,8 +12,8 @@ mixin signInBlock
       +textField({ name: 'password', type: 'password',  placeholder: 'Пароль' })
 
     .sign-in-block__submit-container
-      +button({ text: 'войти', isSubmit: true, modifier: 'big' })
+      +button({ text: 'войти', isSubmit: true, modifier: ['big'] })
 
     .sign-in-block__button-container
       p.sign-in-block__button-label Нет аккаунта на Toxin?
-      +button({ text: 'создать', href: 'registration.html', modifier: 'transparent' })
+      +button({ text: 'создать', href: 'registration.html', modifier: ['transparent'] })

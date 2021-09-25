@@ -23,7 +23,7 @@
   &:hover
     opacity: 50%
 
-  & .button__text
+  &__text
     font-size: 12px
     color: #fff
     margin: 0
@@ -33,10 +33,9 @@
     font-family: $main-font
     font-weight: $bold
 
-  &.button_transparent
+  &_transparent
     +gradient
     position: relative
-    padding: 14.5px 19.25px
     
     &:before
       content: ''
@@ -47,41 +46,28 @@
       background-color: #fff
       z-index: 0
   
-    .button__text
+    & .button__text
       color: $purple
       z-index: 1
 
-  &.button_min-transparent
-    +gradient
-    position: relative
+  &_low
     padding: 9.5px 20.3px
-    
-    &:before
-      content: ''
-      position: absolute
-      width: calc(100% - 4px)
-      height: calc(100% - 4px) 
-      border-radius: 22px
-      background-color: #fff
-      z-index: 0
-      
-  
-    .button__text
-      color: $purple
-      z-index: 1
 
-  &.button_minimal
+  &_wide
+    padding: 15px 26px
+
+  &_minimal
     padding: 0
     background: none 
     margin: 0 
 
-    .button__text
+    & .button__text
       color: $purple
 
       &:hover
         color: $dark-shade-50
 
-  &.button_big
+  &_big
     +gradient
     max-width: 320px
     width: 100%

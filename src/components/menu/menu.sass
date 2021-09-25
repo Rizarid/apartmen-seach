@@ -26,7 +26,7 @@ body
     @media screen and ( max-width:  1000px)
       left: -100%
 
-    &.nav__darkening_active
+    &_active
       opacity: 0.5
       left: 0
       z-index: 100
@@ -51,129 +51,129 @@ body
       box-shadow: inset 7px 16px 15px -11px rgb(50 50 50 / 27%)
 
 
-      &.nav__container_active
+      &_active
         left: 0
 
-    & .nav__list
-      display: flex
-      justify-content: center
+  &__list
+    display: flex
+    justify-content: center
+    align-items: center
+    box-sizing: border-box
+    list-style-type: none
+    padding: 0
+
+    @media screen and ( max-width:  1000px)
+      flex-direction: column
       align-items: center
+      width: 100%
+      margin: 0
+      padding-top: 20px 
+
+  &__item
+    font-weight: $normal
+    font-size: 13.9px
+    line-height: 17px
+    position: relative
+    transition: 0.5s
+
+    @media screen and ( max-width:  1000px)
+      width: 100%
+      padding: 10px 15px
       box-sizing: border-box
-      list-style-type: none
-      padding: 0
+      margin: 0
+      font-size: 22px
+
+    & ~ .nav__item 
+      margin-left: 20.5px
 
       @media screen and ( max-width:  1000px)
-        flex-direction: column
-        align-items: center
-        width: 100%
-        margin: 0
-        padding-top: 20px 
+        margin-left: 0
 
-      & .nav__item
-        font-weight: $normal
-        font-size: 13.9px
-        line-height: 17px
-        position: relative
-        transition: 0.5s
+    &:hover
+      color: $dark-shade-75
 
-        @media screen and ( max-width:  1000px)
-          width: 100%
-          padding: 10px 15px
-          box-sizing: border-box
-          margin: 0
-          font-size: 22px
+    &_dropping
+      
+      & .nav__link-container
+        display: flex
+        align-items: flex-end
 
-        & ~ .nav__item 
-          margin-left: 20.5px
-
-          @media screen and ( max-width:  1000px)
-            margin-left: 0
-
-        &:hover
-          color: $dark-shade-75
-
-        &.nav__item_dropping
-          
-          & .nav__link-container
-            display: flex
-            align-items: flex-end
-
-          & .nav__arrow
-            cursor: pointer
-            
-            &::after
-              content: 'expand_more'
-              font-family: 'Material Icons'
-              text-transform: none
-              font-size: 24px
-              color: $dark-shade-50
-              vertical-align: bottom
-
-        & .nav__link
-          text-decoration: none
-          transition: 0.5s
+      & .nav__arrow
+        cursor: pointer
+        
+        &::after
+          content: 'expand_more'
+          font-family: 'Material Icons'
+          text-transform: none
+          font-size: 24px
           color: $dark-shade-50
-          
-          &:hover
-            color: $dark-shade-75
+          vertical-align: bottom
 
-        & .nav__sub-list
-          position: absolute
-          box-sizing: border-box
-          padding: 0
-          width: max-content
-          list-style-type: none
-          height: 0
-          overflow: hidden
-          opacity: 0
-          transition: 0.75s
-          
-          @media screen and ( max-width:  1000px)
-            position: relative
-            padding: 0
-            width: 100%
+  &__link
+    text-decoration: none
+    transition: 0.5s
+    color: $dark-shade-50
+    
+    &:hover
+      color: $dark-shade-75
 
-          &.nav__sub-list_visible
-            height: fit-content
-            opacity: 1
-            padding: 30px 0 0 0
+  &__sub-list
+    position: absolute
+    box-sizing: border-box
+    padding: 0
+    width: max-content
+    list-style-type: none
+    height: 0
+    overflow: hidden
+    opacity: 0
+    transition: 0.75s
+    
+    @media screen and ( max-width:  1000px)
+      position: relative
+      padding: 0
+      width: 100%
 
-            @media screen and ( max-width:  1000px)
-              padding: 15px 0 0 0
+    &_visible
+      height: fit-content
+      opacity: 1
+      padding: 30px 0 0 0
+
+      @media screen and ( max-width:  1000px)
+        padding: 15px 0 0 0
             
-          & .nav__sub-item
-            padding: 15px
-            box-sizing: border-box
-            background: #fff
-            border-bottom: 1px solid rgb(31, 32, 65, 0.05)
-            z-index: 10
+  &__sub-item
+    padding: 15px
+    box-sizing: border-box
+    background: #fff
+    border-bottom: 1px solid rgb(31, 32, 65, 0.05)
+    z-index: 10
 
-            @media screen and ( max-width:  1000px)
-              box-shadow: none
-              padding: 7.5px 15px
-              line-height: 1.3
+    @media screen and ( max-width:  1000px)
+      box-shadow: none
+      padding: 7.5px 15px
+      line-height: 1.3
 
-            &:hover
-              +gradient
-              transition: none
+    &:hover
+      +gradient
+      transition: none
 
-              & .nav__link
-                color: #fff
+      & .nav__link
+        color: #fff
 
-            & ~ &
-              border-top: 1px dashed $dark-shade-25
+    & ~ &
+      border-top: 1px dashed $dark-shade-25
 
-            & .nav__link
-              color: $dark-shade-50
+  &__link
+    color: $dark-shade-50
 
-              &:hover
-                color: #fff
+    &:hover
+      color: #fff
 
-                & .nav__link
-                  color: $dark-shade-75
+      & .nav__link
+        color: $dark-shade-75
 
-              & ~ &
-                border-top: none
+    & ~ &
+      border-top: none
      
   &__burger
     width: 30px
@@ -212,13 +212,13 @@ body
       transition: 0.5s
       opacity: 1
 
-    &.nav__burger_active::before
-      
-      transform: rotate(39deg)
+    &_active
 
-    &.nav__burger_active::after
-      
-      transform: rotate(-39deg)
+      &::before
+        transform: rotate(39deg)
 
-    &.nav__burger_active span
-      opacity: 0
+      &::after
+        transform: rotate(-39deg)
+
+      & span
+        opacity: 0

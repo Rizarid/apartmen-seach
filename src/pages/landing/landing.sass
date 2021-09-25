@@ -21,28 +21,24 @@
     @media screen and ( max-width:  380px)
       padding: 0 5px
       
-
-    .landing__search-form
-      box-sizing: border-box
+  &__search-form
+    box-sizing: border-box
       
+  &__text-container
+    box-sizing: border-box
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    margin-top: 317px
 
-    .landing__text-container
-      box-sizing: border-box
-      width: 100%
-      display: flex
-      justify-content: flex-end
-      margin-top: 317px
+    @media screen and ( max-width: 767px )
+      margin-top: 150px
 
-      @media screen and ( max-width: 767px )
-        margin-top: 150px
+  &__text
+    font-size: 14px
+    line-height: 24px
+    text-align: right
+    color: $dark-shade-75
+    max-width: 297px
+    margin: 0
 
-      .landing__text
-        font-size: 14px
-        line-height: 24px
-        text-align: right
-        color: $dark-shade-75
-        max-width: 297px
-        margin: 0
-
-.footer__widgests
-  padding: 100px 0

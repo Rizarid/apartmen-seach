@@ -41,7 +41,7 @@ include ../../components/pagination/pagination.pug
           title: 'filter date dropdown', name: 'dateFilter', modifier: "single-field"
         })
 
-      h3.elements__title.subscription-title subscription text field
+      h3.elements__title subscription text field
       .elements__subscription-field-container
         +subscriptionField
 
@@ -59,24 +59,26 @@ include ../../components/pagination/pagination.pug
         - checkboxButtonsOptions.title = 'checkbox buttons'  
         +checkboxButtons(checkboxButtonsOptions)
 
-      h3.elements__title.radio-button-title Radio Buttons
+      h3.elements__title.elements__title_middle-padding Radio Buttons
       .elements__radio-buttons-container 
         +radioButtons('sex', [
           { value: 'man', text: 'Мужчина', checked: true }, 
           { value: 'woman', text: 'Женщина', checked: false }
         ])
 
-      h3.elements__title.toggle-title toggle
+      h3.elements__title toggle
       .elements__toggle-container
-        +toggle({ text: 'Получать спецпредложения', checked: true})
-        +toggle({ text: 'Получать спецпредложения'})
+        .elements__toggle
+          +toggle({ text: 'Получать спецпредложения', checked: true})
+        .elements__toggle
+          +toggle({ text: 'Получать спецпредложения'})
 
-      h3.elements__title.like-button-title like button
+      h3.elements__title.elements__title_high-padding like button
       .elements__like-button-container 
         +likeButton({quantity: 2})
         +likeButton({quantity: 12, liked: true})
 
-      h3.elements__title.rate-button-title rate button
+      h3.elements__title.elements__title_high-padding rate button
       .elements__rate-button-container 
         +rateButton(4)
         +rateButton(5)
@@ -90,19 +92,23 @@ include ../../components/pagination/pagination.pug
       .elements__slider-container 
         +slider({ title: 'range slider', min: 0, max: 16000, initValues: [5000, 10000] })
 
-      h3.elements__title.buttons-title buttons
+      h3.elements__title.elements__title_high-padding buttons
       .elements__buttons-container
-        +button({})
-        +button({modifier: 'transparent'})
-        +button({modifier: 'minimal'})
-        +button({text: 'перейти к оплате', modifier: 'big', isSubmit: true})
+        .elements__button
+          +button({})
+        .elements__button
+          +button({modifier: ['transparent']})
+        .elements__button
+          +button({modifier: ['minimal']})
+        .elements__button
+          +button({text: 'перейти к оплате', modifier: ['big'], isSubmit: true})
 
-      h3.elements__title.pagination-title pagination
+      h3.elements__title.elements__title_high-padding pagination
       .elements__pagination-container
         +pagination(15, '1 – 12 из 100+ вариантов аренды')
         
       .elements__bullet-list-container 
-        +bulletList('bullet list', rulesItems)
+        +bulletList('BULLET LIST', rulesItems)
 
     .elements__row 
       .elements__information-container 

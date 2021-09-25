@@ -19,148 +19,121 @@
     flex-wrap: wrap
     box-sizing: border-box
 
-    & .elements__title
-      text-transform: uppercase
-      margin: 0
-      padding-bottom: 3px
-      box-sizing: border-box
+  &__title
+    text-transform: uppercase
+    margin: 0
+    padding-bottom: 3px
+    box-sizing: border-box
 
-      &.radio-button-title
-        padding-bottom: 13px
+    &_middle-padding
+      padding-bottom: 13px
 
-      &.toggle-title
-        padding-bottom: 13px
+    &_high-padding
+      padding-bottom: 16px
 
-      &.like-button-title
-        padding-bottom: 16px
+  &__column
+    max-width: 320px
+    width: 100%
+    flex: 1 1 auto
+    box-sizing: border-box
 
-      &.rate-button-title
-        padding-bottom: 16px
+    &_center
+      max-width: 265px
 
-      &.buttons-title
-        padding-bottom: 16px
+    &_right
+      max-width: 322px
 
-      &.pagination-title
-        padding-bottom: 16px
+  &__text-field-container
+    box-sizing: border-box
+    padding-bottom: 106px
 
+  &__guests-container
+    box-sizing: border-box
+    padding-bottom: 24px
 
-    & .elements__column
-      max-width: 320px
-      width: 100%
-      flex: 1 1 auto
-      box-sizing: border-box
+  &__masked-field-container
+    box-sizing: border-box
+    padding-bottom: 41px
 
-      &_center
-        max-width: 265px
+  &__date-dropdown-container
+    box-sizing: border-box
+    padding-bottom: 41px
 
-      &_right
-        max-width: 322px
+  &__date-filter-container
+    box-sizing: border-box
+    padding-bottom: 43px
+    max-width: 266px
 
-      & .elements__text-field-container
-        box-sizing: border-box
-        padding-bottom: 106px
+  &__subscription-field-container
+    box-sizing: border-box
+    padding-bottom: 88px
+    max-width: 266px
 
-      & .elements__guests-container
-        box-sizing: border-box
-        padding-bottom: 24px
+  &__convenience-container 
+    box-sizing: border-box
+    padding-bottom: 258px
+    max-width: 266px
 
-      & .elements__masked-field-container
-        box-sizing: border-box
-        padding-bottom: 41px
+  &__expandable-checkbox-container
+    box-sizing: border-box
+    padding-bottom: 43px
+    max-width: 266px
+    
+  &__checkbox-buttons-container
+    box-sizing: border-box
+    padding-bottom: 38px
 
-      & .elements__date-dropdown-container
-        box-sizing: border-box
-        padding-bottom: 41px
+  &__radio-buttons-container
+    box-sizing: border-box
+    padding-bottom: 40px
 
-      & .elements__date-filter-container
-        box-sizing: border-box
-        padding-bottom: 43px
-        max-width: 266px
+  &__toggle-container
+    box-sizing: border-box
+    padding-bottom: 44px
 
-      & .elements__subscription-field-container
-        box-sizing: border-box
-        padding-bottom: 88px
-        max-width: 266px
+  &__toggle
+    padding-top: 10px
+    box-sizing: border-box
 
-      & .elements__convenience-container 
-        box-sizing: border-box
-        padding-bottom: 258px
-        max-width: 266px
+  &__like-button-container
+    display: flex
+    max-width: 89px
+    justify-content: space-between
+    box-sizing: border-box
+    flex: 1 1 auto
+    box-sizing: border-box
+    padding-bottom: 41px
 
-      & .elements__expandable-checkbox-container
-        box-sizing: border-box
-        padding-bottom: 43px
-        max-width: 266px
-        
-      & .elements__checkbox-buttons-container
-        box-sizing: border-box
-        padding-bottom: 38px
+  &__rate-button-container
+    display: flex
+    max-width: 260px
+    flex: 1 1 auto
+    justify-content: space-between
+    padding-bottom: 518px
 
-      & .elements__radio-buttons-container
-        box-sizing: border-box
-        padding-bottom: 40px
+  &__slider-container 
+    max-width: 266px
+    padding-bottom: 45px
 
-      & .elements__toggle-container
-        box-sizing: border-box
-        padding-bottom: 44px
+  &__buttons-container
+    padding-bottom: 42px
 
-        & .toggle ~ .toggle
-          padding-top: 10px
-          box-sizing: border-box
+  &__button ~ &__button
+    margin-top: 30px
 
-      & .elements__like-button-container
-        display: flex
-        max-width: 89px
-        justify-content: space-between
-        box-sizing: border-box
-        flex: 1 1 auto
-        box-sizing: border-box
-        padding-bottom: 41px
+  &__pagination-container
+    padding-bottom: 535px
 
-      & .elements__rate-button-container
-        display: flex
-        max-width: 260px
-        flex: 1 1 auto
-        justify-content: space-between
-        padding-bottom: 518px
+  &__row
+    width: 100%
+    display: flex
+    flex: 1 1 auto
+    box-sizing: border-box
+    padding-top: 182px
+    justify-content: space-between
 
-      & .elements__rich-checkbox-container
-        & .rich-checkbox-buttons__item ~ .rich-checkbox-buttons__item
-          padding-top: 9px
-
-      & .elements__slider-container 
-        max-width: 266px
-        padding-bottom: 45px
-
-      & .elements__buttons-container
-        padding-bottom: 42px
-
-        & .button ~ .button
-          margin-top: 30px
-
-      & .elements__pagination-container
-        padding-bottom: 535px
-
-      & .elements__bullet-list-container
-        & .bullet-list__title
-          text-transform: uppercase
-          font-size: 12px
-          margin: 0
-          padding-left: 0
-
-        & .bullet-list__list
-          padding-top: 9px
-
-    & .elements__row
-      width: 100%
-      display: flex
-      flex: 1 1 auto
-      box-sizing: border-box
-      padding-top: 191px
-      justify-content: space-between
-
-      & .elements__review-container
-        max-width: 714px
-        padding-top: 30px
+  &__review-container
+    max-width: 714px
+    padding-top: 30px
 
 

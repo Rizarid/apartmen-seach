@@ -3,7 +3,7 @@ include ../button/button.pug
 mixin controlPanel
   .control-panel.js-control-panel
     .control-panel__clean-button.js-control-panel__clean-button 
-      +button({ modifier: 'minimal', text: 'очистить' }) 
+      +button({ modifier: ['minimal'], text: 'очистить' }) 
 
     .control-panel__apply-button.js-control-panel__apply-button
-      +button({ modifier: 'minimal', text: 'применить' }) 
+      +button({ modifier: ['minimal'], text: 'применить' }) 

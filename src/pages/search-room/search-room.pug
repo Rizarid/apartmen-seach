@@ -21,14 +21,14 @@ block content
     .search-room__container 
       +filters
       
-      article.search-results.js-search-results
-        h1.search-results__title Номера, которые мы для вас подобрали
+      article.search-room__results.js-search-room__results
+        h1.search-room__results-title Номера, которые мы для вас подобрали
         
         if roomsOptions
-        .search-results__list   
+        .search-room__results-list   
           each item in roomsOptions
-            .search-results__item
+            .search-room__results-item
               +roomCardBlock(item)
 
-          .search-results__pagination
+          .search-room__results-pagination
             +pagination(15, "1 – 12 из 100+ вариантов аренды")
