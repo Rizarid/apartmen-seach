@@ -1,13 +1,15 @@
 import './like-button.sass';
 
 class LikeButton {
-  constructor(target) {
-    this._body = target;
+  constructor(parent) {
+    this._body = this._getBody(parent);
     this._quantityElement = this._getQuantity();
     this._isLiked = this._body.classList.contains('like-button_liked');
     this._quantity = Number(this._quantityElement.innerText);
     this._addListener();
   }
+
+  _getBody = (parent) => parent.querySelector('.js-like-button');
 
   _getQuantity = () => this._body.querySelector('.like-button__quantity');
 

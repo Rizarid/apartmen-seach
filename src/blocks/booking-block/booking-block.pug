@@ -24,10 +24,10 @@ mixin bookingBlock({ roomPrice = 9990, discount = 2179, servicesTotal = 0, addit
         span.booking__price.js-booking__price #{redactedRoomPrice}&#8381
         span.booking__period #{' в сутки'}
 
-    .booking__date 
+    .booking__date.js-booking__date
       +dateDropdown({ initDate: { startDate: '+1d', endDate: '+5d' } })
 
-    .booking__guests
+    .booking__guests.js-booking__guests
       +dropdown({ title: 'гости', name: 'guestsQuantity' })
 
     .booking__calculation 

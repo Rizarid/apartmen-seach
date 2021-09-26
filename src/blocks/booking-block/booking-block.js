@@ -1,18 +1,22 @@
 import { numberMargins, getDecline } from '../../utilities/utilities';
 import '../../components/button/button';
-import '../../components/dropdown/dropdown-init';
-import '../../components/date-dropdown/date-dropdown-init';
+import { DateDropdown } from '../../components/date-dropdown/date-dropdown';
+import { Dropdown } from '../../components/dropdown/dropdown';
 import './booking-block.sass';
 
 class Booking {
-  constructor(target) {
-    this._body = target;
+  constructor(parent) {
+    this._body = this._getBody(parent);
     this._getElements();
     this._getValues();
     this._calculate();
     this._update();
     this._addListeners();
+    this._dateDropdown = new DateDropdown(this._getTarget('.js-booking__date'));
+    this._dropdown = new Dropdown(this._getTarget('.js-booking__guests'));
   }
+
+  _getBody = () => document.querySelector('.js-booking');
 
   _getTarget = (selector) => this._body.querySelector(selector);
 

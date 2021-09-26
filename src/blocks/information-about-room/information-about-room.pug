@@ -4,12 +4,12 @@ include ../../components/reviews/reviews.pug
 include ../../components/bullet-list/bullet-list.pug
 
 mixin roomInformationBlock(informationItems,reviewsData, rulesItems )
-  .information-about-room
+  .information-about-room.js-information-about-room
     .information-about-room__information 
       +informationBlock({ title: 'Сведения о номере', itemOptions: informationItems })
-    .information-about-room__review-statistics
+    .information-about-room__review-statistics.js-information-about-room__review-statistics
       +roundChart({ title: 'Впечатления от номера', votes: [0, 65, 65, 130] })
-    .information-about-room__reviews
+    .information-about-room__reviews.js-information-about-room__reviews
       +reviews({ title: 'Отзывы посетителей номера', reviewsData: reviewsData })
     .information-about-room__rules
       +bulletList('Правила', rulesItems)

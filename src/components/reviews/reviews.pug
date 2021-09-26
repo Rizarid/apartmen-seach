@@ -10,8 +10,9 @@ mixin reviews({ title = 'отзывы', reviewsData = undefined })
   section.reviews.js-reviews
     h2.reviews__title #{ title }
     p.reviews__number-of-reviews #{ numberReviews } #{ reviewWord }
-    .reviews__container
+    .reviews__container.js-reviews__container
       if haveReviewsData
         each item in reviewsData
-          +review(item)
+          .reviews__review.js-reviews__review
+            +review(item)
       

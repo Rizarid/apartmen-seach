@@ -1,8 +1,8 @@
 import './round-chart.sass';
 
 class RoundChart {
-  constructor(target) {
-    this._body = target;
+  constructor(parent) {
+    this._body = this._getBody(parent);
     this._content = this._getContent();
     this._votes = this._getVotes();
     this._sum = this._getSum();
@@ -10,6 +10,8 @@ class RoundChart {
     this._createDashoffset();
     this._content.innerHTML = this._createChart();
   }
+
+  _getBody = (parent) => parent.querySelector('.js-round-chart');
 
   _getContent = () => this._body.querySelector('.js-round-chart__container');
 

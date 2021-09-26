@@ -10,7 +10,7 @@ mixin review({ photo = '', name = '', publicationDate = '', text = '', quantityL
         p.review__publication-date #{ publicationDate }
     
     .review__message
-      .review__like-button-container
+      .review__like-button-container.js-review__like-button-container
         +likeButton({ quantity, liked })
       .review__text-container 
         p.review__text #{ text }

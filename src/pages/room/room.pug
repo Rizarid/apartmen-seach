@@ -15,12 +15,12 @@ block head
   })
 
 block content
-  main.room 
+  main.room.js-room
     +roomGallery(roomGalleryData)
 
     .room__container 
-      .room__room-information-container
+      .room__room-information-container.js-room__room-information-container
         +roomInformationBlock(informationItems, reviewsData, rulesItems)
 
-      .room__booking-container
+      .room__booking-container.js-room__booking-container
         +bookingBlock({})
