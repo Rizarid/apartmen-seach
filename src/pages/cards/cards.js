@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
+
 import '../../fonts/fonts.css';
 import '../../fonts/scss/_path.scss';
-import '../../components/date-picker/date-picker-init';
-import '../../blocks/search-block/search-block';
-import '../../blocks/registration-block/registration-block';
-import '../../blocks/booking-block/booking-block-init';
-import '../../blocks/sign-in-block/sign-in-block';
-import '../../blocks/room-card-block/room-card';
+import { Cards } from './cards-class';
 import './cards.sass';
+
+{
+  const cards = new Cards();
+}

@@ -1,5 +1,5 @@
 import { Filters } from '../../blocks/filters-block/filters-block';
-import { RoomCard } from '../../blocks/room-card-block/room-card';
+import { RoomCard } from '../../blocks/room-card-block/room-card-block';
 import '../../components/pagination/pagination';
 
 class SearchRoom {

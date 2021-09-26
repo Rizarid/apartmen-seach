@@ -10,25 +10,25 @@ include ../../components/date-picker/date-picker.pug
 main.cards.js-cards
   .cards__container 
     .cards__column.cards__column_left
-      .cards__search-form-container
+      .cards__search-form-container.js-cards__search-form-container
         +searchBlock
 
-      .cards__registration-form-container 
+      .cards__registration-form-container.js-cards__registration-form-container
         +registrationBlock
 
     .cards__column.cards__column_center
-      .cards__booking-form-container 
+      .cards__booking-form-container.js-cards__booking-form-container 
         +bookingBlock({})
 
-      .cards__sign-in-form-container
+      .cards__sign-in-form-container.js-cards__sign-in-form-container
         +signInBlock
 
     .cards__column.cards__column_right
-      .cards__date-picker-container 
+      .cards__date-picker-container.js-cards__date-picker-container 
         +datePicker({})
 
-      .cards__room-card-container.cards__room-card-container_first
+      .cards__room-card-container.js-cards__room-card-container.cards__room-card-container_first
         +roomCardBlock(roomsOptions[0])
 
-      .cards__room-card-container.cards__room-card-container_second
+      .cards__room-card-container.js-cards__room-card-container.cards__room-card-container_second
         +roomCardBlock(roomsOptions[1])
