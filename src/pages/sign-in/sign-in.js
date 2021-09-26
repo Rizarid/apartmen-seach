@@ -1,7 +1,10 @@
 import '../../fonts/fonts.css';
 import '../../fonts/scss/_path.scss';
-import '../../blocks/sign-in-block/sign-in-block';
 import '../../blocks/header/header-init';
 import '../../blocks/footer/footer';
-import '../../components/slider-of-background/slider-of-background-init';
+import { SignIn } from './sign-in-class';
 import './sign-in.sass';
+
+{
+  const signIn = new SignIn();
+}

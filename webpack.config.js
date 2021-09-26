@@ -35,7 +35,7 @@ module.exports = {
         main: './src/pages/landing/landing.js',
         //searchRoom: './src/pages/search-room/search-room.js',
         //room: './src/pages/room/room.js',
-        //signIn: './src/pages/sign-in/sign-in.js',
+        signIn: './src/pages/sign-in/sign-in.js',
         registration: './src/pages/registration/registration.js',
         //elements: './src/pages/elements/elements.js',
         //cards: './src/pages/cards/cards.js',
@@ -93,6 +93,7 @@ module.exports = {
                 collapseWhitespace: isProd
             }
         }),
+        */
         new HTMLWebpackPlugin({
             favicon: './favicon.svg',
             template: 'src/pages/sign-in/sign-in.pug',
@@ -103,7 +104,6 @@ module.exports = {
                 collapseWhitespace: isProd
             }
         }),
-        */
         new HTMLWebpackPlugin({
             favicon: './favicon.svg',
             template: 'src/pages/registration/registration.pug',
