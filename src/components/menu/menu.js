@@ -1,11 +1,13 @@
 import './menu.sass';
 
 class Menu {
-  constructor(target) {
-    this._body = target;
+  constructor(parent) {
+    this._body = this._getBody(parent);
     this._getElements();
     this._addListeners();
   }
+
+  _getBody = (parent) => parent.querySelector('.js-nav');
 
   _getElements = () => {
     this._burger = this._body.querySelector('.js-nav__burger');

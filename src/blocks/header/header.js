@@ -1,4 +1,4 @@
-import '../../components/menu/menu-init';
+import { Menu } from '../../components/menu/menu';
 import '../../components/logo/logo';
 import '../../components/button/button';
 import './header.sass';
@@ -16,12 +16,15 @@ class Header {
     }
   }
 
+  _getTarget = (targetSelector) => this._body.querySelector(targetSelector);
+
   _getElements = () => {
-    this._buttons = this._body.querySelector('.js-header__authorization');
-    this._content = this._body.querySelector('.js-header__content');
-    this._navContainer = this._body.querySelector('.js-nav__container');
-    this._navList = this._body.querySelector('.js-nav__list');
-  }
+    this._buttons = this._getTarget('.js-header__authorization');
+    this._content = this._getTarget('.js-header__content');
+    this._navContainer = this._getTarget('.js-nav__container');
+    this._navList = this._getTarget('.js-nav__list');
+    this._menu = new Menu(this._getTarget('.js-header__navigation'));
+  };
 
   _hiddenButtons = () => {
     if (window.innerWidth < 580 && !this._isHidden) {
@@ -33,7 +36,7 @@ class Header {
       this._content.appendChild(this._buttons);
       this._isHidden = false;
     }
-  }
+  };
 
   _init = () => {
     window.addEventListener('resize', this._hiddenButtons);
@@ -43,7 +46,6 @@ class Header {
 
   _getFilterButton = () => {
     this._filterButton = this._body.querySelector('.js-header__filters-button');
-    console.log(this._filterButton)
   }
 
   _createEvent = () => {

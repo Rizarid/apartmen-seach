@@ -3,10 +3,10 @@ include ../../blocks/footer/footer.pug
 
 main.headers 
   .headers__header-container
-    +header(false, '')
+    +header({})
 
   .headers__header-container
-    +header(true, 'Юлий Цезарь')
+    +header({ isLogIn: true, userName: 'Юлий Цезарь' })
 
   .headers__footer-container 
     +footer
