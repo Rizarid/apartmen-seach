@@ -1,6 +1,8 @@
-include ../text-field/text-field.pug
-
 mixin maskedTextField({ title = 'masked text field', name = 'maskedTextField' })
 
   .masked-text-field.js-masked-text-field
-    +textField({ title, name, placeholder: "ДД.ММ.ГГГГ" })
+    if title
+      h3.masked-text-field__title #{ title }
+
+    input.masked-text-field__field.js-masked-text-field__field(type = "text", name = name, placeholder = "ДД.ММ.ГГГГ")
+

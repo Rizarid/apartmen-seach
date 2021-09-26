@@ -15,10 +15,10 @@ mixin registrationBlock
     .registration-block__surname-container 
       +textField({ name: 'surname', placeholder: 'Фамилия' })
 
-    .registration-block__sex-container 
+    .registration-block__sex-container.js-registration-block__sex-container
       +radioButtons('sex', [{ value: 'man', text: 'Мужчина', checked: true }, { value: 'woman', text: 'Женщина', checked: false }])
 
-    .registration-block__date-of-birth-container
+    .registration-block__date-of-birth-container.js-registration-block__date-of-birth-container
       +maskedTextField({ title: 'дата рождения', name: 'dateOfBirth' })
 
     .registration-block__email-container
@@ -27,7 +27,7 @@ mixin registrationBlock
     .registration-block__password-container
       +textField({ name: 'password', type: 'password',  placeholder: 'Пароль' })
 
-    .registration-block__offers-container
+    .registration-block__offers-container.js-registration-block__offers-container
       +toggle({ name: 'offers', text: 'Получать спецпредложения' })
 
     .registration-block__submit-container
