@@ -7,13 +7,15 @@ import './touch-punch';
 import './slider.sass';
 
 class Slider {
-  constructor(target) {
-    this._body = target;
+  constructor(parent) {
+    this._body = this._getBody(parent);
     this._init();
     this._$slider = this._getSlider();
     this._value = this._getValue();
     this._initSlider();
   }
+
+  _getBody = (parent) => parent.querySelector('.js-slider');
 
   _init = () => {
     const { min, max, minInitValue, maxInitValue } = this._body.dataset;

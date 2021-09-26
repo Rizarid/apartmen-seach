@@ -10,24 +10,24 @@ mixin filters()
     .filters__date.js-filters__date
       +dateDropdown({ titles: ['даты пребывания в отеле'], names: ['dateFilter'], modifier: 'single-field' })
     
-    .filters__guests
+    .filters__guests.js-filters__guests
       +dropdown({ title: 'гости' })
     
-    section.filters__price 
+    section.filters__price.js-filters__price
       +slider({ title: 'диапазон цены', min: 0, max: 16000, initValues: [5000, 10000] })
       p.filters__price-text Стоимость за сутки пребывания в номере
     
-    .filters__rules
+    .filters__rules.js-filters__rules
       +checkboxButtons(checkboxButtonsOptions)
     
-    .filters__availability
+    .filters__availability.js-filters__availability
       +checkboxButtons(richCheckboxButtonsOptions)
     
-    .filters__convenience
+    .filters__convenience.js-filters__convenience
       +dropdown({ 
         title: 'удобства номера' , name:'convenience', modifier: 'convenience', 
         items: [{ title: 'спальни', quantity: 2 }, { title: 'кровати', quantity: 2 }, { title: 'ванные комнаты', quantity: 0 }]  
       })
     
-    .filters__additional-amenities
+    .filters__additional-amenities.js-filters__additional-amenities
       +checkboxButtons(expandableCheckboxListOptions)

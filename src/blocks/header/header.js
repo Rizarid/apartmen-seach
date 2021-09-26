@@ -9,6 +9,11 @@ class Header {
     this._isHidden = false;
     this._getElements();
     this._init();
+    if (this._body.classList.contains('header_with-filter-button')) {
+      this._getFilterButton();
+      this._createEvent();
+      this._addListener();
+    }
   }
 
   _getElements = () => {
@@ -35,6 +40,22 @@ class Header {
     this._hiddenButtons();
     this._buttons.classList.add('header__authorization_activated');
   }
+
+  _getFilterButton = () => {
+    this._filterButton = this._body.querySelector('.js-header__filters-button');
+    console.log(this._filterButton)
+  }
+
+  _createEvent = () => {
+    this._onFilterButtonClick = new CustomEvent('filterButtonClick');
+  };
+
+  _addListener = () => {
+    this._filterButton.addEventListener('click', this._handleFilterButtonClick);
+  }
+
+  _handleFilterButtonClick = () => document.dispatchEvent(this._onFilterButtonClick);
+
 }
 
 export { Header };

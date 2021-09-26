@@ -1,5 +1,6 @@
 extends ../page-template/page-template.pug
 
+include ../../blocks/header/header.pug 
 include ../../blocks/room-card-block/room-card-block.pug 
 include ../../blocks/filters-block/filters-block.pug
 
@@ -16,9 +17,12 @@ block head
     title: 'Номера, которые мы для вас подобрали' 
   })
 
+block header
+  +header({ modifier: 'with-filter-button' })
+
 block content
   main.search-room.js-search-room
-    .search-room__container 
+    .search-room__container.js-search-room__container
       +filters
       
       article.search-room__results.js-search-room__results
@@ -27,7 +31,7 @@ block content
         if roomsOptions
         .search-room__results-list   
           each item in roomsOptions
-            .search-room__results-item
+            .search-room__results-item.js-search-room__results-item
               +roomCardBlock(item)
 
           .search-room__results-pagination

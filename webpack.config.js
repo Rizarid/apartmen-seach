@@ -33,7 +33,7 @@ module.exports = {
     mode: 'development',
     entry: {
         main: './src/pages/landing/landing.js',
-        //searchRoom: './src/pages/search-room/search-room.js',
+        searchRoom: './src/pages/search-room/search-room.js',
         room: './src/pages/room/room.js',
         signIn: './src/pages/sign-in/sign-in.js',
         registration: './src/pages/registration/registration.js',
@@ -72,7 +72,6 @@ module.exports = {
                 collapseWhitespace: isProd
             }
         }),
-        /*
         new HTMLWebpackPlugin({
             favicon: './favicon.svg',
             template: 'src/pages/search-room/search-room.pug',
@@ -83,7 +82,6 @@ module.exports = {
                 collapseWhitespace: isProd
             }
         }),
-        */
         new HTMLWebpackPlugin({
             favicon: './favicon.svg',
             template: 'src/pages/room/room.pug',

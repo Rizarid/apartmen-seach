@@ -2,8 +2,8 @@ import { createElement } from '../../utilities/utilities';
 import './image-slider.sass';
 
 class ImageSlider {
-  constructor(target) {
-    this._body = target;
+  constructor(parent) {
+    this._body = this._getBody(parent);
     this._createSlides();
     this._createDotsBlock();
 
@@ -20,6 +20,8 @@ class ImageSlider {
     this._updateHeight(this._body);
     if (this._isTouch()) this._activateTouchOptions();
   }
+
+  _getBody = (parent) => parent.querySelector('.js-image-slider');
 
   _createSlides = () => {
     const images = [...this._body.querySelectorAll('.js-image-slider__image')];
