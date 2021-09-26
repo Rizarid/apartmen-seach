@@ -4,10 +4,10 @@ mixin button({ modifier = [], href = '', isSubmit = false,  text = 'Click me' })
     let classes = classDefault
     if (modifier) modifier.map((item) => classes = `${classes} ${classDefault}_${item}`)
     
-  if isSubmit 
+  if (isSubmit) 
     button(type = "submit", class = classes) #{ text }
   else
-    if (modifier === 'minimal')
+    if (modifier.includes('minimal'))
       p(class = classes, href = href)
         span.button__text #{ text }
     else
