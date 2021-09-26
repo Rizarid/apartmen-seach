@@ -2,12 +2,14 @@ import '../button/button';
 import './control-panel.sass';
 
 class ControlPanel {
-  constructor(target) {
-    this._body = target;
+  constructor(parent) {
+    this._body = this._getBody(parent);
     this._createEvents();
     this._getButtons();
     this._addListeners();
   }
+
+  _getBody = (parent) => parent.querySelector('.js-control-panel');
 
   _createEvents = () => {
     this._cleanEvent = new Event('cleanButtonClick', { bubbles: true });

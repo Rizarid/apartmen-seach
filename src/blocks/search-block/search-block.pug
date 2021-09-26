@@ -7,10 +7,10 @@ mixin searchBlock
     .search-block__title-container 
       h1.search-block__title Найдём номера под ваши пожелания
 
-    .search-block__date-container 
+    .search-block__date-container.js-search-block__date-container
       +dateDropdown({})
 
-    .search-block__guests-quantity-container 
+    .search-block__guests-quantity-container.js-search-block__guests-quantity-container
       +dropdown({ className: 'guests-quantity', title: 'гости' })
 
     .search-block__button-container

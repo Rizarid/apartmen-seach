@@ -1,21 +1,23 @@
 import * as $ from 'jquery';
+import './russification';
+import { ControlPanel } from '../control-panel/control-panel';
 import './date-picker.sass';
 
 class DatePicker {
-  constructor(target) {
-    this._body = target;
+  constructor(parent) {
+    this._body = this._getBody(parent);
     this._getInitDate();
     this._createOnSelectEvent();
     this._init();
     this._datepicker = this._getDatepickerObject();
+    this._controlPanel = new ControlPanel(this._getTarget('.js-date-picker__control-panel'));
     this._addListeners();
-
-    if (this._initDate) {
-      const initDatePromise = new Promise((resolve) => {
-        setTimeout(() => resolve(this._initDate), 1);
-      }).then(this._setDate);
-    }
+    if (this._initDate) this._setDate(this._initDate);
   }
+
+  _getBody = (parent) => parent.querySelector('.js-date-picker');
+
+  _getTarget = (targetSelector) => this._body.querySelector(targetSelector);
 
   _getInitDate = () => {
     const { start, end } = this._body.dataset;

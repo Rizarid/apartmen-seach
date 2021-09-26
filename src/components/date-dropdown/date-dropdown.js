@@ -1,20 +1,23 @@
-import '../date-picker/date-picker-init';
+import { DatePicker } from '../date-picker/date-picker';
 import './date-dropdown.sass';
 
 class DateDropdown {
-  constructor(target) {
-    this._body = target;
+  constructor(parent) {
+    this._body = this._getBody(parent);
     this._isDoubleField = this._getIsDoubleField();
-    this._datePicker = this._getDatePicker();
+    this._datePickerContainer = this._getTarget('.js-date-dropdown__date-picker');
     this._getFields();
     this._setFieldsValues = this._isDoubleField ? this._setDoubleField : this._setSingleField;
     this._onSelected = this._createEvent();
     this._addListeners();
+    this._datePicker = new DatePicker(this._datePickerContainer);
   }
 
-  _getIsDoubleField = () => this._body.classList.contains('date-dropdown_double-field');
+  _getBody = (parent) => parent.querySelector('.js-date-dropdown');
 
-  _getDatePicker = () => this._body.querySelector('.js-date-dropdown__date-picker');
+  _getTarget = (targetSelector) => this._body.querySelector(targetSelector);
+
+  _getIsDoubleField = () => this._body.classList.contains('date-dropdown_double-field');
 
   _getFields = () => {
     if (this._isDoubleField) {
@@ -28,19 +31,19 @@ class DateDropdown {
     this._comingField.addEventListener('focus', this._handleFieldFocus);
     if (this._isDoubleField) this._leaveField.addEventListener('focus', this._handleFieldFocus);
 
-    this._datePicker.addEventListener('datepickerOnSelect', this._handleDatePickerOnSelect);
-    this._datePicker.addEventListener('cleanButtonClick', this._handleCleanButtonClick);
-    this._datePicker.addEventListener('applyButtonClick', this._handleApplyButtonClick);
+    this._datePickerContainer.addEventListener('datepickerOnSelect', this._handleDatePickerOnSelect);
+    this._datePickerContainer.addEventListener('cleanButtonClick', this._handleCleanButtonClick);
+    this._datePickerContainer.addEventListener('applyButtonClick', this._handleApplyButtonClick);
   };
 
   _handleFieldFocus = () => this._showDatepicker();
 
   _showDatepicker = () => {
-    this._datePicker.classList.add('date-dropdown__date-picker_visible');
+    this._datePickerContainer.classList.add('date-dropdown__date-picker_visible');
   };
 
   _hiddenDatepicker = () => {
-    this._datePicker.classList.remove('date-dropdown__date-picker_visible');
+    this._datePickerContainer.classList.remove('date-dropdown__date-picker_visible');
   };
 
   _handleDatePickerOnSelect = (event) => {

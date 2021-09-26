@@ -1,20 +1,23 @@
 // eslint-disable-next-line no-unused-vars
 
 import { getDecline } from '../../utilities/utilities';
-import '../control-panel/control-panel-init';
+import { ControlPanel } from '../control-panel/control-panel';
 import './dropdown.sass';
 
 class Dropdown {
-  constructor(target) {
-    this._body = target;
+  constructor(parent) {
+    this._body = this._getBody(parent);
     this._field = this._getTarget('.js-dropdown__field');
     this._list = this._getTarget('.js-dropdown__list');
     this._items = this._getItems();
 
     this._getValue = this._isConvenience() ? this._getConvenienceValue : this._getGuestsValue;
+    if (!this._isConvenience()) this._controlPanel = new ControlPanel(this._list);
     this._addListeners();
     this._apply();
   }
+
+  _getBody = (parent) => parent.querySelector('.js-dropdown');
 
   _getItems = () => {
     const itemsTargets = [...this._body.querySelectorAll('.js-dropdown__item')];
@@ -36,11 +39,15 @@ class Dropdown {
     else this._apply();
   }
 
-  _handleDropdownMouseleave = () => this._apply();
+  _handleDropdownMouseleave = (event) => {
+    this._apply();
+    event.stopPropagation();
+  }
 
-  _handleCleanButtonClick = () => {
+  _handleCleanButtonClick = (event) => {
     this._items.map((item) => item.clean());
     this._apply();
+    event.stopPropagation();
   }
 
   _handleApplyButtonClick = () => this._apply();

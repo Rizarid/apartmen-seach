@@ -1,13 +1,15 @@
 import './slider-of-background.sass';
 
 class SliderOfBackground {
-  constructor(target) {
-    this._body = target;
+  constructor(parent) {
+    this._body = this._getBody(parent);
     this._interval = Number(this._body.dataset.interval);
     this._slidesNumber = 0;
     this._slides = this._body.children;
     setInterval(this._nextSlide, this._interval);
   }
+
+  _getBody = (parent) => parent.querySelector('.js-slider-of-background');
 
   _nextSlide = () => {
     this._slides[this._slidesNumber].classList.remove('slider-of-background__image_active');
