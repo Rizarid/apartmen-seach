@@ -37,9 +37,9 @@ module.exports = {
         room: './src/pages/room/room.js',
         signIn: './src/pages/sign-in/sign-in.js',
         registration: './src/pages/registration/registration.js',
-        //elements: './src/pages/elements/elements.js',
+        elements: './src/pages/elements/elements.js',
         cards: './src/pages/cards/cards.js',
-        //headers: './src/pages/headers/headers.js' 
+        headers: './src/pages/headers/headers.js' 
     },
     
     output: {
@@ -112,7 +112,6 @@ module.exports = {
                 collapseWhitespace: isProd
             }
         }),
-        /*
         new HTMLWebpackPlugin({
             favicon: './favicon.svg',
             template: 'src/pages/elements/elements.pug',
@@ -123,7 +122,6 @@ module.exports = {
                 collapseWhitespace: isProd
             }
         }),
-        */
         new HTMLWebpackPlugin({
             favicon: './favicon.svg',
             template: 'src/pages/cards/cards.pug',
@@ -134,7 +132,6 @@ module.exports = {
                 collapseWhitespace: isProd
             }
         }),
-        /*
         new HTMLWebpackPlugin({
             favicon: './favicon.svg',
             template: 'src/pages/headers/headers.pug',
@@ -145,7 +142,6 @@ module.exports = {
                 collapseWhitespace: isProd
             }
         }),
-        */
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'

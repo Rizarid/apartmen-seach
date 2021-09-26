@@ -27,13 +27,13 @@ include ../../components/pagination/pagination.pug
       .elements__text-field-container 
         +textField({ title: 'text field', name: 'textField', placeholder: 'Email' }) 
 
-      .elements__guests-container
+      .elements__guests-container.js-elements__guests-container
         +dropdown({ title: 'dropdown', name: 'guestsQuantity' })
 
-      .elements__masked-field-container
+      .elements__masked-field-container.js-elements__masked-field-container
         +maskedTextField({ title: 'masked text field', name: 'dateOfBirth' })
 
-      .elements__date-dropdown-container
+      .elements__date-dropdown-container.js-elements__date-dropdown-container
         +dateDropdown({ className: 'date-selection', titles: ['date dropdown', 'date dropdown'] })
 
       .elements__date-filter-container.js-date-filter-container
@@ -45,22 +45,22 @@ include ../../components/pagination/pagination.pug
       .elements__subscription-field-container
         +subscriptionField
 
-      .elements__convenience-container 
+      .elements__convenience-container.js-elements__convenience-container
         +dropdown({ title: 'dropdown', name: 'convenience', modifier: 'convenience', 
           items: [{ title: 'спальни', quantity: 2 }, { title: 'кровати', quantity: 2 }, { title: 'ванные комнаты', quantity: 0 }]
         })
       
-      .elements__expandable-checkbox-container
+      .elements__expandable-checkbox-container.js-elements__expandable-checkbox-container
         - expandableCheckboxListOptions.title = 'expandable checkbox list'
         +checkboxButtons(expandableCheckboxListOptions)
      
-    .elements__column.elements__column_center 
-      .elements__checkbox-buttons-container
+    .elements__column.elements__column_center
+      .elements__checkbox-buttons-container.js-elements__checkbox-buttons-container
         - checkboxButtonsOptions.title = 'checkbox buttons'  
         +checkboxButtons(checkboxButtonsOptions)
 
       h3.elements__title.elements__title_middle-padding Radio Buttons
-      .elements__radio-buttons-container 
+      .elements__radio-buttons-container.js-elements__radio-buttons-container 
         +radioButtons('sex', [
           { value: 'man', text: 'Мужчина', checked: true }, 
           { value: 'woman', text: 'Женщина', checked: false }
@@ -68,28 +68,30 @@ include ../../components/pagination/pagination.pug
 
       h3.elements__title toggle
       .elements__toggle-container
-        .elements__toggle
+        .elements__toggle.js-elements__toggle
           +toggle({ text: 'Получать спецпредложения', checked: true})
-        .elements__toggle
+        .elements__toggle.js-elements__toggle
           +toggle({ text: 'Получать спецпредложения'})
 
       h3.elements__title.elements__title_high-padding like button
-      .elements__like-button-container 
-        +likeButton({quantity: 2})
-        +likeButton({quantity: 12, liked: true})
+      .elements__like-button-container
+        .elements__likeButton.js-elements__likeButton
+          +likeButton({quantity: 2})
+        .elements__likeButton.js-elements__likeButton
+          +likeButton({quantity: 12, liked: true})
 
       h3.elements__title.elements__title_high-padding rate button
       .elements__rate-button-container 
         +rateButton(4)
         +rateButton(5)
          
-      .elements__rich-checkbox-container
+      .elements__rich-checkbox-container.js-elements__rich-checkbox-container
         - richCheckboxButtonsOptions.title = 'rich checkbox buttons'
         +checkboxButtons(richCheckboxButtonsOptions)
 
 
     .elements__column.elements__column_right
-      .elements__slider-container 
+      .elements__slider-container.js-elements__slider-container 
         +slider({ title: 'range slider', min: 0, max: 16000, initValues: [5000, 10000] })
 
       h3.elements__title.elements__title_high-padding buttons
@@ -114,7 +116,7 @@ include ../../components/pagination/pagination.pug
       .elements__information-container 
         +informationBlock({ itemOptions: [informationItems[0], informationItems[1]] })
 
-      .elements__review-container 
+      .elements__review-container.js-elements__review-container
         +review(reviewsData[0])
 
 

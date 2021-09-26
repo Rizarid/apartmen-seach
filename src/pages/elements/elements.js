@@ -1,19 +1,41 @@
+/* eslint-disable no-unused-vars */
 import '../../fonts/fonts.css';
 import '../../fonts/scss/_path.scss';
 import '../../components/text-field/text-field';
-import '../../components/masked-text-field/masked-text-field';
-import '../../components/date-dropdown/date-dropdown-init';
-import '../../components/checkbox-buttons/checkbox-buttons-init';
 import '../../components/subscription-field/subscription-field';
-import '../../components/radio-buttons/radio-buttons-init';
-import '../../components/like-button/like-button-init';
-import '../../components/slider/slider-init';
 import '../../components/button/button';
 import '../../components/bullet-list/bullet-list';
 import '../../components/information-block/information-block';
-import '../../components/review/review';
 import '../../components/pagination/pagination';
-import '../../components/toggle/toggle-init';
 import '../../components/rate-button/rate-button';
-import '../../components/dropdown/dropdown-init';
+import { Dropdown } from '../../components/dropdown/dropdown';
+import { MaskedTextField } from '../../components/masked-text-field/masked-text-field';
+import { DateDropdown } from '../../components/date-dropdown/date-dropdown';
+import { CheckboxButtons } from '../../components/checkbox-buttons/checkbox-buttons';
+import { RadioButtons } from '../../components/radio-buttons/radio-buttons';
+import { Toggle } from '../../components/toggle/toggle';
+import { LikeButton } from '../../components/like-button/like-button';
+import { Slider } from '../../components/slider/slider';
+import { Review } from '../../components/review/review';
 import './elements.sass';
+
+{
+  const guests = new Dropdown(document.querySelector('.js-elements__guests-container'));
+  const maskedField = new MaskedTextField(document.querySelector('.js-elements__masked-field-container'));
+  const dateDropdown = new DateDropdown(document.querySelector('.js-elements__date-dropdown-container'));
+  const dateFilter = new DateDropdown(document.querySelector('.js-date-filter-container')); 
+  const convenience = new Dropdown(document.querySelector('.js-elements__convenience-container'));
+  const expandable = new CheckboxButtons(document.querySelector('.js-elements__expandable-checkbox-container'));
+  const checkboxButtons = new CheckboxButtons(document.querySelector('.js-elements__checkbox-buttons-container'));
+  const radioButtons = new RadioButtons(document.querySelector('.js-elements__radio-buttons-container'));
+
+  const toggleTargets = Array.from(document.querySelectorAll('.js-elements__toggle'));
+  const toggles = toggleTargets.map((item) => new Toggle(item));
+
+  const likeButtonsTargets = Array.from(document.querySelectorAll('.js-elements__likeButton'));
+  const likeButtons = likeButtonsTargets.map((item) => new LikeButton(item));
+
+  const rich = new CheckboxButtons(document.querySelector('.js-elements__rich-checkbox-container'));
+  const slider = new Slider(document.querySelector('.js-elements__slider-container'));
+  const review = new Review(document.querySelector('.js-elements__review-container'));
+}
