@@ -4,7 +4,9 @@ include ../../blocks/sign-in-block/sign-in-block.pug
 include ../../components/slider-of-background/slider-of-background.pug 
 
 block variables
-  - const { backgroundSliderRegistrationOptions }  =  require("@/state/state.js")
+  -
+    const { backgroundSliderRegistrationOptions }  =  require("@/state/state.js")
+    const pageClass = 'sign-in'
 
 block head
   +head({
@@ -13,7 +15,7 @@ block head
   })
 
 block content
-    main.sign-in.js-sign-in
+    main.sign-in__content.js-sign-in__content
       +backgroundSlider(backgroundSliderRegistrationOptions, 6000)
 
       .sign-in__container 

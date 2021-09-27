@@ -4,7 +4,9 @@ include ../../blocks/registration-block/registration-block.pug
 include ../../components/slider-of-background/slider-of-background.pug 
 
 block variables
-  - const { backgroundSliderRegistrationOptions }  =  require("@/state/state.js")
+  -
+    const { backgroundSliderRegistrationOptions }  =  require("@/state/state.js")
+    const pageClass = 'registration'
 
 block head
   +head({
@@ -14,7 +16,7 @@ block head
 
 block content
 
-  main.registration.js-registration
+  main.registration__content.js-registration__content
     +backgroundSlider(backgroundSliderRegistrationOptions, 6000)
 
     .registration__container.js-registration__container

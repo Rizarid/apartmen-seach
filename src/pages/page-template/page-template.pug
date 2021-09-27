@@ -12,9 +12,10 @@ html(lang = "ru")
       keywords: 'номер, отель, номер в отеле, поис номеров, гостиница', 
       title: 'Найдём номера под ваши пожелания' 
     })
-  body 
-    block header
-      +header({})
+  body(class = `${pageClass} js-${pageClass}`)
+    div(class = `${pageClass}__header js-${pageClass}__header`)
+      block header
+        +header({})
 
     block content
 

@@ -4,10 +4,12 @@ include ../../blocks/search-block/search-block.pug
 include ../../components/slider-of-background/slider-of-background.pug 
 
 block variables
-  - const { backgroundSliderOptions }  =  require("@/state/state.js")
+  -
+    const { backgroundSliderOptions }  =  require("@/state/state.js")
+    const pageClass = 'landing'
 
 block content
-  main.landing.js-landing
+  main.landing__content.js-landing__content
     +backgroundSlider(backgroundSliderOptions, 6000)
 
     .landing__container 

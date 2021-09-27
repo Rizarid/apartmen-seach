@@ -1,6 +1,5 @@
 import '../../fonts/fonts.css';
 import '../../fonts/scss/_path.scss';
-import '../../blocks/header/header-init';
 import '../../blocks/footer/footer';
 import { SignIn } from './sign-in-class';
 import './sign-in.sass';

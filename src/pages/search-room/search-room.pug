@@ -6,10 +6,12 @@ include ../../blocks/filters-block/filters-block.pug
 
 block variables
   -
+    const pageClass = 'search-room'
     const { 
       roomsOptions  =  [], checkboxButtonsOptions  =  {}, richCheckboxButtonsOptions  =  {}, 
       expandableCheckboxListOptions  =  {}
     }  =  require("@/state/state.js")
+    
 
 block head
   +head({
@@ -21,7 +23,7 @@ block header
   +header({ modifier: 'with-filter-button' })
 
 block content
-  main.search-room.js-search-room
+  main.search-room__content.js-search-room__content
     .search-room__container.js-search-room__container
       +filters
       

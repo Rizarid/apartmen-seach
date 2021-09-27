@@ -5,7 +5,9 @@ include ../../blocks/booking-block/booking-block.pug
 include ../../components/room-gallery/room-gallery.pug 
 
 block variables
-  -const { informationItems, reviewsData, rulesItems, roomGalleryData }  =  require("@/state/state.js")
+  -
+    const { informationItems, reviewsData, rulesItems, roomGalleryData }  =  require("@/state/state.js")
+    const pageClass = 'room'
 
 
 block head
@@ -15,7 +17,7 @@ block head
   })
 
 block content
-  main.room.js-room
+  main.room__content.js-room__content
     +roomGallery(roomGalleryData)
 
     .room__container 

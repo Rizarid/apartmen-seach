@@ -2,9 +2,11 @@
 
 import '../../fonts/fonts.css';
 import '../../fonts/scss/_path.scss';
-import '../../blocks/header/header-init';
 import '../../blocks/footer/footer';
 import { Registration } from './registration-class';
 import './registration.sass';
 
-const registration = new Registration();
+{
+  const registration = new Registration();
+}
+

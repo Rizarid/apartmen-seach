@@ -4,8 +4,8 @@ import '../../components/button/button';
 import './header.sass';
 
 class Header {
-  constructor(target) {
-    this._body = target;
+  constructor(parent) {
+    this._body = this._getBody(parent);
     this._isHidden = false;
     this._getElements();
     this._init();
@@ -15,6 +15,8 @@ class Header {
       this._addListener();
     }
   }
+
+  _getBody = (parent) => parent.querySelector('.js-header');
 
   _getTarget = (targetSelector) => this._body.querySelector(targetSelector);
 
@@ -41,7 +43,7 @@ class Header {
   _init = () => {
     window.addEventListener('resize', this._hiddenButtons);
     this._hiddenButtons();
-    this._buttons.classList.add('header__authorization_activated');
+    if (this._buttons) this._buttons.classList.add('header__authorization_activated');
   }
 
   _getFilterButton = () => {

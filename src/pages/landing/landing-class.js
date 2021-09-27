@@ -1,9 +1,11 @@
 import { SearchBlock } from '../../blocks/search-block/search-block';
 import { SliderOfBackground } from '../../components/slider-of-background/slider-of-background';
+import { Header } from '../../blocks/header/header';
 
 class Landing {
   constructor() {
     this._body = this._getBody();
+    this._header = new Header(this._getTarget('.js-landing__header'));
     this._searchBlock = new SearchBlock(this._getTarget('.js-landing__search-form'));
     this._sliderOfBackground = new SliderOfBackground(this._body);
   }
