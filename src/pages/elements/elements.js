@@ -12,8 +12,8 @@ import { Dropdown } from '../../components/dropdown/dropdown';
 import { MaskedTextField } from '../../components/masked-text-field/masked-text-field';
 import { DateDropdown } from '../../components/date-dropdown/date-dropdown';
 import { CheckboxButtons } from '../../components/checkbox-buttons/checkbox-buttons';
-import { RadioButtons } from '../../components/radio-buttons/radio-buttons';
-import { Toggle } from '../../components/toggle/toggle';
+import '../../components/radio-buttons/radio-buttons';
+import '../../components/toggle/toggle';
 import { LikeButton } from '../../components/like-button/like-button';
 import { Slider } from '../../components/slider/slider';
 import { Review } from '../../components/review/review';
@@ -28,9 +28,6 @@ import './elements.sass';
   const expandable = new CheckboxButtons(document.querySelector('.js-elements__expandable-checkbox-container'));
   const checkboxButtons = new CheckboxButtons(document.querySelector('.js-elements__checkbox-buttons-container'));
   const radioButtons = new RadioButtons(document.querySelector('.js-elements__radio-buttons-container'));
-
-  const toggleTargets = Array.from(document.querySelectorAll('.js-elements__toggle'));
-  const toggles = toggleTargets.map((item) => new Toggle(item));
 
   const likeButtonsTargets = Array.from(document.querySelectorAll('.js-elements__likeButton'));
   const likeButtons = likeButtonsTargets.map((item) => new LikeButton(item));

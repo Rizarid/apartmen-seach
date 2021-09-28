@@ -1,42 +1,6 @@
 @import '../../styles/variables.sass'
   
 .checkbox
-  width: 20px
-  height: 20px
-  border: 1px solid $dark-shade-25
-  border-radius: 2px
-  position: relative
-  box-sizing: border-box
-  flex: 0 0 auto
-
-  &:before
-    content: ''
-    width: 4px
-    height: 2px
-    +gradient
-    transform: rotate(45deg)
-    position: absolute
-    top: 8px
-    left: 4px
-    display: none
-
-  &:after
-    content: ''
-    width: 8px
-    height: 2px
-    +gradient
-    transform: rotate(-45deg)
-    position: absolute
-    top: 8px
-    left: 6px
-    display: none
-  
-  &_checked
-    border: 1px solid $purple
-
-    &:before, &:after
-      display: block
-
   &__checkbox
     width: 0
     height: 0
@@ -44,5 +8,45 @@
 
     &:checked
       outline: none
+
+  &__imitator
+    display: inline-block
+    width: 20px
+    height: 20px
+    border: 1px solid $dark-shade-25
+    border-radius: 2px
+    position: relative
+    box-sizing: border-box
+    flex: 0 0 auto
+
+    &:before
+      content: ''
+      width: 4px
+      height: 2px
+      +gradient
+      transform: rotate(45deg)
+      position: absolute
+      top: 8px
+      left: 4px
+      display: none
+
+    &:after
+      content: ''
+      width: 8px
+      height: 2px
+      +gradient
+      transform: rotate(-45deg)
+      position: absolute
+      top: 8px
+      left: 6px
+      display: none
+  
+  & input:checked ~ &__imitator
+    border: 1px solid $purple
+
+    &:before, &:after
+      display: block
+
+  
 
 

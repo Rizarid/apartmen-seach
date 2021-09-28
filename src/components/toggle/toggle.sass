@@ -43,9 +43,8 @@
     margin-left: 10px
     cursor: pointer
 
-  &_active 
-    & .toggle__switch
-      border-color: $purple
+  & input:checked ~ &__switch
+    border-color: $purple
     
     & .toggle__circle
       +gradient

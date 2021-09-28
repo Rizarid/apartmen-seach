@@ -17,17 +17,8 @@
     &~&
       margin-left: 20px
 
-    &_checked
-      & .radio-buttons__input-container
-        border: 1px solid $purple
-        
-        &::before
-          display: block
-      
-      & .radio-buttons__text
-        color: $dark-shade-75
     
-  &__input-container
+  &__imitator
     border: 1px solid $dark-shade-25
     border-radius: 50%
     width: 20px
@@ -56,3 +47,14 @@
     font-size: 13.8px
     line-height: 24px
     margin-left: 10px
+
+  & input:checked ~ &__imitator
+    border: 1px solid $purple
+
+    &::before
+      display: block
+
+    & ~ .radio-buttons__text
+      color: $dark-shade-75
+  
+
