@@ -28,21 +28,21 @@ class Dropdown {
 
   _addListeners = () => {
     this._field.addEventListener('click', this._handleFieldClick);
-    this._body.addEventListener('mouseleave', this._handleDropdownMouseleave);
     this._list.addEventListener('cleanButtonClick', this._handleCleanButtonClick);
     this._list.addEventListener('applyButtonClick', this._handleApplyButtonClick);
   }
 
   _handleFieldClick = () => {
-    const isListVisible = this._list.classList.contains('dropdown-list_visible');
-    if (!isListVisible) this._list.classList.add('dropdown__list_visible');
-    else this._apply();
-  }
+    const isListVisible = this._list.classList.contains('dropdown__list_visible');
+    if (!isListVisible) {
+      this._list.classList.add('dropdown__list_visible');
+      window.addEventListener('click', this._handleOutsideClick);
+    } else this._apply();
+  };
 
-  _handleDropdownMouseleave = (event) => {
-    this._apply();
-    event.stopPropagation();
-  }
+  _handleOutsideClick = (event) => {
+    if (!event.target.closest('.dropdown')) this._apply();
+  };
 
   _handleCleanButtonClick = (event) => {
     this._items.map((item) => item.clean());
@@ -55,6 +55,7 @@ class Dropdown {
   _apply = () => {
     this._field.value = this._getValue();
     this._list.classList.remove('dropdown__list_visible');
+    window.removeEventListener('click', this._handleOutsideClick);
   }
 
   _getConvenienceValue = () => {

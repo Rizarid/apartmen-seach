@@ -28,22 +28,29 @@ class DateDropdown {
   _createEvent = () => new CustomEvent('dateDropdownSelected', { bubbles: true, detail: { daysCount: 0 } });
 
   _addListeners = () => {
-    this._comingField.addEventListener('focus', this._handleFieldFocus);
-    if (this._isDoubleField) this._leaveField.addEventListener('focus', this._handleFieldFocus);
+    this._comingField.addEventListener('click', this._handleFieldFocus);
+    if (this._isDoubleField) this._leaveField.addEventListener('click', this._handleFieldFocus);
 
     this._datePickerContainer.addEventListener('datepickerOnSelect', this._handleDatePickerOnSelect);
     this._datePickerContainer.addEventListener('cleanButtonClick', this._handleCleanButtonClick);
     this._datePickerContainer.addEventListener('applyButtonClick', this._handleApplyButtonClick);
   };
 
-  _handleFieldFocus = () => this._showDatepicker();
+  _handleFieldFocus = () => {
+    const isListVisible = this._datePickerContainer.classList.contains('date-dropdown__date-picker_visible');
+    if (!isListVisible) {
+      this._datePickerContainer.classList.add('date-dropdown__date-picker_visible');
+      window.addEventListener('click', this._handleOutsideClick);
+    } else this._hiddenDatepicker();
+  }
 
-  _showDatepicker = () => {
-    this._datePickerContainer.classList.add('date-dropdown__date-picker_visible');
+  _handleOutsideClick = (event) => {
+    if (!event.target.closest('.date-dropdown')) this._hiddenDatepicker();
   };
 
   _hiddenDatepicker = () => {
     this._datePickerContainer.classList.remove('date-dropdown__date-picker_visible');
+    window.removeEventListener('click', this._handleOutsideClick);
   };
 
   _handleDatePickerOnSelect = (event) => {
