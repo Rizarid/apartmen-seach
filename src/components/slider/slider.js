@@ -3,8 +3,10 @@ import 'jquery-ui-slider/jquery-ui';
 import 'jquery-ui-slider/jquery-ui.css';
 
 import { numberMargins } from '../../utilities/utilities';
-import './touch-punch';
 import './slider.sass';
+
+window.jQuery = $;
+require('jquery-ui-touch-punch');
 
 class Slider {
   constructor(parent) {
