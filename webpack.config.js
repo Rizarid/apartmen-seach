@@ -183,6 +183,7 @@ module.exports = {
                 loader: 'file-loader',
                 options: {
                     emitFile: true,
+                    esModule: false,
                     name: 'fonts/[name].[contenthash].[ext]'
                 }
                

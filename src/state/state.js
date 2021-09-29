@@ -215,18 +215,18 @@ const expandableCheckboxListOptions = {
 
 const informationItems = [
   {
-    img: require('../components/information-block/img/smile.webp'),
+    img: require('../components/information-block/img/smile.svg'),
     alt: 'comfort',
     title: 'Комфорт',
     text: 'Шумопоглощающие стены',
   },
   {
-    img: require('../components/information-block/img/windows.webp'),
+    img: require('../components/information-block/img/windows.svg'),
     alt: 'windows',
     title: 'Удобство',
     text: 'Окно в каждой из спален' },
   {
-    img: require('../components/information-block/img/fire.webp'),
+    img: require('../components/information-block/img/fire.svg'),
     alt: 'cosiness',
     title: 'Уют',
     text: 'Номер оснащён камином',
