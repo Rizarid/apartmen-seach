@@ -33,9 +33,9 @@ class Dropdown {
   }
 
   _handleFieldClick = () => {
-    const isListVisible = this._list.classList.contains('dropdown__list_visible');
+    const isListVisible = this._body.classList.contains('dropdown_active');
     if (!isListVisible) {
-      this._list.classList.add('dropdown__list_visible');
+      this._body.classList.add('dropdown_active');
       window.addEventListener('click', this._handleOutsideClick);
     } else this._apply();
   };
@@ -54,7 +54,7 @@ class Dropdown {
 
   _apply = () => {
     this._field.value = this._getValue();
-    this._list.classList.remove('dropdown__list_visible');
+    this._body.classList.remove('dropdown_active');
     window.removeEventListener('click', this._handleOutsideClick);
   }
 
