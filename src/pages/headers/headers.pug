@@ -2,10 +2,10 @@ include ../../blocks/header/header.pug
 include ../../blocks/footer/footer.pug 
 
 main.headers 
-  .headers__header-container.js-headers__header-container
+  .headers__header-container.js-headers__header-container.headers__header-container_first
     +header({})
 
-  .headers__header-container.js-headers__header-container
+  .headers__header-container.js-headers__header-container.headers__header-container_second
     +header({ isLogIn: true, userName: 'Юлий Цезарь' })
 
   .headers__footer-container 

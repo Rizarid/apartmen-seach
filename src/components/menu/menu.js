@@ -14,7 +14,7 @@ class Menu {
     this._navigation = this._body.querySelector('.js-nav__container');
     this._darkening = this._body.querySelector('.js-nav__darkening');
 
-    this._arrows = [...this._body.querySelectorAll('.js-nav__arrow')];
+    this._dropItems = [...this._body.querySelectorAll('.js-nav__link-container')];
     this._subLists = [...this._body.querySelectorAll('.js-nav__sub-list')];
 
     this._visibleItem = undefined;
@@ -22,7 +22,7 @@ class Menu {
 
   _addListeners = () => {
     this._burger.addEventListener('click', this._handleBurgerClick);
-    this._arrows.map((item) => item.addEventListener('click', this._handleArrowClick));
+    this._dropItems.map((item) => item.addEventListener('click', this._handleArrowClick));
   }
 
   _handleBurgerClick = () => {
