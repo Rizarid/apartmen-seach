@@ -24,6 +24,7 @@
     padding: 16px 0px 20px 0px
     border-bottom: none 
     background-color: #fff
+    border: none
 
     .ui-datepicker-header
       background-color: #fff
@@ -38,6 +39,9 @@
         height: 25px
         margin-bottom: 3px
         transform: rotate(180deg)
+
+        &.ui-state-disabled
+          opacity: 0.75
         
         &:before
           content: '\e901'
@@ -60,6 +64,9 @@
         float: right
         margin-top: 3px
         height: 25px
+        
+        &.ui-state-disabled
+          opacity: 0.75
 
         &:before
           content: '\e901'
@@ -152,15 +159,9 @@
               linre-height: 14.63px
               border: none
               border-radius: 0
-  
-          .ui-datepicker-today
-              background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
-              border-radius: 50%
 
-              a
-                color: #fff
-                opacity: 1
-                font-weight: $bold
+            &.ui-state-disabled
+              opacity: 0.75
 
           .ui-datepicker-other-month
               span
@@ -172,7 +173,7 @@
           .selected
             position: relative
             
-            &::after
+            &::before
               content: ''
               +gradient
               width: 100%
@@ -181,47 +182,68 @@
               opacity: 0.25
               top: 0
               left: 0
+              z-index: 1
 
             &.selected-start
-              +gradient
-              border-radius: 50%
 
               a
+                +gradient
                 color: #fff
                 opacity: 1
                 font-weight: $bold
+                border-radius: 50%
+                width: 100%
+                height: 100%
+                z-index: 5
+                position: relative
 
-              &::after
+              &::before
                 width: 50%
                 left: 50%
 
             &.selected-end
-              +gradient
-              border-radius: 50%
-
               a
+                +gradient
                 color: #fff
                 opacity: 1
                 font-weight: $bold
+                border-radius: 50%
+                width: 100%
+                height: 100%
+                z-index: 5
+                position: relative
 
-              &::after
+              &::before
                 width: 50%
                 left: 0
 
-            &.ui-datepicker-today
+          .ui-datepicker-today
+            position: relative
+            z-index: 5
+
+            a  
+              color: #fff
+              opacity: 1
+              font-weight: $bold
               background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
               border-radius: 50%
+              width: 100%
+              height: 100%
+              z-index: 5
+              position: relative
 
-              a  
-                color: #fff
-                opacity: 1
-                font-weight: $bold
+            &.selected-start.selected-end::before
+              content: none
 
-              &::after
-                content: none
-                
+            &.selected
+              &::before
+                content: ''
+
+              a 
+                background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
+    
           .selected.selected-start.selected-end
-            &::after
+            &::b
                 width: 0
                 left: 0
           

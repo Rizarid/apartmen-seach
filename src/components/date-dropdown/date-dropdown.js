@@ -45,7 +45,8 @@ class DateDropdown {
   }
 
   _handleOutsideClick = (event) => {
-    if (!event.target.closest('.date-dropdown')) this._hiddenDatepicker();
+    const isDatePickerArrow = (event.target.classList.contains('ui-datepicker-prev') || event.target.classList.contains('ui-datepicker-next'))
+    if (!event.target.closest('.date-dropdown') && !isDatePickerArrow) this._hiddenDatepicker();
   };
 
   _hiddenDatepicker = () => {
