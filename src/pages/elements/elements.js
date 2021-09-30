@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import '../../fonts/fonts.css';
-import '../../fonts/scss/_path.scss';
 import '../../components/text-field/text-field';
 import '../../components/subscription-field/subscription-field';
 import '../../components/button/button';
