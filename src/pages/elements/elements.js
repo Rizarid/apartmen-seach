@@ -26,7 +26,6 @@ import './elements.sass';
   const convenience = new Dropdown(document.querySelector('.js-elements__convenience-container'));
   const expandable = new CheckboxButtons(document.querySelector('.js-elements__expandable-checkbox-container'));
   const checkboxButtons = new CheckboxButtons(document.querySelector('.js-elements__checkbox-buttons-container'));
-  const radioButtons = new RadioButtons(document.querySelector('.js-elements__radio-buttons-container'));
 
   const likeButtonsTargets = Array.from(document.querySelectorAll('.js-elements__likeButton'));
   const likeButtons = likeButtonsTargets.map((item) => new LikeButton(item));
