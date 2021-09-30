@@ -34,11 +34,14 @@
       .ui-datepicker-prev
         cursor: pointer
         float: left
-        margin-top: 3px
+        height: fit-content
+        height: 25px
+        margin-bottom: 3px
+        transform: rotate(180deg)
         
         &:before
-          content: 'arrow_back'
-          font-family: 'Material Icons'
+          content: '\e901'
+          font-family: toxin-icons
           text-transform: none
           font-size: 24px
           color: $purple
@@ -56,10 +59,11 @@
         border: none
         float: right
         margin-top: 3px
+        height: 25px
 
         &:before
-          content: 'arrow_forward'
-          font-family: 'Material Icons'
+          content: '\e901'
+          font-family: toxin-icons
           text-transform: none
           font-size: 24px
           color: $purple

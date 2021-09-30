@@ -45,22 +45,22 @@
     cursor: pointer
 
     &:after, &:before
-      font-family: 'Material Icons'
+      font-family: toxin-icons
       text-transform: none
       font-size: 24px
       color: #fff
       font-weight: $normal
 
-  
   &__prev-button
     display: none
+    transform: rotate(180deg)
 
     &::before
-      content: 'arrow_back'
+      content: '\e901'
 
   &__next-button
     &::before
-      content: 'arrow_forward'
+      content: '\e901'
 
   &__text-container
     width: 100%
