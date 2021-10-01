@@ -1,5 +1,5 @@
-import { Filters } from '../../blocks/filters-block/filters-block';
-import { RoomCard } from '../../blocks/room-card-block/room-card-block';
+import { FiltersForm } from '../../blocks/filters-form/filters-form';
+import { RoomCard } from '../../blocks/room-card/room-card';
 import { Header } from '../../blocks/header/header';
 import '../../components/pagination/pagination';
 
@@ -7,7 +7,7 @@ class SearchRoom {
   constructor() {
     this._body = this._getBody();
     this._header = new Header(this._getTarget('.js-search-room__header'));
-    this._filters = new Filters(this._getTarget('.js-search-room__container'));
+    this._filtersForm = new FiltersForm(this._getTarget('.js-search-room__container'));
     this._roomCards = this._getRoomCards();
   }
 

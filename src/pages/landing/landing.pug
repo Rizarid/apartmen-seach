@@ -1,21 +1,21 @@
 extends ../page-template/page-template.pug
 
-include ../../blocks/search-block/search-block.pug 
+include ../../blocks/search-form/search-form.pug 
 include ../../components/slider-of-background/slider-of-background.pug 
 
 block variables
   -
-    const { backgroundSliderOptions }  =  require("@/state/state.js")
+    const { sliderOfBackgroundOptions }  =  require("@/state/state.js")
     const pageClass = 'landing'
 
 block content
   main.landing__content.js-landing__content
-    +backgroundSlider(backgroundSliderOptions, 6000)
+    +sliderOfBackground(sliderOfBackgroundOptions, 6000)
 
     .landing__container 
 
       .landing__search-form.js-landing__search-form
-        +searchBlock 
+        +searchForm 
 
       .landing__text-container 
         p.landing__text Лучшие номера для вашей работы, отдыха и просто вдохновения

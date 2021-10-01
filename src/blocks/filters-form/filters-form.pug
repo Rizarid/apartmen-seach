@@ -5,29 +5,29 @@ include ../../components/pagination/pagination.pug
 include ../../components/date-dropdown/date-dropdown.pug 
 
 
-mixin filters()
-  form.filters.js-filters
-    .filters__date.js-filters__date
+mixin filtersForm()
+  form.filters-form.js-filters-form
+    .filters-form__date.js-filters-form__date
       +dateDropdown({ titles: ['даты пребывания в отеле'], names: ['dateFilter'], modifier: 'single-field' })
     
-    .filters__guests.js-filters__guests
+    .filters-form__guests.js-filters-form__guests
       +dropdown({ title: 'гости' })
     
-    section.filters__price.js-filters__price
+    section.filters-form__price.js-filters-form__price
       +slider({ title: 'диапазон цены', min: 0, max: 16000, initValues: [5000, 10000] })
-      p.filters__price-text Стоимость за сутки пребывания в номере
+      p.filters-form__price-text Стоимость за сутки пребывания в номере
     
-    .filters__rules.js-filters__rules
+    .filters-form__rules.js-filters-form__rules
       +checkboxButtons(checkboxButtonsOptions)
     
-    .filters__availability.js-filters__availability
+    .filters-form__availability.js-filters-form__availability
       +checkboxButtons(richCheckboxButtonsOptions)
     
-    .filters__convenience.js-filters__convenience
+    .filters-form__convenience.js-filters-form__convenience
       +dropdown({ 
         title: 'удобства номера' , name:'convenience', modifier: 'convenience', 
         items: [{ title: 'спальни', quantity: 2 }, { title: 'кровати', quantity: 2 }, { title: 'ванные комнаты', quantity: 0 }]  
       })
     
-    .filters__additional-amenities.js-filters__additional-amenities
+    .filters-form__additional-amenities.js-filters-form__additional-amenities
       +checkboxButtons(expandableCheckboxListOptions)

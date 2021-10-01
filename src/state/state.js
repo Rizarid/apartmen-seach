@@ -273,7 +273,7 @@ const roomGalleryData = [
   },
 ];
 
-const backgroundSliderOptions = [
+const sliderOfBackgroundOptions = [
   {
     src: require('../components/slider-of-background/img/01.webp'),
     alt: 'room01',
@@ -288,7 +288,7 @@ const backgroundSliderOptions = [
   },
 ];
 
-const backgroundSliderRegistrationOptions = [
+const sliderOfBackgroundRegistrationOptions = [
   {
     src: require('../components/slider-of-background/img/04.webp'),
     alt: 'room01',
@@ -305,6 +305,6 @@ const backgroundSliderRegistrationOptions = [
 
 export {
   roomsOptions, checkboxButtonsOptions, richCheckboxButtonsOptions, expandableCheckboxListOptions,
-  informationItems, reviewsData, rulesItems, roomGalleryData, backgroundSliderOptions,
-  backgroundSliderRegistrationOptions,
+  informationItems, reviewsData, rulesItems, roomGalleryData, sliderOfBackgroundOptions,
+  sliderOfBackgroundRegistrationOptions,
 };

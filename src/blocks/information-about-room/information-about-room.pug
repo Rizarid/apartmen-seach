@@ -3,7 +3,7 @@ include ../../components/round-chart/round-chart.pug
 include ../../components/reviews/reviews.pug
 include ../../components/bullet-list/bullet-list.pug
 
-mixin roomInformationBlock(informationItems,reviewsData, rulesItems )
+mixin InformationAboutRoom(informationItems,reviewsData, rulesItems )
   .information-about-room.js-information-about-room
     .information-about-room__information 
       +informationBlock({ title: 'Сведения о номере', itemOptions: informationItems })

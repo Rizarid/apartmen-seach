@@ -1,0 +1,17 @@
+include ../../components/date-dropdown/date-dropdown.pug 
+include ../../components/dropdown/dropdown.pug 
+include ../../components/button/button.pug 
+
+mixin searchForm
+  form.search-form.js-search-form
+    .search-form__title-container 
+      h1.search-form__title Найдём номера под ваши пожелания
+
+    .search-form__date-container.js-search-form__date-container
+      +dateDropdown({})
+
+    .search-form__guests-quantity-container.js-search-form__guests-quantity-container
+      +dropdown({ className: 'guests-quantity', title: 'гости' })
+
+    .search-form__button-container
+      +button({ text: 'подобрать номер', modifier: ['big'], formaction: 'search-room.html' })

@@ -1,8 +1,8 @@
-include ../../blocks/search-block/search-block.pug 
-include ../../blocks/registration-block/registration-block.pug 
-include ../../blocks/booking-block/booking-block.pug
-include ../../blocks/sign-in-block/sign-in-block.pug 
-include ../../blocks/room-card-block/room-card-block.pug 
+include ../../blocks/search-form/search-form.pug 
+include ../../blocks/registration-form/registration-form.pug 
+include ../../blocks/booking-form/booking-form.pug
+include ../../blocks/sign-in-form/sign-in-form.pug 
+include ../../blocks/room-card/room-card.pug 
 include ../../components/date-picker/date-picker.pug
 
 - const { roomsOptions } = require('@/state/state.js')
@@ -11,24 +11,24 @@ main.cards.js-cards
   .cards__container 
     .cards__column.cards__column_left
       .cards__search-form-container.js-cards__search-form-container
-        +searchBlock
+        +searchForm
 
       .cards__registration-form-container.js-cards__registration-form-container
-        +registrationBlock
+        +registrationForm
 
     .cards__column.cards__column_center
       .cards__booking-form-container.js-cards__booking-form-container 
-        +bookingBlock({})
+        +bookingForm({})
 
       .cards__sign-in-form-container.js-cards__sign-in-form-container
-        +signInBlock
+        +signInForm
 
     .cards__column.cards__column_right
       .cards__date-picker-container.js-cards__date-picker-container 
         +datePicker({})
 
       .cards__room-card-container.js-cards__room-card-container.cards__room-card-container_first
-        +roomCardBlock(roomsOptions[0])
+        +roomCard(roomsOptions[0])
 
       .cards__room-card-container.js-cards__room-card-container.cards__room-card-container_second
-        +roomCardBlock(roomsOptions[1])
+        +roomCard(roomsOptions[1])

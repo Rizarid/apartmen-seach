@@ -2,9 +2,9 @@ import { numberMargins, getDecline } from '../../utilities/utilities';
 import '../../components/button/button';
 import { DateDropdown } from '../../components/date-dropdown/date-dropdown';
 import { Dropdown } from '../../components/dropdown/dropdown';
-import './booking-block.sass';
+import './booking-form.sass';
 
-class Booking {
+class BookingForm {
   constructor(parent) {
     this._body = this._getBody(parent);
     this._getElements();
@@ -12,22 +12,22 @@ class Booking {
     this._calculate();
     this._update();
     this._addListeners();
-    this._dateDropdown = new DateDropdown(this._getTarget('.js-booking__date'));
-    this._dropdown = new Dropdown(this._getTarget('.js-booking__guests'));
+    this._dateDropdown = new DateDropdown(this._getTarget('.js-booking-form__date'));
+    this._dropdown = new Dropdown(this._getTarget('.js-booking-form__guests'));
   }
 
-  _getBody = () => document.querySelector('.js-booking');
+  _getBody = () => document.querySelector('.js-booking-form');
 
   _getTarget = (selector) => this._body.querySelector(selector);
 
   _getElements = () => {
-    this._price = this._getTarget('.js-booking__price');
-    this._basicPriceCalculate = this._getTarget('.js-booking__basic-price-calculate');
-    this._basicPriceResult = this._getTarget('.js-booking__basic-price-result');
-    this._discount = this._getTarget('.js-booking__services-prices');
-    this._servicesTotal = this._getTarget('.js-booking__services-total');
-    this._additionalServicesTotal = this._getTarget('.js-booking__additional-services-total');
-    this._totalPrice = this._getTarget('.js-booking__total-price-value');
+    this._price = this._getTarget('.js-booking-form__price');
+    this._basicPriceCalculate = this._getTarget('.js-booking-form__basic-price-calculate');
+    this._basicPriceResult = this._getTarget('.js-booking-form__basic-price-result');
+    this._discount = this._getTarget('.js-booking-form__services-prices');
+    this._servicesTotal = this._getTarget('.js-booking-form__services-total');
+    this._additionalServicesTotal = this._getTarget('.js-booking-form__additional-services-total');
+    this._totalPrice = this._getTarget('.js-booking-form__total-price-value');
   };
 
   _getValues = () => {
@@ -65,4 +65,4 @@ class Booking {
   };
 }
 
-export { Booking };
+export { BookingForm };

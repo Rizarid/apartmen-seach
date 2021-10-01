@@ -1,7 +1,7 @@
 extends ../page-template/page-template.pug
 
 include ../../blocks/information-about-room/information-about-room.pug 
-include ../../blocks/booking-block/booking-block.pug
+include ../../blocks/booking-form/booking-form.pug
 include ../../components/room-gallery/room-gallery.pug 
 
 block variables
@@ -22,7 +22,7 @@ block content
 
     .room__container 
       .room__room-information-container.js-room__room-information-container
-        +roomInformationBlock(informationItems, reviewsData, rulesItems)
+        +InformationAboutRoom(informationItems, reviewsData, rulesItems)
 
       .room__booking-container.js-room__booking-container
-        +bookingBlock({})
+        +bookingForm({})

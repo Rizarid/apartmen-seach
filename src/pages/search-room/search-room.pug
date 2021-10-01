@@ -1,8 +1,8 @@
 extends ../page-template/page-template.pug
 
 include ../../blocks/header/header.pug 
-include ../../blocks/room-card-block/room-card-block.pug 
-include ../../blocks/filters-block/filters-block.pug
+include ../../blocks/room-card/room-card.pug 
+include ../../blocks/filters-form/filters-form.pug
 
 block variables
   -
@@ -25,7 +25,7 @@ block header
 block content
   main.search-room__content.js-search-room__content
     .search-room__container.js-search-room__container
-      +filters
+      +filtersForm
       
       article.search-room__results.js-search-room__results
         h1.search-room__results-title Номера, которые мы для вас подобрали
@@ -34,7 +34,7 @@ block content
         .search-room__results-list   
           each item in roomsOptions
             .search-room__results-item.js-search-room__results-item
-              +roomCardBlock(item)
+              +roomCard(item)
 
           .search-room__results-pagination
             +pagination(15, "1 – 12 из 100+ вариантов аренды")

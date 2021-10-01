@@ -1,19 +1,19 @@
 include ../../components/text-field/text-field.pug 
 include ../../components/button/button.pug 
-mixin signInBlock
-  form.sign-in-block
-    .sign-in-block__title-container 
-      h1.sign-in-block__title Войти
+mixin signInForm
+  form.sign-in-form
+    .sign-in-form__title-container 
+      h1.sign-in-form__title Войти
 
-    .sign-in-block__email-container
+    .sign-in-form__email-container
       +textField({ name: 'email', type: 'email',  placeholder: 'Email' })
 
-    .sign-in-block__password-container
+    .sign-in-form__password-container
       +textField({ name: 'password', type: 'password',  placeholder: 'Пароль' })
 
-    .sign-in-block__submit-container
+    .sign-in-form__submit-container
       +button({ text: 'войти', modifier: ['big'], formaction: '/mock-address/change-me' })
 
-    .sign-in-block__button-container
-      p.sign-in-block__button-label Нет аккаунта на Toxin?
+    .sign-in-form__button-container
+      p.sign-in-form__button-label Нет аккаунта на Toxin?
       +button({ text: 'создать', formaction: 'registration.html', modifier: ['transparent'] })

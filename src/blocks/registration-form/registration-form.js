@@ -3,17 +3,17 @@ import '../../components/button/button';
 import '../../components/radio-buttons/radio-buttons';
 import { MaskedTextField } from '../../components/masked-text-field/masked-text-field';
 import '../../components/toggle/toggle';
-import './registration-block.sass';
+import './registration-form.sass';
 
-class RegistrationBlock {
+class RegistrationForm {
   constructor(parent) {
     this._body = this._getBody(parent);
-    this._maskedField = new MaskedTextField(this._getTarget('.js-registration-block__date-of-birth-container'));
+    this._maskedField = new MaskedTextField(this._getTarget('.js-registration-form__date-of-birth-container'));
   }
 
-  _getBody = (parent) => parent.querySelector('.js-registration-block');
+  _getBody = (parent) => parent.querySelector('.js-registration-form');
 
   _getTarget = (targetSelector) => this._body.querySelector(targetSelector);
 }
 
-export { RegistrationBlock };
+export { RegistrationForm };

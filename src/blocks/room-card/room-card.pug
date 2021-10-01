@@ -1,0 +1,33 @@
+include ../../components/image-slider/image-slider.pug 
+include ../../components/rate-button/rate-button.pug 
+
+mixin roomCard({ slides = [], roomNumber = 0, isLux = false, price = 0, stars = 0, reviewsQuantity = 0, link = '/mock-address/change-me' })
+  -
+    let redactedPrice
+    {
+      const { numberMargins } = require('../../utilities/utilities.js')
+      redactedPrice = numberMargins(price)
+    }
+
+  article.room-card.js-room-card
+    +imageSlider(slides)
+    a.room-card__information(href = link) 
+      .room-card__header 
+        h2.room-card__title 
+          span.room-card__number-symbol №
+          span.room-card__number #{roomNumber}
+          if isLux
+            span.room-card__tag люкс
+
+        p.room-card__room-price
+          span.room-card__price.js-room-card__price #{redactedPrice}&#8381
+          span.room-card__period в сутки
+
+      .room-card__feedback
+        +rateButton(stars)
+    
+        p.room-card__reviews 
+          span.room-card__reviews-quantity #{reviewsQuantity}
+          span.room-card__reviews-text Отзывов
+
+    

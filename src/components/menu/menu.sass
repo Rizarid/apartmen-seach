@@ -4,7 +4,7 @@ body
   @media screen and ( max-width:  1000px)
     position: relative
 
-.nav
+.menu
   box-sizing: border-box
   display: flex
   width: fit-content
@@ -80,7 +80,7 @@ body
       margin: 0
       font-size: 22px
 
-    & ~ .nav__item 
+    & ~ .menu__item 
       margin-left: 20.5px
 
       @media screen and ( max-width:  1000px)
@@ -91,12 +91,12 @@ body
 
     &_dropping
       
-      & .nav__link-container
+      & .menu__link-container
         display: flex
         align-items: flex-end
         cursor: pointer
 
-      & .nav__arrow
+      & .menu__arrow
         cursor: pointer
         
         &::after
@@ -155,7 +155,7 @@ body
       +gradient
       transition: none
 
-      & .nav__link
+      & .menu__link
         color: #fff
 
     & ~ &

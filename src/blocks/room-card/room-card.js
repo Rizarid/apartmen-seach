@@ -1,6 +1,6 @@
 import '../../components/rate-button/rate-button';
 import { ImageSlider } from '../../components/image-slider/image-slider';
-import './room-card-block.sass';
+import './room-card.sass';
 
 
 class RoomCard {
@@ -9,7 +9,7 @@ class RoomCard {
     this._imageSlider = new ImageSlider(this._body);
   }
 
-  _getBody = (parent) => parent.querySelector('.js-room-card-block');
+  _getBody = (parent) => parent.querySelector('.js-room-card');
 }
 
 export { RoomCard };
