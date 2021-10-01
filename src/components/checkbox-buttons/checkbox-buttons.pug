@@ -1,5 +1,3 @@
-include ../checkbox/checkbox.pug
-
 mixin checkboxButtons({ title = 'checkbox buttons', modifier = 'standard', items = [] })
   -
     const blockClass = `checkbox-buttons js-checkbox-buttons checkbox-buttons_${modifier}`
@@ -24,7 +22,9 @@ mixin checkboxButtons({ title = 'checkbox buttons', modifier = 'standard', items
           } = item
         
         label(class = itemClass)
-          +checkbox(name, checked)
+          span.checkbox-buttons__checkbox
+            input.checkbox-buttons__checkbox-input( type = "checkbox", name = name, checked = checked)
+            span.checkbox-buttons__checkbox-imitator
 
           if modifier === 'rich'
             span.checkbox-buttons__item-content 
