@@ -4,7 +4,7 @@ mixin dropdown({ title = 'dropdown', name = 'dropdown', modifier = 'guests',  it
   
   - const classes = `dropdown js-dropdown dropdown_${modifier}`
 
-  section(class = classes)
+  div(class = classes)
     h3.dropdown__title #{ title }
 
     .dropdown__field-container

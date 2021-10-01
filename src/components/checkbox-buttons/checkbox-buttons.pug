@@ -3,7 +3,7 @@ mixin checkboxButtons({ title = 'checkbox buttons', modifier = 'standard', items
     const blockClass = `checkbox-buttons js-checkbox-buttons checkbox-buttons_${modifier}`
     const itemClass = `checkbox-buttons__item js-checkbox-buttons__item`
 
-  section(class = blockClass)
+  div(class = blockClass)
     - const isExpandable = (modifier === 'expandable')
 
     if isExpandable
