@@ -99,11 +99,11 @@ include ../../components/pagination/pagination.pug
         .elements__button
           +button({})
         .elements__button
-          +button({modifier: ['transparent']})
+          +button({ modifier: ['transparent'] })
         .elements__button
-          +button({modifier: ['minimal']})
+          +button({ modifier: ['minimal'], type: 'button' })
         .elements__button
-          +button({text: 'перейти к оплате', modifier: ['big'], isSubmit: true})
+          +button({text: 'перейти к оплате', modifier: ['big']})
 
       h3.elements__title.elements__title_high-padding pagination
       .elements__pagination-container

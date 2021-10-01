@@ -3,7 +3,7 @@ include ../../components/dropdown/dropdown.pug
 include ../../components/button/button.pug 
 
 mixin searchBlock
-  form.search-block.js-search-block(action = "search-room.html")
+  form.search-block.js-search-block
     .search-block__title-container 
       h1.search-block__title Найдём номера под ваши пожелания
 
@@ -14,4 +14,4 @@ mixin searchBlock
       +dropdown({ className: 'guests-quantity', title: 'гости' })
 
     .search-block__button-container
-      +button({ text: 'подобрать номер', isSubmit: true, modifier: ['big'] })
+      +button({ text: 'подобрать номер', modifier: ['big'], formaction: 'search-room.html' })

@@ -53,6 +53,6 @@ mixin bookingBlock({ roomPrice = 9990, discount = 2179, servicesTotal = 0, addit
       p.booking__total-price-value.js-booking__total-price-value 
 
     .booking__submit-container 
-      +button({text: 'забронировать', isSubmit: true, modifier: ['big']})
+      +button({ text: 'забронировать', modifier: ['big'], formaction: '/mock-address/change-me' })
 
   

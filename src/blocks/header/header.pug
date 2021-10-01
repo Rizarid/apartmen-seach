@@ -16,12 +16,12 @@ mixin header({isLogIn = false , userName = '', modifier = ''})
           .header__filters-button.js-header__filters-button
 
         if !isLogIn
-          .header__authorization.js-header__authorization
+          form.header__authorization.js-header__authorization
             .header__log-in
-              +button({ text: 'Войти', href: 'sign-in.html', modifier: ['transparent', 'low'] })
+              +button({ text: 'Войти', formaction: 'sign-in.html', modifier: ['transparent', 'low'] })
 
             .header__registration
-              +button({ text:'Зарегистрироваться', href: 'registration.html' })
+              +button({ text:'Зарегистрироваться', modifier: ['low'], formaction: 'registration.html' })
 
         else 
           .header__user-name 

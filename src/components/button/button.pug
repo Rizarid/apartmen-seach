@@ -1,16 +1,8 @@
-mixin button({ modifier = [], href = '', isSubmit = false,  text = 'Click me' })
+mixin button({ modifier = [], formaction = '', type = 'submit',  text = 'Click me' })
   -
     const classDefault = 'button'
     let classes = classDefault
     if (modifier) modifier.map((item) => classes = `${classes} ${classDefault}_${item}`)
     
-  if (isSubmit) 
-    button(type = "submit", class = classes) #{ text }
-  else
-    if (modifier.includes('minimal'))
-      p(class = classes, href = href)
-        span.button__text #{ text }
-    else
-      a(class = classes, href = href)   
-        p.button__text #{ text }
-      
+  button(type = type, class = classes, formaction = formaction) 
+    span.button__text #{ text }
