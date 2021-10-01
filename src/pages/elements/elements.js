@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-import '../../fonts/fonts.css';
 import '../../components/text-field/text-field';
 import '../../components/subscription-field/subscription-field';
 import '../../components/button/button';
@@ -18,19 +17,33 @@ import { Slider } from '../../components/slider/slider';
 import { Review } from '../../components/review/review';
 import './elements.sass';
 
-{
-  const guests = new Dropdown(document.querySelector('.js-elements__guests-container'));
-  const maskedField = new MaskedTextField(document.querySelector('.js-elements__masked-field-container'));
-  const dateDropdown = new DateDropdown(document.querySelector('.js-elements__date-dropdown-container'));
-  const dateFilter = new DateDropdown(document.querySelector('.js-date-filter-container')); 
-  const convenience = new Dropdown(document.querySelector('.js-elements__convenience-container'));
-  const expandable = new CheckboxButtons(document.querySelector('.js-elements__expandable-checkbox-container'));
-  const checkboxButtons = new CheckboxButtons(document.querySelector('.js-elements__checkbox-buttons-container'));
+class Elements {
+  constructor() {
+    this._body = this._getBody();
 
-  const likeButtonsTargets = Array.from(document.querySelectorAll('.js-elements__likeButton'));
-  const likeButtons = likeButtonsTargets.map((item) => new LikeButton(item));
+    this._guests = new Dropdown(this._getTarget('.js-elements__guests-container'));
+    this._maskedField = new MaskedTextField(this._getTarget('.js-elements__masked-field-container'));
+    this._dateDropdown = new DateDropdown(this._getTarget('.js-elements__date-dropdown-container'));
+    this._dateFilter = new DateDropdown(this._getTarget('.js-date-filter-container')); 
+    this._convenience = new Dropdown(this._getTarget('.js-elements__convenience-container'));
+    this._expandable = new CheckboxButtons(this._getTarget('.js-elements__expandable-checkbox-container'));
+    this._checkboxButtons = new CheckboxButtons(this._getTarget('.js-elements__checkbox-buttons-container'));
 
-  const rich = new CheckboxButtons(document.querySelector('.js-elements__rich-checkbox-container'));
-  const slider = new Slider(document.querySelector('.js-elements__slider-container'));
-  const review = new Review(document.querySelector('.js-elements__review-container'));
+    this._likeButtons = this._getLikeButtons();
+
+    this._rich = new CheckboxButtons(this._getTarget('.js-elements__rich-checkbox-container'));
+    this._slider = new Slider(this._getTarget('.js-elements__slider-container'));
+    this._review = new Review(this._getTarget('.js-elements__review-container'));
+  }
+
+  _getBody = () => document.querySelector('.js-elements');
+
+  _getTarget = (targetSelector) => this._body.querySelector(targetSelector);
+
+  _getLikeButtons = () => {
+    const likeButtonsTargets = Array.from(document.querySelectorAll('.js-elements__likeButton'));
+    return likeButtonsTargets.map((item) => new LikeButton(item));
+  };
 }
+
+export { Elements };

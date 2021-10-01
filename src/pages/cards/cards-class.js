@@ -4,6 +4,7 @@ import { RegistrationForm } from '../../blocks/registration-form/registration-fo
 import { DatePicker } from '../../components/date-picker/date-picker';
 import { RoomCard } from '../../blocks/room-card/room-card';
 import '../../blocks/sign-in-form/sign-in-form';
+import './cards.sass';
 
 class Cards {
   constructor() {
