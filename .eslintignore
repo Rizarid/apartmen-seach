@@ -1,1 +1,3 @@
-src/scripts/jquery-ui
+src/components/date-picker/ui-datepicker.js
+src/components/date-picker/russification.js
+src/fonts/demo toxin icons/demo.js

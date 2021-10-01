@@ -20,5 +20,4 @@ import './ui-datepicker';
     yearSuffix: '',
   };
   $.datepicker.setDefaults($.datepicker.regional.ru);
-
 }
