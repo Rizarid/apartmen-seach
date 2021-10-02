@@ -30,11 +30,8 @@ class RoundChart {
     this._dashoffset = [];
 
     for (let i = 0; i < this._dash.length; i += 1) {
-      if (i === 0) {
-        this._dashoffset.push(25);
-        continue;
-      }
-      this._dashoffset.push(100 - this._dash[i - 1] + this._dashoffset[i - 1] - 0.5);
+      if (i === 0) this._dashoffset.push(25);
+      else this._dashoffset.push(100 - this._dash[i - 1] + this._dashoffset[i - 1] - 0.5);
     }
 
     return this._dashoffset;
@@ -80,5 +77,4 @@ class RoundChart {
   `
 }
 
-export { RoundChart };
-
+export default RoundChart;

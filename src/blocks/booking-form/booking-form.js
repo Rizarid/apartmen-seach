@@ -1,7 +1,9 @@
+/* global document */
+
 import { numberMargins, getDecline } from '../../utilities/utilities';
 import '../../components/button/button';
-import { DateDropdown } from '../../components/date-dropdown/date-dropdown';
-import { Dropdown } from '../../components/dropdown/dropdown';
+import DateDropdown from '../../components/date-dropdown/date-dropdown';
+import Dropdown from '../../components/dropdown/dropdown';
 import './booking-form.sass';
 
 class BookingForm {
@@ -65,4 +67,4 @@ class BookingForm {
   };
 }
 
-export { BookingForm };
+export default BookingForm;

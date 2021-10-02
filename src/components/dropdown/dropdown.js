@@ -1,7 +1,7 @@
-// eslint-disable-next-line no-unused-vars
+/* global window */
 
 import { getDecline } from '../../utilities/utilities';
-import { ControlPanel } from '../control-panel/control-panel';
+import ControlPanel from '../control-panel/control-panel';
 import './dropdown.sass';
 
 class Dropdown {
@@ -123,4 +123,4 @@ class Dropdown {
   _getTarget = (selector) => this._body.querySelector(selector);
 }
 
-export { Dropdown };
+export default Dropdown;

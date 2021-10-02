@@ -1,3 +1,5 @@
+/* global Event */
+
 import '../button/button';
 import './control-panel.sass';
 
@@ -31,4 +33,4 @@ class ControlPanel {
   }
 }
 
-export { ControlPanel };
+export default ControlPanel;

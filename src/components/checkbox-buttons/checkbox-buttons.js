@@ -17,4 +17,4 @@ class CheckboxButtons {
   _isExpandable = () => this._body.classList.contains('checkbox-buttons_expandable');
 }
 
-export { CheckboxButtons };
+export default CheckboxButtons;

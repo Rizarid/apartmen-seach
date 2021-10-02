@@ -1,4 +1,6 @@
-import { DatePicker } from '../date-picker/date-picker';
+/* global CustomEvent window */
+
+import DatePicker from '../date-picker/date-picker';
 import './date-dropdown.sass';
 
 class DateDropdown {
@@ -45,7 +47,7 @@ class DateDropdown {
   }
 
   _handleOutsideClick = (event) => {
-    const isDatePickerArrow = (event.target.classList.contains('ui-datepicker-prev') || event.target.classList.contains('ui-datepicker-next'))
+    const isDatePickerArrow = (event.target.classList.contains('ui-datepicker-prev') || event.target.classList.contains('ui-datepicker-next'));
     if (!event.target.closest('.date-dropdown') && !isDatePickerArrow) this._hiddenDatepicker();
   };
 
@@ -104,4 +106,4 @@ class DateDropdown {
   };
 }
 
-export { DateDropdown };
+export default DateDropdown;

@@ -1,5 +1,7 @@
-import { SliderOfBackground } from '../../components/slider-of-background/slider-of-background';
-import { Header } from '../../blocks/header/header';
+/* global document */
+
+import SliderOfBackground from '../../components/slider-of-background/slider-of-background';
+import Header from '../../blocks/header/header';
 import '../../blocks/sign-in-form/sign-in-form';
 import './sign-in.sass';
 
@@ -15,4 +17,4 @@ class SignIn {
   _getTarget = (targetSelector) => this._body.querySelector(targetSelector);
 }
 
-export { SignIn };
+export default SignIn;

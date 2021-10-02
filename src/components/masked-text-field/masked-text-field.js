@@ -19,4 +19,4 @@ class MaskedTextField {
   );
 }
 
-export { MaskedTextField };
+export default MaskedTextField;

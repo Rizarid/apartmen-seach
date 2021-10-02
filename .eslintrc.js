@@ -20,6 +20,6 @@ module.exports = {
     'fsd/split-conditionals': 'error',
     'no-underscore-dangle': 'off',
     'object-curly-newline': 'off',
-    'no-new': 'off'
+    'no-new': 'off',
   },
 };

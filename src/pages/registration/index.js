@@ -1,7 +1,5 @@
 import '../../fonts/fonts.css';
 import '../../blocks/footer/footer';
-import { Registration } from './registration';
+import Registration from './registration';
 
-{
-  const registration = new Registration();
-}
+new Registration();

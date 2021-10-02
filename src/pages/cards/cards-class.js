@@ -1,8 +1,10 @@
-import { SearchForm } from '../../blocks/search-form/search-form';
-import { BookingForm } from '../../blocks/booking-form/booking-form';
-import { RegistrationForm } from '../../blocks/registration-form/registration-form';
-import { DatePicker } from '../../components/date-picker/date-picker';
-import { RoomCard } from '../../blocks/room-card/room-card';
+/* global document */
+
+import SearchForm from '../../blocks/search-form/search-form';
+import BookingForm from '../../blocks/booking-form/booking-form';
+import RegistrationForm from '../../blocks/registration-form/registration-form';
+import DatePicker from '../../components/date-picker/date-picker';
+import RoomCard from '../../blocks/room-card/room-card';
 import '../../blocks/sign-in-form/sign-in-form';
 import './cards.sass';
 
@@ -21,7 +23,7 @@ class Cards {
     this._bookingForm = new BookingForm(this._getTarget('.js-cards__booking-form-container'));
     this._registration = new RegistrationForm(this._getTarget('.js-cards__registration-form-container'));
     this._datePicker = new DatePicker(this._getTarget('.js-cards__date-picker-container'));
-    this._roomCards = this._getRoomCards(); 
+    this._roomCards = this._getRoomCards();
   };
 
   _getRoomCards = () => {
@@ -30,4 +32,4 @@ class Cards {
   };
 }
 
-export { Cards };
+export default Cards;

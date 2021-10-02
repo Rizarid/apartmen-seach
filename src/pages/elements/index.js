@@ -1,6 +1,4 @@
 import '../../fonts/fonts.css';
-import { Elements } from './elements';
+import Elements from './elements';
 
-{
-  const elements = new Elements();
-}
+new Elements();

@@ -1,3 +1,5 @@
+/* global window */
+
 import * as $ from 'jquery';
 import 'jquery-ui-slider/jquery-ui';
 import 'jquery-ui-slider/jquery-ui.css';
@@ -51,4 +53,4 @@ class Slider {
   }
 }
 
-export { Slider };
+export default Slider;

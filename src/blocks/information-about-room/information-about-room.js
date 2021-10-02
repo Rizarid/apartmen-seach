@@ -1,8 +1,8 @@
 import '../../components/information-block/information-block';
 import '../../components/bullet-list/bullet-list';
 import './information-about-room.sass';
-import { Reviews } from '../../components/reviews/reviews';
-import { RoundChart } from '../../components/round-chart/round-chart';
+import Reviews from '../../components/reviews/reviews';
+import RoundChart from '../../components/round-chart/round-chart';
 
 class InformationAboutRoom {
   constructor(parent) {
@@ -16,4 +16,4 @@ class InformationAboutRoom {
   _getTarget = (targetSelector) => this._body.querySelector(targetSelector);
 }
 
-export { InformationAboutRoom };
+export default InformationAboutRoom;

@@ -1,3 +1,5 @@
+/* global window, document, DocumentTouch, ResizeObserver, Event */
+
 import { createElement } from '../../utilities/utilities';
 import './image-slider.sass';
 
@@ -163,4 +165,4 @@ class ImageSlider {
   }
 }
 
-export { ImageSlider };
+export default ImageSlider;

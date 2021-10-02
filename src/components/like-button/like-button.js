@@ -23,4 +23,4 @@ class LikeButton {
   }
 }
 
-export { LikeButton };
+export default LikeButton;

@@ -1,3 +1,5 @@
+/* global document */
+
 const createElement = (elementType, className) => {
   const element = document.createElement(elementType);
   element.className = className;
@@ -33,4 +35,4 @@ const numberMargins = (number) => {
   return arr.join('');
 };
 
-export { createElement, getDecline, numberMargins }
+export { createElement, getDecline, numberMargins };

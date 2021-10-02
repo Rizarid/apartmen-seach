@@ -1,4 +1,4 @@
-import { LikeButton } from '../like-button/like-button';
+import LikeButton from '../like-button/like-button';
 import './review.sass';
 
 class Review {
@@ -12,4 +12,4 @@ class Review {
   _getTarget = (targetSelector) => this._body.querySelector(targetSelector);
 }
 
-export { Review };
+export default Review;

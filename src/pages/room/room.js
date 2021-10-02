@@ -1,6 +1,8 @@
-import { BookingForm } from '../../blocks/booking-form/booking-form';
-import { InformationAboutRoom } from '../../blocks/information-about-room/information-about-room';
-import { Header } from '../../blocks/header/header';
+/* global document */
+
+import BookingForm from '../../blocks/booking-form/booking-form';
+import InformationAboutRoom from '../../blocks/information-about-room/information-about-room';
+import Header from '../../blocks/header/header';
 import './room.sass';
 
 class Room {
@@ -16,4 +18,4 @@ class Room {
   _getTarget = (targetSelector) => this._body.querySelector(targetSelector);
 }
 
-export { Room };
+export default Room;

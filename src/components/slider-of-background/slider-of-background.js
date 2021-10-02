@@ -20,4 +20,4 @@ class SliderOfBackground {
   };
 }
 
-export { SliderOfBackground };
+export default SliderOfBackground;

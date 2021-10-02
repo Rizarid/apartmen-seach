@@ -1,4 +1,4 @@
-import { Review } from '../review/review';
+import Review from '../review/review';
 import './reviews.sass';
 
 class Reviews {
@@ -17,4 +17,4 @@ class Reviews {
   };
 }
 
-export { Reviews };
+export default Reviews;

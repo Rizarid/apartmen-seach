@@ -1,6 +1,8 @@
+/* global CustomEvent */
+
 import * as $ from 'jquery';
 import './russification';
-import { ControlPanel } from '../control-panel/control-panel';
+import ControlPanel from '../control-panel/control-panel';
 import './date-picker.sass';
 
 class DatePicker {
@@ -62,4 +64,4 @@ class DatePicker {
   _getDatepickerObject = () => $(this._body).datepicker('widget').data('datepickerExtensionRange');
 }
 
-export { DatePicker };
+export default DatePicker;

@@ -1,6 +1,8 @@
-import { RegistrationForm } from '../../blocks/registration-form/registration-form';
-import { SliderOfBackground } from '../../components/slider-of-background/slider-of-background';
-import { Header } from '../../blocks/header/header';
+/* global document */
+
+import RegistrationForm from '../../blocks/registration-form/registration-form';
+import SliderOfBackground from '../../components/slider-of-background/slider-of-background';
+import Header from '../../blocks/header/header';
 import './registration.sass';
 
 class Registration {
@@ -16,4 +18,4 @@ class Registration {
   _getTarget = (targetSelector) => this._body.querySelector(targetSelector);
 }
 
-export { Registration };
+export default Registration;

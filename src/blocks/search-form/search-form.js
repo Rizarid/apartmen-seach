@@ -1,6 +1,6 @@
 import '../../components/button/button';
-import { Dropdown } from '../../components/dropdown/dropdown';
-import { DateDropdown } from '../../components/date-dropdown/date-dropdown';
+import Dropdown from '../../components/dropdown/dropdown';
+import DateDropdown from '../../components/date-dropdown/date-dropdown';
 import './search-form.sass';
 
 class SearchForm {
@@ -15,4 +15,4 @@ class SearchForm {
   _getTarget = (targetSelector) => this._body.querySelector(targetSelector);
 }
 
-export { SearchForm };
+export default SearchForm;

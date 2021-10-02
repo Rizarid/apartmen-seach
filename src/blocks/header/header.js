@@ -1,4 +1,6 @@
-import { Menu } from '../../components/menu/menu';
+/* global window, document, CustomEvent */
+
+import Menu from '../../components/menu/menu';
 import '../../components/logo/logo';
 import '../../components/button/button';
 import './header.sass';
@@ -59,7 +61,6 @@ class Header {
   }
 
   _handleFilterButtonClick = () => document.dispatchEvent(this._onFilterButtonClick);
-
 }
 
-export { Header };
+export default Header;

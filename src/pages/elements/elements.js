@@ -1,4 +1,5 @@
-/* eslint-disable no-unused-vars */
+/* global document */
+
 import '../../components/text-field/text-field';
 import '../../components/subscription-field/subscription-field';
 import '../../components/button/button';
@@ -6,15 +7,15 @@ import '../../components/bullet-list/bullet-list';
 import '../../components/information-block/information-block';
 import '../../components/pagination/pagination';
 import '../../components/rate-button/rate-button';
-import { Dropdown } from '../../components/dropdown/dropdown';
-import { MaskedTextField } from '../../components/masked-text-field/masked-text-field';
-import { DateDropdown } from '../../components/date-dropdown/date-dropdown';
-import { CheckboxButtons } from '../../components/checkbox-buttons/checkbox-buttons';
+import Dropdown from '../../components/dropdown/dropdown';
+import MaskedTextField from '../../components/masked-text-field/masked-text-field';
+import DateDropdown from '../../components/date-dropdown/date-dropdown';
+import CheckboxButtons from '../../components/checkbox-buttons/checkbox-buttons';
 import '../../components/radio-buttons/radio-buttons';
 import '../../components/toggle/toggle';
-import { LikeButton } from '../../components/like-button/like-button';
-import { Slider } from '../../components/slider/slider';
-import { Review } from '../../components/review/review';
+import LikeButton from '../../components/like-button/like-button';
+import Slider from '../../components/slider/slider';
+import Review from '../../components/review/review';
 import './elements.sass';
 
 class Elements {
@@ -24,7 +25,7 @@ class Elements {
     this._guests = new Dropdown(this._getTarget('.js-elements__guests-container'));
     this._maskedField = new MaskedTextField(this._getTarget('.js-elements__masked-field-container'));
     this._dateDropdown = new DateDropdown(this._getTarget('.js-elements__date-dropdown-container'));
-    this._dateFilter = new DateDropdown(this._getTarget('.js-date-filter-container')); 
+    this._dateFilter = new DateDropdown(this._getTarget('.js-date-filter-container'));
     this._convenience = new Dropdown(this._getTarget('.js-elements__convenience-container'));
     this._expandable = new CheckboxButtons(this._getTarget('.js-elements__expandable-checkbox-container'));
     this._checkboxButtons = new CheckboxButtons(this._getTarget('.js-elements__checkbox-buttons-container'));
@@ -46,4 +47,4 @@ class Elements {
   };
 }
 
-export { Elements };
+export default Elements;

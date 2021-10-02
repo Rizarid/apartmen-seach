@@ -1,6 +1,8 @@
-import { SearchForm } from '../../blocks/search-form/search-form';
-import { SliderOfBackground } from '../../components/slider-of-background/slider-of-background';
-import { Header } from '../../blocks/header/header';
+/* global document */
+
+import SearchForm from '../../blocks/search-form/search-form';
+import SliderOfBackground from '../../components/slider-of-background/slider-of-background';
+import Header from '../../blocks/header/header';
 import './landing.sass';
 
 class Landing {
@@ -16,4 +18,4 @@ class Landing {
   _getTarget = (targetSelector) => this._body.querySelector(targetSelector);
 }
 
-export { Landing };
+export default Landing;

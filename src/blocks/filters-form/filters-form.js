@@ -1,8 +1,10 @@
+/* global document */
+
 import '../../components/pagination/pagination';
-import { DateDropdown } from '../../components/date-dropdown/date-dropdown';
-import { Dropdown } from '../../components/dropdown/dropdown';
-import { Slider } from '../../components/slider/slider';
-import { CheckboxButtons } from '../../components/checkbox-buttons/checkbox-buttons';
+import DateDropdown from '../../components/date-dropdown/date-dropdown';
+import Dropdown from '../../components/dropdown/dropdown';
+import Slider from '../../components/slider/slider';
+import CheckboxButtons from '../../components/checkbox-buttons/checkbox-buttons';
 import './filters-form.sass';
 
 class FiltersForm {
@@ -31,4 +33,4 @@ class FiltersForm {
   _appendListeners = () => document.addEventListener('filterButtonClick', this._handleFiltersButtonClick);
 }
 
-export { FiltersForm };
+export default FiltersForm;
