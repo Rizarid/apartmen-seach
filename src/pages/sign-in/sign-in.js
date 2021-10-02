@@ -11,6 +11,8 @@ class SignIn {
   }
 
   _getBody = () => document.querySelector('.js-sign-in');
+
+  _getTarget = (targetSelector) => this._body.querySelector(targetSelector);
 }
 
 export { SignIn };
