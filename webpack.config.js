@@ -66,7 +66,7 @@ module.exports = {
         new HTMLWebpackPlugin({
             favicon: './favicon.svg',
             template: 'src/pages/landing/landing.pug',
-            inject: 'head',
+            inject: 'body',
             chunks: ['main'],
             filename: 'index.html',
             minify: {
@@ -76,7 +76,7 @@ module.exports = {
         new HTMLWebpackPlugin({
             favicon: './favicon.svg',
             template: 'src/pages/search-room/search-room.pug',
-            inject: 'head',
+            inject: 'body',
             filename: 'search-room.html',
             chunks: ['searchRoom'],
             minify: {
@@ -86,7 +86,7 @@ module.exports = {
         new HTMLWebpackPlugin({
             favicon: './favicon.svg',
             template: 'src/pages/room/room.pug',
-            inject: 'head',
+            inject: 'body',
             filename: 'room.html',
             chunks: ['room'],
             minify: {
@@ -96,7 +96,7 @@ module.exports = {
         new HTMLWebpackPlugin({
             favicon: './favicon.svg',
             template: 'src/pages/sign-in/sign-in.pug',
-            inject: 'head',
+            inject: 'body',
             filename: 'sign-in.html',
             chunks: ['signIn'],
             minify: {
@@ -106,7 +106,7 @@ module.exports = {
         new HTMLWebpackPlugin({
             favicon: './favicon.svg',
             template: 'src/pages/registration/registration.pug',
-            inject: 'head',
+            inject: 'body',
             filename: 'registration.html',
             chunks: ['registration'],
             minify: {
@@ -116,7 +116,7 @@ module.exports = {
         new HTMLWebpackPlugin({
             favicon: './favicon.svg',
             template: 'src/pages/elements/elements.pug',
-            inject: 'head',
+            inject: 'body',
             filename: 'elements.html',
             chunks: ['elements'],
             minify: {
@@ -126,7 +126,7 @@ module.exports = {
         new HTMLWebpackPlugin({
             favicon: './favicon.svg',
             template: 'src/pages/cards/cards.pug',
-            inject: 'head',
+            inject: 'body',
             filename: 'cards.html',
             chunks: ['cards'],
             minify: {
@@ -136,7 +136,7 @@ module.exports = {
         new HTMLWebpackPlugin({
             favicon: './favicon.svg',
             template: 'src/pages/headers/headers.pug',
-            inject: 'head',
+            inject: 'body',
             filename: 'headers.html',
             chunks: ['headers'],
             minify: {
