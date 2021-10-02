@@ -6,7 +6,8 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin')
 const { Template } = require('webpack');
 const autoprefixer = require('autoprefixer');
-const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
+const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin'); 
 
 const isDev = process.env.NODE_ENV === "development";
 const isProd = !isDev;
@@ -141,6 +142,9 @@ module.exports = {
             minify: {
                 collapseWhitespace: isProd
             }
+        }),
+        new ScriptExtHtmlWebpackPlugin({
+            defaultAttribute: 'defer'
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
