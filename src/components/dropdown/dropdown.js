@@ -60,7 +60,7 @@ class Dropdown {
 
   _getConvenienceValue = () => {
     const values = this._items.map((item) => item.getItemToString());
-    return `${values.join(', ').slice(0, 20)}...`;
+    return `${values.join(', ').slice(0, 20).toLowerCase()}...`;
   };
 
   _getGuestsValue = () => {
