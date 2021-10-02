@@ -21,7 +21,7 @@ mixin bookingForm({ roomPrice = 9990, discount = 2179, servicesTotal = 0, additi
         span.booking-form__tag люкс
 
       p.booking-form__room-price
-        span.booking-form__price.js-booking-form__price #{redactedRoomPrice}&#8381
+        span.booking-form__price.js-booking-form__price #{redactedRoomPrice}&#8381;
         span.booking-form__period #{' в сутки'}
 
     .booking-form__date.js-booking-form__date
@@ -38,14 +38,14 @@ mixin bookingForm({ roomPrice = 9990, discount = 2179, servicesTotal = 0, additi
       .booking-form__services-container
         p.booking-form__services
           span.booking-form__services-text Сбор за услуги: скидка
-          span.booking-form__services-prices.js-booking-form__services-prices #{redactedDiscount}&#8381
+          span.booking-form__services-prices.js-booking-form__services-prices #{redactedDiscount}&#8381;
         span.booking-form__information i
-        p.booking-form__services-total.js-booking-form__services-total #{redactedServicesTotal}&#8381
+        p.booking-form__services-total.js-booking-form__services-total #{redactedServicesTotal}&#8381;
 
       .booking-form__additional-services-container
         p.booking-form__additional-services-title Сбор за дополнительные услуги
         span.booking-form__information i
-        p.booking-form__additional-services-total.js-booking-form__additional-services-total #{redactedAdditionalServicesPrice}&#8381
+        p.booking-form__additional-services-total.js-booking-form__additional-services-total #{redactedAdditionalServicesPrice}&#8381;
 
     .booking-form__total-price-container 
       p.booking-form__total-price-text Итого

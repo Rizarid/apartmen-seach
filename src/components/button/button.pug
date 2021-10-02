@@ -3,6 +3,10 @@ mixin button({ modifier = [], formaction = '', type = 'submit',  text = 'Click m
     const classDefault = 'button'
     let classes = classDefault
     if (modifier) modifier.map((item) => classes = `${classes} ${classDefault}_${item}`)
-    
-  button(type = type, class = classes, formaction = formaction) 
-    span.button__text #{ text }
+
+  if type === 'submit' 
+    button(type = type, class = classes, formaction = formaction) 
+      span.button__text #{ text }
+  else 
+    button(type = type, class = classes) 
+      span.button__text #{ text }
