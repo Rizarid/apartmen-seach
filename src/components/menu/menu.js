@@ -7,12 +7,19 @@ class Menu {
     this._addListeners();
   }
 
+  getNavigation = () => this._navigation;
+
+  getMenuList = () => this._list;
+
   _getBody = (parent) => parent.querySelector('.js-menu');
+
+  _getTarget = (targetSelector) => this._body.querySelector(targetSelector);
 
   _getElements = () => {
     this._burger = this._body.querySelector('.js-menu__burger');
     this._navigation = this._body.querySelector('.js-menu__container');
     this._darkening = this._body.querySelector('.js-menu__darkening');
+    this._list = this._getTarget('.js-menu__list');
 
     this._dropItems = [...this._body.querySelectorAll('.js-menu__link-container')];
     this._subLists = [...this._body.querySelectorAll('.js-menu__sub-list')];

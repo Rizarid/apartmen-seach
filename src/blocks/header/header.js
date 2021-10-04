@@ -25,14 +25,14 @@ class Header {
   _getElements = () => {
     this._buttons = this._getTarget('.js-header__authorization');
     this._content = this._getTarget('.js-header__content');
-    this._navContainer = this._getTarget('.js-nav__container');
-    this._navList = this._getTarget('.js-nav__list');
     this._menu = new Menu(this._getTarget('.js-header__navigation'));
+    this._navigation = this._menu.getNavigation();
+    this._menuList = this._menu.getMenuList();
   };
 
   _hiddenButtons = () => {
     if (window.innerWidth < 580 && !this._isHidden) {
-      this._navContainer.insertBefore(this._buttons, this._navList);
+      this._navigation.insertBefore(this._buttons, this._menuList);
       this._isHidden = true;
     }
 
