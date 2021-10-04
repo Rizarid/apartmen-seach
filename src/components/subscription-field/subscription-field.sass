@@ -9,6 +9,9 @@
   border-radius: 5px
   overflow: hidden
 
+  &:hover, &:focus-within, &:focus-visible
+    border: 1px solid $dark-shade-50
+
   &__field
     flex: 1 1 auto
     height: 44px
@@ -22,13 +25,86 @@
     box-sizing: border-box
     padding-right: 0
 
-    &::placeholder
+    &:hover, &:focus, &:focus-visible
+      color: $dark-shade
+      line-height: 18px
+      outline: none
+
+    &::-webkit-input-placeholder 
+      font-weight: $normal
       color: $dark-shade-25
       font-size: 14px
       line-height: 24px
 
-    &:focus-visible
-      outline: none
+    &::-moz-placeholder          
+      font-weight: $normal
+      color: $dark-shade-25
+      font-size: 14px
+      line-height: 24px
+
+    &:-moz-placeholder          
+      font-weight: $normal
+      color: $dark-shade-25
+      font-size: 14px
+      line-height: 24px
+
+    &:-ms-input-placeholder      
+      font-weight: $normal
+      color: $dark-shade-25
+      font-size: 14px
+      line-height: 24px
+
+    &::placeholder
+      font-weight: $normal
+      color: $dark-shade-25
+      font-size: 14px
+      line-height: 24px
+
+    &:focus::-webkit-input-placeholder 
+      border: 1px solid $dark-shade-50
+      color: $dark-shade-25
+
+      border: none
+
+    &:focus::-moz-placeholder          
+      border: 1px solid $dark-shade-50
+      color: $dark-shade-25
+      border: none
+
+    &:focus:-moz-placeholder           
+      border: 1px solid $dark-shade-50
+      color: $dark-shade-25
+      border: none
+
+    &:focus:-ms-input-placeholder      
+      border: 1px solid $dark-shade-50
+      color: $dark-shade-25
+      border: none
+
+    &:focus:input-placeholder      
+      border: 1px solid $dark-shade-50
+      color: $dark-shade-25
+      border: none
+
+    &:hover::-webkit-input-placeholder 
+      border: 1px solid $dark-shade-50
+      color: $dark-shade-25
+      border: none
+
+    &:hover::-moz-placeholder          
+      border: 1px solid $dark-shade-50
+      color: $dark-shade-25
+      border: none
+
+    &:hover:-moz-placeholder           
+      border: 1px solid $dark-shade-50
+      color: $dark-shade-25
+      border: none
+      
+    &:hover:-ms-input-placeholder      
+      border: 1px solid $dark-shade-50
+      color: $dark-shade-25
+      border: none
 
   &__button
     width: 44px
