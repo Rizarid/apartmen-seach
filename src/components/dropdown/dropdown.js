@@ -1,5 +1,3 @@
-/* global window */
-
 import { getDecline } from '../../utilities/utilities';
 import ControlPanel from '../control-panel/control-panel';
 import './dropdown.sass';

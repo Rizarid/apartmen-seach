@@ -1,5 +1,3 @@
-/* global document */
-
 import SearchForm from '../../blocks/search-form/search-form';
 import BookingForm from '../../blocks/booking-form/booking-form';
 import RegistrationForm from '../../blocks/registration-form/registration-form';

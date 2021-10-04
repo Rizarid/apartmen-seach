@@ -1,5 +1,3 @@
-/* global document */
-
 import RegistrationForm from '../../blocks/registration-form/registration-form';
 import SliderOfBackground from '../../components/slider-of-background/slider-of-background';
 import Header from '../../blocks/header/header';

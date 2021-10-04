@@ -1,5 +1,3 @@
-/* global document */
-
 import '../../components/pagination/pagination';
 import DateDropdown from '../../components/date-dropdown/date-dropdown';
 import Dropdown from '../../components/dropdown/dropdown';

@@ -1,5 +1,3 @@
-/* global document */
-
 const createElement = (elementType, className) => {
   const element = document.createElement(elementType);
   element.className = className;

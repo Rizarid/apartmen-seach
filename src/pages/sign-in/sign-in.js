@@ -1,5 +1,3 @@
-/* global document */
-
 import SliderOfBackground from '../../components/slider-of-background/slider-of-background';
 import Header from '../../blocks/header/header';
 import '../../blocks/sign-in-form/sign-in-form';

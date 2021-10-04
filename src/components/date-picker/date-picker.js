@@ -1,5 +1,3 @@
-/* global CustomEvent */
-
 import * as $ from 'jquery';
 import './russification';
 import ControlPanel from '../control-panel/control-panel';

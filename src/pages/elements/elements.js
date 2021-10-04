@@ -1,5 +1,3 @@
-/* global document */
-
 import '../../components/text-field/text-field';
 import '../../components/subscription-field/subscription-field';
 import '../../components/button/button';

@@ -1,4 +1,4 @@
-/* global window, document, DocumentTouch, ResizeObserver, Event */
+/* global DocumentTouch */
 
 import { createElement } from '../../utilities/utilities';
 import './image-slider.sass';

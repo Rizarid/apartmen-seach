@@ -1,5 +1,3 @@
-/* global document */
-
 import { numberMargins, getDecline } from '../../utilities/utilities';
 import '../../components/button/button';
 import DateDropdown from '../../components/date-dropdown/date-dropdown';

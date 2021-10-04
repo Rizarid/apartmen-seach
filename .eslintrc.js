@@ -1,6 +1,9 @@
 process.chdir(__dirname);
 
 module.exports = {
+  env: {
+    browser: true,
+  },
   root: true,
   parser: 'babel-eslint',
   parserOptions: {

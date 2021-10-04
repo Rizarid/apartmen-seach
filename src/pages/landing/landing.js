@@ -1,5 +1,3 @@
-/* global document */
-
 import SearchForm from '../../blocks/search-form/search-form';
 import SliderOfBackground from '../../components/slider-of-background/slider-of-background';
 import Header from '../../blocks/header/header';

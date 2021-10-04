@@ -1,5 +1,3 @@
-/* global Event */
-
 import '../button/button';
 import './control-panel.sass';
 

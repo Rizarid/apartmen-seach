@@ -1,5 +1,3 @@
-/* global CustomEvent window */
-
 import DatePicker from '../date-picker/date-picker';
 import './date-dropdown.sass';
 

@@ -1,5 +1,3 @@
-/* global document */
-
 import Header from '../../blocks/header/header';
 import '../../blocks/footer/footer';
 import './headers.sass';

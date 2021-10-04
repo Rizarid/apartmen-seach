@@ -1,5 +1,3 @@
-/* global window, document, CustomEvent */
-
 import Menu from '../../components/menu/menu';
 import '../../components/logo/logo';
 import '../../components/button/button';
