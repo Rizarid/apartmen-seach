@@ -13,3 +13,11 @@
 - [Cards](https://rizarid.github.io/apartmen-seach/cards.html)
 - [Headers & footers](https://rizarid.github.io/apartmen-seach/headers.html)
 
+## npm команды
+
+  - `npm run dev` - собирает проект с модом `development`.
+  - `npm run prod` - собирает проект с модом `production` 
+  - `npm run start` - собирает проект с модом `development` и запускает на локальном сервере.
+  - `npm run lint` - запуск проверки проекта при помощи eslint.
+  - `npm run lint-fix` - исправляет eslint ошибки которые можно исправить автоматически.
+  - `npm run deploy` - собирает проект с модом `production` и публикует на gh-pages.
