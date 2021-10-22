@@ -12,6 +12,9 @@
     width: calc(50% - 10px)
     position: relative
 
+    @media screen and ( max-width: 360px)
+      width: calc(50% - 5px)
+
     &::after
       content: "\e902"
       font-family: toxin-icons
@@ -23,6 +26,9 @@
       bottom: 10px
       cursor: pointer
       z-index: 1
+
+      @media screen and ( max-width: 360px)
+        right: 0
 
   &__title
     text-transform: uppercase
