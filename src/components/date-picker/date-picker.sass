@@ -185,7 +185,6 @@
               z-index: 1
 
             &.selected-start
-
               a
                 +gradient
                 color: #fff
@@ -217,7 +216,7 @@
                 width: 50%
                 left: 0
 
-          .ui-datepicker-today
+          .selected-start.selected-end
             position: relative
             z-index: 5
 
@@ -232,20 +231,12 @@
               z-index: 5
               position: relative
 
-            &.selected-start.selected-end::before
+            &::before
               content: none
-
-            &.selected
-              &::before
-                content: ''
-
-              a 
-                background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
     
-          .selected.selected-start.selected-end
             &::b
-                width: 0
-                left: 0
+              width: 0
+              left: 0
           
           .ui-datepicker-other-month
             color:$dark-shade-25

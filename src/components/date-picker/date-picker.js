@@ -13,6 +13,7 @@ class DatePicker {
     this._controlPanel = new ControlPanel(this._getTarget('.js-date-picker__control-panel'));
     this._addListeners();
     if (this._initDate) this._setDate(this._initDate);
+    else this._setDate([null, null]);
   }
 
   _getBody = (parent) => parent.querySelector('.js-date-picker');
@@ -52,11 +53,13 @@ class DatePicker {
 
   _onSelect = () => {
     const { startDate, endDate, startDateText, endDateText } = this._datepicker;
-    this._onSelected.detail.startDate = startDate;
-    this._onSelected.detail.endDate = endDate;
-    this._onSelected.detail.startDateText = startDateText;
-    this._onSelected.detail.endDateText = endDateText;
-    this._body.dispatchEvent(this._onSelected);
+    if (startDate !== null) {
+      this._onSelected.detail.startDate = startDate;
+      this._onSelected.detail.endDate = endDate;
+      this._onSelected.detail.startDateText = startDateText;
+      this._onSelected.detail.endDateText = endDateText;
+      this._body.dispatchEvent(this._onSelected);
+    }
   };
 
   _getDatepickerObject = () => $(this._body).datepicker('widget').data('datepickerExtensionRange');
