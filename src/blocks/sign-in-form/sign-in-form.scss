@@ -6,7 +6,7 @@
   max-width: 380px;
   margin: 0;
   padding: 39px 29px 31px;
-  background: #fff;
+  background: $white;
   border: 1px solid rgb(0 0 0 / 12%);
   border-radius: 4px;
   box-shadow: 0 0 25px rgb(0 0 0 / 20%);
@@ -49,7 +49,7 @@
 
   &__button-label {
     margin: 0;
-    color: #000;
+    color: $black;
     font-size: 13.8px;
   }
 }

@@ -22,7 +22,7 @@ body {
     top: 70px;
     width: 100%;
     height: calc(100% - 70px);
-    background-color: #000;
+    background-color: $black;
     opacity: 0%;
     transition: 0.5s;
 
@@ -51,7 +51,7 @@ body {
       max-width: 320px;
       height: calc(100% - 70px);
       padding-top: 30px;
-      background-color: #fff;
+      background-color: $white;
       box-shadow: inset 7px 16px 15px -11px rgb(50 50 50 / 27%);
 
       &_active {
@@ -172,7 +172,7 @@ body {
     z-index: 10;
     box-sizing: border-box;
     padding: 15px;
-    background: #fff;
+    background: $white;
     border-bottom: 1px solid rgb(31 32 65 / 5%);
 
     @media screen and (max-width: 1000px) {
@@ -186,7 +186,7 @@ body {
       transition: none;
 
       & .menu__link {
-        color: #fff;
+        color: $white;
       }
     }
 

@@ -41,7 +41,7 @@ class RoundChart {
     <figure class='round-chart__chart'>
       <figure class='round-chart__chart-content'>
         <svg width='100%' height='100%' viewBox='0 0 34 34' class='round-chart__chart-donut'>
-          <circle class='donut-hole' cx='17' cy='17' r='15.91549430918954' fill='#fff'></circle>
+          <circle class='donut-hole' cx='17' cy='17' r='15.91549430918954' fill='$white'></circle>
           <circle class='donut-segment' cx='17' cy='17' r='15.91549430918954' fill='transparent' stroke='#909090' stroke-width='1' stroke-dasharray='${this._dash[0]} ${100 - this._dash[0]}' stroke-dashoffset='${this._dashoffset[0]}'></circle>
           <circle class='donut-segment' cx='17' cy='17' r='15.91549430918954' fill='transparent' stroke='#BC9CFF' stroke-width='1' stroke-dasharray='${this._dash[1]} ${100 - this._dash[1]}' stroke-dashoffset='${this._dashoffset[1]}'></circle>
           <circle class='donut-segment' cx='17' cy='17' r='15.91549430918954' fill='transparent' stroke='#6FCF97' stroke-width='1' stroke-dasharray='${this._dash[2]} ${100 - this._dash[2]}' stroke-dashoffset='${this._dashoffset[2]}'></circle>

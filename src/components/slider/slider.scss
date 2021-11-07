@@ -33,7 +33,7 @@
     width: 100%;
     height: 6px;
     padding: 0;
-    background: #fff;
+    background: $white;
     border: 1px solid $dark-shade-25;
     border-radius: 3px;
     cursor: pointer;
@@ -43,7 +43,7 @@
     }
 
     & .ui-slider-range {
-      background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+      background: $gradient-green-turquoise
       border-radius: 3px;
     }
 
@@ -56,8 +56,8 @@
       top: -7px;
       width: 12px;
       height: 12px;
-      background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
-      border: 3px #fff solid;
+      background: $gradient-green-turquoise
+      border: 3px $white solid;
       border-radius: 50%;
       cursor: pointer;
 

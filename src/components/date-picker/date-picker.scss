@@ -12,7 +12,7 @@
   height: auto;
   padding: 0;
   overflow: hidden;
-  background-color: #fff;
+  background-color: $white;
   border: 1px solid $dark-shade-25;
   border-radius: 4px;
   box-shadow: 0 10px 20px rgb(31 32 65 / 5%);
@@ -21,14 +21,14 @@
   .ui-widget.ui-widget-content {
     width: 100%;
     padding: 16px 0 20px;
-    background-color: #fff;
+    background-color: $white;
     border: none;
     border-bottom: none;
 
     .ui-datepicker-header {
       margin: 0 20px;
       padding: 0;
-      background-color: #fff;
+      background-color: $white;
       border: none;
 
       .ui-datepicker-prev {
@@ -53,7 +53,7 @@
         }
 
         &:hover {
-          background: #fff;
+          background: $white;
           border: none;
         }
 
@@ -83,7 +83,7 @@
         }
 
         &:hover {
-          background: #fff;
+          background: $white;
           border: none;
         }
 
@@ -214,7 +214,7 @@
                 z-index: 5;
                 width: 100%;
                 height: 100%;
-                color: #fff;
+                color: $white;
                 font-weight: $bold;
                 background: $gradient-purple-blue;
                 border-radius: 50%;
@@ -233,7 +233,7 @@
                 z-index: 5;
                 width: 100%;
                 height: 100%;
-                color: #fff;
+                color: $white;
                 font-weight: $bold;
                 background: $gradient-purple-blue;
                 border-radius: 50%;
@@ -256,9 +256,9 @@
               z-index: 5;
               width: 100%;
               height: 100%;
-              color: #fff;
+              color: $white;
               font-weight: $bold;
-              background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+              background: $gradient-green-turquoise;
               border-radius: 50%;
               opacity: 100%;
             }
