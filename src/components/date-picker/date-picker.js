@@ -1,5 +1,5 @@
 import * as $ from 'jquery';
-import './russification';
+import './date-picker-to-rus';
 import ControlPanel from '../control-panel/control-panel';
 import './date-picker.scss';
 

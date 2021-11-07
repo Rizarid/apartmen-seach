@@ -1,3 +1,3 @@
-src/components/date-picker/ui-datepicker.js
-src/components/date-picker/russification.js
+src/components/date-picker/ui-date-picker.js
+src/components/date-picker/date-picker-to-rus.js
 src/fonts/demo toxin icons/demo.js

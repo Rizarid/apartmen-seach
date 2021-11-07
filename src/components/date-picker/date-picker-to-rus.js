@@ -1,5 +1,5 @@
 import * as $ from 'jquery';
-import './ui-datepicker';
+import './ui-date-picker';
 
 {
   $.datepicker.regional.ru = {
