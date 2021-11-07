@@ -1,7 +1,7 @@
 import BookingForm from '../../blocks/booking-form/booking-form';
 import InformationAboutRoom from '../../blocks/information-about-room/information-about-room';
 import Header from '../../blocks/header/header';
-import './room.sass';
+import './room.scss';
 
 class Room {
   constructor() {

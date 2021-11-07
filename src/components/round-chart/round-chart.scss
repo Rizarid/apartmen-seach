@@ -1,0 +1,123 @@
+@import "../../styles/variables";
+
+.round-chart {
+  box-sizing: border-box;
+  width: 100%;
+
+  &__title {
+    margin: 0;
+    color: $dark-shade;
+    font-weight: $bold;
+    font-size: 19px;
+    line-height: 23px;
+
+    @media screen and (max-width: 650px) {
+      text-align: center;
+    }
+  }
+
+  &__container {
+    box-sizing: border-box;
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    padding-top: 19px;
+  }
+
+  &__chart {
+    display: flex;
+    width: 320px;
+    height: 0;
+    height: fit-content;
+    margin: 0;
+
+    @media screen and (max-width: 650px) {
+      justify-content: center;
+    }
+  }
+
+  &__chart-content {
+    width: 124px;
+    height: 124px;
+    margin: 0;
+  }
+
+  &__chart-text {
+    font-size: 16px/1.4em;
+    font-family: Montserrat, sans-serif;
+    transform: translateY(0.25em);
+    transform: translateY(0.25em);
+    transform: translateY(0.25em);
+    transform: translateY(0.25em);
+    fill: $purple;
+  }
+
+  &__chart-number {
+    font-weight: $bold;
+    font-size: 0.4em;
+    line-height: 29px;
+    transform: translateY(-0.75em);
+    transform: translateY(-0.75em);
+    transform: translateY(-0.75em);
+    transform: translateY(-0.75em);
+    text-anchor: middle;
+  }
+
+  &__chart-label {
+    font-weight: $bold;
+    font-size: 0.2em;
+    text-transform: uppercase;
+    transform: translateY(0.1em);
+    transform: translateY(0.1em);
+    transform: translateY(0.1em);
+    transform: translateY(0.1em);
+    text-anchor: middle;
+  }
+
+  &__chart-key {
+    width: 162px;
+    height: 100px;
+    padding: 27px 0 0 28px;
+
+    @media screen and (max-width: 355px) {
+      padding: 27px 0 0 15px;
+    }
+  }
+
+  &__chart-key-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__chart-key-item {
+    color: $dark-shade-75;
+    font-weight: $normal;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__chart-key-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    vertical-align: middle;
+    border-radius: 50%;
+
+    &_great {
+      background: linear-gradient(180deg, #ffe39c 0%, #ffba9c 100%);
+    }
+
+    &_good {
+      background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    }
+
+    &_satisfactory {
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    }
+
+    &_disappointed {
+      background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
+    }
+  }
+}

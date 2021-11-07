@@ -1,4 +1,4 @@
-import './checkbox-buttons.sass';
+import './checkbox-buttons.scss';
 
 class CheckboxButtons {
   constructor(parent) {

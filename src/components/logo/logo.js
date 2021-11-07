@@ -1,1 +1,1 @@
-import './logo.sass';
+import './logo.scss';

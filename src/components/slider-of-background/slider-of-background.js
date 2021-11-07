@@ -1,4 +1,4 @@
-import './slider-of-background.sass';
+import './slider-of-background.scss';
 
 class SliderOfBackground {
   constructor(parent) {

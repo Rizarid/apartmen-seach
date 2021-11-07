@@ -1,7 +1,7 @@
 /* global DocumentTouch */
 
 import { createElement } from '../../utilities/utilities';
-import './image-slider.sass';
+import './image-slider.scss';
 
 class ImageSlider {
   constructor(parent) {

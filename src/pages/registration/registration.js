@@ -1,7 +1,7 @@
 import RegistrationForm from '../../blocks/registration-form/registration-form';
 import SliderOfBackground from '../../components/slider-of-background/slider-of-background';
 import Header from '../../blocks/header/header';
-import './registration.sass';
+import './registration.scss';
 
 class Registration {
   constructor() {

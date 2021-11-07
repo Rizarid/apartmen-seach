@@ -1,0 +1,81 @@
+@import "../../styles/variables";
+
+.subscription-field {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: 44px;
+  overflow: hidden;
+  border: 1px solid $dark-shade-25;
+  border-radius: 5px;
+
+  &:hover,
+  &:focus-within,
+  &:focus-visible {
+    border: 1px solid $dark-shade-50;
+  }
+
+  &__field {
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    height: 44px;
+    padding: 8px 15px;
+    padding-right: 0;
+    color: $dark-shade-75;
+    font-weight: $normal;
+    font-size: 14px;
+    line-height: 24px;
+    border: none;
+    border-radius: 0;
+
+    &::placeholder {
+      color: $dark-shade-25;
+      font-weight: $normal;
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      color: $dark-shade;
+      line-height: 18px;
+      outline: none;
+    }
+
+    &:focus::placeholder {
+      color: $dark-shade-25;
+      border: 1px solid $dark-shade-50;
+      border: none;
+    }
+
+    &:hover:placeholder {
+      color: $dark-shade-25;
+      border: 1px solid $dark-shade-50;
+      border: none;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 44px;
+    height: 44px;
+    background-color: #fff;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+
+    &::before {
+      font-size: 24px;
+      font-family: toxin-icons;
+      text-transform: none;
+      background: $gradient-purple-blue;
+      background-clip: text;
+      content: "\e901";
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import './menu.sass';
+import './menu.scss';
 
 class Menu {
   constructor(parent) {

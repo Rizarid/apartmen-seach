@@ -1,7 +1,7 @@
 import Menu from '../../components/menu/menu';
 import '../../components/logo/logo';
 import '../../components/button/button';
-import './header.sass';
+import './header.scss';
 
 class Header {
   constructor(parent) {

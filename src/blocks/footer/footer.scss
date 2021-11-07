@@ -1,0 +1,234 @@
+@import "../../styles/variables";
+
+.footer {
+  position: relative;
+  background-color: #fff;
+
+  @media screen and (max-width: 768px) {
+    padding: 120px 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 60px 0;
+  }
+
+  &__container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+
+  &__widgets {
+    display: flex;
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    padding: 101px 0 97px;
+    word-wrap: 100%;
+
+    @media screen and (max-width: 1200px) {
+      justify-content: space-between;
+    }
+
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+      padding: 0;
+      box-shadow: none;
+    }
+  }
+
+  &__description {
+    box-sizing: border-box;
+    max-width: 260px;
+  }
+
+  &__description-text {
+    max-width: 260px;
+    margin: 0;
+    padding-top: 18px;
+    color: $dark-shade-75;
+    font-weight: $normal;
+    font-size: 13.9px;
+    line-height: 24px;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__navigation,
+  &__about-us,
+  &__support,
+  &__subscribe {
+    box-sizing: border-box;
+    width: fit-content;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding: 5px 0;
+    color: $dark-shade;
+    font-weight: $bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    box-sizing: border-box;
+    padding: 14px 0 0;
+  }
+
+  &__link {
+    color: $dark-shade-50;
+    font-weight: $normal;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: none;
+  }
+
+  &__navigation {
+    margin-left: 40px;
+
+    @media screen and (max-width: 1200px) {
+      margin-left: 20px;
+    }
+  }
+
+  &__about-us {
+    margin-left: 56px;
+
+    @media screen and (max-width: 1200px) {
+      margin-left: 20px;
+    }
+  }
+
+  &__support {
+    margin-left: 90px;
+
+    @media screen and (max-width: 1200px) {
+      margin-left: 20px;
+    }
+  }
+
+  &__subscribe {
+    position: relative;
+    width: 100%;
+    max-width: 260px;
+    margin-left: 52px;
+
+    @media screen and (max-width: 1200px) {
+      margin-left: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__subscribe-text {
+    margin: 0;
+    padding: 13px 0 22px;
+    color: $dark-shade-75;
+    font-weight: $normal;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__copyright-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 70px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      height: fit-content;
+      padding-top: 21px;
+    }
+
+    &::before {
+      position: absolute;
+      bottom: 70px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: rgb(31 32 65 / 10%);
+      content: " ";
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  &__copyright {
+    margin: 0;
+    margin-bottom: 1px;
+    color: $dark-shade-75;
+    font-weight: $normal;
+    font-size: 13.75px;
+    line-height: 17px;
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    box-sizing: border-box;
+    width: fit-content;
+    padding-bottom: 0;
+
+    @media screen and (max-width: 768px) {
+      padding-top: 23px;
+    }
+  }
+
+  &__social-link {
+    font-size: 20px;
+    font-family: toxin-icons;
+    text-decoration: none;
+    background: $gradient-purple-blue;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &_twitter {
+      font-size: 25px;
+
+      &::before {
+        content: "\e905";
+      }
+    }
+
+    &_facebook {
+      margin-left: 20.5px;
+
+      &::before {
+        content: "\ea91";
+      }
+    }
+
+    &_instagram {
+      margin-left: 25.5px;
+
+      &::before {
+        content: "\e904";
+      }
+    }
+  }
+}

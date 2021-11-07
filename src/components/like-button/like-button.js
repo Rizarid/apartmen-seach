@@ -1,4 +1,4 @@
-import './like-button.sass';
+import './like-button.scss';
 
 class LikeButton {
   constructor(parent) {

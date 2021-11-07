@@ -1,57 +1,69 @@
 @font-face {
-  font-family: 'toxin-icons';
-  src:  url('../toxin-icons.eot?bee8bl');
-  src:  url('../toxin-icons.eot?bee8bl#iefix') format('embedded-opentype'),
-    url('../toxin-icons.ttf?bee8bl') format('truetype'),
-    url('../toxin-icons.woff?bee8bl') format('woff'),
-    url('../toxin-icons.svg?bee8bl#toxin-icons') format('svg');
   font-weight: normal;
+  font-family: "toxin-icons";
   font-style: normal;
+  src: url("../toxin-icons.eot?bee8bl");
+  src:
+    url("../toxin-icons.eot?bee8bl#iefix") format("embedded-opentype"),
+    url("../toxin-icons.ttf?bee8bl") format("truetype"),
+    url("../toxin-icons.woff?bee8bl") format("woff"),
+    url("../toxin-icons.svg?bee8bl#toxin-icons") format("svg");
   font-display: block;
 }
 
-[class^="-toxin-"], [class*=" -toxin-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'toxin-icons' !important;
-  speak: never;
-  font-style: normal;
+[class^="-toxin-"],
+[class*=" -toxin-"] {
   font-weight: normal;
+
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "toxin-icons" !important;
+  font-style: normal;
   font-variant: normal;
-  text-transform: none;
   line-height: 1;
+  text-transform: none;
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  speak: never;
 }
 
-.-toxin-favorite:before {
+.-toxin-favorite::before {
   content: "\e908";
 }
-.-toxin-star:before {
+
+.-toxin-star::before {
   content: "\e907";
 }
-.-toxin-star_border:before {
+
+.-toxin-star_border::before {
   content: "\e906";
 }
-.-toxin-arrow_forward:before {
+
+.-toxin-arrow_forward::before {
   content: "\e901";
 }
-.-toxin-expand_more:before {
+
+.-toxin-expand_more::before {
   content: "\e902";
 }
-.-toxin-favorite_border:before {
+
+.-toxin-favorite_border::before {
   content: "\e903";
 }
-.-toxin-filter:before {
+
+.-toxin-filter::before {
   content: "\e900";
 }
-.-toxin-instagram:before {
+
+.-toxin-instagram::before {
   content: "\e904";
 }
-.-toxin-twitter:before {
+
+.-toxin-twitter::before {
   content: "\e905";
 }
-.-toxin-facebook:before {
+
+.-toxin-facebook::before {
   content: "\ea91";
 }

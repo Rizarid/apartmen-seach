@@ -14,7 +14,7 @@ import '../../components/toggle/toggle';
 import LikeButton from '../../components/like-button/like-button';
 import Slider from '../../components/slider/slider';
 import Review from '../../components/review/review';
-import './elements.sass';
+import './elements.scss';
 
 class Elements {
   constructor() {

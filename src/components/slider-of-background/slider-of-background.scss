@@ -1,0 +1,21 @@
+.slider-of-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0%;
+    transition: 4s;
+  }
+
+  &__image_active {
+    opacity: 100%;
+  }
+}

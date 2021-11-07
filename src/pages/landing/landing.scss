@@ -1,0 +1,61 @@
+@import "~normalize.css";
+@import "@/styles/variables";
+@import "@/fonts/fonts.css";
+@include start-page-stiles;
+
+.landing {
+  &__header {
+    position: relative;
+    z-index: 20;
+
+    @media screen and (max-width: 1000px) {
+      position: unset;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    width: 100%;
+    height: fit-content;
+    padding-top: 69px;
+    padding-bottom: 19px;
+  }
+
+  &__container {
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media screen and (max-width: 380px) {
+      padding: 0 5px;
+    }
+  }
+
+  &__search-form {
+    box-sizing: border-box;
+  }
+
+  &__text-container {
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 317px;
+
+    @media screen and (max-width: 767px) {
+      margin-top: 150px;
+    }
+  }
+
+  &__text {
+    max-width: 297px;
+    margin: 0;
+    color: $dark-shade-75;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: right;
+  }
+}

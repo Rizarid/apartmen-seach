@@ -1,0 +1,30 @@
+@import "../../styles/variables";
+
+.rate-button {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: fit-content;
+  margin: 0;
+
+  &__star {
+    width: 24px;
+    height: 24px;
+
+    &::before {
+      padding: 0;
+      color: #fff;
+      font-size: 24px;
+      font-family: toxin-icons;
+      background: $gradient-purple-blue;
+      background-clip: text;
+      border: 1px solid transparent;
+      content: "\e906";
+      -webkit-text-fill-color: transparent;
+    }
+
+    &_active::before {
+      content: "\e907";
+    }
+  }
+}

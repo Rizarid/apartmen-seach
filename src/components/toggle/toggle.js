@@ -1,1 +1,1 @@
-import './toggle.sass';
+import './toggle.scss';

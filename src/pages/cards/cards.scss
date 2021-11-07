@@ -1,0 +1,55 @@
+@import "~normalize.css";
+@import "@/styles/variables";
+@import "@/fonts/fonts.css";
+@include start-page-stiles;
+
+.cards {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 40px 0 80px;
+  background: #e5e5e5;
+
+  &__container {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &__column {
+    flex: 1 1 auto;
+    max-width: 380px;
+
+    &_right {
+      max-width: 320px;
+    }
+  }
+
+  &__search-form-container {
+    padding-bottom: 25px;
+  }
+
+  &__booking-form-container {
+    padding-top: 2px;
+    padding-bottom: 25px;
+  }
+
+  &__date-picker-container {
+    margin-top: 2px;
+  }
+
+  &__room-card-container {
+    max-width: 270px;
+  }
+
+  &__room-card-container_first {
+    margin-top: 41px;
+  }
+
+  &__room-card-container_second {
+    margin-top: 39px;
+  }
+}

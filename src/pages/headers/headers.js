@@ -1,6 +1,6 @@
 import Header from '../../blocks/header/header';
 import '../../blocks/footer/footer';
-import './headers.sass';
+import './headers.scss';
 
 class Headers {
   constructor() {

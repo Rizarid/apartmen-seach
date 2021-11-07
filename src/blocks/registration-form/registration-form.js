@@ -3,7 +3,7 @@ import '../../components/button/button';
 import '../../components/radio-buttons/radio-buttons';
 import MaskedTextField from '../../components/masked-text-field/masked-text-field';
 import '../../components/toggle/toggle';
-import './registration-form.sass';
+import './registration-form.scss';
 
 class RegistrationForm {
   constructor(parent) {

@@ -1,0 +1,87 @@
+@import "../../styles/variables";
+
+.information-about-room {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
+    align-content: center;
+  }
+
+  &__information {
+    flex: 1 1 auto;
+    max-width: 360px;
+
+    @media screen and (max-width: 650px) {
+      align-self: center;
+    }
+  }
+
+  &__review-statistics {
+    flex: 1 1 auto;
+    max-width: 352px;
+    height: fit-content;
+
+    @media screen and (max-width: 650px) {
+      align-self: center;
+      padding-top: 50px;
+    }
+  }
+
+  &__reviews {
+    width: 100%;
+    padding-top: 12px;
+
+    @media screen and (max-width: 650px) {
+      align-self: center;
+      padding-top: 50px;
+    }
+  }
+
+  &__rules {
+    max-width: 255px;
+    padding-top: 9px;
+
+    @media screen and (max-width: 650px) {
+      align-self: center;
+      padding-top: 40px;
+    }
+  }
+
+  &__cancellation-conditions {
+    flex: 1 1 auto;
+    max-width: 351px;
+    padding-top: 10px;
+
+    @media screen and (max-width: 650px) {
+      align-self: center;
+      padding-top: 50px;
+    }
+  }
+
+  &__cancellation-conditions-title {
+    margin: 0;
+
+    @media screen and (max-width: 650px) {
+      text-align: center;
+    }
+  }
+
+  &__cancellation-conditions-text {
+    max-width: 345px;
+    margin: 0;
+    padding-top: 19px;
+    color: $dark-shade-75;
+    font-weight: $normal;
+    font-size: 13.9px;
+    line-height: 24px;
+
+    @media screen and (max-width: 650px) {
+      text-align: center;
+    }
+  }
+}

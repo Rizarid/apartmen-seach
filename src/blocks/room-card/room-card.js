@@ -1,6 +1,6 @@
 import '../../components/rate-button/rate-button';
 import ImageSlider from '../../components/image-slider/image-slider';
-import './room-card.sass';
+import './room-card.scss';
 
 class RoomCard {
   constructor(parent) {

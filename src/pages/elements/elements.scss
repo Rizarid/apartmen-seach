@@ -1,0 +1,162 @@
+@import "~normalize.css";
+@import "@/styles/variables";
+@import "@/fonts/fonts.css";
+@include start-page-stiles;
+
+.elements {
+  box-sizing: border-box;
+  padding-top: 40px;
+
+  &__container {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+
+  &__title {
+    box-sizing: border-box;
+    margin: 0;
+    padding-bottom: 3px;
+    text-transform: uppercase;
+
+    &_middle-padding {
+      padding-bottom: 13px;
+    }
+
+    &_high-padding {
+      padding-bottom: 16px;
+    }
+  }
+
+  &__column {
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 320px;
+
+    &_center {
+      max-width: 265px;
+    }
+
+    &_right {
+      max-width: 322px;
+    }
+  }
+
+  &__text-field-container {
+    box-sizing: border-box;
+    padding-bottom: 106px;
+  }
+
+  &__guests-container {
+    box-sizing: border-box;
+    padding-bottom: 24px;
+  }
+
+  &__masked-field-container {
+    box-sizing: border-box;
+    padding-bottom: 41px;
+  }
+
+  &__date-dropdown-container {
+    box-sizing: border-box;
+    padding-bottom: 41px;
+  }
+
+  &__date-filter-container {
+    box-sizing: border-box;
+    max-width: 266px;
+    padding-bottom: 43px;
+  }
+
+  &__subscription-field-container {
+    box-sizing: border-box;
+    max-width: 266px;
+    padding-bottom: 88px;
+  }
+
+  &__convenience-container {
+    box-sizing: border-box;
+    max-width: 266px;
+    padding-bottom: 258px;
+  }
+
+  &__expandable-checkbox-container {
+    box-sizing: border-box;
+    max-width: 266px;
+    padding-bottom: 43px;
+  }
+
+  &__checkbox-buttons-container {
+    box-sizing: border-box;
+    padding-bottom: 38px;
+  }
+
+  &__radio-buttons-container {
+    box-sizing: border-box;
+    padding-bottom: 40px;
+  }
+
+  &__toggle-container {
+    box-sizing: border-box;
+    padding-bottom: 44px;
+  }
+
+  &__toggle {
+    box-sizing: border-box;
+    padding-top: 10px;
+  }
+
+  &__like-button-container {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    box-sizing: border-box;
+    max-width: 89px;
+    padding-bottom: 41px;
+  }
+
+  &__rate-button-container {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    max-width: 260px;
+    padding-bottom: 518px;
+  }
+
+  &__slider-container {
+    max-width: 266px;
+    padding-bottom: 45px;
+  }
+
+  &__buttons-container {
+    padding-bottom: 42px;
+  }
+
+  &__button ~ &__button {
+    margin-top: 30px;
+  }
+
+  &__pagination-container {
+    padding-bottom: 535px;
+  }
+
+  &__row {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 182px;
+  }
+
+  &__review-container {
+    max-width: 714px;
+    padding-top: 30px;
+  }
+}

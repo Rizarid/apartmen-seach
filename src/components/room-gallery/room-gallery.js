@@ -1,1 +1,1 @@
-import './room-gallery.sass';
+import './room-gallery.scss';

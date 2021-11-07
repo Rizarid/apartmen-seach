@@ -1,0 +1,38 @@
+@import "~normalize.css";
+@import "@/styles/variables";
+@import "@/fonts/fonts.css";
+@include start-page-stiles;
+
+.registration {
+  &__header {
+    position: relative;
+    z-index: 20;
+
+    @media screen and (max-width: 1000px) {
+      position: unset;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    width: 100%;
+    height: fit-content;
+    padding: 18px 0 16px;
+  }
+
+  &__container {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media screen and (max-width: 350px) {
+      padding: 0 10px;
+    }
+  }
+}

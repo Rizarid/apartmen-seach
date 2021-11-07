@@ -2,7 +2,7 @@ import FiltersForm from '../../blocks/filters-form/filters-form';
 import RoomCard from '../../blocks/room-card/room-card';
 import Header from '../../blocks/header/header';
 import '../../components/pagination/pagination';
-import './search-room.sass';
+import './search-room.scss';
 
 class SearchRoom {
   constructor() {

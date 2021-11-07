@@ -1,8 +1,8 @@
 import '../../components/information-block/information-block';
 import '../../components/bullet-list/bullet-list';
-import './information-about-room.sass';
 import Reviews from '../../components/reviews/reviews';
 import RoundChart from '../../components/round-chart/round-chart';
+import './information-about-room.scss';
 
 class InformationAboutRoom {
   constructor(parent) {

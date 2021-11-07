@@ -3,7 +3,7 @@ import 'jquery-ui-slider/jquery-ui';
 import 'jquery-ui-slider/jquery-ui.css';
 
 import { numberMargins } from '../../utilities/utilities';
-import './slider.sass';
+import './slider.scss';
 
 window.jQuery = $;
 require('jquery-ui-touch-punch');

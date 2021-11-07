@@ -1,0 +1,118 @@
+@import "../../styles/variables";
+
+.room-card {
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px $dark-shade-5;
+
+  &__information {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 17px 17px 20px 20px;
+    text-decoration: none;
+  }
+
+  &__header {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-bottom: 11px;
+    border-bottom: 1px solid $dark-shade-10;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0;
+    color: $dark-shade;
+    font-weight: $bold;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &__number-symbol {
+    box-sizing: border-box;
+    padding-top: 5px;
+    padding-left: 1px;
+    line-height: 1;
+  }
+
+  &__number {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-left: 3.5px;
+    padding-top: 3px;
+    font-size: 19px;
+    line-height: 17px;
+  }
+
+  &__tag {
+    margin-top: 8px;
+    margin-left: 8.5px;
+    color: $purple;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+  }
+
+  &__room-price {
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: 7px;
+    color: $dark-shade-50;
+    font-weight: $bold;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__period {
+    font-weight: $normal;
+    font-size: 12px;
+  }
+
+  &__feedback {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: fit-content;
+    padding-top: 8px;
+  }
+
+  &__reviews {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: fit-content;
+    margin: 0;
+    margin-right: 3px;
+    color: $dark-shade-50;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__reviews-quantity {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0;
+    margin-right: 3px;
+    font-weight: $bold;
+  }
+
+  &__reviews-text {
+    width: fit-content;
+    margin: 0;
+    font-weight: $normal;
+  }
+}

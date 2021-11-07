@@ -1,6 +1,6 @@
 import Inputmask from 'inputmask';
 
-import './masked-text-field.sass';
+import './masked-text-field.scss';
 
 class MaskedTextField {
   constructor(parent) {

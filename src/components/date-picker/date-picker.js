@@ -1,7 +1,7 @@
 import * as $ from 'jquery';
 import './russification';
 import ControlPanel from '../control-panel/control-panel';
-import './date-picker.sass';
+import './date-picker.scss';
 
 class DatePicker {
   constructor(parent) {

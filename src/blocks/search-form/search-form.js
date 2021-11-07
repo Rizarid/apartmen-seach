@@ -1,7 +1,7 @@
 import '../../components/button/button';
 import Dropdown from '../../components/dropdown/dropdown';
 import DateDropdown from '../../components/date-dropdown/date-dropdown';
-import './search-form.sass';
+import './search-form.scss';
 
 class SearchForm {
   constructor(parent) {

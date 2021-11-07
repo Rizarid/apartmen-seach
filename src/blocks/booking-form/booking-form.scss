@@ -1,0 +1,174 @@
+@import "../../styles/variables";
+
+.booking-form {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 380px;
+  padding: 40px 30px 30px;
+  background: #fff;
+  border: 1px solid rgb(0 0 0 / 12%);
+  border-radius: 4px;
+  box-shadow: 0 0 25px rgb(0 0 0 / 20%);
+
+  @media screen and (max-width: 380px) {
+    padding: 40px 20px 30px;
+  }
+
+  &__header {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-bottom: 22px;
+  }
+
+  &__title {
+    box-sizing: border-box;
+    margin: 0;
+    color: $dark-shade;
+    font-weight: $bold;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &__number {
+    margin-left: 4px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &__tag {
+    margin-left: 8px;
+    color: $purple;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+  }
+
+  &__room-price {
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: 7px;
+    color: $dark-shade-50;
+    font-weight: $bold;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__period {
+    font-weight: $normal;
+    font-size: 12px;
+  }
+
+  &__date {
+    box-sizing: border-box;
+    width: 100%;
+    padding-bottom: 21px;
+  }
+
+  &__guests {
+    box-sizing: border-box;
+    width: 100%;
+    padding-bottom: 18px;
+  }
+
+  &__calculation {
+    box-sizing: border-box;
+    width: 100%;
+    color: rgb(195 195 199 / 75%);
+    font-weight: $normal;
+    font-size: 13.9px;
+    line-height: 24px;
+  }
+
+  &__basic-price-container,
+  &__services-container,
+  &__additional-services-container {
+    display: flex;
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    padding-bottom: 11px;
+  }
+
+  &__information {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    margin-left: 7px;
+    color: rgb(31 32 65 / 25%);
+    font-weight: $bold;
+    font-size: 12px;
+    line-height: 14px;
+    border: 1px solid $dark-shade-25;
+    border-radius: 50%;
+  }
+
+  &__basic-price-calculate,
+  &__basic-price-result,
+  &__services,
+  &__services-total,
+  &__additional-services-title,
+  &__additional-services-total {
+    max-width: 212px;
+    margin: 0;
+
+    @media screen and (max-width: 350px) {
+      max-width: 150px;
+    }
+  }
+
+  &__additional-services-title {
+    margin-top: 2px;
+    line-height: 18px;
+
+    & ~ .booking-form__information {
+      margin-top: 2px;
+    }
+  }
+
+  &__basic-price-result,
+  &__services-total,
+  &__additional-services-total {
+    flex: 1 1 auto;
+    text-align: right;
+  }
+
+  &__additional-services-container {
+    padding-bottom: 29px;
+  }
+
+  &__total-price-container {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-bottom: 22px;
+    color: $dark-shade;
+    font-weight: $bold;
+    font-size: 19px;
+    line-height: 23px;
+  }
+
+  &__total-price-text {
+    flex: 0 0 auto;
+    margin: 0;
+  }
+
+  &__dots-container {
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    height: 1px;
+    margin: 0;
+    margin-top: 18px;
+    border-bottom: 1px dashed $dark-shade-25;
+  }
+
+  &__total-price-value {
+    flex: 0 0 auto;
+    margin: 0;
+  }
+}

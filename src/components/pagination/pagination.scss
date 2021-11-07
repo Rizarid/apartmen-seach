@@ -1,0 +1,92 @@
+@import "../../styles/variables";
+
+.pagination {
+  box-sizing: border-box;
+  width: fit-content;
+  max-width: 280px;
+
+  &__pages {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  &__page {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: $dark-shade-50;
+    font-weight: $normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+
+    &_active {
+      color: #fff;
+      font-weight: $bold;
+      background: $gradient-purple-blue;
+      border-radius: 50%;
+    }
+  }
+
+  &__prev-button,
+  &__next-button {
+    position: relative;
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    border-radius: 50%;
+    cursor: pointer;
+
+    &::after,
+    &::before {
+      color: #fff;
+      font-weight: $normal;
+      font-size: 24px;
+      font-family: toxin-icons;
+      text-transform: none;
+    }
+  }
+
+  &__prev-button {
+    display: none;
+    transform: rotate(180deg);
+
+    &::before {
+      content: "\e901";
+    }
+  }
+
+  &__next-button {
+    &::before {
+      content: "\e901";
+    }
+  }
+
+  &__text-container {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  &__text {
+    width: fit-content;
+    margin-top: 8px;
+    color: $dark-shade-75;
+    font-weight: $normal;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}

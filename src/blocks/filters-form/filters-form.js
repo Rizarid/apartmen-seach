@@ -3,7 +3,7 @@ import DateDropdown from '../../components/date-dropdown/date-dropdown';
 import Dropdown from '../../components/dropdown/dropdown';
 import Slider from '../../components/slider/slider';
 import CheckboxButtons from '../../components/checkbox-buttons/checkbox-buttons';
-import './filters-form.sass';
+import './filters-form.scss';
 
 class FiltersForm {
   constructor(parent) {

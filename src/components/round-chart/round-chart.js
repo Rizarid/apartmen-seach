@@ -1,4 +1,4 @@
-import './round-chart.sass';
+import './round-chart.scss';
 
 class RoundChart {
   constructor(parent) {

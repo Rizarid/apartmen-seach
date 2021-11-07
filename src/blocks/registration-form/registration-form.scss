@@ -1,0 +1,75 @@
+@import "../../styles/variables";
+
+.registration-form {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 380px;
+  margin: 0;
+  padding: 25px 29px 30px;
+  background: #fff;
+  border: 1px solid rgb(0 0 0 / 12%);
+  border-radius: 4px;
+  box-shadow: 0 0 25px rgb(0 0 0 / 20%);
+
+  @media screen and (max-width: 350px) {
+    flex: 1 1 auto;
+    padding: 25px 15px 30px;
+  }
+
+  &__title-container {
+    box-sizing: border-box;
+    padding-bottom: 5px;
+  }
+
+  &__name-container {
+    box-sizing: border-box;
+    padding-bottom: 10px;
+  }
+
+  &__surname-container {
+    box-sizing: border-box;
+    padding-bottom: 8px;
+  }
+
+  &__sex-container {
+    box-sizing: border-box;
+    padding-bottom: 22px;
+  }
+
+  &__date-of-birth-container {
+    box-sizing: border-box;
+    padding-bottom: 21px;
+  }
+
+  &__email-container {
+    box-sizing: border-box;
+    padding-bottom: 10px;
+  }
+
+  &__password-container {
+    box-sizing: border-box;
+    padding-bottom: 7px;
+  }
+
+  &__offers-container {
+    box-sizing: border-box;
+    padding-bottom: 23px;
+  }
+
+  &__submit-container {
+    box-sizing: border-box;
+    padding-bottom: 29px;
+  }
+
+  &__sign-in-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  &__sign-in-label {
+    margin: 0;
+    font-size: 13.8px;
+  }
+}

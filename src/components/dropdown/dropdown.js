@@ -1,6 +1,6 @@
 import { getDecline } from '../../utilities/utilities';
 import ControlPanel from '../control-panel/control-panel';
-import './dropdown.sass';
+import './dropdown.scss';
 
 class Dropdown {
   constructor(parent) {

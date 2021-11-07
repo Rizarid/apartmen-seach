@@ -1,0 +1,30 @@
+@import "~normalize.css";
+@import "@/styles/variables";
+@import "@/fonts/fonts.css";
+@include start-page-stiles;
+
+.headers {
+  box-sizing: border-box;
+  width: 100%;
+  background: #e5e5e5;
+
+  &__header-container {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 40px;
+
+    &_first {
+      z-index: 10;
+    }
+
+    &_second {
+      z-index: 5;
+    }
+  }
+
+  &__footer-container {
+    width: 100%;
+    padding-top: 38px;
+  }
+}

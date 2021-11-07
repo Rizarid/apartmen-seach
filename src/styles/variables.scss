@@ -1,0 +1,43 @@
+$main-font: montserrat, arial, sans-serif;
+$normal: 500;
+$bold: 700;
+$dark-shade: #1f2041;
+$dark-shade-75: rgb(31 32 65 / 75%);
+$dark-shade-50: rgb(31 32 65 / 50%);
+$dark-shade-25: rgb(31 32 65 / 25%);
+$dark-shade-10: rgb(31 32 65 / 10%);
+$dark-shade-5: rgb(31 32 65 / 5%);
+$purple: #bc9cff;
+$green: #6fcf97;
+$blue: #8ba4f9;
+$gradient-purple-blue: linear-gradient(180deg, $purple 0%, $blue 100%);
+
+@mixin start-page-stiles {
+  html {
+    font-weight: $normal;
+    font-size: 14px;
+    font-family: $main-font;
+    line-height: 24px;
+  }
+
+  h1 {
+    font-weight: $bold;
+    font-size: 24px;
+    font-family: $main-font;
+    line-height: 29.26px;
+  }
+
+  h2 {
+    font-weight: $bold;
+    font-size: 19px;
+    font-family: $main-font;
+    line-height: 23.16px;
+  }
+
+  h3 {
+    font-weight: $bold;
+    font-size: 12px;
+    font-family: $main-font;
+    line-height: 14.63px;
+  }
+}

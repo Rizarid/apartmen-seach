@@ -1,5 +1,5 @@
 import Review from '../review/review';
-import './reviews.sass';
+import './reviews.scss';
 
 class Reviews {
   constructor(parent) {

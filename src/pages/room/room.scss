@@ -1,0 +1,63 @@
+@import "~normalize.css";
+@import "@/styles/variables";
+@import "@/fonts/fonts.css";
+@include start-page-stiles;
+
+.room {
+  &__header {
+    position: relative;
+    z-index: 20;
+
+    @media screen and (max-width: 1000px) {
+      position: unset;
+    }
+  }
+
+  &__content {
+    z-index: 1;
+    box-sizing: border-box;
+    width: 100%;
+    padding-bottom: 59px;
+    border-bottom: 1px solid rgb(31 32 65 / 10%);
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media screen and (max-width: 1050px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media screen and (max-width: 355px) {
+      padding: 0 10px;
+    }
+  }
+
+  &__room-information-container {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 712px;
+    margin-right: 10px;
+    padding-top: 72px;
+
+    @media screen and (max-width: 1050px) {
+      margin-right: 0;
+    }
+
+    @media screen and (max-width: 650px) {
+      padding-top: 50px;
+    }
+  }
+
+  &__booking-container {
+    flex: 0 0 auto;
+    padding-top: 69px;
+  }
+}

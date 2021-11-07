@@ -1,5 +1,5 @@
 import LikeButton from '../like-button/like-button';
-import './review.sass';
+import './review.scss';
 
 class Review {
   constructor(parent) {

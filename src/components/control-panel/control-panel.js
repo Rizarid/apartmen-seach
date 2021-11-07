@@ -1,5 +1,5 @@
 import '../button/button';
-import './control-panel.sass';
+import './control-panel.scss';
 
 class ControlPanel {
   constructor(parent) {

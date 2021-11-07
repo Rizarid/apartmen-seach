@@ -1,1 +1,1 @@
-import './information-block.sass';
+import './information-block.scss';

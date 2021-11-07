@@ -1,5 +1,5 @@
 import DatePicker from '../date-picker/date-picker';
-import './date-dropdown.sass';
+import './date-dropdown.scss';
 
 class DateDropdown {
   constructor(parent) {
