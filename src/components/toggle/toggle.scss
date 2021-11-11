@@ -7,6 +7,18 @@
   width: 100%;
   height: fit-content;
 
+  &:hover {
+    .toggle__switch {
+      border: 1px solid $purple;
+      opacity: 75%;
+    }
+
+    .toggle__text {
+      color: $purple;
+      opacity: 75%;
+    }
+  }
+
   &__checkbox {
     z-index: -1;
     width: 0;
@@ -45,6 +57,7 @@
     font-size: 13.8px;
     line-height: 24px;
     cursor: pointer;
+    transition: 0.5s;
   }
 
   & input:checked ~ &__switch {

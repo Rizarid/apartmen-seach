@@ -17,6 +17,10 @@
   transition: 0.5s;
   user-select: none;
 
+  &:hover {
+    transform: scale(1.07);
+  }
+
   &__icon {
     display: flex;
     align-items: center;

@@ -96,6 +96,11 @@
     font-size: 14px;
     line-height: 17px;
     text-decoration: none;
+    transition: 0.5s;
+
+    &:hover {
+      color: $dark-shade-75;
+    }
   }
 
   &__navigation {

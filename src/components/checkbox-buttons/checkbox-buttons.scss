@@ -93,8 +93,15 @@
 
       & .checkbox-buttons__item-text {
         margin-left: 10px;
+        color: $dark-shade-50;
         font-size: 13.8px;
         line-height: 18px;
+        transition: 0.5s;
+      }
+
+      &:hover .checkbox-buttons__item-text {
+        color: $purple;
+        opacity: 75%;
       }
     }
   }
@@ -106,6 +113,11 @@
 
     & .checkbox-buttons__item {
       box-sizing: border-box;
+
+      &:hover .checkbox-buttons__item-title {
+        color: $purple;
+        opacity: 75%;
+      }
     }
 
     & .checkbox-buttons__item-content {
@@ -126,6 +138,7 @@
       font-weight: $bold;
       font-size: 14px;
       line-height: 1;
+      transition: 0.5s;
     }
 
     & .checkbox-buttons__item-text {

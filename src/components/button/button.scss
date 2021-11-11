@@ -93,10 +93,6 @@
     white-space: normal;
     background: $gradient-purple-blue;
 
-    &:hover {
-      opacity: 100%;
-    }
-
     &::before {
       position: absolute;
       display: flex;

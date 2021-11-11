@@ -14,6 +14,16 @@
     box-sizing: border-box;
     cursor: pointer;
 
+    &:hover {
+      & .radio-buttons__text {
+        color: $dark-shade-75;
+      }
+
+      & .radio-buttons__imitator {
+        border: 1px solid $dark-shade-75;
+      }
+    }
+
     & ~ & {
       margin-left: 20px;
     }
@@ -27,6 +37,7 @@
     padding: 3px;
     border: 1px solid $dark-shade-25;
     border-radius: 50%;
+    transition: 0.5s;
 
     &::before {
       position: absolute;
@@ -51,6 +62,7 @@
     font-weight: $normal;
     font-size: 13.8px;
     line-height: 24px;
+    transition: 0.5s;
   }
 
   & input:checked ~ &__imitator {
