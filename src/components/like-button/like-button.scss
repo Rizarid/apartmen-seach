@@ -18,7 +18,17 @@
   user-select: none;
 
   &:hover {
-    transform: scale(1.07);
+    border: 1px solid $dark-shade-50;
+
+    & .like-button__icon {
+      &::before {
+        color: $dark-shade-50;
+      }
+    }
+
+    & .like-button__quantity {
+      color: $dark-shade-50;
+    }
   }
 
   &__icon {
@@ -34,6 +44,7 @@
       font-family: toxin-icons;
       line-height: 9px;
       text-transform: none;
+      transition: 0.5s;
       content: "\e903";
     }
   }
@@ -49,6 +60,10 @@
 
   &_liked {
     border: 1px solid $purple;
+
+    &:hover {
+      opacity: 75%;
+    }
 
     .like-button__icon::before {
       color: transparent;

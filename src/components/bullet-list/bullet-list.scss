@@ -28,17 +28,6 @@
     box-sizing: border-box;
     margin-bottom: 11px;
 
-    &:hover {
-      & .bullet-list__text {
-        color: $purple;
-        opacity: 75%;
-      }
-
-      &::before {
-        background-color: $purple;
-      }
-    }
-
     &::before {
       display: inline-block;
       flex: 0 0 auto;
