@@ -1,17 +1,18 @@
 mixin informationBlock({ title = '', itemOptions = [] })
 
   .information-block
-    h2.information-block__title #{ title }
+    if title
+      h2.information-block__title #{ title }
 
-    ul.information-block__list
-      if itemOptions.length
-        each item in itemOptions
-          - const { img, alt, title, text } = item
-          li.information-block__item
-            img.information-block__block-image(src = img, alt = alt)
+      ul.information-block__list
+        if itemOptions.length
+          each item in itemOptions
+            - const { img, alt, title, text } = item
+            li.information-block__item
+              img.information-block__block-image(src = img, alt = alt)
 
-            .information-block__text-container 
-              p.information-block__item-title #{ title }
-              p.information-block__text #{ text }
+              .information-block__text-container 
+                p.information-block__item-title #{ title }
+                p.information-block__text #{ text }
             
       

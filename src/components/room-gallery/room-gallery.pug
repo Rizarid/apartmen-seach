@@ -1,15 +1,15 @@
-mixin roomGallery([bigImage = {}, smallImageFirst = {}, smallImageSecond = {}])
+mixin roomGallery([bigImage, smallImageFirst, smallImageSecond])
+  if (bigImage && smallImageFirst && smallImageSecond)
+    figure.room-gallery
+      figure.room-gallery__main-container
+        if bigImage
+          img.room-gallery__image.room-gallery__image_big(src = bigImage.src, alt = bigImage.alt) 
 
-  figure.room-gallery
-    figure.room-gallery__main-container
-      if bigImage
-        img.room-gallery__image.room-gallery__image_big(src = bigImage.src, alt = bigImage.alt) 
+      figure.room-gallery__additional-container 
+        figure.room-gallery__small-container 
+          if smallImageFirst
+            img.room-gallery__image.room-gallery__image_small(src = smallImageFirst.src, alt = smallImageFirst.alt)
 
-    figure.room-gallery__additional-container 
-      figure.room-gallery__small-container 
-        if smallImageFirst
-          img.room-gallery__image.room-gallery__image_small(src = smallImageFirst.src, alt = smallImageFirst.alt)
-
-      figure.room-gallery__small-container 
-        if smallImageSecond
-          img.room-gallery__image.room-gallery__image_small(src = smallImageSecond.src, alt = smallImageSecond.alt)
+        figure.room-gallery__small-container 
+          if smallImageSecond
+            img.room-gallery__image.room-gallery__image_small(src = smallImageSecond.src, alt = smallImageSecond.alt)

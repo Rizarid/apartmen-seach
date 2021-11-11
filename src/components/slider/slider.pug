@@ -1,12 +1,13 @@
-mixin slider({ title = 'slider', min = 0, max = 15000, initValues = [min, max] })
+mixin slider({ title = 'slider', min, max, initValues = [min, max] })
 
-  .slider.js-slider(
-    data-min = min, 
-    data-max = max, 
-    data-min-init-value = initValues[0], 
-    data-max-init-value = initValues[1]
-  )
-    .slider__header
-      h3.slider__title #{ title }
-      p.slider__values 
-    .slider__body
+  if ((min !== undefined) && (max !== undefined))
+    .slider.js-slider(
+      data-min = min, 
+      data-max = max, 
+      data-min-init-value = initValues[0], 
+      data-max-init-value = initValues[1]
+    )
+      .slider__header
+        h3.slider__title #{ title }
+        p.slider__values 
+      .slider__body

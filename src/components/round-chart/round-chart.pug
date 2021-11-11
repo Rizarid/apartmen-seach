@@ -1,7 +1,10 @@
-mixin roundChart({ title = 'round chart', votes = [0, 65, 65, 130] })
-  div(
-    class = "round-chart js-round-chart", data-first = votes[0], data-second = votes[1], 
-    data-third = votes[2], data-fourth = votes[3]
-  )
-    h3.round-chart__title #{ title }
-    figure.round-chart__container.js-round-chart__container
+mixin roundChart({ title = 'round chart', votes })
+  if (votes)
+    .round-chart.js-round-chart(
+      data-first = votes[0], 
+      data-second = votes[1], 
+      data-third = votes[2], 
+      data-fourth = votes[3]
+    )
+      h3.round-chart__title #{ title }
+      figure.round-chart__container.js-round-chart__container

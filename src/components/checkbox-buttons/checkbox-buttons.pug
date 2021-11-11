@@ -1,4 +1,4 @@
-mixin checkboxButtons({ title = 'checkbox buttons', modifier = 'standard', items = [] })
+mixin checkboxButtons({ title = 'checkbox buttons', modifier = 'standard', items })
   -
     const modifiers = { 
       standard: 'checkbox-buttons_standard',
@@ -6,32 +6,33 @@ mixin checkboxButtons({ title = 'checkbox buttons', modifier = 'standard', items
       expandable: 'checkbox-buttons_expandable'
     }
 
-  div(class = ['checkbox-buttons', 'js-checkbox-buttons', modifiers[modifier]])
-    - const isExpandable = (modifier === 'expandable')
+  if items
 
-    if isExpandable
-      .checkbox-buttons__titles-container.js-checkbox-buttons__titles-container
-        h3.checkbox-buttons__title #{ title } 
-    else
-      h3.checkbox-buttons__title #{ title }
+    div(class = ['checkbox-buttons', 'js-checkbox-buttons', modifiers[modifier]])
+      - const isExpandable = (modifier === 'expandable')
 
-    .checkbox-buttons__list
-      each item in items
-        -
-          if (!item) item = {}
-          const { 
-            title = "items title", text = 'items text', name = 'checkbox', 
-            checked = false 
-          } = item
-        
-        label.checkbox-buttons__item.js-checkbox-buttons__item
-          span.checkbox-buttons__checkbox
-            input.checkbox-buttons__checkbox-input( type = "checkbox", name = name, checked = checked)
-            span.checkbox-buttons__checkbox-imitator
+      if isExpandable
+        .checkbox-buttons__titles-container.js-checkbox-buttons__titles-container
+          h3.checkbox-buttons__title #{ title } 
+      else
+        h3.checkbox-buttons__title #{ title }
 
-          if modifier === 'rich'
-            span.checkbox-buttons__item-content 
-              span.checkbox-buttons__item-title #{ title }
+      .checkbox-buttons__list
+        each item in items
+          -
+            const { 
+              title = "items title", text = 'items text', name = 'checkbox', 
+              checked = false 
+            } = item
+          
+          label.checkbox-buttons__item.js-checkbox-buttons__item
+            span.checkbox-buttons__checkbox
+              input.checkbox-buttons__checkbox-input( type = "checkbox", name = name, checked = checked)
+              span.checkbox-buttons__checkbox-imitator
+
+            if modifier === 'rich'
+              span.checkbox-buttons__item-content 
+                span.checkbox-buttons__item-title #{ title }
+                span.checkbox-buttons__item-text #{ text }
+            else 
               span.checkbox-buttons__item-text #{ text }
-          else 
-            span.checkbox-buttons__item-text #{ text }

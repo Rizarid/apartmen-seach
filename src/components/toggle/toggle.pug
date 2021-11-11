@@ -1,7 +1,8 @@
-mixin toggle({ name = 'toggle', value = 'on', text = 'toggle', checked = false })
+mixin toggle({ name = 'toggle', value = 'on', text, checked = false })
 
-  label.toggle.js-toggle
-    input.toggle__checkbox(type = "checkbox", name = name, value = value, checked = checked)
-    span.toggle__switch
-      span.toggle__circle
-    span.toggle__text #{text}
+  if (text)
+    label.toggle.js-toggle
+      input.toggle__checkbox(type = "checkbox", name = name, value = value, checked = checked)
+      span.toggle__switch
+        span.toggle__circle
+      span.toggle__text #{text}

@@ -11,10 +11,12 @@ require('jquery-ui-touch-punch');
 class Slider {
   constructor(parent) {
     this._body = this._getBody(parent);
-    this._init();
-    this._$slider = this._getSlider();
-    this._value = this._getValue();
-    this._initSlider();
+    if (this._body) {
+      this._init();
+      this._$slider = this._getSlider();
+      this._value = this._getValue();
+      this._initSlider();
+    }
   }
 
   _getBody = (parent) => parent.querySelector('.js-slider');
