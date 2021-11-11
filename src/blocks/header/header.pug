@@ -3,8 +3,9 @@ include ../../components/button/button.pug
 include ../../components/menu/menu.pug 
 
 mixin header({isLogIn = false , userName = '', modifier = ''})
-  - const classes = modifier ? `header js-header header_${modifier}` : 'header js-header'
-  header(class = classes)
+  - const withFilterButton = modifier ? `header_with-filter-button` : ''
+  
+  header(class = ['header', 'js-header', withFilterButton])
     .header__container 
       +logo
       
@@ -18,10 +19,10 @@ mixin header({isLogIn = false , userName = '', modifier = ''})
         if !isLogIn
           form.header__authorization.js-header__authorization
             .header__log-in
-              +button({ text: 'Войти', formaction: 'sign-in.html', modifier: ['transparent', 'low'] })
+              +button({ text: 'Войти', formaction: 'sign-in.html', size: 'low', color: 'white' })
 
             .header__registration
-              +button({ text:'Зарегистрироваться', modifier: ['low'], formaction: 'registration.html' })
+              +button({ text:'Зарегистрироваться', size: 'low', formaction: 'registration.html' })
 
         else 
           .header__user-name 

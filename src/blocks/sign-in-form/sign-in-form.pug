@@ -12,8 +12,8 @@ mixin signInForm
       +textField({ name: 'password', type: 'password',  placeholder: 'Пароль' })
 
     .sign-in-form__submit-container
-      +button({ text: 'войти', modifier: ['big'], formaction: '/mock-address/change-me' })
+      +button({ text: 'войти', size: 'big', formaction: '/mock-address/change-me' })
 
     .sign-in-form__button-container
       p.sign-in-form__button-label Нет аккаунта на Toxin?
-      +button({ text: 'создать', formaction: 'registration.html', modifier: ['transparent', 'narrow'] })
+      +button({ text: 'создать', formaction: 'registration.html', size:  'narrow', color: 'white' })

@@ -4,10 +4,10 @@ import './date-dropdown.scss';
 class DateDropdown {
   constructor(parent) {
     this._body = this._getBody(parent);
-    this._isDoubleField = this._getIsDoubleField();
+    this._isSingleField = this._getIsSingleField();
     this._datePickerContainer = this._getTarget('.js-date-dropdown__date-picker');
     this._getFields();
-    this._setFieldsValues = this._isDoubleField ? this._setDoubleField : this._setSingleField;
+    this._setFieldsValues = this._isSingleField ? this._setSingleField : this._setDoubleField;
     this._onSelected = this._createEvent();
     this._addListeners();
     this._datePicker = new DatePicker(this._datePickerContainer);
@@ -17,19 +17,19 @@ class DateDropdown {
 
   _getTarget = (targetSelector) => this._body.querySelector(targetSelector);
 
-  _getIsDoubleField = () => this._body.classList.contains('date-dropdown_double-field');
+  _getIsSingleField = () => this._body.classList.contains('date-dropdown_single-field');
 
   _getFields = () => {
-    if (this._isDoubleField) {
-      [this._comingField, this._leaveField] = this._body.querySelectorAll('.js-date-dropdown__field');
-    } else this._comingField = this._body.querySelector('.js-date-dropdown__field');
+    if (this._isSingleField) {
+      this._comingField = this._body.querySelector('.js-date-dropdown__field');
+    } else [this._comingField, this._leaveField] = this._body.querySelectorAll('.js-date-dropdown__field');
   };
 
   _createEvent = () => new CustomEvent('dateDropdownSelected', { bubbles: true, detail: { daysCount: 0 } });
 
   _addListeners = () => {
     this._comingField.addEventListener('click', this._handleFieldFocus);
-    if (this._isDoubleField) this._leaveField.addEventListener('click', this._handleFieldFocus);
+    if (!this._isSingleField) this._leaveField.addEventListener('click', this._handleFieldFocus);
 
     this._datePickerContainer.addEventListener('datepickerOnSelect', this._handleDatePickerOnSelect);
     this._datePickerContainer.addEventListener('cleanButtonClick', this._handleCleanButtonClick);

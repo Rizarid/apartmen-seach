@@ -1,10 +1,13 @@
 include ../control-panel/control-panel.pug
 
 mixin dropdown({ title = 'dropdown', name = 'dropdown', modifier = 'guests',  items = [{ title: 'взрослые', quantity: 0 }, { title: 'дети', quantity: 0 }, { title: 'младенцы', quantity: 0 }] })
-  
-  - const classes = `dropdown js-dropdown dropdown_${modifier}`
+  -
+    const modifiers = {
+      guests: 'dropdown_guests',
+      convenience: 'dropdown_convenience'
+    }
 
-  div(class = classes)
+  div(class = ['dropdown', 'js-dropdown', modifiers[modifier]])
     h3.dropdown__title #{ title }
 
     .dropdown__field-container

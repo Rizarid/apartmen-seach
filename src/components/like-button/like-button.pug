@@ -1,7 +1,7 @@
 mixin likeButton({ quantity = 0, liked = false })
-  - const classes = liked ? 'like-button like-button_liked js-like-button' : 'like-button js-like-button'
+  - const likedMod = liked ? 'like-button_liked' : '' 
 
-  div(class = classes)
+  div(class = ['like-button', 'js-like-button', likedMod])
     span.like-button__icon 
     span.like-button__quantity #{ quantity }
 

@@ -1,5 +1,5 @@
 mixin sliderOfBackground(imgData = [], interval = 5000)
-  div(class = "slider-of-background js-slider-of-background", data-interval = interval)
+  .slider-of-background.js-slider-of-background(data-interval = interval)
     if imgData
       - i = 0
       each item in imgData

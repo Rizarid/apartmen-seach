@@ -31,8 +31,8 @@ mixin registrationForm
       +toggle({ name: 'offers', text: 'Получать спецпредложения' })
 
     .registration-form__submit-container
-      +button({ text: 'зарегистрироваться', modifier: ['big'], formaction: '/mock-address/change-me' })
+      +button({ text: 'зарегистрироваться', size: 'big', formaction: '/mock-address/change-me' })
 
     .registration-form__sign-in-container
       p.registration-form__sign-in-label Уже есть аккаунт на Toxin
-      +button({ text: 'войти', formaction: 'sign-in.html', modifier: ['transparent', 'wide'] })
+      +button({ text: 'войти', formaction: 'sign-in.html', size: 'wide', color: 'white' })

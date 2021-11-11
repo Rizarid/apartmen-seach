@@ -1,12 +1,22 @@
-mixin button({ modifier = [], formaction = '', type = 'submit',  text = 'Click me' })
+mixin button({ size = 'normal', color = 'purple', formaction = '', type = 'submit',  text = 'Click me' })
   -
-    const classDefault = 'button'
-    let classes = classDefault
-    if (modifier) modifier.map((item) => classes = `${classes} ${classDefault}_${item}`)
+    const sizes = { 
+      normal: '',
+      big: 'button_size-big',  
+      minimal: 'button_size-minimal',
+      narrow: 'button_size-narrow',
+      wide: 'button_size-wide',
+      low: 'button_size-low'
+    };
+
+    const colors = { 
+      purple: 'button_color-purple', 
+      white: 'button_color-white'
+    }
 
   if type === 'submit' 
-    button(type = type, class = classes, formaction = formaction) 
+    button(type = type, class = ["button", sizes[size], colors[color]], formaction = formaction) 
       span.button__text #{ text }
   else 
-    button(type = type, class = classes) 
+    button(type = type, class = ["button", sizes[size], colors[color]]) 
       span.button__text #{ text }
