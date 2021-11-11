@@ -132,11 +132,22 @@
     border-radius: 22px;
     cursor: pointer;
     opacity: 100%;
+    transition: 0.5s;
     user-select: none;
+
+    &:hover {
+      color: $dark-shade-75;
+      border: 1px solid $dark-shade-50;
+    }
 
     &_disabled {
       cursor: default;
       opacity: 25%;
+
+      &:hover {
+        color: $dark-shade-50;
+        border: 1px solid $dark-shade-25;
+      }
     }
   }
 

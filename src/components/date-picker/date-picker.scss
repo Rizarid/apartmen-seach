@@ -38,6 +38,7 @@
         margin-bottom: 3px;
         transform: rotate(180deg);
         cursor: pointer;
+        transition: 0.5s;
 
         &.ui-state-disabled {
           opacity: 75%;
@@ -55,6 +56,7 @@
         &:hover {
           background: $white;
           border: none;
+          opacity: 50%;
         }
 
         & .ui-icon {
@@ -68,6 +70,7 @@
         margin-top: 3px;
         border: none;
         cursor: pointer;
+        transition: 0.5s;
 
         &.ui-state-disabled {
           opacity: 75%;
@@ -85,6 +88,7 @@
         &:hover {
           background: $white;
           border: none;
+          opacity: 50%;
         }
 
         & .ui-icon {
@@ -137,7 +141,8 @@
             margin: 0;
             padding: 0;
 
-            a {
+            a,
+            span {
               display: flex;
               align-items: center;
               justify-content: center;
@@ -158,28 +163,32 @@
               border-radius: 0;
             }
 
-            span {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              box-sizing: border-box;
-              width: 100%;
-              height: 100%;
-              margin: 0;
-              padding: 0;
-              color: $dark-shade-50;
-              font-weight: $normal;
-              font-size: 12px;
-              font-family: $main-font;
-              line-height: 14.63px;
-              text-align: center;
-              background: none;
-              border: none;
-              border-radius: 0;
+            &:hover {
+              position: relative;
+
+              &::after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                background: $gradient-purple-blue;
+                border-radius: 50%;
+                cursor: pointer;
+                opacity: 25%;
+                content: "";
+              }
             }
 
             &.ui-state-disabled {
               opacity: 75%;
+
+              &:hover {
+                &::after {
+                  content: none;
+                }
+              }
             }
           }
 
