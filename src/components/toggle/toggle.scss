@@ -9,12 +9,12 @@
 
   &:hover {
     .toggle__switch {
-      border: 1px solid $purple;
+      border: 1px solid $color-primary;
       opacity: 75%;
     }
 
     .toggle__text {
-      color: $purple;
+      color: $color-primary;
       opacity: 75%;
     }
   }
@@ -33,8 +33,8 @@
     width: 40px;
     height: 20px;
     padding: 4px;
-    background-color: $white;
-    border: 1px solid $dark-shade-25;
+    background-color: $color-main-bg;
+    border: 1px solid $color-font-dark-25;
     border-radius: 10px;
     cursor: pointer;
     transition: 0.5s;
@@ -44,7 +44,7 @@
     width: 12px;
     height: 12px;
     margin-left: 0;
-    background: linear-gradient(180deg, $dark-shade-25 0%, $dark-shade-25 100%);
+    background: linear-gradient(180deg, $color-font-dark-25 0%, $color-font-dark-25 100%);
     border-radius: 10px;
     transition: 0.5s;
   }
@@ -52,7 +52,7 @@
   &__text {
     margin: 0;
     margin-left: 10px;
-    color: $dark-shade-75;
+    color: $color-font-dark-75;
     font-weight: $normal;
     font-size: 13.8px;
     line-height: 24px;
@@ -61,11 +61,11 @@
   }
 
   & input:checked ~ &__switch {
-    border-color: $purple;
+    border-color: $color-primary;
 
     & .toggle__circle {
       margin-left: 18px;
-      background: $gradient-purple-blue;
+      background: $gradient-primary;
     }
   }
 }

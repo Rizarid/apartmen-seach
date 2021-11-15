@@ -6,7 +6,7 @@
   max-width: 380px;
   margin: 0;
   padding: 39px 29px 31px;
-  background: $white;
+  background: $color-main-bg;
   border: 1px solid rgb(0 0 0 / 12%);
   border-radius: 4px;
   box-shadow: 0 0 25px rgb(0 0 0 / 20%);
@@ -22,7 +22,7 @@
 
   &__title {
     margin: 0;
-    color: $dark-shade;
+    color: $color-font-dark;
   }
 
   &__email-container {
@@ -49,7 +49,7 @@
 
   &__button-label {
     margin: 0;
-    color: $black;
+    color: black;
     font-size: 13.8px;
   }
 }

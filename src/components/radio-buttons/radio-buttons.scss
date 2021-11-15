@@ -16,11 +16,11 @@
 
     &:hover {
       & .radio-buttons__text {
-        color: $dark-shade-75;
+        color: $color-font-dark-75;
       }
 
       & .radio-buttons__imitator {
-        border: 1px solid $dark-shade-75;
+        border: 1px solid $color-font-dark-75;
       }
     }
 
@@ -35,7 +35,7 @@
     width: 20px;
     height: 20px;
     padding: 3px;
-    border: 1px solid $dark-shade-25;
+    border: 1px solid $color-font-dark-25;
     border-radius: 50%;
     transition: 0.5s;
 
@@ -44,7 +44,7 @@
       display: none;
       width: 12px;
       height: 12px;
-      background: $gradient-purple-blue;
+      background: $gradient-primary;
       border-radius: 50%;
       content: " ";
     }
@@ -58,7 +58,7 @@
 
   &__text {
     margin-left: 10px;
-    color: $dark-shade-50;
+    color: $color-font-dark-50;
     font-weight: $normal;
     font-size: 13.8px;
     line-height: 24px;
@@ -66,14 +66,14 @@
   }
 
   & input:checked ~ &__imitator {
-    border: 1px solid $purple;
+    border: 1px solid $color-primary;
 
     &::before {
       display: block;
     }
 
     & ~ .radio-buttons__text {
-      color: $dark-shade-75;
+      color: $color-font-dark-75;
     }
   }
 }

@@ -5,7 +5,7 @@
   width: 100%;
   max-width: 380px;
   padding: 40px 30px 30px;
-  background: $white;
+  background: $color-main-bg;
   border: 1px solid rgb(0 0 0 / 12%);
   border-radius: 4px;
   box-shadow: 0 0 25px rgb(0 0 0 / 20%);
@@ -31,7 +31,7 @@
   &__title {
     box-sizing: border-box;
     margin: 0;
-    color: $dark-shade;
+    color: $color-font-dark;
     font-weight: $bold;
     font-size: 14px;
     line-height: 17px;
@@ -45,7 +45,7 @@
 
   &__tag {
     margin-left: 8px;
-    color: $purple;
+    color: $color-primary;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
@@ -55,7 +55,7 @@
     box-sizing: border-box;
     margin: 0;
     margin-top: 7px;
-    color: $dark-shade-50;
+    color: $color-font-dark-50;
     font-weight: $bold;
     font-size: 14px;
     line-height: 18px;
@@ -108,7 +108,7 @@
     font-weight: $bold;
     font-size: 12px;
     line-height: 14px;
-    border: 1px solid $dark-shade-25;
+    border: 1px solid $color-font-dark-25;
     border-radius: 50%;
   }
 
@@ -152,7 +152,7 @@
     justify-content: space-between;
     box-sizing: border-box;
     padding-bottom: 22px;
-    color: $dark-shade;
+    color: $color-font-dark;
     font-weight: $bold;
     font-size: 19px;
     line-height: 23px;
@@ -169,7 +169,7 @@
     height: 1px;
     margin: 0;
     margin-top: 18px;
-    border-bottom: 1px dashed $dark-shade-25;
+    border-bottom: 1px dashed $color-font-dark-25;
   }
 
   &__total-price-value {

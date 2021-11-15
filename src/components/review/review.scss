@@ -13,9 +13,9 @@
     flex: 0 0 auto;
     width: 44px;
     height: 44px;
-    border: 2px solid $white;
+    border: 2px solid $color-main-bg;
     border-radius: 50%;
-    filter: drop-shadow(0 10px 20px $dark-shade-10);
+    filter: drop-shadow(0 10px 20px $color-font-dark-10);
   }
 
   &__name-container {
@@ -30,7 +30,7 @@
   &__name {
     flex: 1 1 auto;
     margin: 0;
-    color: $dark-shade-75;
+    color: $color-font-dark-75;
     font-weight: $bold;
     font-size: 14px;
     line-height: 24px;
@@ -39,7 +39,7 @@
   &__publication-date {
     width: 100%;
     margin: 0;
-    color: $dark-shade-75;
+    color: $color-font-dark-75;
     font-weight: $normal;
     font-size: 14px;
     line-height: 24px;
@@ -69,7 +69,7 @@
 
   &__text {
     margin: 0;
-    color: $dark-shade-75;
+    color: $color-font-dark-75;
     font-weight: $normal;
     font-size: 13.84px;
     line-height: 24px;

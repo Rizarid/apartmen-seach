@@ -19,7 +19,7 @@
     width: 100%;
     padding-top: 30px;
     padding-bottom: 55px;
-    border-bottom: 1px solid $dark-shade-25;
+    border-bottom: 1px solid $color-font-dark-25;
   }
 
   &__container {
@@ -45,7 +45,7 @@
 
   &__results-title {
     margin: 0;
-    color: $dark-shade;
+    color: $color-font-dark;
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;

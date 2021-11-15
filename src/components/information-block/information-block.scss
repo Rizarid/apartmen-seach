@@ -26,7 +26,7 @@
     padding: 24px 24px 24px 0;
 
     & ~ & {
-      border-top: 1px solid $dark-shade-10;
+      border-top: 1px solid $color-font-dark-10;
     }
   }
 
@@ -47,7 +47,7 @@
 
   &__item-title {
     margin: 0;
-    color: $dark-shade-75;
+    color: $color-font-dark-75;
     font-weight: $bold;
     font-size: 14px;
     line-height: 15px;
@@ -55,7 +55,7 @@
 
   &__text {
     margin: 0;
-    color: $dark-shade-75;
+    color: $color-font-dark-75;
     font-weight: $normal;
     font-size: 13.8px;
     line-height: 15px;

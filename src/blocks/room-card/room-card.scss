@@ -4,13 +4,13 @@
   box-sizing: border-box;
   width: 100%;
   overflow: hidden;
-  background: $white;
+  background: $color-main-bg;
   border-radius: 4px;
-  box-shadow: 0 10px 20px $dark-shade-5;
+  box-shadow: 0 10px 20px $color-font-dark-5;
   transition: 0.5s;
 
   &:hover {
-    box-shadow: 0 10px 20px $dark-shade-50;
+    box-shadow: 0 10px 20px $color-font-dark-50;
   }
 
   &__information {
@@ -28,7 +28,7 @@
     justify-content: space-between;
     box-sizing: border-box;
     padding-bottom: 11px;
-    border-bottom: 1px solid $dark-shade-10;
+    border-bottom: 1px solid $color-font-dark-10;
   }
 
   &__title {
@@ -36,7 +36,7 @@
     align-items: center;
     box-sizing: border-box;
     margin: 0;
-    color: $dark-shade;
+    color: $color-font-dark;
     font-weight: $bold;
     font-size: 14px;
     line-height: 17px;
@@ -62,7 +62,7 @@
   &__tag {
     margin-top: 8px;
     margin-left: 8.5px;
-    color: $purple;
+    color: $color-primary;
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
@@ -72,7 +72,7 @@
     box-sizing: border-box;
     margin: 0;
     margin-top: 7px;
-    color: $dark-shade-50;
+    color: $color-font-dark-50;
     font-weight: $bold;
     font-size: 14px;
     line-height: 18px;
@@ -101,7 +101,7 @@
     width: fit-content;
     margin: 0;
     margin-right: 3px;
-    color: $dark-shade-50;
+    color: $color-font-dark-50;
     font-size: 14px;
     line-height: 18px;
   }

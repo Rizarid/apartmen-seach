@@ -24,7 +24,7 @@
     transition: 0.5s;
 
     &::before {
-      color: $white;
+      color: $color-font-light;
       font-size: 24px;
       font-family: toxin-icons;
       text-transform: none;
@@ -98,13 +98,13 @@
     width: 8px;
     height: 8px;
     margin-right: 3px;
-    border: 1px solid $white;
+    border: 1px solid $color-main-bg;
     border-radius: 50%;
     filter: drop-shadow(0 5px 5px rgb(255 255 255 / 30%));
     transition: 1s;
   }
 
   &__slide-dote_active {
-    background-color: $white;
+    background-color: $color-main-bg;
   }
 }

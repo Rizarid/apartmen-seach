@@ -11,23 +11,23 @@
   height: 20px;
   padding: 0 5px;
   overflow: hidden;
-  border: 1px solid $dark-shade-25;
+  border: 1px solid $color-font-dark-25;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.5s;
   user-select: none;
 
   &:hover {
-    border: 1px solid $dark-shade-50;
+    border: 1px solid $color-font-dark-50;
 
     & .like-button__icon {
       &::before {
-        color: $dark-shade-50;
+        color: $color-font-dark-50;
       }
     }
 
     & .like-button__quantity {
-      color: $dark-shade-50;
+      color: $color-font-dark-50;
     }
   }
 
@@ -39,7 +39,7 @@
     height: 8px;
 
     &::before {
-      color: $dark-shade-25;
+      color: $color-font-dark-25;
       font-size: 10px;
       font-family: toxin-icons;
       line-height: 9px;
@@ -51,7 +51,7 @@
 
   &__quantity {
     margin-left: 6px;
-    color: $dark-shade-25;
+    color: $color-font-dark-25;
     font-weight: $normal;
     font-size: 10px;
     line-height: 12px;
@@ -59,7 +59,7 @@
   }
 
   &_liked {
-    border: 1px solid $purple;
+    border: 1px solid $color-primary;
 
     &:hover {
       opacity: 75%;
@@ -71,14 +71,14 @@
       font-family: toxin-icons;
       line-height: 9px;
       text-transform: none;
-      background: $gradient-purple-blue;
+      background: $gradient-primary;
       background-clip: text;
       content: "\e908";
       -webkit-text-fill-color: transparent;
     }
 
     .like-button__quantity {
-      color: $purple;
+      color: $color-primary;
     }
   }
 }

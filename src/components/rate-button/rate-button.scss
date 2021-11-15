@@ -13,10 +13,10 @@
 
     &::before {
       padding: 0;
-      color: $white;
+      color: $color-font-light;
       font-size: 24px;
       font-family: toxin-icons;
-      background: $gradient-purple-blue;
+      background: $gradient-primary;
       background-clip: text;
       border: 1px solid transparent;
       content: "\e906";

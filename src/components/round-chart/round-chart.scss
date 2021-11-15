@@ -6,7 +6,7 @@
 
   &__title {
     margin: 0;
-    color: $dark-shade;
+    color: $color-font-dark;
     font-weight: $bold;
     font-size: 19px;
     line-height: 23px;
@@ -50,7 +50,7 @@
     transform: translateY(0.25em);
     transform: translateY(0.25em);
     transform: translateY(0.25em);
-    fill: $purple;
+    fill: $color-primary;
   }
 
   &__chart-number {
@@ -92,7 +92,7 @@
   }
 
   &__chart-key-item {
-    color: $dark-shade-75;
+    color: $color-font-dark-75;
     font-weight: $normal;
     font-size: 14px;
     line-height: 24px;
@@ -110,7 +110,7 @@
     }
 
     &_good {
-      background: $gradient-green-turquoise;
+      background: $gradient-secondary;
     }
 
     &_satisfactory {

@@ -19,7 +19,7 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    color: $dark-shade-50;
+    color: $color-font-dark-50;
     font-weight: $normal;
     font-size: 12px;
     line-height: 15px;
@@ -28,9 +28,9 @@
     user-select: none;
 
     &_active {
-      color: $white;
+      color: $color-font-light;
       font-weight: $bold;
-      background: $gradient-purple-blue;
+      background: $gradient-primary;
       border-radius: 50%;
     }
   }
@@ -44,13 +44,13 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: $gradient-green-turquoise;
+    background: $gradient-secondary;
     border-radius: 50%;
     cursor: pointer;
 
     &::after,
     &::before {
-      color: $white;
+      color: $color-font-light;
       font-weight: $normal;
       font-size: 24px;
       font-family: toxin-icons;
@@ -84,7 +84,7 @@
   &__text {
     width: fit-content;
     margin-top: 8px;
-    color: $dark-shade-75;
+    color: $color-font-dark-75;
     font-weight: $normal;
     font-size: 14px;
     line-height: 24px;
