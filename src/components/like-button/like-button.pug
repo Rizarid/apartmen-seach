@@ -3,6 +3,6 @@ mixin likeButton({ quantity = 0, liked = false })
 
   div(class = ['like-button', 'js-like-button', likedMod])
     span.like-button__icon 
-    span.like-button__quantity #{ quantity }
+    span.like-button__quantity.js-like-button__quantity #{ quantity }
 
     
