@@ -11,7 +11,7 @@ class LikeButton {
 
   _getBody = (parent) => parent.querySelector('.js-like-button');
 
-  _getQuantity = () => this._body.querySelector('.like-button__quantity');
+  _getQuantity = () => this._body.querySelector('.js-like-button__quantity');
 
   _addListener = () => { this._body.addEventListener('click', this._handleLikeButtonClick); };
 
