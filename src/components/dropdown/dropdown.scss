@@ -71,6 +71,7 @@
     overflow: hidden;
     background-color: $color-main-bg;
     border: 1px solid $color-font-dark-50;
+    border-top: none;
     border-radius: 0;
     border-radius: 0 0 4px 4px;
     box-shadow: 0 10px 20px rgb(31 32 65 / 5%);
@@ -99,9 +100,9 @@
   }
 
   &__item-quantity-block {
-    display: flex;
+    display: grid;
+    grid-template-columns: 30px 1fr 30px;
     align-items: center;
-    justify-content: space-between;
     width: 92px;
     height: 30px;
   }
