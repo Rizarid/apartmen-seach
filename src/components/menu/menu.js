@@ -41,9 +41,9 @@ class Menu {
   _handleArrowClick = (event) => {
     this._subLists.map((item) => item.classList.remove('menu__sub-list_visible'));
 
-    if (this._visibleItem !== event.target) {
+    if (this._visibleItem !== event.target.parentNode) {
       event.target.parentNode.nextElementSibling.classList.toggle('menu__sub-list_visible');
-      this._visibleItem = event.target;
+      this._visibleItem = event.target.parentNode;
     } else {
       this._visibleItem = undefined;
     }
