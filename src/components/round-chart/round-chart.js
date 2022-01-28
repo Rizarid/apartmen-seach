@@ -47,10 +47,10 @@ class RoundChart {
           <circle class='donut-segment' cx='17' cy='17' r='15.91549430918954' fill='transparent' stroke='#6FCF97' stroke-width='1' stroke-dasharray='${this._dash[2]} ${100 - this._dash[2]}' stroke-dashoffset='${this._dashoffset[2]}'></circle>
           <circle class='donut-segment' cx='17' cy='17' r='15.91549430918954' fill='transparent' stroke='#FFE39C' stroke-width='1' stroke-dasharray='${this._dash[3]} ${100 - this._dash[3]}' stroke-dashoffset='${this._dashoffset[3]}'></circle>
           <g class='round-chart__chart-text'>
-            <text x='50%' y='50%' class='round-chart__chart-number'>
+            <text x='49%' y='52%' class='round-chart__chart-number'>
               ${this._sum}
             </text>
-            <text x='50%' y='50%' class='round-chart__chart-label'>
+            <text x='49%' y='52%' class='round-chart__chart-label'>
               голосов
             </text>
           </g>

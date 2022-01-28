@@ -83,7 +83,7 @@ class DateDropdown {
   _formatDate = (startDate, endDate) => {
     if (!startDate || !endDate) return '';
 
-    const months = ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'];
+    const months = ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'];
     const startDay = (startDate.getDate() > 9) ? startDate.getDate().toString() : `0${startDate.getDate()}`;
     const endDay = (endDate.getDate() > 9) ? endDate.getDate().toString() : `0${endDate.getDate()}`;
     const startMonth = months[startDate.getMonth()];

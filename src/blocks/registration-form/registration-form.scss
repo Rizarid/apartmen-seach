@@ -5,6 +5,7 @@
   width: 100%;
   max-width: 380px;
   margin: 0;
+  margin-left: 5px;
   padding: 25px 29px 30px;
   background: $color-main-bg;
   border: 1px solid rgb(0 0 0 / 12%);
@@ -18,47 +19,51 @@
 
   &__title-container {
     box-sizing: border-box;
-    padding-bottom: 5px;
+    padding-top: 15px;
+  }
+
+  &__title {
+    margin: 0;
   }
 
   &__name-container {
     box-sizing: border-box;
-    padding-bottom: 10px;
+    padding-top: 21px;
   }
 
   &__surname-container {
     box-sizing: border-box;
-    padding-bottom: 8px;
+    padding-top: 10px;
   }
 
   &__sex-container {
     box-sizing: border-box;
-    padding-bottom: 22px;
+    padding-top: 8px;
   }
 
   &__date-of-birth-container {
     box-sizing: border-box;
-    padding-bottom: 21px;
+    padding-top: 23px;
   }
 
   &__email-container {
     box-sizing: border-box;
-    padding-bottom: 10px;
+    padding-top: 21px;
   }
 
   &__password-container {
     box-sizing: border-box;
-    padding-bottom: 7px;
+    padding-top: 10px;
   }
 
   &__offers-container {
     box-sizing: border-box;
-    padding-bottom: 23px;
+    padding-top: 8px;
   }
 
   &__submit-container {
     box-sizing: border-box;
-    padding-bottom: 29px;
+    padding-top: 23px;
   }
 
   &__sign-in-container {
@@ -66,6 +71,7 @@
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
+    padding-top: 30px;
   }
 
   &__sign-in-label {

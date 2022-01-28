@@ -41,14 +41,15 @@
     box-sizing: border-box;
     width: 100%;
     max-width: 266px;
-    padding-top: 32px;
+    padding-top: 31px;
   }
 
   &__price-text {
-    margin-top: 15px;
+    margin: 0;
+    padding-top: 15px;
     color: $color-font-dark-50;
     font-weight: $normal;
-    font-size: 11.9px;
+    font-size: 11.8px;
     line-height: 14px;
     text-align: center;
   }
@@ -57,27 +58,27 @@
     box-sizing: border-box;
     width: 100%;
     max-width: 266px;
-    padding-top: 18px;
+    padding-top: 29px;
   }
 
   &__availability {
     box-sizing: border-box;
     width: 100%;
     max-width: 266px;
-    padding-top: 29px;
+    padding-top: 32px;
   }
 
   &__convenience {
     box-sizing: border-box;
     width: 100%;
     max-width: 266px;
-    padding-top: 27px;
+    padding-top: 26px;
   }
 
   &__additional-amenities {
     box-sizing: border-box;
     width: 100%;
     max-width: 266px;
-    padding-top: 32px;
+    padding-top: 31px;
   }
 }

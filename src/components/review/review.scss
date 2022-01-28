@@ -11,8 +11,8 @@
 
   &__photo {
     flex: 0 0 auto;
-    width: 44px;
-    height: 44px;
+    width: 43px;
+    height: 43px;
     border: 2px solid $color-main-bg;
     border-radius: 50%;
     filter: drop-shadow(0 10px 20px $color-font-dark-10);
@@ -24,7 +24,7 @@
     justify-content: space-between;
     box-sizing: border-box;
     width: 100%;
-    padding: 0 10px;
+    padding: 0 9px;
   }
 
   &__name {
@@ -32,7 +32,7 @@
     margin: 0;
     color: $color-font-dark-75;
     font-weight: $bold;
-    font-size: 14px;
+    font-size: 13.9px;
     line-height: 24px;
   }
 
@@ -41,7 +41,7 @@
     margin: 0;
     color: $color-font-dark-75;
     font-weight: $normal;
-    font-size: 14px;
+    font-size: 13.8px;
     line-height: 24px;
   }
 
@@ -57,21 +57,21 @@
     flex: 0 0 auto;
     justify-content: center;
     box-sizing: border-box;
-    width: 48px;
+    width: 42px;
     margin-top: 2px;
   }
 
   &__text-container {
     box-sizing: border-box;
     width: 100%;
-    padding: 0 0 0 10px;
+    padding: 0 2px 0 14px;
   }
 
   &__text {
     margin: 0;
     color: $color-font-dark-75;
     font-weight: $normal;
-    font-size: 13.84px;
+    font-size: 13.8px;
     line-height: 24px;
   }
 }
