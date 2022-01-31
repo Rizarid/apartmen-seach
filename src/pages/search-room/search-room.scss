@@ -60,7 +60,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    padding-top: 23px;
+    padding-top: 22px;
 
     @media screen and (max-width: 860px) {
       justify-content: space-around;
@@ -76,8 +76,8 @@
     box-sizing: border-box;
     width: fit-content;
     width: 100%;
-    max-width: 269px;
-    padding-bottom: 20.5px;
+    max-width: 270px;
+    padding-bottom: 20px;
 
     @media screen and (max-width: 860px) {
       max-width: calc(50% - 10px);
@@ -94,6 +94,6 @@
     box-sizing: border-box;
     width: 100%;
     margin-right: 13px;
-    padding-top: 18.5px;
+    padding-top: 19.5px;
   }
 }

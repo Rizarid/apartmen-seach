@@ -2,10 +2,20 @@
 
 .rate-button {
   display: flex;
+  flex: 1 1 auto;
   align-items: center;
+  justify-content: space-between;
   box-sizing: border-box;
-  width: fit-content;
-  margin: 0;
+  height: fit-content;
+  padding-top: 8px;
+
+  &__stars {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: fit-content;
+    margin: 0;
+  }
 
   &__star {
     width: 24px;
@@ -26,5 +36,33 @@
     &_active::before {
       content: "\e907";
     }
+  }
+
+  &__reviews {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: fit-content;
+    margin: 0;
+    margin-right: 3px;
+    color: $color-font-dark-50;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__reviews-quantity {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0;
+    margin-right: 3px;
+    font-weight: $bold;
+  }
+
+  &__reviews-text {
+    width: fit-content;
+    margin: 0;
+    font-weight: $normal;
   }
 }

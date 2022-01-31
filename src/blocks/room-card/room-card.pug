@@ -1,7 +1,7 @@
 include ../../components/image-slider/image-slider.pug 
 include ../../components/rate-button/rate-button.pug 
 
-mixin roomCard({ slides = [], roomNumber = 0, isLux = false, price = 0, stars = 0, reviewsQuantity = 0, link = '/mock-address/change-me' })
+mixin roomCard({ slides = [], roomNumber = 0, isLux = false, price = 0, evaluations = [0, 0, 0, 0, 0], link = '/mock-address/change-me' })
   -
     let redactedPrice
     {
@@ -23,11 +23,6 @@ mixin roomCard({ slides = [], roomNumber = 0, isLux = false, price = 0, stars = 
           span.room-card__price.js-room-card__price #{redactedPrice}&#8381;
           span.room-card__period  в сутки
 
-      .room-card__feedback
-        +rateButton(stars)
-    
-        p.room-card__reviews 
-          span.room-card__reviews-quantity #{reviewsQuantity}
-          span.room-card__reviews-text Отзывов
+      +rateButton(evaluations, false)
 
     

@@ -1,10 +1,11 @@
-mixin rateButton(stars = 0)
-  .rate-button 
-    - let i = 0
-    while i < stars
-      span.rate-button__star.rate-button__star_active
-      - i++
+mixin rateButton(evaluations = [0, 0, 0, 0, 0])
+  .rate-button.js-rate-button(data-evaluations = evaluations)
+    .rate-button__stars.js-rate-button__stars
+      - let i = 0
+      while i < 5 
+        span.rate-button__star.js-rate-button__star
+        - i++
 
-    while i < 5 
-      span.rate-button__star
-      - i++
+    p.rate-button__reviews 
+      span.rate-button__reviews-quantity.js-rate-button__reviews-quantity
+      span.rate-button__reviews-text Отзывов

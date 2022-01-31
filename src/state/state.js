@@ -10,8 +10,7 @@ const roomsOptions = [
     roomNumber: 888,
     isLux: true,
     price: 9990,
-    stars: 5,
-    reviewsQuantity: 145,
+    evaluations: [0, 0, 0, 0, 145],
     link: 'room.html',
   },
   {
@@ -24,8 +23,7 @@ const roomsOptions = [
     roomNumber: 840,
     isLux: false,
     price: 9900,
-    stars: 4,
-    reviewsQuantity: 65,
+    evaluations: [0, 0, 0, 35, 30],
     link: 'room.html',
   },
   {
@@ -38,8 +36,7 @@ const roomsOptions = [
     roomNumber: 980,
     isLux: true,
     price: 8500,
-    stars: 3,
-    reviewsQuantity: 35,
+    evaluations: [0, 0, 30, 5, 0],
     link: 'room.html',
   },
   {
@@ -52,8 +49,7 @@ const roomsOptions = [
     roomNumber: 856,
     isLux: false,
     price: 7300,
-    stars: 5,
-    reviewsQuantity: 19,
+    evaluations: [0, 0, 0, 0, 19],
     link: 'room.html',
   },
   {
@@ -66,8 +62,7 @@ const roomsOptions = [
     roomNumber: 740,
     isLux: false,
     price: 6000,
-    stars: 4,
-    reviewsQuantity: 44,
+    evaluations: [0, 0, 0, 40, 4],
     link: 'room.html',
   },
   {
@@ -80,8 +75,7 @@ const roomsOptions = [
     roomNumber: 982,
     isLux: false,
     price: 5800,
-    stars: 3,
-    reviewsQuantity: 56,
+    evaluations: [0, 0, 50, 4, 2],
     link: 'room.html',
   },
   {
@@ -94,8 +88,7 @@ const roomsOptions = [
     roomNumber: 678,
     isLux: false,
     price: 5500,
-    stars: 5,
-    reviewsQuantity: 45,
+    evaluations: [0, 0, 0, 3, 42],
     link: 'room.html',
   },
   {
@@ -108,8 +101,7 @@ const roomsOptions = [
     roomNumber: 450,
     isLux: false,
     price: 5300,
-    stars: 4,
-    reviewsQuantity: 39,
+    evaluations: [0, 0, 15, 9, 15],
     link: 'room.html',
   },
   {
@@ -122,8 +114,7 @@ const roomsOptions = [
     roomNumber: 350,
     isLux: false,
     price: 5000,
-    stars: 3,
-    reviewsQuantity: 77,
+    evaluations: [0, 0, 77, 0, 0],
     link: 'room.html',
   },
   {
@@ -136,8 +127,7 @@ const roomsOptions = [
     roomNumber: 666,
     isLux: false,
     price: 5000,
-    stars: 5,
-    reviewsQuantity: 25,
+    evaluations: [0, 0, 0, 0, 25],
     link: 'room.html',
   },
   {
@@ -150,8 +140,7 @@ const roomsOptions = [
     roomNumber: 444,
     isLux: false,
     price: 5000,
-    stars: 3,
-    reviewsQuantity: 15,
+    evaluations: [0, 0, 15, 0, 0],
     link: 'room.html',
   },
   {
@@ -164,8 +153,7 @@ const roomsOptions = [
     roomNumber: 352,
     isLux: false,
     price: 5000,
-    stars: 3,
-    reviewsQuantity: 55,
+    evaluations: [0, 0, 55, 0, 0],
     link: 'room.html',
   },
 ];
