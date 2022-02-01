@@ -81,6 +81,14 @@
       border: none;
       cursor: pointer;
       user-select: none;
+
+      &:hover {
+        color: $color-font-light;
+        font-weight: $bold;
+        background: $gradient-primary;
+        border-radius: 50%;
+        opacity: 50%;
+      }
     }
 
     &_active {
@@ -117,6 +125,10 @@
       border: none;
       border-radius: 50%;
       cursor: pointer;
+
+      &:hover {
+        opacity: 50%;
+      }
     }
 
     &::after,
