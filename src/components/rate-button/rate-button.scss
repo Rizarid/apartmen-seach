@@ -21,6 +21,10 @@
     width: 24px;
     height: 24px;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     &::before {
       padding: 0;
       color: $color-font-light;

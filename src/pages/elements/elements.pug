@@ -81,9 +81,8 @@ include ../../components/pagination/pagination.pug
           +likeButton({quantity: 12, liked: true})
 
       h3.elements__title.elements__title_high-padding rate button
-      .elements__rate-button-container 
-        +rateButton(4)
-        +rateButton(5)
+      .elements__rate-button-container.js-elements__rate-button-container 
+        +rateButton([0, 0, 0, 1, 0])
          
       .elements__rich-checkbox-container.js-elements__rich-checkbox-container
         - richCheckboxButtonsOptions.title = 'rich checkbox buttons'
@@ -106,8 +105,8 @@ include ../../components/pagination/pagination.pug
           +button({text: 'перейти к оплате', size: 'big'})
 
       h3.elements__title.elements__title_high-padding pagination
-      .elements__pagination-container
-        +pagination(15, '1 – 12 из 100+ вариантов аренды')
+      .elements__pagination-container.js-elements__pagination-container
+        +pagination(15)
         
       .elements__bullet-list-container 
         +bulletList('BULLET LIST', rulesItems)

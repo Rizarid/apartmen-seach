@@ -3,8 +3,6 @@ import '../../components/subscription-field/subscription-field';
 import '../../components/button/button';
 import '../../components/bullet-list/bullet-list';
 import '../../components/information-block/information-block';
-import '../../components/pagination/pagination';
-import '../../components/rate-button/rate-button';
 import Dropdown from '../../components/dropdown/dropdown';
 import MaskedTextField from '../../components/masked-text-field/masked-text-field';
 import DateDropdown from '../../components/date-dropdown/date-dropdown';
@@ -14,6 +12,8 @@ import '../../components/toggle/toggle';
 import LikeButton from '../../components/like-button/like-button';
 import Slider from '../../components/slider/slider';
 import Review from '../../components/review/review';
+import RateButton from '../../components/rate-button/rate-button';
+import Pagination from '../../components/pagination/pagination';
 import './elements.scss';
 
 class Elements {
@@ -30,9 +30,11 @@ class Elements {
 
     this._likeButtons = this._getLikeButtons();
 
+    this._rateButton = new RateButton(this._getTarget('.js-elements__rate-button-container'));
     this._rich = new CheckboxButtons(this._getTarget('.js-elements__rich-checkbox-container'));
     this._slider = new Slider(this._getTarget('.js-elements__slider-container'));
     this._review = new Review(this._getTarget('.js-elements__review-container'));
+    this._pagination = new Pagination(this._getTarget('.js-elements__pagination-container'));
   }
 
   _getBody = () => document.querySelector('.js-elements');
