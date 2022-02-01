@@ -14,6 +14,7 @@ $color-secondary: #6fcf97;
 $color-accent: #8ba4f9;
 $color-secondary-accent: #66d2ea;
 $gradient-primary: linear-gradient(180deg, $color-primary 0%, $color-accent 100%);
+$gradient-primary-lite: linear-gradient(180deg, #bc9cff80 0%, #8ba4f980 100%);
 $gradient-secondary: linear-gradient(180deg, $color-secondary 0%, $color-secondary-accent 100%);
 
 @mixin start-page-stiles {

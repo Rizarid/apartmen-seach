@@ -41,6 +41,7 @@
   &_color-white {
     position: relative;
     background: $gradient-primary;
+    transition: 0.5s;
 
     &::before {
       position: absolute;
@@ -55,6 +56,11 @@
     & .button__text {
       z-index: 1;
       color: $color-primary;
+    }
+
+    &:hover {
+      background: $gradient-primary-lite;
+      opacity: 100%;
     }
   }
 
