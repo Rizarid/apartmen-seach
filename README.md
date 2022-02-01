@@ -16,7 +16,11 @@
 ## Установка проекта:
 ### Клонировать репозиторий
 ```git
-$ git clone https://github.com/Rizarid/apartmen-seach.git
+$ git clone https://github.com/rizarid/apartmen-seach.git
+```
+### Перейти в папку проекта
+```
+cd apartmen-seach
 ```
 ### Установить зависимости
 ```
