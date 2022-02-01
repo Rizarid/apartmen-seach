@@ -1,13 +1,17 @@
 mixin pagination(maxValue = 15, paginationText = 'pagination text')
-  .pagination
-    .pagination__pages
-      .pagination__prev-button
-      .pagination__page.pagination__page_active 1
-      .pagination__page 2
-      .pagination__page 3
-      .pagination__page ...
-      .pagination__page #{ maxValue } 
-      .pagination__next-button 
+  .pagination.js-pagination
+    .pagination__buttons
+      button.pagination__prev-button.js-pagination__prev-button
+      .pagination__pages.js-pagination__pages
+        button.pagination__page.js-pagination__page.pagination__page_first 1
+        .pagination__dots.pagination__dots_first.js-pagination__dots_first ...
+        - let i = 2
+        while i < maxValue
+          button.pagination__page.js-pagination__page #{i}
+          - i += 1
+        .pagination__dots.pagination__dots_second.js-pagination__dots_second ...
+        button.pagination__page.js-pagination__page.pagination__page_last #{ maxValue } 
+      button.pagination__next-button.js-pagination__next-button.pagination__next-button_visible
 
     .pagination__text-container 
-      p.pagination__text #{ paginationText }
+      p.pagination__text.js-pagination__text 1 – 12 из 100+ вариантов аренды

@@ -1,7 +1,7 @@
 import FiltersForm from '../../blocks/filters-form/filters-form';
 import RoomCard from '../../blocks/room-card/room-card';
 import Header from '../../blocks/header/header';
-import '../../components/pagination/pagination';
+import Pagination from '../../components/pagination/pagination';
 import './search-room.scss';
 
 class SearchRoom {
@@ -10,6 +10,7 @@ class SearchRoom {
     this._header = new Header(this._getTarget('.js-search-room__header'));
     this._filtersForm = new FiltersForm(this._getTarget('.js-search-room__container'));
     this._roomCards = this._getRoomCards();
+    this.pagination = new Pagination(this._body);
   }
 
   _getBody = () => document.querySelector('.js-search-room');

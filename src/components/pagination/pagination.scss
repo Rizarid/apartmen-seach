@@ -3,29 +3,85 @@
 .pagination {
   box-sizing: border-box;
   width: fit-content;
-  max-width: 280px;
 
-  &__pages {
+  &__buttons {
     display: flex;
-    flex-wrap: wrap;
     box-sizing: border-box;
     width: 100%;
   }
 
-  &__page {
+  &__pages {
     display: flex;
-    flex: 0 0 auto;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  &__dots {
+    display: none;
     width: 40px;
     height: 40px;
-    color: $color-font-dark-50;
-    font-weight: $normal;
-    font-size: 12px;
-    line-height: 15px;
-    text-align: center;
-    cursor: pointer;
-    user-select: none;
+
+    @media screen and (max-width: 600px) {
+      width: 35px;
+      height: 35px;
+    }
+
+    @media screen and (max-width: 370px) {
+      width: 30px;
+      height: 30px;
+    }
+
+    &_visible {
+      display: flex;
+      flex: 0 0 auto;
+      align-items: center;
+      justify-content: center;
+      color: $color-font-dark-50;
+      font-weight: $normal;
+      font-size: 12px;
+      line-height: 15px;
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+
+  &__page {
+    display: none;
+    width: 40px;
+    height: 40px;
+
+    @media screen and (max-width: 600px) {
+      width: 35px;
+      height: 35px;
+    }
+
+    @media screen and (max-width: 370px) {
+      width: 30px;
+      height: 30px;
+    }
+
+    &_visible,
+    &_active,
+    &_first,
+    &_last,
+    &_prev,
+    &_next {
+      display: flex;
+      flex: 0 0 auto;
+      align-items: center;
+      justify-content: center;
+      color: $color-font-dark-50;
+      font-weight: $normal;
+      font-size: 12px;
+      line-height: 15px;
+      text-align: center;
+      background-color: #fff;
+      border: none;
+      cursor: pointer;
+      user-select: none;
+    }
 
     &_active {
       color: $color-font-light;
@@ -37,16 +93,31 @@
 
   &__prev-button,
   &__next-button {
-    position: relative;
-    display: flex;
-    flex: 0 0 auto;
-    align-items: center;
-    justify-content: center;
+    display: none;
     width: 40px;
     height: 40px;
-    background: $gradient-secondary;
-    border-radius: 50%;
-    cursor: pointer;
+
+    @media screen and (max-width: 600px) {
+      width: 35px;
+      height: 35px;
+    }
+
+    @media screen and (max-width: 370px) {
+      width: 30px;
+      height: 30px;
+    }
+
+    &_visible {
+      position: relative;
+      display: flex;
+      flex: 0 0 auto;
+      align-items: center;
+      justify-content: center;
+      background: $gradient-secondary;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+    }
 
     &::after,
     &::before {
@@ -59,7 +130,6 @@
   }
 
   &__prev-button {
-    display: none;
     transform: rotate(180deg);
 
     &::before {
