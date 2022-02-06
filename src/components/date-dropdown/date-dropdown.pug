@@ -1,6 +1,6 @@
 include ../date-picker/date-picker.pug
 
-mixin dateDropdown({ titles = ['прибытие', 'выезд'], names = ['dateComing', 'dateLeave'], initDate, modifier = 'double-field' })   
+mixin dateDropdown({ titles = ['прибытие', 'выезд'], names = ['dateComing', 'dateLeave'], initDate, modifier = 'double-field' } = {})   
   
   - const isSingleField = (modifier === 'single-field') ? 'date-dropdown_single-field' : ''
   

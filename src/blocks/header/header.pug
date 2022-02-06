@@ -2,7 +2,7 @@ include ../../components/logo/logo.pug
 include ../../components/button/button.pug
 include ../../components/menu/menu.pug 
 
-mixin header({isLogIn = false , userName = '', modifier = ''})
+mixin header({isLogIn = false , userName = '', modifier = ''} = {})
   - const withFilterButton = modifier ? `header_with-filter-button` : ''
   
   header(class = ['header', 'js-header', withFilterButton])

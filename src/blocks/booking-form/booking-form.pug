@@ -2,7 +2,7 @@ include ../../components/date-dropdown/date-dropdown.pug
 include ../../components/dropdown/dropdown.pug 
 include ../../components/button/button.pug 
 
-mixin bookingForm({ roomPrice = 9990, discount = 2179, servicesTotal = 0, additionalServicesPrice = 300 })
+mixin bookingForm({ roomPrice = 9990, discount = 2179, servicesTotal = 0, additionalServicesPrice = 300 } = {})
   -
     let redactedRoomPrice, redactedDiscount, redactedServicesTotal, redactedAdditionalServicesPrice
     {

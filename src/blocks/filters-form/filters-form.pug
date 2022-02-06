@@ -5,7 +5,7 @@ include ../../components/pagination/pagination.pug
 include ../../components/date-dropdown/date-dropdown.pug 
 
 
-mixin filtersForm({ checkboxButtonsOptions, richCheckboxButtonsOptions, expandableCheckboxListOptions })
+mixin filtersForm({ checkboxButtonsOptions, richCheckboxButtonsOptions, expandableCheckboxListOptions } = {})
   form.filters-form.js-filters-form
     .filters-form__date.js-filters-form__date
       +dateDropdown({ titles: ['даты пребывания в отеле'], names: ['dateFilter'], modifier: 'single-field' })

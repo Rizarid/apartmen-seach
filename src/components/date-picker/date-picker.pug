@@ -1,6 +1,6 @@
 include ../control-panel/control-panel.pug
 
-mixin datePicker({ startDate = '', endDate = '' })
+mixin datePicker({ startDate = '', endDate = '' } = {})
   .date-picker.js-date-picker(data-start = startDate, data-end = endDate)
     .date-picker__control-panel.js-date-picker__control-panel
       +controlPanel
