@@ -1,15 +1,15 @@
 include ../date-picker/date-picker.pug
 
-mixin dateDropdown({ titles = ['прибытие', 'выезд'], names = ['dateComing', 'dateLeave'], initDate, modifier = 'double-field' } = {})   
+mixin dateDropdown({ titles = ['прибытие', 'выезд'], names = ['dateComing', 'dateLeave'], initDate, modifier = 'double' } = {})   
   
-  - const isSingleField = (modifier === 'single-field') ? 'date-dropdown_single-field' : ''
+  - const mod = (modifier === 'single') ? 'date-dropdown_modifier_single' : ''
   
-  div(class = ['date-dropdown', 'js-date-dropdown', isSingleField])
+  div(class = ['date-dropdown', 'js-date-dropdown', mod])
     .date-dropdown__container
       h3.date-dropdown__title #{titles[0]}
       input.date-dropdown__field.js-date-dropdown__field(type = "text", name = names[0], placeholder = "ДД.ММ.ГГГГ", readonly)
     
-    if (modifier === 'double-field')
+    if (modifier === 'double')
       .date-dropdown__container
         h3.date-dropdown__title #{titles[1]}
         input.date-dropdown__field.js-date-dropdown__field(type = "text", name = names[1], placeholder = "ДД.ММ.ГГГГ", readonly)

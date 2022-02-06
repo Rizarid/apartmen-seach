@@ -42,7 +42,7 @@ class Elements {
   _getTarget = (targetSelector) => this._body.querySelector(targetSelector);
 
   _getLikeButtons = () => {
-    const likeButtonsTargets = Array.from(document.querySelectorAll('.js-elements__likeButton'));
+    const likeButtonsTargets = Array.from(document.querySelectorAll('.js-elements__like-button'));
     return likeButtonsTargets.map((item) => new LikeButton(item));
   };
 }

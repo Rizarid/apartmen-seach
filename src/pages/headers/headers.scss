@@ -14,12 +14,14 @@
     width: 100%;
     padding-top: 40px;
 
-    &_first {
-      z-index: 10;
-    }
+    &_number {
+      &_first {
+        z-index: 10;
+      }
 
-    &_second {
-      z-index: 5;
+      &_second {
+        z-index: 5;
+      }
     }
   }
 

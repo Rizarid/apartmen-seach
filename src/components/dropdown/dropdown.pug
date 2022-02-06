@@ -3,8 +3,8 @@ include ../control-panel/control-panel.pug
 mixin dropdown({ title = 'dropdown', name = 'dropdown', modifier = 'guests',  items = [{ title: 'взрослые', quantity: 0 }, { title: 'дети', quantity: 0 }, { title: 'младенцы', quantity: 0 }] })
   -
     const modifiers = {
-      guests: 'dropdown_guests',
-      convenience: 'dropdown_convenience'
+      guests: 'dropdown_modifier_guests',
+      convenience: 'dropdown_modifier_convenience'
     }
 
   div(class = ['dropdown', 'js-dropdown', modifiers[modifier]])

@@ -33,88 +33,92 @@
     transition: 0.5s;
   }
 
-  &_color-purple {
-    color: $color-font-light;
-    background: $gradient-primary;
-  }
-
-  &_color-white {
-    position: relative;
-    background: $gradient-primary;
-    transition: 0.5s;
-
-    &::before {
-      position: absolute;
-      z-index: 0;
-      width: calc(100% - 4px);
-      height: calc(100% - 4px);
-      background-color: $color-main-bg;
-      border-radius: 22px;
-      content: "";
+  &_color {
+    &_purple {
+      color: $color-font-light;
+      background: $gradient-primary;
     }
 
-    & .button__text {
-      z-index: 1;
-      color: $color-primary;
-    }
+    &_white {
+      position: relative;
+      background: $gradient-primary;
+      transition: 0.5s;
 
-    &:hover {
-      background: $gradient-primary-lite;
-      opacity: 100%;
-    }
-  }
+      &::before {
+        position: absolute;
+        z-index: 0;
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        background-color: $color-main-bg;
+        border-radius: 22px;
+        content: "";
+      }
 
-  &_size-low {
-    padding: 9.5px 20.3px;
-  }
-
-  &_size-wide {
-    padding: 15.5px 26px;
-  }
-
-  &_size-narrow {
-    padding: 15.5px 18.5px;
-  }
-
-  &_size-minimal {
-    margin: 0;
-    padding: 0;
-    background: none;
-
-    & .button__text {
-      color: $color-primary;
+      & .button__text {
+        z-index: 1;
+        color: $color-primary;
+      }
 
       &:hover {
-        color: $color-font-dark-50;
+        background: $gradient-primary-lite;
+        opacity: 100%;
       }
     }
   }
 
-  &_size-big {
-    position: relative;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 320px;
-    padding: 14px 22px 15px 18px;
-    white-space: normal;
-    background: $gradient-primary;
+  &_size {
+    &_low {
+      padding: 9.5px 20.3px;
+    }
 
-    &::before {
-      position: absolute;
-      right: 1px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
+    &_wide {
+      padding: 15.5px 26px;
+    }
+
+    &_narrow {
+      padding: 15.5px 18.5px;
+    }
+
+    &_minimal {
+      margin: 0;
+      padding: 0;
+      background: none;
+
+      & .button__text {
+        color: $color-primary;
+
+        &:hover {
+          color: $color-font-dark-50;
+        }
+      }
+    }
+
+    &_big {
+      position: relative;
       box-sizing: border-box;
       width: 100%;
-      height: 100%;
-      padding-right: 10px;
-      color: $color-font-light;
-      font-weight: $normal;
-      font-size: 24px;
-      font-family: toxin-icons;
-      text-transform: none;
-      content: "\e901";
+      max-width: 320px;
+      padding: 14px 22px 15px 18px;
+      white-space: normal;
+      background: $gradient-primary;
+
+      &::before {
+        position: absolute;
+        right: 1px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        padding-right: 10px;
+        color: $color-font-light;
+        font-weight: $normal;
+        font-size: 24px;
+        font-family: toxin-icons;
+        text-transform: none;
+        content: "\e901";
+      }
     }
   }
 }

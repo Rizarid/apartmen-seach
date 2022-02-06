@@ -156,9 +156,11 @@
     margin-top: 20px;
   }
 
-  &_convenience {
-    & .dropdown__field {
-      border-radius: 4px 4px 0 0;
+  &_modifier {
+    &_convenience {
+      & .dropdown__field {
+        border-radius: 4px 4px 0 0;
+      }
     }
   }
 

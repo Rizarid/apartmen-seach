@@ -94,9 +94,11 @@
     }
   }
 
-  &_single-field {
-    .date-dropdown__container {
-      width: 100%;
+  &_modifier {
+    &_single {
+      .date-dropdown__container {
+        width: 100%;
+      }
     }
   }
 }

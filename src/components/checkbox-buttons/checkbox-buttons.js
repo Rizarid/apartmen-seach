@@ -14,7 +14,7 @@ class CheckboxButtons {
     this._body.classList.toggle('checkbox-buttons_visible');
   };
 
-  _isExpandable = () => this._body.classList.contains('checkbox-buttons_expandable');
+  _isExpandable = () => this._body.classList.contains('checkbox-buttons_modifier_expandable');
 }
 
 export default CheckboxButtons;

@@ -22,7 +22,7 @@ class Dropdown {
     return itemsTargets.map((item) => new this._Item(item));
   }
 
-  _isConvenience = () => this._body.classList.contains('dropdown_convenience');
+  _isConvenience = () => this._body.classList.contains('dropdown_modifier_convenience');
 
   _addListeners = () => {
     this._field.addEventListener('click', this._handleFieldClick);

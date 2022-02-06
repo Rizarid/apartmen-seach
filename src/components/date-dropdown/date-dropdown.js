@@ -17,7 +17,7 @@ class DateDropdown {
 
   _getTarget = (targetSelector) => this._body.querySelector(targetSelector);
 
-  _getIsSingleField = () => this._body.classList.contains('date-dropdown_single-field');
+  _getIsSingleField = () => this._body.classList.contains('date-dropdown_modifier_single');
 
   _getFields = () => {
     if (this._isSingleField) {
